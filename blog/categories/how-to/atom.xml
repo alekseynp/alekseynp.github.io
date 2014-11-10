@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: How To | Aleksey Nozdryn-Plotnicki]]></title>
+  <link href="http://alekseynp.github.io/blog/categories/how-to/atom.xml" rel="self"/>
+  <link href="http://alekseynp.github.io/"/>
+  <updated>2014-11-10T03:09:18-05:00</updated>
+  <id>http://alekseynp.github.io/</id>
+  <author>
+    <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Make a Heat Map With Hexagons, D3.js, hexbins.js, Open Street Map, Inkscape, and Paint.NET]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net/"/>
+    <updated>2013-08-26T17:55:06-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net</id>
+    <content type="html"><![CDATA[<p>In this post I will be showing how I made my map for the post, <a href="http://thinkdatavis.com/2013/08/17/average-age-of-brooklyns-buildings-mapped/">Average age of Brooklyn&rsquo;s buildings mapped</a>.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4-150x150.png" alt="bk_r5_version4" /></a></p>
+
+<p>I did it with:</p>
+
+<ul>
+<li><p>Completely open source tools</p></li>
+<li><p>D3.js and hexbins.js to render in Firefox</p></li>
+<li><p>Inkscape and Paint.NET for graphical editing</p></li>
+<li><p>Open Street Map for the basemap</p></li>
+</ul>
+
+
+<p><strong>Overall Technique</strong></p>
+
+<p>The overall technique is based on using D3.js offline in the browser on a one-off basis to create a static visual that you will use elsewhere. I outline the technique here in my post, <a href="http://thinkdatavis.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
+
+<p><strong>Get Data</strong></p>
+
+<p>You can get the CSV I used <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml">here</a>. The hexbins.js doesn&rsquo;t do so well with missing values, so I cleaned out all of the records with missing values and re-saved the CSV. Additionally I removed most of the columns which are unnecessary and really bulk up the file.</p>
+
+<p><strong>Creating the Heat for the Map</strong></p>
+
+<p>First of all we&rsquo;re going to be using <a href="http://d3js.org/">D3.js</a> along with <a href="https://github.com/indiemaps/hexbin-js">hexbins.js</a>. You can read a lot about hexbins.js <a href="http://indiemaps.com/blog/2011/10/hexbins/">here</a>.</p>
+
+<pre><code>&lt;code&gt;&lt;code&gt;&lt;span style="font-family: Consolas, Monaco, monospace;"&gt;&lt;span style="line-height: 18px;"&gt;&lt;script type="text/javascript" src="d3.v3.js"&gt;&lt;/script&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;script src="hexbin.js"&gt;&lt;/script&gt;
+&lt;/code&gt;
+</code></pre>
+
+<p>Using D3.js as you normally would, and I&rsquo;m not going to give a complete tutorial on that here&hellip;</p>
+
+<p>The full code listing is at the bottom of this post.</p>
+
+<p>First of all, add an SVG to the document. This is probably not the best way to manage widths, margins, etc., but remember this only has to work once and well enough, so elegance of code is not important. Below we have a chart that will be 1100 x 1100 with 50 padding around the outside.</p>
+
+<pre><code>&lt;code&gt;var chartHeight = 1000;
+var chartWidth = 1000;
+
+var svg = d3.select("#chart").append("svg")
+  .attr("height", chartHeight+100)
+  .attr("width", chartWidth+100)
+  .append("g")
+    .attr("transform", "translate(50,50)");
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we create two scales to translate the XCoord and YCoord from the Brooklyn data into coordinates in our chart. We are translating 973045 to 0 and 1024202 to chartWidth which is 1000 and using a linear interpolation for x. Similarly for y. Note that this is possibly a HUGE MISTAKE when it comes to dealing with maps. If you&rsquo;re going to work with maps, then you may have to learn about projections. The fundamental thing here is that translating the 3D points on the surface of the earth to 2D points on the surface of a computer screen is not at all straightforward, and you will always have to use a projection of some sort. Here I am using a linear projection which can be fine, but if I combine this later with a basemap that isn&rsquo;t on a linear projection, big, visible errors could be introduced. In this case, the basemap is small enough that those errors aren&rsquo;t big and aren&rsquo;t visible, so it&rsquo;s not a big deal.</p>
+
+<pre><code>&lt;code&gt;var x = d3.scale.linear()
+  .range([0, chartWidth])
+  .domain([973045,1024202]);
+
+var y = d3.scale.linear()
+  .domain([146940, 208432])
+  .range([chartHeight, 0]);
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we create the scale that we will be using to create the &ldquo;heat&rdquo; in the map. We will use this to control the opacity.  Here we are translating 1870 to 0 opacity and 2013 to 1.</p>
+
+<pre><code>&lt;code&gt;  var opacity = d3.scale.linear()
+    .domain([1870, 2013])
+    .range([0,1]);    
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we use D3 to load the CSV data as usual. The code that follows later comes from the ellipses below.</p>
+
+<pre><code>&lt;code&gt;d3.csv("bk-xybuild-nomissing.csv",function(data) {
+...
+});
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we use hexbins.js for the first time. We create a new hexbin that is 1000 x 1000 where the hexagons have a &ldquo;radius&rdquo; of 30. We also teach the hexbin how to retrieve the x and y to use when we pass it the data. In this case we will give it values converted by the scales x() and y() that we created above that come from the CSV data.</p>
+
+<pre><code>&lt;code&gt;  var hexbin = d3.hexbin()
+    .size([chartWidth, chartHeight])
+    .radius(30)
+    .x(function(d) {return x(d.XCoord);})
+    .y(function(d) {return y(d.YCoord);});
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we run the hexbin algorithm on our data. This will return an object that where every data point has been assigned to a hexagon.</p>
+
+<pre><code>&lt;code&gt;  hexBinsData = hexbin(data);    
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we create a special function that we will use to calculate the average for each hexagon. It takes in d which is the array of data points assigned to the hexagon, and calculated the average of YearBuilt for that hexagon.</p>
+
+<pre><code>&lt;code&gt;  var averageFunction = function(d) {
+    var sum = 0;
+    for(var i = 0; i &lt; d.length; i++)
+    {
+      sum += +d[i].YearBuilt;
+    }
+    return sum/d.length;
+  };
+&lt;/code&gt;
+</code></pre>
+
+<p>Finally we do the very normal D3 thing of binding the hexBinsData to hexagon paths in the SVG. We give them a class of hexagon, a path as defined by hexbin.hexagon(), a transform to translate the hexagon by it&rsquo;s x and y coordinate, and a fill colour. Finally we also change the fill-opacity. We use the averageFunction to calculate the average YearBuilt for the hexagon, and then we convert it using our opacity scale to a value between 0 and 1.</p>
+
+<pre><code>&lt;code&gt;  svg.selectAll(".hexagon")
+    .data(hexBinsData).enter()
+    .append("path")
+      .attr("class", "hexagon")
+      .attr("d", hexbin.hexagon())
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .style("fill", "#0000FF")
+      .style("fill-opacity", function(d) { return opacity(averageFunction(d)); });
+&lt;/code&gt;
+</code></pre>
+
+<p>The result should look something like this:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400-150x150.png" alt="radius_5_400" /></a></p>
+
+<p><strong>Extract SVG from the Browser</strong></p>
+
+<p>Use Firefox to copy and paste the SVG that is generated out of the browser, into a text editor, and save it off as an SVG file. I explain more here: <a href="http://thinkdatavis.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
+
+<p><strong>Get a Basemap from Open Street Map</strong></p>
+
+<p>Open Street Map is great. If you aren&rsquo;t aware of it, then you should be. I tell people it&rsquo;s like &ldquo;Wikipedia, but for maps&rdquo; which is accurate enough. I&rsquo;ve used Open Street Map to navigate 20,000 km of driving through 7 countries in South America at the time of writing this post, so I can say it&rsquo;s pretty good.</p>
+
+<p>With the heat we created above, we want to layer this on top of a map of Brooklyn.</p>
+
+<p>Go to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org</a> and click on the Share icon on the right-hand side.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/share.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/share.png" alt="share" /></a></p>
+
+<p>You will see a menu that allows you to export PNGs from Open Street Map. There are some practical limits to how much detail you are allowed to get based on how large an area you select, but in any case it should be sufficient to make a large-ish map. If not, maybe you&rsquo;ll have to piece together some pieces manually.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/image.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/image.png" alt="image" /></a></p>
+
+<p><strong>Convert SVG to PNG</strong></p>
+
+<p>Since our OSM data is in PNG format, we&rsquo;ll want our heat to be as well. We could operate in SVG, but that can be very computer intensive with map data. Open the SVG in Inkscape and convert to a PNG.</p>
+
+<p><strong>Combine with Paint.NET</strong></p>
+
+<p>Not much to say here. I took the PNG from OSM, I black-and-white-ed it, then pasted in a layer on top the heat and adjusted it&rsquo;s position and size until it matched the data below. In this instance I was able to line up the water and green space with the data, as there was no BuildYear data for these places. For other data, lining up with the map would be more complicated.</p>
+
+<p><strong>Done!</strong></p>
+
+<p>264,534 data points aggregated onto one heatmap of Brooklyn all using free open source tools and nothing specialized for map-making</p>
+
+<p><strong>Full JavaScript code listing:</strong></p>
+
+<pre><code>&lt;code&gt;var chartHeight = 1000;
+var chartWidth = 1000;
+
+var svg = d3.select("#chart").append("svg")
+  .attr("height", chartHeight+100)
+  .attr("width", chartWidth+100)
+  .append("g")
+    .attr("transform", "translate(50,50)");
+
+var x = d3.scale.linear()
+  .range([0, chartWidth])
+  .domain([973045,1024202]);
+
+var y = d3.scale.linear()
+  .domain([146940, 208432])
+  .range([chartHeight, 0]);
+
+d3.csv("bk-xybuild-nomissing.csv",function(data) {
+  var hexbin = d3.hexbin()
+    .size([chartWidth, chartHeight])
+    .radius(30)
+  .x(function(d) {return x(d.XCoord);})
+  .y(function(d) {return y(d.YCoord);});
+
+  var opacity = d3.scale.linear()
+    .domain([1870, 2013])
+    .range([0,1]);  
+
+  hexBinsData = hexbin(data);  
+
+  var averageFunction = function(d) {
+    var sum = 0;
+  for(var i = 0; i &lt; d.length; i++)
+  {
+    sum += +d[i].YearBuilt;
+  }
+  return sum/d.length;
+  };
+
+  svg.selectAll(".hexagon")
+    .data(hexBinsData).enter()
+  .append("path")
+      .attr("class", "hexagon")
+      .attr("d", hexbin.hexagon())
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+    .style("fill", "#0000FF")
+      .style("fill-opacity", function(d) { return opacity(averageFunction(d)); });
+});
+&lt;/code&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Use D3.js on Your Desktop to Publish Static Visualisations]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations/"/>
+    <updated>2013-08-18T20:03:48-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations</id>
+    <content type="html"><![CDATA[<p>D3.js is a great tool for creating &ldquo;Data Drive Documents&rdquo;. As a JavaScript library, its natural primary use is on the web, rendering visualizations in the browser. It can also, however, be used offline on your PC to generate data driven content on a one-off basis. For someone familiar with D3, it can be a rapid and powerful way of scripting data into visual elements for use in a project that will not necessarily be published live and interactive on the web. In this post I will outline my simple method for using D3.js to script elements in static work.</p>
+
+<p><strong>Use D3.js to render content in the browser</strong></p>
+
+<p>Use D3 as you normally would to load CSVs and bind data to document elements. It doesn&rsquo;t have to be polished, properly wired together, or compatible with various browsers. This only has to work once, well enough, and on your machine in order to move it on to the next step in your process. It can get whatever polish it needs later in your graphical editing programs. JavaScript in the browser is your chance to do anything in a scripted way that would otherwise be a huge pain. The truth is, you could create all kinds of data visualisations by hand with an infinite amount of time and patience to calculate values and draw rectangles of exactly the right length and shade. But you don&rsquo;t.</p>
+
+<p>Use Firefox. Like the rest of the world I&rsquo;ve moved on to Chrome, but I still have Firefox installed on my computer for this purpose. I neither know nor need to know the full technical detail on this, but certain security settings to prevent cross site scripting attacks make it difficult to use D3.js to load CSV data locally from your machine in Chrome and Internet Explorer. There ways around this by running a tiny webserver on your desktop, but I find the simplest thing is to use Firefox which seems to not be quite so picky about its security on this issue.</p>
+
+<p><strong>Export SVG from the browser</strong></p>
+
+<p>Now that you&rsquo;ve used D3 to render SVG in the browser based on your data, you can reach into that content and extract it and save it off to a file!</p>
+
+<p>Firefox comes with its own inspector, so you don&rsquo;t even have to use Firebug. If you right click on your image and pick Inspect Element, you should gain access to a tree-view of the Document Objecet Model that will allow you to find the code for your svg. It will look like <svg>&hellip;stuffhere&hellip;</svg></p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/innerhtml.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/innerhtml.png" alt="innerhtml" /></a></p>
+
+<p>In this example here, the SVG content we want is &ldquo;<svg height="1100" width="1100" > .. </svg>. All this is just a bunch of text and we want to get it onto the clipboard. The way we do this is to right-click on the node that contains the SVG and choose Copy Inner HTML. In this case that is the <div id="chart" >.</p>
+
+<p>Now that the SVG is on the clipboard, now what? Open up a text editor (maybe Notepad, maybe Notepad++), paste in the text and save it off as a &ldquo;.svg&rdquo; file.</p>
+
+<p><strong>Use Inkscape to access SVG content</strong></p>
+
+<p>****There&rsquo;s not really much more to be said here. If you open up your new SVG file with Inkscape, you&rsquo;ll find it malleable and in your hands like any other graphic. Combine, edit, and label. Publish.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Add a Table of Values to a Boxplot in R]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r/"/>
+    <updated>2013-07-28T13:11:41-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r</id>
+    <content type="html"><![CDATA[<p>In this post I show how to use R to create a nice boxplot chart with a table showing the boxplot statistics to one side.</p>
+
+<p>As I have<a href="http://thinkdatavis.com/2013/06/05/how-to-make-nice-boxplots-with-r/"> shown before</a>, R can be used to produce nice-looking boxplots, a standard statistical technique that is not a standard chart available in the ubiquitous Microsoft Excel. Boxplots are a useful visualisation, but often your customer will also want to see a table of the values so that they can both see the trend and, for example, look up exact average values. If you try to create this table using Excel PivotTables, you will quickly be disappointed to see that it is not possible to calculate quartiles in a PivotTable. An Excel master will be able to create a bespoke set of formulas to filter the data and utilize the =Percentile() worksheet function, but there must be a better way&hellip; and there is.</p>
+
+<p>Here is the demo output using R (click for larger):</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/07/demo.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/07/demo-300x120.png" alt="demo" /></a></p>
+
+<p>How to create this using R? See further below for my complete script.</p>
+
+<p>Important script elements:</p>
+
+<pre><code>m &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rbind"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rbind&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/layout"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;layout&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;m&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+</code></pre>
+
+<p>Rather than using par(mfrow(1,2)) which would create a 1 rows by 2 columns grid of equal size, we can use layout to create a layout with unequal sizes. Using c(1,1,1,2,2) above, we are able to make the size of the chart a 3:2 ratio to the table. If we wanted, we could use c(1,1,1,2) to create a 3:1 ratio.</p>
+
+<pre><code>&lt;span style="color: #666666; font-style: italic;"&gt;# initialize the arrays&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# Creates a vector of 17 (there are 17 yeras) NAs that we will fill in later&lt;/span&gt;
+means &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+mins &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+maxs &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+lowerq &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+upperq &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# Creates a vectory of 1997, 1998, 1999,... 2013&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# These are the years at the bottom of the boxplot&lt;/span&gt;
+years &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Perform this loop once for each value of i from 1997 to 2013&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; &lt;span style="color: #009900;"&gt;(&lt;/span&gt;i &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; &lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;{&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# Run the boxplot statistics for this year&lt;/span&gt;
+  boxstats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/grDevices/boxplot.stats"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;boxplot.stats&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+    &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"year"&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span&gt;==&lt;/span&gt;i&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"price"&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;  &lt;span style="color: #666666; font-style: italic;"&gt;# filters the data for only year that matches i&lt;/span&gt;
+    &lt;a href="http://inside-r.org/r-doc/stats/coef"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;coef&lt;/span&gt;&lt;/a&gt; = &lt;span style="color: #cc66cc;"&gt;1.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; do.conf = &lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; do.out = &lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# Next 5 lines store the boxplot statistics into our arrays&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# i-1996 trasforms 1997 to 2013 into 1 to 17, these are the indexes in our array&lt;/span&gt;
+  mins&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  lowerq&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  means&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  upperq&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  maxs&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;5&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;}
+
+&lt;/span&gt;
+</code></pre>
+
+<p>The code above utilizes the boxplot.stats() function and then pulls the actual values from the output for use later.</p>
+
+<pre><code>&lt;a href="http://inside-r.org/packages/cran/PerformanceAnalytics"&gt;&lt;span&gt;PerformanceAnalytics&lt;/span&gt;&lt;/a&gt;&lt;span&gt;:::&lt;/span&gt;textplot&lt;span style="color: #009900;"&gt;(&lt;/span&gt;myBoxStats &lt;span style="color: #666666; font-style: italic;"&gt;#data&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;halign = &lt;span style="color: #0000ff;"&gt;"left"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#horizontal alignment&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;valign = &lt;span style="color: #0000ff;"&gt;"top"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#vertical alignment&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;row.valign=&lt;span style="color: #0000ff;"&gt;"center"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#row alignment&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/packages/cran/mAr"&gt;&lt;span&gt;mar&lt;/span&gt;&lt;/a&gt; = &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.1&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#margin parameters&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;show.rownames=&lt;span style="color: #000000; font-weight: bold;"&gt;FALSE&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#omit the record identifiers&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+</code></pre>
+
+<p>Using the strangely named PerformanceAnalytics package, this command writes out a graphic table using the data.</p>
+
+<p>Download the data <a href="https://docs.google.com/file/d/0B4hPSKdfKZm1OXcwWDVqZzJkYXM/edit?usp=sharing">here </a>if you want to see the script running live on your own computer. Remember to update the setwd at the top of the file to the directory where you saved the data to.</p>
+
+<p>Here is the full script that creates a boxplot graph and includes a table of values to the right:</p>
+
+<pre><code>&lt;span style="color: #666666; font-style: italic;"&gt;# Clear all existing variables from memory&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/rm"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rm&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/list"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;list&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/ls"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;ls&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Set working directory for the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/setwd"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;setwd&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span&gt;&lt;span style="color: #0000ff;"&gt;"C:&lt;/span&gt;&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;&lt;span&gt;&lt;span style="color: #0000ff;"&gt;yourDirectory&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# load the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt; &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/utils/read.csv"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;read.csv&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"dataForBlog.csv"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; header=&lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; sep=&lt;span style="color: #0000ff;"&gt;","&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# some code that cleans up the variables so that boxplot will work later&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt; &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/data.frame"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data.frame&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/sapply"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;sapply&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/function"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;function&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;x&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #009900;"&gt;{&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;if&lt;/span&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/is.factor"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;is.factor&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;x&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #009900;"&gt;{&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/base/as.numeric"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;as.numeric&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/as.character"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;as.character&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;x&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;}&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;else&lt;/span&gt; &lt;span style="color: #009900;"&gt;{&lt;/span&gt;
+  x
+&lt;span style="color: #009900;"&gt;}&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;}&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Prepare the "device" that this graph will be prepared for -- more standard results&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# than acquired by exporting from the R GUI&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/png"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;png&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;filename = &lt;span style="color: #0000ff;"&gt;"demo.png"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; width = &lt;span style="color: #cc66cc;"&gt;800&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; height = &lt;span style="color: #cc66cc;"&gt;320&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/units"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;units&lt;/span&gt;&lt;/a&gt; = &lt;span style="color: #0000ff;"&gt;"px"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Create a vector and use it to define the layout&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# Here we will have two panels in a ratio of 3:2&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# c(1,2) or c(1,1,2,2) would create two equal panels&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# c(1,1,2) would create two panels in a ratio of 2:1&lt;/span&gt;
+m &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rbind"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rbind&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/layout"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;layout&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;m&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Generate the boxplot. Not the focus of this script, so no comments&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/par"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;par&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/packages/cran/mAr"&gt;&lt;span&gt;mar&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/boxplot"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;boxplot&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;price&lt;span&gt;~&lt;/span&gt;year&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; xaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; yaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/graphics/frame"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;frame&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"f"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/packages/cran/mAr"&gt;&lt;span&gt;mar&lt;/span&gt;&lt;/a&gt; = &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; at=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; lwd.ticks=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; cex.axis=&lt;span style="color: #cc66cc;"&gt;0.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; at=&lt;a href="http://inside-r.org/r-doc/base/seq"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;seq&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;11000000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/by"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;by&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1000000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/formatC"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;formatC&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/seq"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;seq&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;11000000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/by"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;by&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1000000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/format"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;format&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"d"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; big.mark=&lt;span style="color: #0000ff;"&gt;','&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; las=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; cex.axis=&lt;span style="color: #cc66cc;"&gt;0.65&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; bty=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; lwd.ticks=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; tck=&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.02&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.35&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; hadj=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/mtext"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;mtext&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/graphics/text"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;text&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"Price vs. Year"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; side = &lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; adj=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/stats/line"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;line&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; cex=&lt;span style="color: #cc66cc;"&gt;1.1&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# initialize the arrays&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# Creates a vector of 17 (there are 17 yeras) NAs that we will fill in later&lt;/span&gt;
+means &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+mins &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+maxs &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+lowerq &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+upperq &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/rep"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rep&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;NA&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# Creates a vectory of 1997, 1998, 1999,... 2013&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# These are the years at the bottom of the boxplot&lt;/span&gt;
+years &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Perform this loop once for each value of i from 1997 to 2013&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; &lt;span style="color: #009900;"&gt;(&lt;/span&gt;i &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; &lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;{&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# Run the boxplot statistics for this year&lt;/span&gt;
+  boxstats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/grDevices/boxplot.stats"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;boxplot.stats&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+    &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"year"&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span&gt;==&lt;/span&gt;i&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"price"&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;  &lt;span style="color: #666666; font-style: italic;"&gt;# filters teh data for only year that matches i&lt;/span&gt;
+    &lt;a href="http://inside-r.org/r-doc/stats/coef"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;coef&lt;/span&gt;&lt;/a&gt; = &lt;span style="color: #cc66cc;"&gt;1.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; do.conf = &lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; do.out = &lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# Next 5 lines store the boxplot statistics into our arrays&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# i-1996 trasforms 1997 to 2013 into 1 to 17, these are the indexes in our array&lt;/span&gt;
+  mins&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  lowerq&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  means&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  upperq&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+  maxs&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1996&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; boxstats&lt;span&gt;$&lt;/span&gt;stats&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;5&lt;/span&gt;&lt;span style="color: #009900;"&gt;]&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;}&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# combine the arrays into a dataframe to pass to textplot later&lt;/span&gt;
+myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/data.frame"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data.frame&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  years &lt;span style="color: #666666; font-style: italic;"&gt;# first column, unformatted&lt;/span&gt;
+  &lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/format"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;format&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/data.frame"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data.frame&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;mins&lt;span style="color: #339933;"&gt;,&lt;/span&gt;lowerq&lt;span style="color: #339933;"&gt;,&lt;/span&gt;means&lt;span style="color: #339933;"&gt;,&lt;/span&gt;upperq&lt;span style="color: #339933;"&gt;,&lt;/span&gt;maxs&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;scientific=&lt;span style="color: #000000; font-weight: bold;"&gt;FALSE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;big.mark=&lt;span style="color: #0000ff;"&gt;","&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;small.mark=&lt;span style="color: #0000ff;"&gt;"."&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#format other columns nicely&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# rename the column names so they come out nicely in textplot later&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/colnames"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;colnames&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;myBoxStats&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"Year"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"Minimum"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"Lower Quartile"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"Average"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"Upper Quartile"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"Maximum"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# sets margins to nothing&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/par"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;par&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/packages/cran/mAr"&gt;&lt;span&gt;mar&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Write out the table&lt;/span&gt;
+&lt;a href="http://inside-r.org/packages/cran/PerformanceAnalytics"&gt;&lt;span&gt;PerformanceAnalytics&lt;/span&gt;&lt;/a&gt;&lt;span&gt;:::&lt;/span&gt;textplot&lt;span style="color: #009900;"&gt;(&lt;/span&gt;myBoxStats &lt;span style="color: #666666; font-style: italic;"&gt;#data&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;halign = &lt;span style="color: #0000ff;"&gt;"left"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#horizontal alignment&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;valign = &lt;span style="color: #0000ff;"&gt;"top"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#vertical alignment&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;row.valign=&lt;span style="color: #0000ff;"&gt;"center"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#row alignment&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/packages/cran/mAr"&gt;&lt;span&gt;mar&lt;/span&gt;&lt;/a&gt; = &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.1&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#margin parameters&lt;/span&gt;
+                                &lt;span style="color: #339933;"&gt;,&lt;/span&gt;show.rownames=&lt;span style="color: #000000; font-weight: bold;"&gt;FALSE&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;#omit the record identifiers&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# write the output to disk&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/dev.off"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;dev.off&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+</code></pre>
+
+<p><a href="http://www.inside-r.org/pretty-r">Created by Pretty R at inside-R.org</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How I Made: The Sun Shines Fondly on Ontario University Presidents]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents/"/>
+    <updated>2013-07-15T21:34:41-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents</id>
+    <content type="html"><![CDATA[<p>In this post I will share my R script that produce the visual from <a href="http://thinkdatavis.com/2013/07/13/the-sun-shines-fondly-on-ontario-university-presidents/">The sun shines fondly on Ontario university presidents</a>. The visual is a 10 x 3 grid of charts, what might be called small multiples. As you can see, the charts are time series, each with the same context-setting lines, and each with a unique series for a given university.<strong><a href="http://thinkdatavis.com/wp-admin/post.php?post=546&amp;action=edit">
+</a></strong></p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/07/university-presidents.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/07/university-presidents-391x1024.png" alt="university presidents" /></a></p>
+
+<p>I used all open source tools:</p>
+
+<ul>
+<li><p><a href="http://www.r-project.org/">R</a> – Open source statistical analysis and charting software</p></li>
+<li><p><a href="inkscape.org">Inkscape</a> – Open source alternative to Adobe Illustrator</p></li>
+</ul>
+
+
+<p>The process was:</p>
+
+<ol>
+<li><p> Data Gathering and Analysis – a deep topic for another post</p></li>
+<li><p> CSV as a bridge between analysis tools and charting tools</p></li>
+<li><p> R to generate base chart</p></li>
+<li><p> Inkscape to clean up</p></li>
+</ol>
+
+
+<p>The R script generates an SVG that you can load and edit in Inkscape.</p>
+
+<pre><code>&lt;span style="color: #666666; font-style: italic;"&gt;# Clear all existing variables from memory&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/rm"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rm&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/list"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;list&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/ls"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;ls&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Set working directory for the csv file and output file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/setwd"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;setwd&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"C:&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Users&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Aleksey&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Documents&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Data Journalism&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;c#&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;salaryDisclosure&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;raceUniversity"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# load the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt; &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/utils/read.csv"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;read.csv&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"forR.csv"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; header=&lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; sep=&lt;span style="color: #0000ff;"&gt;","&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# set the output type and size -- good for standardizing outputs&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# this here creates an svg file that is 12 inches by 30 inches&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# I know I know, what does inches mean? Well it's important to R&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# for graphics. You can use the values for scaling&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/svg"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;svg&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;filename=&lt;span style="color: #0000ff;"&gt;"output.svg"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; width=&lt;span style="color: #cc66cc;"&gt;12&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; height=&lt;span style="color: #cc66cc;"&gt;30&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# set up the grid for the graphs&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# mfrom (10,3) defines grid with 10 rows and 3 columns&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# mar defines margins, bottom, left, top, right&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# mgp moves the axis labels around and is currently redundant&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/par"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;par&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;mfrow = &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;10&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/packages/cran/mAr"&gt;&lt;span&gt;mar&lt;/span&gt;&lt;/a&gt; = &lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# My data set has a row for each year, and a column for each&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# university. The universities are the 30th through 58th columns&lt;/span&gt;
+&lt;span style="color: #666666; font-style: italic;"&gt;# The for loop will execute once for each value 30 to 58&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; &lt;span style="color: #009900;"&gt;(&lt;/span&gt;i &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; &lt;span style="color: #cc66cc;"&gt;30&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;58&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;{&lt;/span&gt;
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# initial plot, x is year and y is data$x1, the series for 1st best paid&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/plot"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;plot&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;Year&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;X1&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+     type=&lt;span style="color: #0000ff;"&gt;"l"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# makes it a line chart&lt;/span&gt;
+     ylim=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;600000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# sets the y axis limits&lt;/span&gt;
+     ylab=&lt;span style="color: #0000ff;"&gt;""&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# no y axis lavels &lt;/span&gt;
+     xlab=&lt;span style="color: #0000ff;"&gt;""&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# no x axis labels&lt;/span&gt;
+     xaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress x axis&lt;/span&gt;
+     yaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress y axis&lt;/span&gt;
+     xaxs=&lt;span style="color: #0000ff;"&gt;"i"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# no margin within the plotting frame to the left or right&lt;/span&gt;
+     yaxs=&lt;span style="color: #0000ff;"&gt;"i"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# similarly&lt;/span&gt;
+     lwd=&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line width for the line&lt;/span&gt;
+     &lt;a href="http://inside-r.org/r-doc/base/col"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;col&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"#999999"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line color&lt;/span&gt;
+     &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# add the line for the 10th best paid&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/lines"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;lines&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;Year&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;X10&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+      lwd=&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line width for the line&lt;/span&gt;
+      &lt;a href="http://inside-r.org/r-doc/base/col"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;col&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"#999999"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line color&lt;/span&gt;
+      &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# add a line for the minimum value&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/lines"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;lines&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;Year&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;MIN&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+      lwd=&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line width&lt;/span&gt;
+      &lt;a href="http://inside-r.org/r-doc/base/col"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;col&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"#999999"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line color&lt;/span&gt;
+      &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# add a custom x-axis&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# 1 = at the bottom&lt;/span&gt;
+     at=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2002&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2007&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# vector of value locations for the ticks&lt;/span&gt;
+     &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2002&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2007&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# vector of labels for those ticks&lt;/span&gt;
+     lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the axis line, 0 makes it go away&lt;/span&gt;
+     lwd.ticks=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the tick marks, 0 makes it go away&lt;/span&gt;
+     cex.axis=&lt;span style="color: #cc66cc;"&gt;1.6&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# scales the size of the labels&lt;/span&gt;
+     mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+     &lt;span style="color: #009900;"&gt;)&lt;/span&gt; 
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# add a custom y-axis&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# 2 = y axis&lt;/span&gt;
+     at=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;150000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;300000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;450000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;600000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# vector of value ocations for the ticks&lt;/span&gt;
+     &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"0"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"150"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"300"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"450"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"600"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# vector of labels for those ticks&lt;/span&gt;
+     las=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# labels are rotated so they read normally left to right&lt;/span&gt;
+     cex.axis=&lt;span style="color: #cc66cc;"&gt;1.6&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# scales the size of the labels&lt;/span&gt;
+     bty=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+     lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the axis line, 0 makes it go away&lt;/span&gt;
+     lwd.ticks=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the tick marks, 0 makes it go away&lt;/span&gt;
+     tck=&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.02&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# tick length&lt;/span&gt;
+     mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.35&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+     hadj=&lt;span style="color: #cc66cc;"&gt;1.1&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# moves the labels left or right&lt;/span&gt;
+     &lt;span style="color: #009900;"&gt;)&lt;/span&gt; 
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# add the data series for this university&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/lines"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;lines&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span&gt;$&lt;/span&gt;Year&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# x is still year as before&lt;/span&gt;
+        &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;i&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# this references the ith column of the data&lt;/span&gt;
+        lwd=&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line width&lt;/span&gt;
+        &lt;a href="http://inside-r.org/r-doc/base/col"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;col&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"#2222dd"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# line colour&lt;/span&gt;
+        &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# add a title to the chart&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/mtext"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;mtext&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/graphics/text"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;text&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/names"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;names&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;i&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# this returns the name of the ith column&lt;/span&gt;
+        side = &lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# top&lt;/span&gt;
+        adj=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+        &lt;a href="http://inside-r.org/r-doc/stats/line"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;line&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# moves it up and down&lt;/span&gt;
+        cex=&lt;span style="color: #cc66cc;"&gt;1.5&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# scales the size&lt;/span&gt;
+        &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #009900;"&gt;}&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# saves out the .svg for to disk in the working directory&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/dev.off"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;dev.off&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
+</code></pre>
+
+<p><a href="http://www.inside-r.org/pretty-r">Created by Pretty R at inside-R.org</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Make Nice Boxplots With R]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/06/04/how-to-make-nice-boxplots-with-r/"/>
+    <updated>2013-06-04T23:26:20-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/06/04/how-to-make-nice-boxplots-with-r</id>
+    <content type="html"><![CDATA[<p>Anyone who has tried to create a boxplot in Microsoft Excel will know that there must be a better way. Boxplots are a powerful, standard statistical tool. They aren&rsquo;t that popular in the business community, as they are a little on the technical side, and perhaps this is why they are shunned by Microsoft. In any case, analytics professionals require a reproducible approach for generating good, clean boxplots.</p>
+
+<p>My recent infographic, <a href="http://thinkdatavis.com/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/">Thinking of buying or selling a Peugeot Partner in Chile?</a>, I featured two boxplots and here is how I made them.</p>
+
+<p>I used <a href="https://www.google.com.pe/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fwww.r-project.org%2F&amp;ei=MFupUa-oDJK40gHAmYH4Dw&amp;usg=AFQjCNFq9BSTD_8y4svhPlIv_58OxEpd5A&amp;sig2=_ziAUMJRWN86JBwlo_VjJw&amp;bvm=bv.47244034,d.dmQ">R</a>, an open source statistics, analytics, and charting software. It is used extremely widely and many would consider it the de facto standard.</p>
+
+<p>I scraped the data from chileautos.cl and output a CSV file from the process for loading into R. Afterwards I ran the following R script. See the extensive comments in order to understand what it&rsquo;s doing:</p>
+
+<pre><code>&lt;span style="color: #666666; font-style: italic;"&gt;# Clear all existing variables from memory&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/rm"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rm&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/list"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;list&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/ls"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;ls&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Set working directory for the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/setwd"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;setwd&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"C:&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Users&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Aleksey&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Documents&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Data Viz&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;projects&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;chileAutos&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# load the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt; &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/utils/read.csv"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;read.csv&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"partners2013-5-29-20-5.csv"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; header=&lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; sep=&lt;span style="color: #0000ff;"&gt;","&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# set the output type and size -- good for standardizing outputs&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/svg"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;svg&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;filename=&lt;span style="color: #0000ff;"&gt;"output.svg"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; width=&lt;span style="color: #cc66cc;"&gt;6&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; height=&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Draw the cord boxplot&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/boxplot"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;boxplot&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  price&lt;span&gt;~&lt;/span&gt;year&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts price on the y axis and groups by year on the x axis&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# dataframe to be used&lt;/span&gt;
+  xaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress the default x axis&lt;/span&gt;
+  yaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress the default y axis&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/frame"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;frame&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"f"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress the plotting frame&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Draw our own x-axis&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  &lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts the axis at the bottom&lt;/span&gt;
+  at=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# labels will be placed in the 17 categories&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# labels will be for the years&lt;/span&gt;
+  lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the long axis line is zero, makes invisible&lt;/span&gt;
+  lwd.ticks=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the etick lines also zero, makes them invisible&lt;/span&gt;
+  cex.axis=&lt;span style="color: #cc66cc;"&gt;0.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# offset from the axis of the labels&lt;/span&gt;
+  mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# middle zero controls distance of labels from axis&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Draw our own y-axis&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  &lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts the axis on the left&lt;/span&gt;
+  at=&lt;a href="http://inside-r.org/r-doc/base/seq"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;seq&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;11000000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/by"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;by&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1000000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# creates a vector of label locations starting at 0 ever 1 mil to 11 mil&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/formatC"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;formatC&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/seq"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;seq&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;11000000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/by"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;by&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1000000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/format"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;format&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"d"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; big.mark=&lt;span style="color: #0000ff;"&gt;','&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# similar labels with formatting&lt;/span&gt;
+  las=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# rotate labels to be parallel&lt;/span&gt;
+  cex.axis=&lt;span style="color: #cc66cc;"&gt;0.65&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# offset of labels&lt;/span&gt;
+  lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the long axis line is zero, makes invisible&lt;/span&gt;
+  lwd.ticks=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# tick marks are 1 wide&lt;/span&gt;
+  tck=&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.02&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# length of ticks, negative goes out from the plot&lt;/span&gt;
+  mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.35&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# 0.35 controls the left-right movemenet of the tick labels&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Put our title on&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/mtext"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;mtext&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/graphics/text"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;text&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"Price by Year"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+      side = &lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# Top&lt;/span&gt;
+      adj=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# Combined with top implies left alignment&lt;/span&gt;
+      &lt;a href="http://inside-r.org/r-doc/stats/line"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;line&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# Controls what margin line, essentially moves the text up and down&lt;/span&gt;
+      cex=&lt;span style="color: #cc66cc;"&gt;1.1&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# text size&lt;/span&gt;
+      &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;a href="http://inside-r.org/r-doc/grDevices/dev.off"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;dev.off&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# writes the SVG file to the working directory&lt;/span&gt;
+</code></pre>
+
+<p><a href="http://www.inside-r.org/pretty-r">Created by Pretty R at inside-R.org</a></p>
+
+<p>What we get from this script:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/06/output.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/06/output-300x200.png" alt="output" /></a></p>
+
+<p>What we would get from the default:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/06/output_default.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/06/output_default-300x200.png" alt="output_default" /></a></p>
+
+<p>One aspect of this approach to highlight is the SVG device output. By scripting the size of the SVG output and writing it to disk, we take more control over the process, creating a more scripted and reproducible outcome.</p>
+
+<pre><code>&lt;a href="http://inside-r.org/r-doc/grDevices/svg"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;svg&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;filename=&lt;span style="color: #0000ff;"&gt;"output.svg"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; width=&lt;span style="color: #cc66cc;"&gt;6&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; height=&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/dev.off"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;dev.off&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+</code></pre>
+
+<p>If you wanted to create 76 such boxplots, say one for each supplier to your company, all to the same size standard, doing so in Excel would be a nightmare. Even flexing VBA, the dimensioning, positioning, alignment, generation, etc. of Excel charts can be very frustrating. Trust me, I&rsquo;ve been there. With scripting in R, one could wrap a loop around the above and generate any number of charts to the exact same size, dimensions, etc.</p>
+]]></content>
+  </entry>
+  
+</feed>

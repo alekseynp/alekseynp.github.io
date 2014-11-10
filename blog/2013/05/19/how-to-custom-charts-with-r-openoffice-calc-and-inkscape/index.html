@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to: Custom Charts With R, OpenOffice Calc, and Inkscape - Aleksey Nozdryn-Plotnicki</title>
+  <meta name="author" content="Aleksey Nozdryn-Plotnicki">
+
+  
+  <meta name="description" content="In my recent posts analysing the Ontario Public Sector Salary Disclosure, I produced several visuals and I thought I would share how I did it. Custom &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alekseynp.github.io/blog/2013/05/19/how-to-custom-charts-with-r-openoffice-calc-and-inkscape">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Aleksey Nozdryn-Plotnicki" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Aleksey Nozdryn-Plotnicki</a></h1>
+  
+    <h2>blog, portfolio, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:alekseynp.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/portfolio/">Portfolio</a></li>
+  <li><a href="/topics/">Topics</a></li>
+  <li><a href="/blog/archives/">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">How to: Custom Charts With R, OpenOffice Calc, and Inkscape</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-05-19T11:46:31-04:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:46 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In my recent posts analysing the Ontario Public Sector Salary Disclosure, I produced several visuals and I thought I would share how I did it. Custom, high quality, effective, professional, clean, stylish visuals can be difficult to wrestle out of standard analytical software, so here&rsquo;s some guidance on how-to.</p>
+
+<table width="500" ><tr >
+<td style="vertical-align:top;" >
+[![pathologistsovertime](http://54.214.234.254/wp-content/uploads/2013/05/pathologistsovertime.png)](http://54.214.234.254/wp-content/uploads/2013/05/pathologistsovertime.png)
+
+</td>
+<td style="vertical-align:top;" >
+[![top4000_raise_2012](http://54.214.234.254/wp-content/uploads/2013/05/top4000_raise_2012.png)](http://54.214.234.254/wp-content/uploads/2013/05/top4000_raise_2012.png)
+
+</td>
+<td style="vertical-align:top;" >
+[![graphv2](http://54.214.234.254/wp-content/uploads/2013/04/graphv2.png)](http://54.214.234.254/wp-content/uploads/2013/04/graphv2.png)
+
+</td></tr></table>
+
+
+<p>I used all open source tools:</p>
+
+<ul>
+<li><p><a href="http://www.r-project.org/">R</a> – Open source statistical analysis and charting software</p></li>
+<li><p><a href="www.openoffice.org">OpenOffice Calc</a> – Open source alternative to Excel</p></li>
+<li><p><a href="inkscape.org">Inkscape</a> – Open source alternative to Adobe Illustrator</p></li>
+</ul>
+
+
+<p>The process was:</p>
+
+<ol>
+<li><p> Data Gathering and Analysis – a deep topic for another post</p></li>
+<li><p> CSV as a bridge between analysis tools and charting tools</p></li>
+<li><p> R or Calc to generate base chart</p></li>
+<li><p> Inkscape to clean up</p></li>
+</ol>
+
+
+<p><strong>Charts with R and Inkscape</strong></p>
+
+<p><strong>Chart 1: Average Pathologist Salary by List Ranking</strong></p>
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/pathologistsovertime.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/pathologistsovertime.png" alt="pathologistsovertime" /></a></p>
+
+<ol>
+<li><p>Data Gathering and Analysis – was an extensive task undertaken with C# and a topic for another post</p></li>
+<li><p>CSV - In order to bridge from the analysis tool to the charting application &reg;, I used a simple flat file. If the analysis were done in R, this would obviously not be necessary.</p></li>
+</ol>
+
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/csv_image.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/csv_image.png" alt="csv_image" /></a></p>
+
+<ol>
+<li><p>R - Load the CSV into R and produce the base chart with the following code. See in-line comments for detail on how it works.</p>
+
+<p> <span style="color: #666666; font-style: italic;"># Clear all existing variables from memory</span>
+ <a href="http://inside-r.org/r-doc/base/rm"><span style="color: #003399; font-weight: bold;">rm</span></a><span style="color: #009900;">(</span><a href="http://inside-r.org/r-doc/base/list"><span style="color: #003399; font-weight: bold;">list</span></a>=<a href="http://inside-r.org/r-doc/base/ls"><span style="color: #003399; font-weight: bold;">ls</span></a><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># Set working directory for the csv file</span>
+ <a href="http://inside-r.org/r-doc/base/setwd"><span style="color: #003399; font-weight: bold;">setwd</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">&ldquo;C:<span style="color: #000099; font-weight: bold;">\</span>Users<span style="color: #000099; font-weight: bold;">\</span>Aleksey<span style="color: #000099; font-weight: bold;">\</span>Documents<span style="color: #000099; font-weight: bold;">\</span>Data Journalism<span style="color: #000099; font-weight: bold;">\</span>c#<span style="color: #000099; font-weight: bold;">\</span>salaryDisclosure&rdquo;</span><span style="color: #009900;">)</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># load the csv file</span>
+ <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a> <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">&ldquo;rankRaiseAalysis.csv&rdquo;</span><span style="color: #339933;">,</span> header=<span style="color: #000000; font-weight: bold;">TRUE</span><span style="color: #339933;">,</span> sep=<span style="color: #0000ff;">&ldquo;,&rdquo;</span><span style="color: #339933;">,</span> as.is=<span style="color: #000000; font-weight: bold;">TRUE</span><span style="color: #009900;">)</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># take a subest of the data, only the top some</span>
+ lessData <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a><span style="color: #009900;">[</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">4000</span><span style="color: #339933;">,</span><span style="color: #009900;">]</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># x axis is rank</span>
+ x <span style="">&lt;-</span> lessData<span style="">$</span>rank</p>
+
+<p> <span style="color: #666666; font-style: italic;"># set up the grid for the graphs</span>
+ <span style="color: #666666; font-style: italic;"># mfrom (4,4) defines 4 x 4 grid</span>
+ <span style="color: #666666; font-style: italic;"># mar defines margins, bottom, left, top, right</span>
+ <span style="color: #666666; font-style: italic;"># mgp moves the axis labels around and is currently redundant</span>
+ <a href="http://inside-r.org/r-doc/graphics/par"><span style="color: #003399; font-weight: bold;">par</span></a><span style="color: #009900;">(</span>mfrow = <a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <a href="http://inside-r.org/packages/cran/mAr"><span style="">mar</span></a> = <a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">0.1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0.5</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0.5</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> mgp=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></p>
+
+<p> <span style="color: #000000; font-weight: bold;">for</span> <span style="color: #009900;">(</span>i <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #cc66cc;">1998</span><span style="">:</span><span style="color: #cc66cc;">2013</span><span style="color: #009900;">)</span>
+ <span style="color: #009900;">{</span>
+   <span style="color: #666666; font-style: italic;"># for whatever reason R doesn&rsquo;t do sensible string concatenation</span>
+   <span style="color: #666666; font-style: italic;"># this adds X to i to get the string for fetching the variable from the dataframe</span>
+   y <span style="">&lt;-</span> paste0<span style="color: #009900;">(</span><span style="color: #0000ff;">&ldquo;X&rdquo;</span><span style="color: #339933;">,</span>i<span style="color: #009900;">)</span>
+   <a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">(</span>x<span style="color: #339933;">,</span> lessData<span style="color: #009900;">[</span><span style="color: #339933;">,</span>y<span style="color: #009900;">]</span><span style="">*</span><span style="color: #cc66cc;">100</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># also mutiply by 100 to get % values</span>
+        type=<span style="color: #0000ff;">&ldquo;h&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># histogram</span>
+        ylim=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">20</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># y-axis limits min 0, max 20</span>
+        main=i<span style="">-</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># this is the chart title</span>
+        ylab=<span style="color: #0000ff;">&ldquo;&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no y axis lavels </span>
+        xlab=<span style="color: #0000ff;">&ldquo;&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no x axis labels</span>
+        xaxt=<span style="color: #0000ff;">&ldquo;n&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># suppress x axis</span>
+        yaxt=<span style="color: #0000ff;">&ldquo;n&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># suppress y axis</span>
+        xaxs=<span style="color: #0000ff;">&ldquo;i&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no margin within the plotting frame to the left or right</span>
+        yaxs=<span style="color: #0000ff;">&ldquo;i&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># similarly</span>
+        <a href="http://inside-r.org/r-doc/base/col"><span style="color: #003399; font-weight: bold;">col</span></a>=<span style="color: #0000ff;">&ldquo;#550000&rdquo;</span> <span style="color: #666666; font-style: italic;"># plotting colour</span>
+        <span style="color: #009900;">)</span>
+ <span style="color: #009900;">}</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># for the next plot, we don&rsquo;t want the 4x4 grid, so set it back to 1x1</span>
+ <a href="http://inside-r.org/r-doc/graphics/par"><span style="color: #003399; font-weight: bold;">par</span></a><span style="color: #009900;">(</span>mfrow=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <a href="http://inside-r.org/packages/cran/mAr"><span style="">mar</span></a>=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">3</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> mgp=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">1.5</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0.5</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></p>
+
+<p> <a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">(</span>x<span style="color: #339933;">,</span> lessData<span style="">$</span>X2013<span style="">*</span><span style="color: #cc66cc;">100</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># plot only 2013 in this chart, multiply by 100 to get % values</span>
+      type=<span style="color: #0000ff;">&ldquo;h&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;">#histogram</span>
+      ylim=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">20</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># y-axis goes from 0 to 20</span>
+      ylab=<span style="color: #0000ff;">&ldquo;&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no y axis labels</span>
+      yaxs=<span style="color: #0000ff;">&ldquo;i&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no margin within the plotting frame to the top or bottom</span>
+      yaxt=<span style="color: #0000ff;">&ldquo;n&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># suppress y axis</span>
+      xlim=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4000</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># x-axis goes from 0 to 4000</span>
+      xlab=<span style="color: #0000ff;">&ldquo;&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no x axis labels</span>
+      xaxs=<span style="color: #0000ff;">&ldquo;i&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># no margin within the plotting frame to the left or right</span>
+      xaxt=<span style="color: #0000ff;">&ldquo;n&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># suppress the x-axis</span>
+      main=<span style="color: #0000ff;">&ldquo;Year 2012 % Salary Growth For Top 4000 on Sunshine List&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;">#title</span>
+      <a href="http://inside-r.org/r-doc/base/col"><span style="color: #003399; font-weight: bold;">col</span></a>=<span style="color: #0000ff;">&ldquo;#D45500&rdquo;</span><span style="color: #009900;">)</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># add our own axis title</span>
+ <a href="http://inside-r.org/r-doc/graphics/title"><span style="color: #003399; font-weight: bold;">title</span></a><span style="color: #009900;">(</span>xlab=<span style="color: #0000ff;">&ldquo;Rank&rdquo;</span><span style="color: #339933;">,</span>
+       cex.lab = <span style="color: #cc66cc;">1</span><span style="color: #009900;">)</span> <span style="color: #666666; font-style: italic;"># size</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># add a custom x-axis</span>
+ <a href="http://inside-r.org/r-doc/graphics/axis"><span style="color: #003399; font-weight: bold;">axis</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># 1 = at the bottom</span>
+      at=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1000</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">2000</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">3000</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4000</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># vector of value locations for the ticks</span>
+      <a href="http://inside-r.org/r-doc/base/labels"><span style="color: #003399; font-weight: bold;">labels</span></a>=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1000</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">2000</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">3000</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4000</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span> <span style="color: #666666; font-style: italic;"># vector of labels for those ticks</span></p>
+
+<p> <span style="color: #666666; font-style: italic;"># add a custom y-axis</span>
+ <a href="http://inside-r.org/r-doc/graphics/axis"><span style="color: #003399; font-weight: bold;">axis</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># 2 = y axis</span>
+      at=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">20</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># vector of value ocations for the ticks</span>
+      <a href="http://inside-r.org/r-doc/base/labels"><span style="color: #003399; font-weight: bold;">labels</span></a>=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">&ldquo;0&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">&ldquo;10&rdquo;</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">&ldquo;20&rdquo;</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #666666; font-style: italic;"># vector of labels for those ticks</span>
+      cex.lab=<span style="color: #cc66cc;">0.5</span><span style="color: #009900;">)</span> <span style="color: #666666; font-style: italic;"># size</span></p></li>
+</ol>
+
+
+<p><a href="http://www.inside-r.org/pretty-r">Created by Pretty R at inside-R.org</a></p>
+
+<p>The following chart is generated by R and can be exported to SVG for loading into Inkscape.</p>
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/Rplot.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/Rplot.png" alt="Rplot" /></a></p>
+
+<ol>
+<li>Inkscape</li>
+</ol>
+
+
+<p>Open the file in Inkscape, ungroup the elements and start cleaning:</p>
+
+<ul>
+<li><p>Colourise</p></li>
+<li><p>Add legends and labels</p></li>
+<li><p>Removal of excess ink for a cleaner look</p>
+
+<ul>
+<li><p>No Y or X axis- lines, these can be visually implied by the ticks</p></li>
+<li><p>No plotting area border, again visually implied by the other elements</p></li>
+</ul>
+</li>
+<li><p>Better Y and X axis ticks and labels</p></li>
+<li><p>Required extensive use of the object align and distribute features</p></li>
+</ul>
+
+
+<p><strong>Chart 2 – Salary Growth at top of “Sunshine List”</strong></p>
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/top4000_raise_2012.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/top4000_raise_2012.png" alt="top4000_raise_2012" /></a></p>
+
+<ol>
+<li><p>Data Gathering and Analysis – was an extensive task undertaken with C# and a topic for another post</p></li>
+<li><p>CSV - In order to bridge from the analysis tool to the charting application &reg;, I used a simple flat file. If the analysis were done in R, this would obviously not be necessary.</p></li>
+</ol>
+
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/csv_image2.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/csv_image2.png" alt="csv_image2" /></a></p>
+
+<ol>
+<li>R</li>
+</ol>
+
+
+<p>Load the CSV into R and produce the base chart with the following code. See in-line comments for detail on how it works.</p>
+
+<pre><code>&lt;span style="color: #666666; font-style: italic;"&gt;# Clear all existing variables from memory&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/rm"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rm&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/list"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;list&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/ls"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;ls&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Set working directory for the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/setwd"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;setwd&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"C:&lt;span style="color: #000099; font-weight: bold;"&gt;\&lt;/span&gt;Users&lt;span style="color: #000099; font-weight: bold;"&gt;\&lt;/span&gt;Aleksey&lt;span style="color: #000099; font-weight: bold;"&gt;\&lt;/span&gt;Documents&lt;span style="color: #000099; font-weight: bold;"&gt;\&lt;/span&gt;Data Viz&lt;span style="color: #000099; font-weight: bold;"&gt;\&lt;/span&gt;blogging&lt;span style="color: #000099; font-weight: bold;"&gt;\&lt;/span&gt;017 - Pathologists follow-up"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# load the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt; &lt;span style=""&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/utils/read.csv"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;read.csv&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"newPathologists.csv"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# csv file&lt;/span&gt;
+                 header=&lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# varaible names are at the top&lt;/span&gt;
+                 sep=&lt;span style="color: #0000ff;"&gt;","&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# it's commas, it's a csv&lt;/span&gt;
+                 as.is=&lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# build a plot with the firs tseries of data against year&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/plot"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;plot&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style=""&gt;$&lt;/span&gt;year&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style=""&gt;$&lt;/span&gt;X1.to.25&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+     type=&lt;span style="color: #0000ff;"&gt;"l"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# makes a line plot&lt;/span&gt;
+     ylim=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;450000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# sets the range for the y axis&lt;/span&gt;
+     xaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# supresses the x-axis for customisation later&lt;/span&gt;
+     lwd=&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# sets the line width&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# build our own custom x axis &lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts it at the bottom&lt;/span&gt;
+     at=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2002&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2007&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2012&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# position for the ticks&lt;/span&gt;
+     &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2002&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2007&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2012&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# labels for those ticks&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# use a for loop for the rest of the data, the other 7 series&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; &lt;span style="color: #009900;"&gt;(&lt;/span&gt;i &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; &lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style=""&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;7&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;{&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# below is my ridiculous solution for string manipulation in R&lt;/span&gt;
+  &lt;span style="color: #666666; font-style: italic;"&gt;# in order to turn 1, 2, 3... into the names of my variables&lt;/span&gt;
+  y &lt;span style=""&gt;&lt;-&lt;/span&gt; paste0&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"X"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;paste0&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style=""&gt;+&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;25&lt;/span&gt;&lt;span style=""&gt;*&lt;/span&gt;i&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;paste0&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;".to."&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;25&lt;/span&gt;&lt;span style=""&gt;+&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;25&lt;/span&gt;&lt;span style=""&gt;*&lt;/span&gt;i&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+  &lt;span style="color: #666666; font-style: italic;"&gt;# the lines command adds lines to an existing plot&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/lines"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;lines&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style=""&gt;$&lt;/span&gt;year&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# x is still year&lt;/span&gt;
+        &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;[&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;y&lt;span style="color: #009900;"&gt;]&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# having built y as a string i.e. "X25.to.50", you can refernce it this way&lt;/span&gt;
+        lwd=&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style=""&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style=""&gt;*&lt;/span&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;i&lt;span style=""&gt;/&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;7&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# a little function for line width that makes later series thinner&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;}&lt;/span&gt;
+</code></pre>
+
+<p><a href="http://www.inside-r.org/pretty-r">Created by Pretty R at inside-R.org</a></p>
+
+<p>The following two charts are generated by R and can be exported to SVG for loading into Inkscape.</p>
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/rankraise-part1.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/rankraise-part1.png" alt="rankraise part1" /></a></p>
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/05/rankraise-part2.png"><img src="http://54.214.234.254/wp-content/uploads/2013/05/rankraise-part2.png" alt="rankraise part2" /></a></p>
+
+<ol>
+<li><p>Inkscape</p></li>
+<li><p>Open the file in Inkscape, ungroup the elements and start cleaning:</p></li>
+<li><p>Customise colours</p></li>
+<li><p>Better titles</p></li>
+<li><p>Grey-out borders and labels to reduce chart clutter</p></li>
+</ol>
+
+
+<p><strong>Chart with OpenOffice Calc and Inkscape</strong></p>
+
+<p><strong>Chart 3 – Ontario “Sunshine List” Salary Growth</strong></p>
+
+<p><a href="http://54.214.234.254/wp-content/uploads/2013/04/graphv2.png"><img src="http://54.214.234.254/wp-content/uploads/2013/04/graphv2.png" alt="graphv2" /></a></p>
+
+<ol>
+<li><p>Data Gathering and Analysis – was an extensive task undertaken with C# and a topic for another post</p></li>
+<li><p>CSV</p></li>
+</ol>
+
+
+<p>In order to bridge from the analysis tool to the charting application &reg;, I used a simple flat file. If the analysis were done in R, this would obviously not be necessary.</p>
+
+<ol>
+<li>OpenOffice Calc</li>
+</ol>
+
+
+<p>Load the CSV into Calc. Create the three bar charts.</p>
+
+<ol>
+<li><p>Inkscape</p></li>
+<li><p>Copy and paste from OpenOffice Calc into Inkscape.</p></li>
+<li><p>Tear up everything, keeping only the bars.</p></li>
+<li><p>Custom labelling, lines, row shading, etc.</p></li>
+<li><p>Extensive use of align and distribute features.</p></li>
+</ol>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    admin
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-05-19T11:46:31-04:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:46 am</span></time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/how-to/'>how to</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://alekseynp.github.io/blog/2013/05/19/how-to-custom-charts-with-r-openoffice-calc-and-inkscape/" data-via="" data-counturl="http://alekseynp.github.io/blog/2013/05/19/how-to-custom-charts-with-r-openoffice-calc-and-inkscape/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/06/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list/" title="Previous Post: Pathologists follow-up, data from 1996 to 2013 from Ontario "Sunshine List"">&laquo; Pathologists follow-up, data from 1996 to 2013 from Ontario &#8220;Sunshine List&#8221;</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/" title="Next Post: Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure">Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aleksey Nozdryn-Plotnicki -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

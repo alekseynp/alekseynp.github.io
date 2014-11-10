@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Aleksey Nozdryn-Plotnicki</title>
+  <meta name="author" content="Aleksey Nozdryn-Plotnicki">
+
+  
+  <meta name="description" content="In the 2012-13 regular season, tens of thousands of shots were taken. How can we visualize these in a useful manner? What is the average location of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alekseynp.github.io/posts/3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Aleksey Nozdryn-Plotnicki" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Aleksey Nozdryn-Plotnicki</a></h1>
+  
+    <h2>blog, portfolio, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:alekseynp.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/portfolio/">Portfolio</a></li>
+  <li><a href="/topics/">Topics</a></li>
+  <li><a href="/blog/archives/">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">Average Made Shot Location - NBA Regular Season 2012-13</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-10-13T15:14:35-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>3:14 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://thinkdatavis.com/wp-content/uploads/2013/10/final.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/final.png" alt="final" /></a></p>
+
+<p>In the 2012-13 regular season, tens of thousands of shots were taken. How can we visualize these in a useful manner? What is the average location of successful shot attempts? How do the top 50 players compare?</p>
+
+<p>Note: In terms of magnitude, the points above fall roughly within the key.</p>
+
+<p>Interesting observations:</p>
+
+<ul>
+<li><p>Outliers or rather, those players who are the most different:</p>
+
+<ul>
+<li><p>Omer Asik and Dwight Howard very close to the basket</p></li>
+<li><p>Stephen Curry and Jarrett Jack very far from the basket</p></li>
+<li><p>Kevin Martin way out to the left</p></li>
+</ul>
+</li>
+<li><p>Right-hand bias. The majority of players are making shots on average from the right-hand side of the court</p></li>
+<li><p>Trend. Notice that the dots seem to form a line.  The majority of the players are on the right-hand side and as you move further from the basket, they also move further right. This may reveal something fundamental about the game, that there is some sort of ideal-angle to be shooting from. Note that the points on the left-hand side may have a similar trend, but it&rsquo;s not as strong.</p></li>
+</ul>
+
+
+<p>Know something about basketball? What insights do you get from this chart?</p>
+
+<p>More about this from a data visualization perspective in another post.</p>
+
+<p>See also my work on the average passing direction in the English Premier League (Football (Soccer)):</p>
+
+<p><a href="http://thinkdatavis.com/portfolio/mcfc-opta-passing-permier-league-2011-12.html"><img src="http://thinkdatavis.com/wp-content/uploads/2012/08/passingDirection1.png" alt="passingDirection" /></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/01/venezuelan-bat-pie/">Venezuelan Bat Pie</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-10-01T00:59:14-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2013</span></span> <span class='time'>12:59 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Pointing out failures of the Venezuelan government can be a little too easy at times.</p>
+
+<p>Today, points for creativity, but the 3-dimensional Venezuelan pie is an absolute technical failure.</p>
+
+<p>Case in point, compare the yellow 12% slice to the 25% and 48% slices. The reader has no chance to use either area or angles to compare the data values, and are left simply to read the values and ignore the visual aid.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/10/DSC_8769.jpg"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/DSC_8769-1024x685.jpg" alt="DSC_8769" /></a></p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/10/DSC_8768.jpg"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/DSC_8768-685x1024.jpg" alt="DSC_8768" /></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/29/which-countries-are-successfully-requesting-data-from-facebook/">Which Countries Are Successfully Requesting Data From Facebook?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-29T11:33:42-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:33 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/facebook_requests_v1_publish.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/facebook_requests_v1_publish.png" alt="facebook_requests_v1_publish" /></a></p>
+
+<p>Recently <a href="http://newsroom.fb.com/News/699/Global-Government-Requests-Report">Facebook published a report</a> covering the first 6 months of 2013, disclosing which countries have made data requests from Facebook, and to what proportion of requests did Facebook respond with at least some data. &ldquo;Transparency and trust are core values at Facebook.&rdquo; And good on them for at least trying not to be evil. Unfortunately, in this case &ldquo;transparency&rdquo; has amounted to a single HTML table with 71 rows of data. Given the enormous audience for this information, perhaps some data visualisation would have been appropriate. After all, what is &ldquo;transparency&rdquo; if people can&rsquo;t really &ldquo;see&rdquo; the data?</p>
+
+<p><strong>Proportionality - Requests vs. Facebook Population</strong></p>
+
+<p>I was going to combine the requests data with Facebook populations, but it <a href="http://www.motherjones.com/kevin-drum/2013/08/chart-day-which-countries-snoop-facebook-users-most">looks like this has already been done</a>. This is a classic example of the importance of relative ratios in data reporting and journalism. The result is also important given the position of Germany in the current debate on web privacy. I encourage you to take a look <a href="http://www.motherjones.com/kevin-drum/2013/08/chart-day-which-countries-snoop-facebook-users-most">here</a>.</p>
+
+<p><strong>Successful Requests</strong></p>
+
+<p>Facebook tells us that it is battling hard against any and all requests, and that it only complies with the strict letter of the law. Still it would be interesting to see which countries are more successful than others. We could do this simply by looking at the success ratio in the report, but plotting it against number of requests adds an interesting dimension.</p>
+
+<p>Without being an expert in online data privacy and international law, it&rsquo;s interesting to note a few things:</p>
+
+<ul>
+<li><p>In the bottom left, countries who have made few requests with very little success</p></li>
+<li><p>In the top-right, countries who have made a lot of requests with good success</p>
+
+<ul>
+<li><p>United States, United Kingdom, and Australia leading the pack</p></li>
+<li><p>Canada not together with those nations above</p></li>
+<li><p>Italy, France, Germany, Spain, Portugal clustered - Western Schengen</p></li>
+<li><p>Switzerland and Austria with much lower success rates than those nations above</p></li>
+</ul>
+</li>
+<li><p>Poland a proliferate requester with remarkably little success</p></li>
+</ul>
+
+
+<p><strong>Meta</strong></p>
+
+<p>Logarithmic scales are probably not the best practice in data journalism, but it was worth it in order to spread out the dots and see the different countries.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net/">How to Make a Heat Map With Hexagons, D3.js, hexbins.js, Open Street Map, Inkscape, and Paint.NET</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-26T17:55:06-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>5:55 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In this post I will be showing how I made my map for the post, <a href="http://thinkdatavis.com/2013/08/17/average-age-of-brooklyns-buildings-mapped/">Average age of Brooklyn&rsquo;s buildings mapped</a>.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4-150x150.png" alt="bk_r5_version4" /></a></p>
+
+<p>I did it with:</p>
+
+<ul>
+<li><p>Completely open source tools</p></li>
+<li><p>D3.js and hexbins.js to render in Firefox</p></li>
+<li><p>Inkscape and Paint.NET for graphical editing</p></li>
+<li><p>Open Street Map for the basemap</p></li>
+</ul>
+
+
+<p><strong>Overall Technique</strong></p>
+
+<p>The overall technique is based on using D3.js offline in the browser on a one-off basis to create a static visual that you will use elsewhere. I outline the technique here in my post, <a href="http://thinkdatavis.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
+
+<p><strong>Get Data</strong></p>
+
+<p>You can get the CSV I used <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml">here</a>. The hexbins.js doesn&rsquo;t do so well with missing values, so I cleaned out all of the records with missing values and re-saved the CSV. Additionally I removed most of the columns which are unnecessary and really bulk up the file.</p>
+
+<p><strong>Creating the Heat for the Map</strong></p>
+
+<p>First of all we&rsquo;re going to be using <a href="http://d3js.org/">D3.js</a> along with <a href="https://github.com/indiemaps/hexbin-js">hexbins.js</a>. You can read a lot about hexbins.js <a href="http://indiemaps.com/blog/2011/10/hexbins/">here</a>.</p>
+
+<pre><code>&lt;code&gt;&lt;code&gt;&lt;span style="font-family: Consolas, Monaco, monospace;"&gt;&lt;span style="line-height: 18px;"&gt;&lt;script type="text/javascript" src="d3.v3.js"&gt;&lt;/script&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;script src="hexbin.js"&gt;&lt;/script&gt;
+&lt;/code&gt;
+</code></pre>
+
+<p>Using D3.js as you normally would, and I&rsquo;m not going to give a complete tutorial on that here&hellip;</p>
+
+<p>The full code listing is at the bottom of this post.</p>
+
+<p>First of all, add an SVG to the document. This is probably not the best way to manage widths, margins, etc., but remember this only has to work once and well enough, so elegance of code is not important. Below we have a chart that will be 1100 x 1100 with 50 padding around the outside.</p>
+
+<pre><code>&lt;code&gt;var chartHeight = 1000;
+var chartWidth = 1000;
+
+var svg = d3.select("#chart").append("svg")
+  .attr("height", chartHeight+100)
+  .attr("width", chartWidth+100)
+  .append("g")
+    .attr("transform", "translate(50,50)");
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we create two scales to translate the XCoord and YCoord from the Brooklyn data into coordinates in our chart. We are translating 973045 to 0 and 1024202 to chartWidth which is 1000 and using a linear interpolation for x. Similarly for y. Note that this is possibly a HUGE MISTAKE when it comes to dealing with maps. If you&rsquo;re going to work with maps, then you may have to learn about projections. The fundamental thing here is that translating the 3D points on the surface of the earth to 2D points on the surface of a computer screen is not at all straightforward, and you will always have to use a projection of some sort. Here I am using a linear projection which can be fine, but if I combine this later with a basemap that isn&rsquo;t on a linear projection, big, visible errors could be introduced. In this case, the basemap is small enough that those errors aren&rsquo;t big and aren&rsquo;t visible, so it&rsquo;s not a big deal.</p>
+
+<pre><code>&lt;code&gt;var x = d3.scale.linear()
+  .range([0, chartWidth])
+  .domain([973045,1024202]);
+
+var y = d3.scale.linear()
+  .domain([146940, 208432])
+  .range([chartHeight, 0]);
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we create the scale that we will be using to create the &ldquo;heat&rdquo; in the map. We will use this to control the opacity.  Here we are translating 1870 to 0 opacity and 2013 to 1.</p>
+
+<pre><code>&lt;code&gt;  var opacity = d3.scale.linear()
+    .domain([1870, 2013])
+    .range([0,1]);    
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we use D3 to load the CSV data as usual. The code that follows later comes from the ellipses below.</p>
+
+<pre><code>&lt;code&gt;d3.csv("bk-xybuild-nomissing.csv",function(data) {
+...
+});
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we use hexbins.js for the first time. We create a new hexbin that is 1000 x 1000 where the hexagons have a &ldquo;radius&rdquo; of 30. We also teach the hexbin how to retrieve the x and y to use when we pass it the data. In this case we will give it values converted by the scales x() and y() that we created above that come from the CSV data.</p>
+
+<pre><code>&lt;code&gt;  var hexbin = d3.hexbin()
+    .size([chartWidth, chartHeight])
+    .radius(30)
+    .x(function(d) {return x(d.XCoord);})
+    .y(function(d) {return y(d.YCoord);});
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we run the hexbin algorithm on our data. This will return an object that where every data point has been assigned to a hexagon.</p>
+
+<pre><code>&lt;code&gt;  hexBinsData = hexbin(data);    
+&lt;/code&gt;
+</code></pre>
+
+<p>Now we create a special function that we will use to calculate the average for each hexagon. It takes in d which is the array of data points assigned to the hexagon, and calculated the average of YearBuilt for that hexagon.</p>
+
+<pre><code>&lt;code&gt;  var averageFunction = function(d) {
+    var sum = 0;
+    for(var i = 0; i &lt; d.length; i++)
+    {
+      sum += +d[i].YearBuilt;
+    }
+    return sum/d.length;
+  };
+&lt;/code&gt;
+</code></pre>
+
+<p>Finally we do the very normal D3 thing of binding the hexBinsData to hexagon paths in the SVG. We give them a class of hexagon, a path as defined by hexbin.hexagon(), a transform to translate the hexagon by it&rsquo;s x and y coordinate, and a fill colour. Finally we also change the fill-opacity. We use the averageFunction to calculate the average YearBuilt for the hexagon, and then we convert it using our opacity scale to a value between 0 and 1.</p>
+
+<pre><code>&lt;code&gt;  svg.selectAll(".hexagon")
+    .data(hexBinsData).enter()
+    .append("path")
+      .attr("class", "hexagon")
+      .attr("d", hexbin.hexagon())
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .style("fill", "#0000FF")
+      .style("fill-opacity", function(d) { return opacity(averageFunction(d)); });
+&lt;/code&gt;
+</code></pre>
+
+<p>The result should look something like this:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400-150x150.png" alt="radius_5_400" /></a></p>
+
+<p><strong>Extract SVG from the Browser</strong></p>
+
+<p>Use Firefox to copy and paste the SVG that is generated out of the browser, into a text editor, and save it off as an SVG file. I explain more here: <a href="http://thinkdatavis.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
+
+<p><strong>Get a Basemap from Open Street Map</strong></p>
+
+<p>Open Street Map is great. If you aren&rsquo;t aware of it, then you should be. I tell people it&rsquo;s like &ldquo;Wikipedia, but for maps&rdquo; which is accurate enough. I&rsquo;ve used Open Street Map to navigate 20,000 km of driving through 7 countries in South America at the time of writing this post, so I can say it&rsquo;s pretty good.</p>
+
+<p>With the heat we created above, we want to layer this on top of a map of Brooklyn.</p>
+
+<p>Go to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org</a> and click on the Share icon on the right-hand side.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/share.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/share.png" alt="share" /></a></p>
+
+<p>You will see a menu that allows you to export PNGs from Open Street Map. There are some practical limits to how much detail you are allowed to get based on how large an area you select, but in any case it should be sufficient to make a large-ish map. If not, maybe you&rsquo;ll have to piece together some pieces manually.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/image.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/image.png" alt="image" /></a></p>
+
+<p><strong>Convert SVG to PNG</strong></p>
+
+<p>Since our OSM data is in PNG format, we&rsquo;ll want our heat to be as well. We could operate in SVG, but that can be very computer intensive with map data. Open the SVG in Inkscape and convert to a PNG.</p>
+
+<p><strong>Combine with Paint.NET</strong></p>
+
+<p>Not much to say here. I took the PNG from OSM, I black-and-white-ed it, then pasted in a layer on top the heat and adjusted it&rsquo;s position and size until it matched the data below. In this instance I was able to line up the water and green space with the data, as there was no BuildYear data for these places. For other data, lining up with the map would be more complicated.</p>
+
+<p><strong>Done!</strong></p>
+
+<p>264,534 data points aggregated onto one heatmap of Brooklyn all using free open source tools and nothing specialized for map-making</p>
+
+<p><strong>Full JavaScript code listing:</strong></p>
+
+<pre><code>&lt;code&gt;var chartHeight = 1000;
+var chartWidth = 1000;
+
+var svg = d3.select("#chart").append("svg")
+  .attr("height", chartHeight+100)
+  .attr("width", chartWidth+100)
+  .append("g")
+    .attr("transform", "translate(50,50)");
+
+var x = d3.scale.linear()
+  .range([0, chartWidth])
+  .domain([973045,1024202]);
+
+var y = d3.scale.linear()
+  .domain([146940, 208432])
+  .range([chartHeight, 0]);
+
+d3.csv("bk-xybuild-nomissing.csv",function(data) {
+  var hexbin = d3.hexbin()
+    .size([chartWidth, chartHeight])
+    .radius(30)
+  .x(function(d) {return x(d.XCoord);})
+  .y(function(d) {return y(d.YCoord);});
+
+  var opacity = d3.scale.linear()
+    .domain([1870, 2013])
+    .range([0,1]);  
+
+  hexBinsData = hexbin(data);  
+
+  var averageFunction = function(d) {
+    var sum = 0;
+  for(var i = 0; i &lt; d.length; i++)
+  {
+    sum += +d[i].YearBuilt;
+  }
+  return sum/d.length;
+  };
+
+  svg.selectAll(".hexagon")
+    .data(hexBinsData).enter()
+  .append("path")
+      .attr("class", "hexagon")
+      .attr("d", hexbin.hexagon())
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+    .style("fill", "#0000FF")
+      .style("fill-opacity", function(d) { return opacity(averageFunction(d)); });
+});
+&lt;/code&gt;
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/20/small-multiples-of-pies-from-the-economist/">Small Multiples of Pies From the Economist?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-20T12:54:37-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:54 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Really guys?</p>
+
+<p><a href="http://www.economist.com/blogs/graphicdetail/2013/08/daily-chart-12?fsrc=rss">http://www.economist.com/blogs/graphicdetail/2013/08/daily-chart-12?fsrc=rss</a></p>
+
+<p>Pie charts can be used to show a part-to-whole relationship with a relatively small number of parts. That is, if you have something that breaks down into 5 or so parts, then you can use a pie to show it. If you have 10 decades and they are ordinal, that is they have a natural ordering to them, then you might be tempted to do what The Economist did below&hellip; But don&rsquo;t!</p>
+
+<p>All you have to do is try and use the chart at the top to answer simple questions like: Which is the most popular? More difficult, which is second most? How much more or less popular are the 50s vs the 80s?</p>
+
+<p><a href="http://www.economist.com/blogs/graphicdetail/2013/08/daily-chart-12?fsrc=rss"><img src="http://cdn.static-economist.com/sites/default/files/imagecache/595-width-retina/20130824_GDC239_1190.png" alt="" /></a></p>
+
+<p>Obviously I&rsquo;m going to recommend a bar chart instead, which would have a different aspect ratio and might not work well in the space allowed by the graphic. A good alternative to a bar chart would be to put in a line in each of the charts representing the average result. I&rsquo;ve sketched it below:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/economist_better.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/economist_better-973x1024.png" alt="economist_better" /></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on Your Desktop to Publish Static Visualisations</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-18T20:03:48-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>8:03 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>D3.js is a great tool for creating &ldquo;Data Drive Documents&rdquo;. As a JavaScript library, its natural primary use is on the web, rendering visualizations in the browser. It can also, however, be used offline on your PC to generate data driven content on a one-off basis. For someone familiar with D3, it can be a rapid and powerful way of scripting data into visual elements for use in a project that will not necessarily be published live and interactive on the web. In this post I will outline my simple method for using D3.js to script elements in static work.</p>
+
+<p><strong>Use D3.js to render content in the browser</strong></p>
+
+<p>Use D3 as you normally would to load CSVs and bind data to document elements. It doesn&rsquo;t have to be polished, properly wired together, or compatible with various browsers. This only has to work once, well enough, and on your machine in order to move it on to the next step in your process. It can get whatever polish it needs later in your graphical editing programs. JavaScript in the browser is your chance to do anything in a scripted way that would otherwise be a huge pain. The truth is, you could create all kinds of data visualisations by hand with an infinite amount of time and patience to calculate values and draw rectangles of exactly the right length and shade. But you don&rsquo;t.</p>
+
+<p>Use Firefox. Like the rest of the world I&rsquo;ve moved on to Chrome, but I still have Firefox installed on my computer for this purpose. I neither know nor need to know the full technical detail on this, but certain security settings to prevent cross site scripting attacks make it difficult to use D3.js to load CSV data locally from your machine in Chrome and Internet Explorer. There ways around this by running a tiny webserver on your desktop, but I find the simplest thing is to use Firefox which seems to not be quite so picky about its security on this issue.</p>
+
+<p><strong>Export SVG from the browser</strong></p>
+
+<p>Now that you&rsquo;ve used D3 to render SVG in the browser based on your data, you can reach into that content and extract it and save it off to a file!</p>
+
+<p>Firefox comes with its own inspector, so you don&rsquo;t even have to use Firebug. If you right click on your image and pick Inspect Element, you should gain access to a tree-view of the Document Objecet Model that will allow you to find the code for your svg. It will look like <svg>&hellip;stuffhere&hellip;</svg></p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/innerhtml.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/innerhtml.png" alt="innerhtml" /></a></p>
+
+<p>In this example here, the SVG content we want is &ldquo;<svg height="1100" width="1100" > .. </svg>. All this is just a bunch of text and we want to get it onto the clipboard. The way we do this is to right-click on the node that contains the SVG and choose Copy Inner HTML. In this case that is the <div id="chart" >.</p>
+
+<p>Now that the SVG is on the clipboard, now what? Open up a text editor (maybe Notepad, maybe Notepad++), paste in the text and save it off as a &ldquo;.svg&rdquo; file.</p>
+
+<p><strong>Use Inkscape to access SVG content</strong></p>
+
+<p>****There&rsquo;s not really much more to be said here. If you open up your new SVG file with Inkscape, you&rsquo;ll find it malleable and in your hands like any other graphic. Combine, edit, and label. Publish.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/17/average-age-of-brooklyns-buildings-mapped/">Average Age of Brooklyn&#8217;s Buildings Mapped</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-17T00:12:25-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:12 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I saw <a href="http://bklynr.com/block-by-block-brooklyns-past-and-present/">this</a> recently <a href="http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/">here</a>. It&rsquo;s a map showing the age of Brooklyn&rsquo;s buildings.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/bklynr.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/bklynr.png" alt="bklynr" /></a></p>
+
+<p><strong>What do I get from the map?</strong></p>
+
+<p>Every data point is plotted, so if I were a Brooklyner, I would probably find my street or look up my favourite building. For some people this seems to have reduced confidence in the data quality. Having only ever been half-way across the Brooklyn Bridge, instead I looked at the map to try and find interesting trends. Some are certainly visible, but I found myself wanting a map with some aggregation.</p>
+
+<p><strong>What I tried.</strong></p>
+
+<p>So I made this. Yes, a post will follow on how.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4-923x1024.png" alt="bk_r5_version4" /></a></p>
+
+<p>(click for the huge version)</p>
+
+<p>By showing the average build year for buildings in each hexagon, rather than plotting every single data point, some patterns are more visible. Though I will admit that once you&rsquo;ve seen them in the above map, they are often quite visible in the original.</p>
+
+<p><strong>Hexagon Size</strong></p>
+
+<p>The size or &ldquo;radius&rdquo; of the hexagons is an important parameter of the visualization. As you can see clearly below, our ability to spot patterns of a certain size requires aggregation of a similar size. Compare the first with the last and you&rsquo;ll see.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png" alt="radius_5_400" /></a><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_10_4001.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_10_4001.png" alt="radius_10_400" /></a><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_20_400.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_20_400.png" alt="radius_20_400" /></a><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_30_400.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/radius_30_400.png" alt="radius_30_400" /></a></p>
+
+<p><strong>Aggregation</strong></p>
+
+<p>While my map is not a compelling improvement on the original, I think it is a nice demonstration of the power of aggregation. Data visualizers can be overly focused on plotting the data directly. Analysts, however, know that you can rarely accomplish anything without some good aggregation. This intersection of data viz and analysis is undeniably interesting.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/08/faux-pas-in-white-papers-visier/">Faux Pas in White Papers - Visier</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-08T00:19:26-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:19 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/Gratuitous-pies.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/Gratuitous-pies.png" alt="Gratuitous-pies" /></a>Over at <a href="http://flowingdata.com/2013/08/07/piemaster/">FlowingData</a>, this &ldquo;mutant pie chart&rdquo; was shared as a sinful act in the Data Viz community. It looks very wizzy and innovative, but it breaks nearly every rule in the book:</p>
+
+<ul>
+<li><p>The data does not reflect a part-to-whole relationship which is the entire reason to use a pie chart.</p></li>
+<li><p>Comparisons are very difficult to make. Without looking at the data labels, can you tell me how much larger the first blue pie is compared to the second? This is partly due to the unnecessary 3-d perspective, but again would be difficult had they been 2-d pie slices.</p></li>
+<li><p>If your colours don&rsquo;t mean anything, don&rsquo;t use them</p></li>
+</ul>
+
+
+<p>Nathan wasn&rsquo;t, &ldquo;entirely sure where this came from&rdquo;, and his source, <a href="https://twitter.com/infoholic/status/363555757175734273/photo/1">Steve</a> tells that it is from &#8221;an innovation leader in delivering&hellip;analytics&hellip;&ldquo;.</p>
+
+<p>Well with the power of Google I&rsquo;m prepared to out them&hellip; This is from <a href="http://www.visier.com/">Visier&rsquo;s</a> <a href="http://info.visier.com/workforce-analytics-trends-research-report">2012 Survey of Employers:  Workforce Analytics practices, preferences &amp; plans</a>. In the same report you can find more traditional data viz faux pas like 3-d bar charts and more basic 3-d pie charts.</p>
+
+<p>Move forwards one year and the<a href="http://info.visier.com/2013-workforce-analytics-and-planning-survey-report"> 2013 report is available</a>. More of the same gratuitous, unnecessary, and indeed harmful 3-d perspectives, but also another gem.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/visier.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/visier.png" alt="visier" /></a>So what&rsquo;s going on here? At first glance (the most important glance) it appears that priorities are&hellip; trending&hellip; towards other&hellip;? Not as bad as the pies, but:</p>
+
+<ul>
+<li><p>Why is this a line chart? The categories are the bottom are not ordinal in any way. They are not time. They have no natural ordering. Thus to use a line, and highlight the differences from one to another is not particularly useful.</p></li>
+<li><p>The Y-axis should be flipped. According to the sub-title, low values are for high priorities, so they should be higher on the page to match our instincts.</p></li>
+<li><p>The gradient-filled background is a nice touch. I&rsquo;m not sure if the darker background on the left-hand-side gives &ldquo;Headcount&rdquo; more weight, or if the better contrast with the data ink on the right-hand-side gives &ldquo;Other&rdquo; more weight, but what I do know is that it can&rsquo;t be a good idea and it doesn&rsquo;t make the data any more exciting.</p></li>
+<li><p>Ordering: Given that the categories at the bottom are not ordinal, the order is curious. They are suspiciously almost ordered by data value, but not. They should be ordered highest to lowest.</p></li>
+</ul>
+
+
+<p>And this is the obligatory part of the post where I spent a tiny amount of time redesigning a better version of what I criticized.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/visier2.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/visier2.png" alt="visier2" /></a></p>
+
+<p><strong>What should Visier and companies like it learn from this?</strong></p>
+
+<p>White papers are a channel through which consultancies or other service providers can demonstrate thought leadership, completeness of vision, depth of understanding, experience, competence, etc. It is important that the content of a white paper be good and that it be communicated clearly through well-designed visuals. Additionally, however, as the data visualisation movement gains momentum, it will also be important that your visuals not be poorly enough designed to embarrass you on the global stage that is the internet.</p>
+
+<p>Companies like Visier should consider:</p>
+
+<ul>
+<li><p>Contracting a Data Graphics Editor to clean up publications before they go out. This would neither take a lot of time nor would it be overly costly.</p></li>
+<li><p>Upskilling their existing in-house editing capability with some data visualisation training</p></li>
+</ul>
+
+
+<p>In any case, someone like Aleksey Nozdryn-Plotnicki (me) may be able to provide such a service.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/07/1-year-of-thinkdatavis/">1 Year of thinkDataVis</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-07T06:00:18-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>6:00 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today is the anniversary of thinkDataVis. 365 days ago was:<a href="http://thinkdatavis.com/2012/08/08/hello-world-2/"> It all begins</a>.</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/07/topContent.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/07/topContent.png" alt="topContent" /></a></p>
+
+<p>What do we take away from this? Well my older posts which were primarily projects scored the most pageviews. Time will tell if my how-to posts rise to the top in the second year. Also interesting that my Data Journalism content sees the least traffic, but <a href="http://thinkdatavis.com/2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post/">won me the most recognition</a> outside of the nets.</p>
+
+<ul>
+<li><p>Passing - <a href="http://thinkdatavis.com/2012/10/20/new-project-passing-direction-of-premier-league-football-players/">New Project: Passing Direction of Premier League Football Players</a></p></li>
+<li><p>London Olympics - <a href="http://thinkdatavis.com/2012/08/14/new-project-global-games-regional-sports-london-2012/">New Project: Global Games, Regional Sports – London 2012</a></p></li>
+<li><p>K-Means - <a href="http://thinkdatavis.com/2012/12/18/new-project-k-means-clustering/">New Project: K-means Clustering</a></p></li>
+<li><p>Value for money - <a href="http://thinkdatavis.com/2012/11/04/new-project-english-football-value-for-money/">New Project: English Football Value for Money</a></p></li>
+<li><p>Create Infowheel - <a href="http://thinkdatavis.com/2013/02/25/create-information-wheel/">Create: Information Wheel</a></p></li>
+<li><p>Who won the Olympics - <a href="http://thinkdatavis.com/2012/08/20/new-project-who-won-the-olympics/">New Project: Who Won the Olympics?</a></p></li>
+<li><p>Paid to win - <a href="http://thinkdatavis.com/2012/12/09/new-project-paid-to-win/">New Project: Paid to Win</a></p></li>
+<li><p>Nice boxplots - <a href="http://thinkdatavis.com/2013/06/05/how-to-make-nice-boxplots-with-r/">How to make nice boxplots with R</a></p></li>
+</ul>
+
+
+<p>An interesting development: The defaults in Excel 2013 seem not so bad. The chart above is largely default.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/01/visualising-on-line-conversations-mooc-for-credit-discussion/">Visualising On-line Conversations: MOOC For-credit &#8220;Discussion&#8221;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-01T00:38:45-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2013</span></span> <span class='time'>12:38 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Visualizing discussions is an interesting challenge. In this post I use a simple technique in the context of discussions in an on-line course.</p>
+
+<p>I have been auditing Dr. Anthony C. Robinson&#8217;s Maps and the Geospatial Revolution on <a href="https://www.coursera.org/">Coursera</a>, a MOOC (Massive Open Online Course). 10% of a student&rsquo;s grade for the course comes from the weekly discussion assignments. If a student makes 20 posts within the 5 week course, they will receive full credit. When venturing into the forum for Week 1, I was struck by the low quality of the &ldquo;discussion&rdquo; taking place. It did not seem at all like an exchange of ideas.</p>
+
+<p>My gut told me that the participation credit was driving bad behavior. The data lover in me wanted to prove it with data. The data visualizer wants to see it to believe it.</p>
+
+<p>I found two threads to compare. In the general discussion forum I found a thread, &ldquo;Where are you located?&rdquo; and in the assignment forum I found &ldquo;Where are you from?&rdquo;. More or less the same question (engaging discussions on the topic of identity aside), but with one key difference: the posts in the assignment forum were for credit. Take a look (click for bigger):</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/08/where_r_u_publish1.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/08/where_r_u_publish1-1024x144.png" alt="where_r_u_publish" /></a></p>
+
+<p>Posts go in chronological order from left to right. Every author is a line. An author who posts only once is a dot. An author who posts more than once has his posts connected by a line.</p>
+
+<p>The difference is clear. While this does not constitute proof, it&rsquo;s certainly compelling.</p>
+
+<p>Statistics of note: The general discussion thread has 1.34 posts per author and 96 characters per post, compared to 1.20 posts per author and 81 characters per post in the discussion assignment.</p>
+
+<p><strong>Edit:</strong> I have been corrected. Apparently all posts in all forums count for credit, though this is not entirely clear from the syllabus. The key difference between the two posts remains, but must be restated: Participants in the assignment forum were there primarily for credit, while those in the general forum were there primarily to discuss.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/4">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/2">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aleksey Nozdryn-Plotnicki -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

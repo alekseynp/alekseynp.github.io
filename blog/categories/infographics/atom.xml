@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Infographics | Aleksey Nozdryn-Plotnicki]]></title>
+  <link href="http://alekseynp.github.io/blog/categories/infographics/atom.xml" rel="self"/>
+  <link href="http://alekseynp.github.io/"/>
+  <updated>2014-11-10T03:09:18-05:00</updated>
+  <id>http://alekseynp.github.io/</id>
+  <author>
+    <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Infographic: Thinking of Buying or Selling a Peugeot Partner in Chile?]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/"/>
+    <updated>2013-05-31T21:57:04-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile</id>
+    <content type="html"><![CDATA[<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/06/partner1.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/06/partner1.png" alt="partner" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

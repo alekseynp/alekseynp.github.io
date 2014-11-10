@@ -1,0 +1,236 @@
+	
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>thinkDataVis - Information Tree</title>	
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <script type="text/javascript" src="d3.v2.js"></script>
+	<script type="text/javascript" src="jscolor/jscolor.js"></script>
+	
+	<link rel="stylesheet" href="Reingold_Tilford_Tree.css" type="text/css" />  
+	
+  </head>
+  <body style="margin:0px;">
+
+  <div style="background-color:#eeeeee; line-height:10px; padding:10px; font-size:12px; font-weight:bold;">
+    <table><tr><td style="width:700px"><a style="color:black; text-decoration: none;" href="http://thinkDataVis.com">thinkDataVis.com</a></td>
+	<td>Information Tree</td></tr></table>
+  </div>
+  
+  <div style="margin:5px;">
+  
+<table>
+  <tr>	
+	<td style="width:450px; vertical-align:top;">
+	  <div class="ui">
+	    <center><table style="border-spacing:10px;"><tr><td>
+		  <button onclick="drawVis()" style="line-height:40px; width:80px;">Update</button>
+		</td><td>
+          Make changes below and press update to redraw.
+		</td></tr></table></center>
+	  </div>
+	  
+	  <div class="ui">
+	    <span class="myTitle">Download</span><br><br>
+		<table style="border-spacing:10px; font-size:8px; color:#aaaaaa;">
+	      <tr>
+			<td rowspan=2><a href="#" id="download"><img width=50 style="vertical-align:top; border:0px;" src="my_svg_doc_icon.png"></a></td>
+		    <td><img src="no_Internet_Explorer_9_icon.png" style="vertical-align:middle;"/> Sorry, this doesn't work yet in IE.</td>
+		  </tr><tr>
+		    <td>Note: File will open in the browser. To save to your compuer, use Ctrl+S, File -> Save Page As, or Right-click + Save Page As.<br>How to open SVG files: <a href="http://amaclane.hubpages.com/hub/How-To-Open-An-SVG-File">Using SVG files</a><br>Open Source SVG Editor/Adobe Illustrator Replacement: <a href="http://inkscape.org/">Inkscape</a></td>
+	      </tr>
+	    </table>
+	  </div>
+	    
+	<div class="ui">
+	  <span class="myTitle">Customisation Here</span><br>
+      <br>
+	  Width:
+	  <select id="inputWidth" class="levelProperty">
+	    <option value="300">300</option>
+		<option value="400">400</option>
+		<option value="500">500</option>
+		<option value="600">600</option>
+		<option value="700">700</option>
+		<option value="800" selected="selected">800</option>
+		<option value="900">900</option>
+		<option value="1000">1000</option>
+		<option value="1100">1100</option>
+		<option value="1200">1200</option>
+	  </select><br>
+	  <br>
+	  Outer Padding:
+	  <select id="outerPadding" class="levelProperty">
+	    <option value="30">small</option>
+		<option value="60" selected="selected">medium</option>
+		<option value="90">large</option>
+		<option value="120">huge</option>
+	  </select>
+	</div>
+	
+	<div class="ui">
+	  <span class="myTitle">Rings</span><br><br>
+	  <table style="margin:2px;"><tr><td colspan=2 style="text-align:center;">Level:</td><td><img src="l1.png" class="centeredImage" /></td><td><img src="l2.png" class="centeredImage" /></td><td><img src="l3.png" class="centeredImage"/></td><td><img src="l4.png" class="centeredImage" /></td></tr>
+	  <tr class="levelRow">
+	    <td>Font:</td>
+		<td style="vertical-align:middle"><img src="fontsize.png" class="centeredImage" /></td>
+	  <td><select id="font1" class="levelProperty">
+	    <option value="6">6</option>
+	    <option value="7">7</option>
+	    <option value="8">8</option>
+	    <option value="9">9</option>
+	    <option value="10" selected="selected">10</option>
+	    <option value="11">11</option>
+	    <option value="12">12</option>
+	    <option value="13">13</option>
+	    <option value="14">14</option>
+	    <option value="15">15</option>
+	    <option value="16">16</option>
+	    <option value="17">17</option>
+	    <option value="18">18</option>
+      </select></td>
+	  <td><select id="font2" class="levelProperty">
+	    <option value="6">6</option>
+	    <option value="7">7</option>
+	    <option value="8">8</option>
+	    <option value="9">9</option>
+	    <option value="10" selected="selected">10</option>
+	    <option value="11">11</option>
+	    <option value="12">12</option>
+	    <option value="13">13</option>
+	    <option value="14">14</option>
+	    <option value="15">15</option>
+	    <option value="16">16</option>
+	    <option value="17">17</option>
+	    <option value="18">18</option>
+      </select></td>
+	  <td><select id="font3" class="levelProperty">
+	    <option value="6">6</option>
+	    <option value="7">7</option>
+	    <option value="8">8</option>
+	    <option value="9">9</option>
+	    <option value="10" selected="selected">10</option>
+	    <option value="11">11</option>
+	    <option value="12">12</option>
+	    <option value="13">13</option>
+	    <option value="14">14</option>
+	    <option value="15">15</option>
+	    <option value="16">16</option>
+	    <option value="17">17</option>
+	    <option value="18">18</option>
+      </select></td>
+	  <td><select id="font4" class="levelProperty">
+	    <option value="6">6</option>
+	    <option value="7">7</option>
+	    <option value="8">8</option>
+	    <option value="9">9</option>
+	    <option value="10" selected="selected">10</option>
+	    <option value="11">11</option>
+	    <option value="12">12</option>
+	    <option value="13">13</option>
+	    <option value="14">14</option>
+	    <option value="15">15</option>
+	    <option value="16">16</option>
+	    <option value="17">17</option>
+	    <option value="18">18</option>
+      </select></td>
+	  </tr><tr class="levelRow">
+	  <td>Size:</td>
+	  <td style="vertical-align:middle;"><img src="circle_size.png" class="centeredImage" /></td>
+	  <td><select id="width1" class="levelProperty">
+	    <option value="3">small</option>
+		<option value="4.5" selected="selected">medium</option>
+		<option value="6">large</option>
+		<option value="12">huge</option>
+	  </select></td>
+	  <td><select id="width2" class="levelProperty">
+	    <option value="3">small</option>
+		<option value="4.5" selected="selected">medium</option>
+		<option value="6">large</option>
+		<option value="12">huge</option>
+	  </select></td>
+	  <td><select id="width3" class="levelProperty">
+	    <option value="3">small</option>
+		<option value="4.5" selected="selected">medium</option>
+		<option value="6">large</option>
+		<option value="12">huge</option>
+	  </select></td>
+	  <td><select id="width4" class="levelProperty">
+	    <option value="3">small</option>
+		<option value="4.5" selected="selected">medium</option>
+		<option value="6">large</option>
+		<option value="12">huge</option>
+	  </select></td>
+	  </tr><tr class="levelRow">
+	  <td>Inner Colour</td>
+	  <td style="vertical-align:middle"><img src="circle_inner.png" class="centeredImage" /></td>
+	  <td><input class="color" id="innerColour1" value="ffffff" size="9" /><br></td>
+      <td><input class="color" id="innerColour2" value="ffffff" size="9" /><br></td>
+	  <td><input class="color" id="innerColour3" value="ffffff" size="9" /><br></td>
+	  <td><input class="color" id="innerColour4" value="ffffff" size="9" /><br></td>
+	  </tr><tr class="levelRow">
+	  <td>Outer Colour</td>
+	  <td style="vertical-align:middle"><img src="circle_outer.png" class="centeredImage" /></td>
+	  <td><input class="color" id="outerColour1" value="4682b4" size="9" /><br></td>
+      <td><input class="color" id="outerColour2" value="4682b4" size="9" /><br></td>
+	  <td><input class="color" id="outerColour3" value="4682b4" size="9" /><br></td>
+	  <td><input class="color" id="outerColour4" value="4682b4" size="9" /><br></td>
+	  </tr></table>
+	</div>
+	
+	<div class="ui">
+	  <span class="myTitle">Wheel Text Data</span><br><br>
+	  <center><textarea rows="10" cols="45" id="dataText">
+L1,L2,L3,L4
+One, One.1, One.1.1, One.1.1.1
+One, One.1, One.1.1, One.1.1.2
+One, One.1, One.1.1, One.1.1.3
+One, One.1, One.1.1, One.1.1.4
+One, One.1, One.1.1, One.1.1.5
+One, One.1, One.1.1, One.1.1.6
+One, One.1, One.1.1, One.1.1.7
+One, One.1, One.1.2, One.1.2.1
+One, One.1, One.1.2, One.1.2.2
+One, One.1, One.1.2, One.1.2.3
+One, One.1, One.1.2, One.1.2.4
+One, One.2, One.2.1, One.2.1.1
+One, One.2, One.2.2, One.2.2.1
+Two, Two.1, Two.1.1, Two.1.1.1
+Two, Two.2, Two.2.1, Two.2.1.1
+Two, Two.3, Two.3.1, Two.3.1.1
+Two, Two.3, Two.3.2, Two.3.2.1
+Three, Three.1, Three.1.1, Three.1.1.1
+Three, Three.1, Three.1.1, Three.1.1.2
+Three, Three.1, Three.1.1, Three.1.1.3
+Three, Three.1, Three.1.1, Three.1.1.4
+Three, Three.1, Three.1.1, Three.1.1.5
+Three, Three.1, Three.1.1, Three.1.1.6
+Three, Three.1, Three.1.1, Three.1.1.7
+Three, Three.1, Three.1.1, Three.1.1.8
+Three, Three.1, Three.1.1, Three.1.1.9
+Three, Three.2, Three.2.1, Three.2.1.1
+Three, Three.2, Three.2.1, Three.2.1.2
+Three, Three.2, Three.2.1, Three.2.1.3
+Three, Three.2, Three.2.1, Three.2.1.4
+Three, Three.2, Three.2.1, Three.2.1.5
+Three, Three.2, Three.2.1, Three.2.1.6
+Four, Four.1, Four.1.1, Four.1.1.1
+Four, Four.2, Four.2.1, Four.2.1.1
+</textarea></center>
+  </div>
+  </td>
+  
+    <td style="margin:0px; padding:0px; vertical-align:top;">
+      <div id='chart' class="ui"></div>
+    </td>
+  </tr>
+</table>
+
+<script src="Reingold_Tilford_Tree.js" type='text/javascript'></script>
+  
+  </div>
+  <div style="background-color:#eeeeee; line-height:10px; padding:10px; text-align:right;">
+    &#169 Aleksey Nozdryn-Plotnicki 2013
+  </div>
+  </body>
+</html>
