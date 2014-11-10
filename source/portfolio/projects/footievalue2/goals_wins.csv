@@ -1,0 +1,155 @@
+League,Club,cheapestMatchDayTicket,goalsPerGame,winsPerGame
+English Premier,Arsenal,26,1.50,0.40
+English Premier,Aston Villa,20,0.78,0.11
+English Premier,Chelsea,41,2.33,0.78
+English Premier,Everton,31,1.89,0.44
+English Premier,Fulham,20,2.11,0.44
+English Premier,Liverpool,39,1.33,0.22
+English Premier,Man City,26,2.00,0.67
+English Premier,Man Utd,30,2.60,0.80
+English Premier,Newcastle,15,1.22,0.33
+English Premier,Norwich,30,0.78,0.11
+English Premier,QPR,25,0.78,0.00
+English Premier,Reading,37,1.38,0.00
+English Premier,Southampton,28,1.56,0.11
+English Premier,Stoke,25,0.89,0.11
+English Premier,Sunderland,25,0.75,0.13
+English Premier,Swansea,35,1.56,0.33
+English Premier,Tottenham,32,1.89,0.56
+English Premier,West Brom,25,1.44,0.44
+English Premier,West Ham,36,1.33,0.44
+English Premier,Wigan,20,1.11,0.22
+English Championship,Barnsley,25,1.46,0.31
+English Championship,Birmingham City,21,1.15,0.31
+English Championship,Blackburn Rovers,15,1.46,0.46
+English Championship,Blackpool,24,1.69,0.38
+English Championship,Bolton Wanderers,22,1.46,0.31
+English Championship,Brighton & Hove Albion,28,1.23,0.38
+English Championship,Bristol City,25,1.85,0.23
+English Championship,Burnley,22,2.00,0.38
+English Championship,Charlton Athletic,20,1.08,0.23
+English Championship,Crystal Palace,20,1.77,0.54
+English Championship,Huddersfield Town,10,1.38,0.46
+English Championship,Hull City,20,1.54,0.54
+English Championship,Ipswich Town,22.5,0.77,0.08
+English Championship,Leeds United,20,1.54,0.38
+English Championship,Leicester City,15,1.54,0.62
+English Championship,Middlesbrough,24,1.62,0.62
+English Championship,Millwall,26,1.77,0.31
+English Championship,Nottingham Forest,20,1.54,0.38
+English Championship,Peterborough United,15,1.23,0.31
+English Championship,Sheffield Wednesday,24,1.38,0.23
+English Championship,Watford,26,1.31,0.38
+English Championship,Wolverhampton Wanderers,24,1.38,0.46
+English League One,Bournemouth,18,1.20,0.10
+English League One,Brentford,21,1.30,0.30
+English League One,Bury,17,0.89,0.00
+English League One,Carlisle United,19,1.22,0.33
+English League One,Colchester United,18,0.90,0.20
+English League One,Coventry City,18,0.90,0.10
+English League One,Crawley Town,17,1.50,0.60
+English League One,Crewe Alexandra,20,0.80,0.20
+English League One,Doncaster Rovers,15,1.33,0.44
+English League One,Hartlepool United,20,0.89,0.11
+English League One,Leyton Orient,23,1.11,0.44
+English League One,Milton Keynes Dons,20,1.30,0.50
+English League One,Notts County,22,1.70,0.50
+English League One,Oldham Athletic,19,0.78,0.22
+English League One,Portsmouth,20,1.40,0.30
+English League One,Preston North End,20,2.00,0.50
+English League One,Scunthorpe United,17,0.70,0.20
+English League One,Sheffield United,10,1.40,0.40
+English League One,Shrewsbury Town,21,1.10,0.20
+English League One,Stevenage,17,1.60,0.50
+English League One,Swindon Town,19,1.40,0.50
+English League One,Tranmere Rovers,14.5,2.50,0.70
+English League One,Walsall,17.5,1.40,0.50
+English League One,Yeovil Town,17,1.40,0.30
+English League Two,Accrington Stanley,17,1.56,0.56
+English League Two,AFC Wimbledon,15,1.10,0.20
+English League Two,Aldershot Town,17,1.00,0.20
+English League Two,Barnet,14,0.50,0.00
+English League Two,Bradford City,20,1.60,0.50
+English League Two,Bristol Rovers,18,0.75,0.13
+English League Two,Burton Albion,14,1.90,0.50
+English League Two,Cheltenham Town,15,1.22,0.44
+English League Two,Chesterfield,18,1.30,0.20
+English League Two,Dagenham & Redbridge,17,1.10,0.10
+English League Two,Exeter City,17,2.00,0.60
+English League Two,Fleetwood Town,15,1.60,0.60
+English League Two,Gillingham,21,2.00,0.80
+English League Two,Morecambe,14,1.40,0.30
+English League Two,Northampton Town,19,1.40,0.30
+English League Two,Oxford United,19.5,1.40,0.40
+English League Two,Plymouth Argyle,20,1.10,0.20
+English League Two,Port Vale,20,2.30,0.60
+English League Two,Rochdale,15,1.40,0.40
+English League Two,Rotherham United,20,1.89,0.44
+English League Two,Southend United,21,1.30,0.40
+English League Two,Torquay United,17,1.40,0.30
+English League Two,Wycombe Wanderers,18,0.89,0.11
+English League Two,York City,16,1.50,0.30
+English Conference National,AFC Telford United,14,1.69,0.31
+English Conference National,Alfreton Town,18,1.20,0.27
+English Conference National,Barrow AFC,14,1.25,0.25
+English Conference National,Cambridge United,15,1.69,0.25
+English Conference National,Dartford,15,1.69,0.56
+English Conference National,Ebbsfleet United,10,1.31,0.19
+English Conference National,Forest Green Rovers,14,1.63,0.50
+English Conference National,Gateshead,14,1.25,0.25
+English Conference National,Grimsby Town,15,1.38,0.44
+English Conference National,Hereford United,16,1.50,0.31
+English Conference National,Hyde,14,1.20,0.20
+English Conference National,Kidderminster Harriers,14,1.13,0.19
+English Conference National,Lincoln City,16,1.38,0.25
+English Conference National,Luton Town,15,1.88,0.63
+English Conference National,Macclesfield Town,14,1.73,0.47
+English Conference National,Mansfield Town,15,1.47,0.40
+English Conference National,Newport County,13,1.88,0.63
+English Conference National,Nuneaton Town,12,1.31,0.13
+English Conference National,Southport,10,1.50,0.31
+English Conference National,Stockport County,16,1.44,0.31
+English Conference National,Tamworth,12,1.31,0.44
+English Conference National,Woking,15,1.75,0.44
+English Conference National,Wrexham,14,1.67,0.53
+Scottish Premier,Aberdeen,18,1.27,0.36
+Scottish Premier,Celtic,23,1.90,0.60
+Scottish Premier,Dundee,20,0.36,0.09
+Scottish Premier,Dundee United,19,1.00,0.33
+Scottish Premier,Heart Of Midlothian,18,1.09,0.27
+Scottish Premier,Inverness CT,16,2.09,0.27
+Scottish Premier,Kilmarnock,17,1.45,0.36
+Scottish Premier,Motherwell,18,1.30,0.30
+Scottish Premier,Ross County,20,1.09,0.18
+Scottish Premier,St Johnstone,22,1.27,0.45
+Scottish Premier,St Mirren,20,1.36,0.27
+Scottish First Division,Airdrie United,16,1.40,0.30
+Scottish First Division,Cowdenbeath,15,1.70,0.30
+Scottish First Division,Dumbarton,15,0.90,0.00
+Scottish First Division,Dunfermline,17,2.50,0.70
+Scottish First Division,Falkirk,18,1.10,0.20
+Scottish First Division,Hamilton Academical,16,1.00,0.10
+Scottish First Division,Livingston,17,1.50,0.30
+Scottish First Division,Morton,15,2.20,0.50
+Scottish First Division,Partick Thistle,17,2.40,0.70
+Scottish First Division,Raith Rovers,17,1.50,0.40
+Scottish Second Division,Albion Rovers,12,1.38,0.25
+Scottish Second Division,Alloa,13,1.88,0.50
+Scottish Second Division,Arbroath,12,2.00,0.50
+Scottish Second Division,Ayr United,15,1.63,0.38
+Scottish Second Division,Brechin City,12,0.75,0.25
+Scottish Second Division,East Fife,13,1.38,0.13
+Scottish Second Division,Forfar Athletic,12,2.38,0.63
+Scottish Second Division,Queen Of The South,15,2.38,0.88
+Scottish Second Division,Stenhousemuir,12,2.00,0.38
+Scottish Second Division,Stranraer,12,0.88,0.13
+Scottish Third Division,Annan Athletic,10,1.78,0.33
+Scottish Third Division,Berwick Rangers,10,1.56,0.33
+Scottish Third Division,Clyde,12,1.00,0.33
+Scottish Third Division,East Stirlingshire,10,1.44,0.33
+Scottish Third Division,Elgin City,10,2.20,0.40
+Scottish Third Division,Montrose,6,1.70,0.30
+Scottish Third Division,Peterhead,12,1.33,0.44
+Scottish Third Division,Queens Park,12,1.67,0.44
+Scottish Third Division,Rangers,16,2.33,0.56
+Scottish Third Division,Stirling Albion,10,1.44,0.22

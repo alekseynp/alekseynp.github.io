@@ -1,0 +1,45 @@
+---
+author: admin
+comments: true
+date: 2014-02-10 23:41:19+00:00
+layout: post
+slug: joys-of-r
+title: Joys of R
+wordpress_id: 780
+tags:
+- R
+---
+
+I've been coding a lot in R lately. Just thought I'd share one example of the insanity.
+
+myList = list("a","b")  
+myList[1] == "a"  
+class(myList[1]) == class("a")  
+myList[[1]] == "a"  
+class(myList[[1]]) == class("a")  
+class(myList)  
+class(myList[1])  
+class(myList[[1]])  
+class("a")  
+
+Returns...
+
+> myList = list("a","b")  
+> myList[1] == "a"  
+[1] TRUE  
+> class(myList[1]) == class("a")  
+[1] FALSE  
+> myList[[1]] == "a"  
+[1] TRUE  
+> class(myList[[1]]) == class("a")  
+[1] TRUE  
+> class(myList)  
+[1] "list"  
+> class(myList[1])  
+[1] "list"  
+> class(myList[[1]])  
+[1] "character"  
+> class("a")  
+[1] "character"
+
+Generally weird but reasonable, except  that myList[1] == "a" is TRUE even though they are not of the same class.
