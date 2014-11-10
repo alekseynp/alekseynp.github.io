@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Make Nice Boxplots With R - Aleksey Nozdryn-Plotnicki</title>
+  <meta name="author" content="Aleksey Nozdryn-Plotnicki">
+
+  
+  <meta name="description" content="Anyone who has tried to create a boxplot in Microsoft Excel will know that there must be a better way. Boxplots are a powerful, standard statistical &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alekseynp.github.io/blog/2013/06/04/how-to-make-nice-boxplots-with-r">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Aleksey Nozdryn-Plotnicki" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Aleksey Nozdryn-Plotnicki</a></h1>
+  
+    <h2>blog, portfolio, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:alekseynp.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/portfolio">Portfolio</a></li>
+  <li><a href="/topics">Topics</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">How to Make Nice Boxplots With R</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-06-04T23:26:20-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:26 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Anyone who has tried to create a boxplot in Microsoft Excel will know that there must be a better way. Boxplots are a powerful, standard statistical tool. They aren&rsquo;t that popular in the business community, as they are a little on the technical side, and perhaps this is why they are shunned by Microsoft. In any case, analytics professionals require a reproducible approach for generating good, clean boxplots.</p>
+
+<p>My recent infographic, <a href="http://thinkdatavis.com/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/">Thinking of buying or selling a Peugeot Partner in Chile?</a>, I featured two boxplots and here is how I made them.</p>
+
+<p>I used <a href="https://www.google.com.pe/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fwww.r-project.org%2F&amp;ei=MFupUa-oDJK40gHAmYH4Dw&amp;usg=AFQjCNFq9BSTD_8y4svhPlIv_58OxEpd5A&amp;sig2=_ziAUMJRWN86JBwlo_VjJw&amp;bvm=bv.47244034,d.dmQ">R</a>, an open source statistics, analytics, and charting software. It is used extremely widely and many would consider it the de facto standard.</p>
+
+<p>I scraped the data from chileautos.cl and output a CSV file from the process for loading into R. Afterwards I ran the following R script. See the extensive comments in order to understand what it&rsquo;s doing:</p>
+
+<pre><code>&lt;span style="color: #666666; font-style: italic;"&gt;# Clear all existing variables from memory&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/rm"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;rm&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/list"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;list&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/ls"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;ls&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Set working directory for the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/base/setwd"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;setwd&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"C:&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Users&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Aleksey&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Documents&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;Data Viz&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;projects&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;chileAutos&lt;span style="color: #000099; font-weight: bold;"&gt;\\&lt;/span&gt;"&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# load the csv file&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt; &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/utils/read.csv"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;read.csv&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"partners2013-5-29-20-5.csv"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; header=&lt;span style="color: #000000; font-weight: bold;"&gt;TRUE&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; sep=&lt;span style="color: #0000ff;"&gt;","&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# set the output type and size -- good for standardizing outputs&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/svg"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;svg&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;filename=&lt;span style="color: #0000ff;"&gt;"output.svg"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; width=&lt;span style="color: #cc66cc;"&gt;6&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; height=&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Draw the cord boxplot&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/boxplot"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;boxplot&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  price&lt;span&gt;~&lt;/span&gt;year&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts price on the y axis and groups by year on the x axis&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/utils/data"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;data&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# dataframe to be used&lt;/span&gt;
+  xaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress the default x axis&lt;/span&gt;
+  yaxt=&lt;span style="color: #0000ff;"&gt;"n"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress the default y axis&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/graphics/frame"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;frame&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"f"&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# suppress the plotting frame&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Draw our own x-axis&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  &lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts the axis at the bottom&lt;/span&gt;
+  at=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;17&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# labels will be placed in the 17 categories&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1997&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;2013&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# labels will be for the years&lt;/span&gt;
+  lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the long axis line is zero, makes invisible&lt;/span&gt;
+  lwd.ticks=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the etick lines also zero, makes them invisible&lt;/span&gt;
+  cex.axis=&lt;span style="color: #cc66cc;"&gt;0.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# offset from the axis of the labels&lt;/span&gt;
+  mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# middle zero controls distance of labels from axis&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Draw our own y-axis&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/axis"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;axis&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;
+  &lt;span style="color: #cc66cc;"&gt;2&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# puts the axis on the left&lt;/span&gt;
+  at=&lt;a href="http://inside-r.org/r-doc/base/seq"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;seq&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;11000000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/by"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;by&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1000000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# creates a vector of label locations starting at 0 ever 1 mil to 11 mil&lt;/span&gt;
+  &lt;a href="http://inside-r.org/r-doc/base/labels"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;labels&lt;/span&gt;&lt;/a&gt;=&lt;a href="http://inside-r.org/r-doc/base/formatC"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;formatC&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/seq"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;seq&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;11000000&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/base/by"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;by&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1000000&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,,&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/base/format"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;format&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"d"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; big.mark=&lt;span style="color: #0000ff;"&gt;','&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# similar labels with formatting&lt;/span&gt;
+  las=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# rotate labels to be parallel&lt;/span&gt;
+  cex.axis=&lt;span style="color: #cc66cc;"&gt;0.65&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# offset of labels&lt;/span&gt;
+  lwd=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# width of the long axis line is zero, makes invisible&lt;/span&gt;
+  lwd.ticks=&lt;span style="color: #cc66cc;"&gt;1&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# tick marks are 1 wide&lt;/span&gt;
+  tck=&lt;span&gt;-&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.02&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# length of ticks, negative goes out from the plot&lt;/span&gt;
+  mgp=&lt;a href="http://inside-r.org/r-doc/base/c"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;c&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0.35&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# 0.35 controls the left-right movemenet of the tick labels&lt;/span&gt;
+  &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;span style="color: #666666; font-style: italic;"&gt;# Put our title on&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/graphics/mtext"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;mtext&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;a href="http://inside-r.org/r-doc/graphics/text"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;text&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #0000ff;"&gt;"Price by Year"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt;
+      side = &lt;span style="color: #cc66cc;"&gt;3&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# Top&lt;/span&gt;
+      adj=&lt;span style="color: #cc66cc;"&gt;0&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# Combined with top implies left alignment&lt;/span&gt;
+      &lt;a href="http://inside-r.org/r-doc/stats/line"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;line&lt;/span&gt;&lt;/a&gt;=&lt;span style="color: #cc66cc;"&gt;1.5&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# Controls what margin line, essentially moves the text up and down&lt;/span&gt;
+      cex=&lt;span style="color: #cc66cc;"&gt;1.1&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# text size&lt;/span&gt;
+      &lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+
+&lt;a href="http://inside-r.org/r-doc/grDevices/dev.off"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;dev.off&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt; &lt;span style="color: #666666; font-style: italic;"&gt;# writes the SVG file to the working directory&lt;/span&gt;
+</code></pre>
+
+<p><a href="http://www.inside-r.org/pretty-r">Created by Pretty R at inside-R.org</a></p>
+
+<p>What we get from this script:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/06/output.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/06/output-300x200.png" alt="output" /></a></p>
+
+<p>What we would get from the default:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/06/output_default.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/06/output_default-300x200.png" alt="output_default" /></a></p>
+
+<p>One aspect of this approach to highlight is the SVG device output. By scripting the size of the SVG output and writing it to disk, we take more control over the process, creating a more scripted and reproducible outcome.</p>
+
+<pre><code>&lt;a href="http://inside-r.org/r-doc/grDevices/svg"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;svg&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;filename=&lt;span style="color: #0000ff;"&gt;"output.svg"&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; width=&lt;span style="color: #cc66cc;"&gt;6&lt;/span&gt;&lt;span style="color: #339933;"&gt;,&lt;/span&gt; height=&lt;span style="color: #cc66cc;"&gt;4&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+&lt;a href="http://inside-r.org/r-doc/grDevices/dev.off"&gt;&lt;span style="color: #003399; font-weight: bold;"&gt;dev.off&lt;/span&gt;&lt;/a&gt;&lt;span style="color: #009900;"&gt;(&lt;/span&gt;&lt;span style="color: #009900;"&gt;)&lt;/span&gt;
+</code></pre>
+
+<p>If you wanted to create 76 such boxplots, say one for each supplier to your company, all to the same size standard, doing so in Excel would be a nightmare. Even flexing VBA, the dimensioning, positioning, alignment, generation, etc. of Excel charts can be very frustrating. Trust me, I&rsquo;ve been there. With scripting in R, one could wrap a loop around the above and generate any number of charts to the exact same size, dimensions, etc.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    admin
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-06-04T23:26:20-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:26 pm</span></time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/how-to/'>how to</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://alekseynp.github.io/blog/2013/06/04/how-to-make-nice-boxplots-with-r/" data-via="" data-counturl="http://alekseynp.github.io/blog/2013/06/04/how-to-make-nice-boxplots-with-r/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/" title="Previous Post: Infographic: Thinking of buying or selling a Peugeot Partner in Chile?">&laquo; Infographic: Thinking of buying or selling a Peugeot Partner in Chile?</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/02/communication-in-consulting-circular-visuals-of-hierarchical-information/" title="Next Post: Communication in consulting: Circular visuals of hierarchical information">Communication in consulting: Circular visuals of hierarchical information &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aleksey Nozdryn-Plotnicki -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

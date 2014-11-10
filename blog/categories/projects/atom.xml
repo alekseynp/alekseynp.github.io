@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Projects | Aleksey Nozdryn-Plotnicki]]></title>
+  <link href="http://alekseynp.github.io/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://alekseynp.github.io/"/>
+  <updated>2014-11-10T02:46:55-05:00</updated>
+  <id>http://alekseynp.github.io/</id>
+  <author>
+    <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gephi Layout Plugin: Random 3D Layout]]></title>
+    <link href="http://alekseynp.github.io/blog/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
+    <updated>2014-05-15T14:02:45-04:00</updated>
+    <id>http://alekseynp.github.io/blog/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
+    <content type="html"><![CDATA[<p><img src="http://thinkdatavis.com/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
+
+<p>For anyone working in 3D in Gephi, this will be a useful and simple initialization layout plugin. Works well with the <a href="https://marketplace.gephi.org/plugin/force-atlas-3d/">Force Atlas 3D Plugin</a>. Without it and using a 2D layout to initialize instead, the 3D results can sometimes be milky-way-shaped, not generally spherical as you would expect, and ultimately not taking full advantage of the third dimension.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My US GDP/”Population” Map]]></title>
+    <link href="http://alekseynp.github.io/blog/2014/02/21/my-us-gdppopulation-map/"/>
+    <updated>2014-02-21T16:13:51-05:00</updated>
+    <id>http://alekseynp.github.io/blog/2014/02/21/my-us-gdppopulation-map</id>
+    <content type="html"><![CDATA[<p>My US GDP/&ldquo;Population&rdquo; Map</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
+
+<p>Yes, the quality on this is not super high, but the point is to experiment with an idea.</p>
+
+<p>There has been a lot of controversy floating around about a map.</p>
+
+<ul>
+<li><p><a href="http://www.visualisingdata.com/index.php/2014/02/defending-the-incredible-gdp-map/">Visualising Data</a></p></li>
+<li><p><a href="http://andywoodruff.com/blog/its-just-a-population-map/">Andrew Woodruff</a></p></li>
+<li><p><a href="http://www.thefunctionalart.com/2014/02/the-incredible-gdp-map-that-shows-that.html">The Functional Art</a></p></li>
+</ul>
+
+
+<p>&hellip; to name a few.</p>
+
+<p>The map being this: <a href="http://www.reddit.com/r/MapPorn/comments/1y371s/">http://www.reddit.com/r/MapPorn/comments/1y371s/</a></p>
+
+<p>I have a thing for trying out abstract ideas in spacial analysis. Like:</p>
+
+<ul>
+<li><p><a href="http://thinkdatavis.com/2013/10/14/visualising-shot-location-in-basketball/">NBA Basketball</a></p></li>
+<li><p><a href="http://thinkdatavis.com/2012/08/14/new-project-global-games-regional-sports-london-2012/">Olympic Medals</a></p></li>
+</ul>
+
+
+<p>As a western Canadian, I&rsquo;m very aware of the east-west dynamics in the US and Canada, so I thought I would follow a hunch and make this map. I think it demonstrates nicely how lop-sided the US is.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Average Shot Locations in the Paint and at Midrange]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/"/>
+    <updated>2013-11-07T19:07:15-05:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange</id>
+    <content type="html"><![CDATA[<p>Yet another post on visualising and analysing NBA shot location data using location averaging methods.</p>
+
+<p>Previously I have shown averages by team for all shots taken. What about shots taken by zone? Consider the following two charts:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png" alt="avg_inthepaint_teams" /></a></p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_midrange_teams.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_midrange_teams.png" alt="avg_midrange_teams" /></a></p>
+
+<p>Now we can see a level of detail that we couldn&rsquo;t in the average of all shots.</p>
+
+<p>Previously:</p>
+
+<p><a href="http://thinkdatavis.com/2013/11/05/more-on-averages-shot-locations/"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png" alt="for_and_against_640w" /></a></p>
+
+<p>Observations:</p>
+
+<ul>
+<li><p>Previously we saw that the GSW were the longest shooters in the league and indeed they were also long shooters in the paint and at midrange. It is not simply that the GSW take a lot of 3s.</p></li>
+<li><p>Other teams like the NYK take shots from close up in both the paint and at midrange. They were generally longer shooters in the previous analysis, suggesting that they balance those close 2-pts with many 3-pt attempts</p></li>
+<li><p>Previously we saw DEN as the closest shooters overall, and indeed they appear to be close shooters in the paint and moderately close shooters at midrange.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NBA Players Shoot From Further as the Game Progresses]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/"/>
+    <updated>2013-11-07T16:02:15-05:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses</id>
+    <content type="html"><![CDATA[<p>On average, players in the NBA take shots 6.5% further from the basket in the 4th period than in the 1st. This is a subtle, but consistent trend across all periods. 1.2% further in the 2nd than the 1st, 2.4% further in the 3rd than the 2nd, and 2.7% further in the 4th than the 3rd.</p>
+
+<p>Most teams show the same trend, consider the graphic Average Distance of Shots by Period below:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png" alt="avg_distance_period_allteams" /></a></p>
+
+<p>Nearly all teams show an increasing distance by period, but there are some notable exceptions. A few teams like NYK, UTA, ATL, and ORL show an opposite trend.</p>
+
+<p>It&rsquo;s not clear at this point what is leading this. Greater defense in later periods forces further shots? A greater need for 3-pts pushes shots away from the basket? A greater need for points in less time forces less ideal shots from further out? What about the exceptional teams where they get closer? What are these teams doing in the 4th quarter? Leaning more heavily on particular strengths or players?  Tired players not driving to the net?</p>
+
+<p>What is true at the global level and largely true at the team level is again reflected in the players. Here are the average distance for the top 100 scorers:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_100players.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_100players.png" alt="avg_distance_period_100players" /></a></p>
+
+<p>More noise, but the trend is still visible!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[More on Averages Shot Locations]]></title>
+    <link href="http://alekseynp.github.io/blog/2013/11/05/more-on-averages-shot-locations/"/>
+    <updated>2013-11-05T10:58:08-05:00</updated>
+    <id>http://alekseynp.github.io/blog/2013/11/05/more-on-averages-shot-locations</id>
+    <content type="html"><![CDATA[<p>Here are some more visuals based on my analysis of average shot locations from the NBA Regular Season 2012-13&hellip;</p>
+
+<p>See previously:</p>
+
+<ul>
+<li><p><a href="http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">Average Made Shot Location - NBA Regular Season 2012-13</a></p></li>
+<li><p><a href="http://thinkdatavis.com/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/">Update: Average shot locations - NBA Regular Season 2012-13</a></p></li>
+</ul>
+
+
+<p>Average Location of Shots Made - NBA 2012-13 Regular Season by teams and against teams&hellip;</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1.png" alt="for_and_against_640w" /></a></p>
+
+<ul>
+<li><p>Shots made by a team show more variation than shots made against a team. Where you shoot from depends more on who you are than who you are playing against &ndash; fine.</p></li>
+<li><p>A lot more front-back variation than side-to-side, probably to be expected</p></li>
+<li><p>Shots made by MIN, DET, SAS close to the net and DAL, GSW, NYK far away somewhat interesting. Fairly big difference here actually which can probably be chalked up to specific players</p></li>
+<li><p>Shots made <em>against</em> probably more interesting. MIL way down at the bottom, GSW significantly at the top. What about these teams&#8217; defensive style means they are more inclined to allow shots close or far from the net?</p></li>
+</ul>
+
+
+<p>Sketch (not poblished):</p>
+
+<p>Average Shot Location by Team by Win/Loss - NBA Regular Season 2012-13</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png" alt="sketch_wins_losses_byteam_v2" /></a></p>
+
+<p>Every line represents a team and connects the two points for that team. The white dot for a team is the average location of shots attempted in games that team won. The black dot for a team is the average location of shots attempted in games that team lost.</p>
+
+<p>Analysis:</p>
+
+<ul>
+<li><p>Most wins and losses points are near one another</p></li>
+<li><p>Lines generally do not cross</p></li>
+<li><p>There are a number of teams across the middle of the chart who attempt shots closer to the net more often when they win</p></li>
+<li><p>Variation is left/right variation is probably just statistical noise</p></li>
+</ul>
+
+
+<p>Same chart but filtering for only successful shots&hellip; same story, though less evidence that closer shots are important for winning:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png" alt="sketch_wins_losses_byteam_made_v2" /></a></p>
+
+<p>We could also look at the games for an individual team&hellip; and I think learn nothing:</p>
+
+<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/1610612737-.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/1610612737-.png" alt="1610612737" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>
