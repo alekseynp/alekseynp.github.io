@@ -4,7 +4,7 @@
   <title><![CDATA[Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.github.io/atom.xml" rel="self"/>
   <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-10T03:09:18-05:00</updated>
+  <updated>2014-11-14T22:52:58-05:00</updated>
   <id>http://alekseynp.github.io/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -33,7 +33,7 @@
     <link href="http://alekseynp.github.io/blog/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
     <updated>2014-05-15T14:02:45-04:00</updated>
     <id>http://alekseynp.github.io/blog/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
-    <content type="html"><![CDATA[<p><img src="http://thinkdatavis.com/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
+    <content type="html"><![CDATA[<p><img src="http://alekseynp.github.io/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
 
 <p>For anyone working in 3D in Gephi, this will be a useful and simple initialization layout plugin. Works well with the <a href="https://marketplace.gephi.org/plugin/force-atlas-3d/">Force Atlas 3D Plugin</a>. Without it and using a 2D layout to initialize instead, the 3D results can sometimes be milky-way-shaped, not generally spherical as you would expect, and ultimately not taking full advantage of the third dimension.</p>
 ]]></content>
@@ -87,18 +87,18 @@
 
 <p>Kazi Stastna writes <a href="http://www.cbc.ca/news/canada/sunshine-list-2014-ontario-s-list-drives-salaries-up-not-down-1.2592793">Sunshine List 2014: Ontario&rsquo;s list drives salaries up, not down</a> and includes:</p>
 
-<blockquote>Ontario pathologists did just that and saw their Sunshine List salaries increase by 20 to 25 per cent between 2011 and 2012, compared with the 2.2 per cent average for the list as a whole, according to an [analysis](http://thinkdatavis.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/) done by data blogger Aleksey Nozdryn-Plotnicki.
+<blockquote>Ontario pathologists did just that and saw their Sunshine List salaries increase by 20 to 25 per cent between 2011 and 2012, compared with the 2.2 per cent average for the list as a whole, according to an [analysis](http://alekseynp.github.io/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/) done by data blogger Aleksey Nozdryn-Plotnicki.
 
 &#8230;
 
-Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000-best-paid-ontario-public-sector-employees/) that this inflationary effect is greatest at the upper echelons of the Sunshine List, with the salaries of the 1,000 highest-paid workers rising 7.2 per cent between 2011 and 2012, compared with 2.2 per cent for the bottom half of the list.</blockquote>
+Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1000-best-paid-ontario-public-sector-employees/) that this inflationary effect is greatest at the upper echelons of the Sunshine List, with the salaries of the 1,000 highest-paid workers rising 7.2 per cent between 2011 and 2012, compared with 2.2 per cent for the bottom half of the list.</blockquote>
 
 
 <p>They are, of course, referring to my work:</p>
 
 <ul>
-<li><p><a href="http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000-best-paid-ontario-public-sector-employees/">7.2% raise for 1,000 best paid Ontario public sector employees</a></p></li>
-<li><p><a href="http://thinkdatavis.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% raise for Ontario’s pathologists in 2012
+<li><p><a href="http://alekseynp.github.io/2013/04/19/7-2-raise-for-1000-best-paid-ontario-public-sector-employees/">7.2% raise for 1,000 best paid Ontario public sector employees</a></p></li>
+<li><p><a href="http://alekseynp.github.io/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% raise for Ontario’s pathologists in 2012
 </a></p></li>
 </ul>
 
@@ -114,7 +114,7 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
     <id>http://alekseynp.github.io/blog/2014/03/28/i-tried-to-sell-open-government-data</id>
     <content type="html"><![CDATA[<p>I tried to sell open government data, but I won&rsquo;t be the only one.</p>
 
-<p>In 2013 I wrote a series of data journalism articles on the topic of <a href="http://thinkdatavis.com/topic-ontario-public-salary-disclosure/">Ontario Public Sector Salary Disclosure</a>. The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.</p>
+<p>In 2013 I wrote a series of data journalism articles on the topic of <a href="http://alekseynp.github.io/topic-ontario-public-salary-disclosure/">Ontario Public Sector Salary Disclosure</a>. The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.</p>
 
 <p>In late 2013 I was approached by someone who was looking for the data behind my analysis. I agreed to share the data on a few conditions, one of which was non-commercial use that they were unable to meet. And so I offered to sell them the data. Free, open, public data.</p>
 
@@ -129,7 +129,7 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 
 <p>Nobody owns the truth, but once they have measured it, processed it, and made it available in a useful format, then they have something that they could sell to you. If I sold you a map based on free government data or delivered you a service based on it, you would accept that.</p>
 
-<p>I wrote about the <a href="http://thinkdatavis.com/2013/05/28/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/">Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure</a> and <a href="http://thinkdatavis.com/2013/04/22/current-publishing-of-ontario-sunshine-list-not-good-enough/">Current publishing of Ontario “Sunshine List” not good enough</a>. This data was &ldquo;open&rdquo; but not truly &ldquo;open&rdquo; and it required considerable effort to process before I could analyse it.</p>
+<p>I wrote about the <a href="http://alekseynp.github.io/2013/05/28/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/">Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure</a> and <a href="http://alekseynp.github.io/2013/04/22/current-publishing-of-ontario-sunshine-list-not-good-enough/">Current publishing of Ontario “Sunshine List” not good enough</a>. This data was &ldquo;open&rdquo; but not truly &ldquo;open&rdquo; and it required considerable effort to process before I could analyse it.</p>
 
 <p><strong>ProPublica</strong></p>
 
@@ -157,27 +157,27 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 
 <p>Sales and quantity sold by product line and quarter at 2:12</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_1.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_1.png" alt="sap_video_1" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_1.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_1.png" alt="sap_video_1" /></a></p>
 
 <p>Sales and quantity sold by product line and quarter at 3:03</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_4.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_4.png" alt="sap_video_4" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_4.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_4.png" alt="sap_video_4" /></a></p>
 
 <p>3D Bar Pies (is that even a thing?) at 3:33</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_5.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_5.png" alt="sap_video_5" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_5.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_5.png" alt="sap_video_5" /></a></p>
 
 <p>Variably-sized pies on a map at 3:57</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_6.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_6.png" alt="sap_video_6" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_6.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_6.png" alt="sap_video_6" /></a></p>
 
 <p>Sales revenue by city by quarter at 4:52</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_7.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_7.png" alt="sap_video_7" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_7.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_7.png" alt="sap_video_7" /></a></p>
 
 <p>Sales revenue by city at 6:27</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_8.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/sap_video_8.png" alt="sap_video_8" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_8.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/sap_video_8.png" alt="sap_video_8" /></a></p>
 
 <p>The Visual Analytics movement seeks to democratize data analysis by making it easy to use and highly visual. They want to push analysis up towards senior management and outwards away from the analysts. Which is a laudable goal, but when we get there and people are creating stuff like we see in this video, we will have failed.</p>
 
@@ -210,7 +210,7 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 
 <p>Enter my adjustment:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/03/social_mobility_final.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/03/social_mobility_final.png" alt="social_mobility_final" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/03/social_mobility_final.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/03/social_mobility_final.png" alt="social_mobility_final" /></a></p>
 
 <p>I&hellip;</p>
 
@@ -236,7 +236,7 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
     <id>http://alekseynp.github.io/blog/2014/02/21/my-us-gdppopulation-map</id>
     <content type="html"><![CDATA[<p>My US GDP/&ldquo;Population&rdquo; Map</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
 
 <p>Yes, the quality on this is not super high, but the point is to experiment with an idea.</p>
 
@@ -256,8 +256,8 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 <p>I have a thing for trying out abstract ideas in spacial analysis. Like:</p>
 
 <ul>
-<li><p><a href="http://thinkdatavis.com/2013/10/14/visualising-shot-location-in-basketball/">NBA Basketball</a></p></li>
-<li><p><a href="http://thinkdatavis.com/2012/08/14/new-project-global-games-regional-sports-london-2012/">Olympic Medals</a></p></li>
+<li><p><a href="http://alekseynp.github.io/2013/10/14/visualising-shot-location-in-basketball/">NBA Basketball</a></p></li>
+<li><p><a href="http://alekseynp.github.io/2012/08/14/new-project-global-games-regional-sports-london-2012/">Olympic Medals</a></p></li>
 </ul>
 
 
@@ -284,7 +284,7 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 
 <p><a href="http://www.pwc.com/gx/en/asset-management/emerging-trends-real-estate/european-investment-market-forecast.jhtml">The Original</a>:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects.gif"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects.gif" alt="business-prospects" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects.gif"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects.gif" alt="business-prospects" /></a></p>
 
 <p>Quick answers to basic questions:</p>
 
@@ -298,13 +298,13 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 
 <p>Left-to-right changes:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects_v2.gif"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects_v2.gif" alt="business-prospects_v2" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects_v2.gif"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects_v2.gif" alt="business-prospects_v2" /></a></p>
 
 <p>So now we at least get the impression that things are good before we start studying the labeling in detail. We can also scan across, say, the red bars in order to see how things are changing with time without having to realize that the chart&rsquo;s timeline is backwards.</p>
 
 <p>I also experimented with a line design here:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/pwc2.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/pwc2.png" alt="pwc2" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/pwc2.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/pwc2.png" alt="pwc2" /></a></p>
 
 <ul>
 <li><p>Maybe the &ldquo;things are good&rdquo; message is a little muted</p></li>
@@ -325,17 +325,17 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 
 <p>A 4x4 grid of single-value donuts? Are you kidding?</p>
 
-<p>Like <a href="http://thinkdatavis.com/2014/02/16/dubious-visuals-in-thought-leadership-from-consultancies/">last time</a>, I will show you how this is bad with simple re-design.</p>
+<p>Like <a href="http://alekseynp.github.io/2014/02/16/dubious-visuals-in-thought-leadership-from-consultancies/">last time</a>, I will show you how this is bad with simple re-design.</p>
 
 <p>First let&rsquo;s try simply cleaning up the graphic a bit:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/BgdOBnbIAAAJgsj-2.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/BgdOBnbIAAAJgsj-2.png" alt="BgdOBnbIAAAJgsj-2" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/BgdOBnbIAAAJgsj-2.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/BgdOBnbIAAAJgsj-2.png" alt="BgdOBnbIAAAJgsj-2" /></a></p>
 
 <p>It looks better already! If I can improve your graphic by erasing the visual elements that you used to encode your data, this is a very bad sign.</p>
 
 <p>And finally the obligatory bar-chart redesign:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2014/02/kpmg-data-and-analytics.png"><img src="http://thinkdatavis.com/wp-content/uploads/2014/02/kpmg-data-and-analytics.png" alt="kpmg data and analytics" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/kpmg-data-and-analytics.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/kpmg-data-and-analytics.png" alt="kpmg data and analytics" /></a></p>
 
 <p>Extra patterns become visible:</p>
 
@@ -345,7 +345,7 @@ Nozdryn-Plotnicki [found](http://thinkdatavis.com/2013/04/19/7-2-raise-for-1000
 </ul>
 
 
-<p>KPMG can <a href="http://thinkdatavis.com/2014/02/16/dubious-visuals-in-thought-leadership-from-consultancies/">join Accenture</a> on the list of consultancies that should practice better data visualisation, especially when generating thought leadership on the topic of data and anatlytics.</p>
+<p>KPMG can <a href="http://alekseynp.github.io/2014/02/16/dubious-visuals-in-thought-leadership-from-consultancies/">join Accenture</a> on the list of consultancies that should practice better data visualisation, especially when generating thought leadership on the topic of data and anatlytics.</p>
 ]]></content>
   </entry>
   
@@ -444,7 +444,7 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>Outliers.</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/12/outliers.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/12/outliers.png" alt="outliers" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/12/outliers.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/12/outliers.png" alt="outliers" /></a></p>
 ]]></content>
   </entry>
   
@@ -457,15 +457,15 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>Previously I have shown averages by team for all shots taken. What about shots taken by zone? Consider the following two charts:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png" alt="avg_inthepaint_teams" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png" alt="avg_inthepaint_teams" /></a></p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_midrange_teams.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_midrange_teams.png" alt="avg_midrange_teams" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png" alt="avg_midrange_teams" /></a></p>
 
 <p>Now we can see a level of detail that we couldn&rsquo;t in the average of all shots.</p>
 
 <p>Previously:</p>
 
-<p><a href="http://thinkdatavis.com/2013/11/05/more-on-averages-shot-locations/"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png" alt="for_and_against_640w" /></a></p>
+<p><a href="http://alekseynp.github.io/2013/11/05/more-on-averages-shot-locations/"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png" alt="for_and_against_640w" /></a></p>
 
 <p>Observations:</p>
 
@@ -487,7 +487,7 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>Most teams show the same trend, consider the graphic Average Distance of Shots by Period below:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png" alt="avg_distance_period_allteams" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_allteams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_allteams.png" alt="avg_distance_period_allteams" /></a></p>
 
 <p>Nearly all teams show an increasing distance by period, but there are some notable exceptions. A few teams like NYK, UTA, ATL, and ORL show an opposite trend.</p>
 
@@ -495,7 +495,7 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>What is true at the global level and largely true at the team level is again reflected in the players. Here are the average distance for the top 100 scorers:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_100players.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_100players.png" alt="avg_distance_period_100players" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_100players.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_100players.png" alt="avg_distance_period_100players" /></a></p>
 
 <p>More noise, but the trend is still visible!</p>
 ]]></content>
@@ -511,14 +511,14 @@ class(&ldquo;a&rdquo;)<br/>
 <p>See previously:</p>
 
 <ul>
-<li><p><a href="http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">Average Made Shot Location - NBA Regular Season 2012-13</a></p></li>
-<li><p><a href="http://thinkdatavis.com/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/">Update: Average shot locations - NBA Regular Season 2012-13</a></p></li>
+<li><p><a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">Average Made Shot Location - NBA Regular Season 2012-13</a></p></li>
+<li><p><a href="http://alekseynp.github.io/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/">Update: Average shot locations - NBA Regular Season 2012-13</a></p></li>
 </ul>
 
 
 <p>Average Location of Shots Made - NBA 2012-13 Regular Season by teams and against teams&hellip;</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1.png" alt="for_and_against_640w" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1.png" alt="for_and_against_640w" /></a></p>
 
 <ul>
 <li><p>Shots made by a team show more variation than shots made against a team. Where you shoot from depends more on who you are than who you are playing against &ndash; fine.</p></li>
@@ -532,7 +532,7 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>Average Shot Location by Team by Win/Loss - NBA Regular Season 2012-13</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png" alt="sketch_wins_losses_byteam_v2" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png" alt="sketch_wins_losses_byteam_v2" /></a></p>
 
 <p>Every line represents a team and connects the two points for that team. The white dot for a team is the average location of shots attempted in games that team won. The black dot for a team is the average location of shots attempted in games that team lost.</p>
 
@@ -548,11 +548,11 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>Same chart but filtering for only successful shots&hellip; same story, though less evidence that closer shots are important for winning:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png" alt="sketch_wins_losses_byteam_made_v2" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png" alt="sketch_wins_losses_byteam_made_v2" /></a></p>
 
 <p>We could also look at the games for an individual team&hellip; and I think learn nothing:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/11/1610612737-.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/11/1610612737-.png" alt="1610612737" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/1610612737-.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/1610612737-.png" alt="1610612737" /></a></p>
 ]]></content>
   </entry>
   
@@ -561,11 +561,11 @@ class(&ldquo;a&rdquo;)<br/>
     <link href="http://alekseynp.github.io/blog/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/"/>
     <updated>2013-10-24T17:45:40-04:00</updated>
     <id>http://alekseynp.github.io/blog/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13</id>
-    <content type="html"><![CDATA[<p>Here are two updated charts following up from my<a href="http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/"> previous post</a>.</p>
+    <content type="html"><![CDATA[<p>Here are two updated charts following up from my<a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/"> previous post</a>.</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png" alt="wgtavg_made_location_top50scorers_201213_regular" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png" alt="wgtavg_made_location_top50scorers_201213_regular" /></a></p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png" alt="avg_made_location_top50scorers_201213_regular" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png" alt="avg_made_location_top50scorers_201213_regular" /></a></p>
 
 <p>What&rsquo;s new?</p>
 
@@ -579,7 +579,7 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p><strong>Collaboration</strong></p>
 
-<p>Collaboration is an important thing. Earlier with my weak knowledge of basketball I published what I thought would be an interesting visual <a href="http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>. Seems I was correct. But with a little conversation with the guys at <a href="deadspin.com">deadspin.com</a>, some very easy improvements could be made.</p>
+<p>Collaboration is an important thing. Earlier with my weak knowledge of basketball I published what I thought would be an interesting visual <a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>. Seems I was correct. But with a little conversation with the guys at <a href="deadspin.com">deadspin.com</a>, some very easy improvements could be made.</p>
 ]]></content>
   </entry>
   
@@ -592,15 +592,15 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>At stats.nba.com you can see shot charts like this:</p>
 
-<p><a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=true&amp;zoneDetails=false&amp;zoneOverlays=false"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/short_chart_thumbnail.png" alt="short_chart_thumbnail" /></a> <a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=false&amp;zoneDetails=true&amp;zoneOverlays=true&amp;zone-mode=zone"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/shot_chart_thumbnail2.png" alt="shot_chart_thumbnail2" /></a></p>
+<p><a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=true&amp;zoneDetails=false&amp;zoneOverlays=false"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/short_chart_thumbnail.png" alt="short_chart_thumbnail" /></a> <a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=false&amp;zoneDetails=true&amp;zoneOverlays=true&amp;zone-mode=zone"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail2.png" alt="shot_chart_thumbnail2" /></a></p>
 
 <p>At hotshotcharts.com you can see shot charts heated by success rate:</p>
 
-<p><a href="http://hotshotcharts.com/"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/shot_chart_thumbnail3.png" alt="shot_chart_thumbnail3" /></a></p>
+<p><a href="http://hotshotcharts.com/"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail3.png" alt="shot_chart_thumbnail3" /></a></p>
 
 <p>Even at the much (rightly) worshiped New York Times they&rsquo;re doing charts like this:</p>
 
-<p><a href="http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html?_r=0"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/shot_chart_thumbnail4.png" alt="shot_chart_thumbnail4" /></a></p>
+<p><a href="http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html?_r=0"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail4.png" alt="shot_chart_thumbnail4" /></a></p>
 
 <p><strong>Shotcomings</strong></p>
 
@@ -612,11 +612,11 @@ class(&ldquo;a&rdquo;)<br/>
 
 <p>What I am experimenting with is greater use of aggregation in these circumstances. What if we take average positions to aggregate thousands of data points and then plot those averages together to gain insights?</p>
 
-<p>Here is <a href="http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">my first piece</a> on basketball:</p>
+<p>Here is <a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">my first piece</a> on basketball:</p>
 
-<p><a href="http://thinkdatavis.com/wp-content/uploads/2013/10/final.png"><img src="http://thinkdatavis.com/wp-content/uploads/2013/10/final-298x300.png" alt="final" /></a></p>
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/10/final.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/final-298x300.png" alt="final" /></a></p>
 
-<p>Unfortunately the concept of average location is a bit abstract, and thus that creates a greater overhead of effort for the viewer to overcome before they start getting value out of the graphic. However, after that we can start to compare players in a way that we never have before. See the first post <a href="http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>.</p>
+<p>Unfortunately the concept of average location is a bit abstract, and thus that creates a greater overhead of effort for the viewer to overcome before they start getting value out of the graphic. However, after that we can start to compare players in a way that we never have before. See the first post <a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>.</p>
 ]]></content>
   </entry>
   
