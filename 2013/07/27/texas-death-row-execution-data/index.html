@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Texas Death Row Execution Data - Aleksey Nozdryn-Plotnicki</title>
+  <meta name="author" content="Aleksey Nozdryn-Plotnicki">
+
+  
+  <meta name="description" content="Andy Kirk over at Visualising Data wrote recently about the Texas Death Row Education Data. Texas has executed it&rsquo;s 500th person since it began &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alekseynp.github.io/2013/07/27/texas-death-row-execution-data">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Aleksey Nozdryn-Plotnicki" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Aleksey Nozdryn-Plotnicki</a></h1>
+  
+    <h2>blog, portfolio, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:alekseynp.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/portfolio/">Portfolio</a></li>
+  <li><a href="/topics/">Topics</a></li>
+  <li><a href="/archives/">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Texas Death Row Execution Data</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-07-27T23:06:53-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:06 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Andy Kirk over at <a href="http://www.visualisingdata.com/">Visualising Data</a> wrote recently about the <a href="http://www.visualisingdata.com/index.php/2013/07/texas-death-row-execution-data/">Texas Death Row Education Data</a>. Texas has executed it&rsquo;s 500th person since it began executing people again and provides a <a href="http://www.tdcj.state.tx.us/stat/dr_executed_offenders.html">wealth of data</a> about those people. Andy shared <a href="https://docs.google.com/spreadsheet/ccc?key=0ArNsipRBvi69dEUxZHVuRTc4ZlctREdldExsOW5rMUE#gid=0">a working copy the data </a>as scraped from the site. I&rsquo;m moving the ball forward here by sharing my updated copy of the data.</p>
+
+<p>You can find my dataset here: <a href="https://docs.google.com/spreadsheet/ccc?key=0AohPSKdfKZm1dE8tZlpZeWtIT1dDckFrTUZucG1sY3c#gid=0">get the data</a></p>
+
+<p>Much of the data is stored in images and I have not processed those, so this is why there are empty rows. Probably a manual affair, though anyone who is a wiz with OCR (optical character recognition) may want to do this as an exercise.</p>
+
+<p>I have not yet standardised the data. When I have time, I will write regular expressions to standardize the height data, for example.</p>
+
+<p>How I scraped this data is a topic for another post.  I used my weapon of choice, C# and modified code I had written for other projects.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    admin
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-07-27T23:06:53-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:06 pm</span></time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/data/'>data</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://alekseynp.github.io/2013/07/27/texas-death-row-execution-data/" data-via="" data-counturl="http://alekseynp.github.io/2013/07/27/texas-death-row-execution-data/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents/" title="Previous Post: How I made: The sun shines fondly on Ontario university presidents">&laquo; How I made: The sun shines fondly on Ontario university presidents</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post/" title="Next Post: My Ontario Sunshine List work in the Financial Post">My Ontario Sunshine List work in the Financial Post &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aleksey Nozdryn-Plotnicki -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

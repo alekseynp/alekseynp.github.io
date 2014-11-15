@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Techniques | Aleksey Nozdryn-Plotnicki]]></title>
+  <link href="http://alekseynp.github.io/categories/techniques/atom.xml" rel="self"/>
+  <link href="http://alekseynp.github.io/"/>
+  <updated>2014-11-14T23:22:32-05:00</updated>
+  <id>http://alekseynp.github.io/</id>
+  <author>
+    <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Visualising Shot Location in Basketball]]></title>
+    <link href="http://alekseynp.github.io/2013/10/14/visualising-shot-location-in-basketball/"/>
+    <updated>2013-10-14T15:30:30-04:00</updated>
+    <id>http://alekseynp.github.io/2013/10/14/visualising-shot-location-in-basketball</id>
+    <content type="html"><![CDATA[<p>Sports is full of spacial data. Data visualizers love this. Take the points and plot them by x and y location. Instantly the data is in a format that we can relate to and gain insight from. Too many data points? Aggregate and count points by region to create a head map or something similar. Want to compare two sets of points? Put two charts side-by-side. All of this is done with NBA shot position, but it has its shortcomings.</p>
+
+<p>At stats.nba.com you can see shot charts like this:</p>
+
+<p><a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=true&amp;zoneDetails=false&amp;zoneOverlays=false"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/short_chart_thumbnail.png" alt="short_chart_thumbnail" /></a> <a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=false&amp;zoneDetails=true&amp;zoneOverlays=true&amp;zone-mode=zone"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail2.png" alt="shot_chart_thumbnail2" /></a></p>
+
+<p>At hotshotcharts.com you can see shot charts heated by success rate:</p>
+
+<p><a href="http://hotshotcharts.com/"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail3.png" alt="shot_chart_thumbnail3" /></a></p>
+
+<p>Even at the much (rightly) worshiped New York Times they&rsquo;re doing charts like this:</p>
+
+<p><a href="http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html?_r=0"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail4.png" alt="shot_chart_thumbnail4" /></a></p>
+
+<p><strong>Shotcomings</strong></p>
+
+<p>I would say that the number one shortcoming of these charts is the difficultly in comparing two sets of points. Take the New York Times piece for example. Try to compare the Heat to the Thunder or the various pairs of players side-by-side. Your eyes will flick back and forth and maybe you&rsquo;ll find a difference, but it&rsquo;s hard and you can&rsquo;t help but feel that you are missing something.</p>
+
+<p>Why? Too much data. The points are not together for easy comparison.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>What I am experimenting with is greater use of aggregation in these circumstances. What if we take average positions to aggregate thousands of data points and then plot those averages together to gain insights?</p>
+
+<p>Here is <a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">my first piece</a> on basketball:</p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/10/final.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/final-298x300.png" alt="final" /></a></p>
+
+<p>Unfortunately the concept of average location is a bit abstract, and thus that creates a greater overhead of effort for the viewer to overcome before they start getting value out of the graphic. However, after that we can start to compare players in a way that we never have before. See the first post <a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Average Age of Brooklyn's Buildings Mapped]]></title>
+    <link href="http://alekseynp.github.io/2013/08/17/average-age-of-brooklyns-buildings-mapped/"/>
+    <updated>2013-08-17T00:12:25-04:00</updated>
+    <id>http://alekseynp.github.io/2013/08/17/average-age-of-brooklyns-buildings-mapped</id>
+    <content type="html"><![CDATA[<p>I saw <a href="http://bklynr.com/block-by-block-brooklyns-past-and-present/">this</a> recently <a href="http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/">here</a>. It&rsquo;s a map showing the age of Brooklyn&rsquo;s buildings.</p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/bklynr.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/bklynr.png" alt="bklynr" /></a></p>
+
+<p><strong>What do I get from the map?</strong></p>
+
+<p>Every data point is plotted, so if I were a Brooklyner, I would probably find my street or look up my favourite building. For some people this seems to have reduced confidence in the data quality. Having only ever been half-way across the Brooklyn Bridge, instead I looked at the map to try and find interesting trends. Some are certainly visible, but I found myself wanting a map with some aggregation.</p>
+
+<p><strong>What I tried.</strong></p>
+
+<p>So I made this. Yes, a post will follow on how.</p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4-923x1024.png" alt="bk_r5_version4" /></a></p>
+
+<p>(click for the huge version)</p>
+
+<p>By showing the average build year for buildings in each hexagon, rather than plotting every single data point, some patterns are more visible. Though I will admit that once you&rsquo;ve seen them in the above map, they are often quite visible in the original.</p>
+
+<p><strong>Hexagon Size</strong></p>
+
+<p>The size or &ldquo;radius&rdquo; of the hexagons is an important parameter of the visualization. As you can see clearly below, our ability to spot patterns of a certain size requires aggregation of a similar size. Compare the first with the last and you&rsquo;ll see.</p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400.png" alt="radius_5_400" /></a><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_10_4001.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_10_4001.png" alt="radius_10_400" /></a><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_20_400.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_20_400.png" alt="radius_20_400" /></a><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_30_400.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_30_400.png" alt="radius_30_400" /></a></p>
+
+<p><strong>Aggregation</strong></p>
+
+<p>While my map is not a compelling improvement on the original, I think it is a nice demonstration of the power of aggregation. Data visualizers can be overly focused on plotting the data directly. Analysts, however, know that you can rarely accomplish anything without some good aggregation. This intersection of data viz and analysis is undeniably interesting.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Visualising On-line Conversations: MOOC For-credit "Discussion"]]></title>
+    <link href="http://alekseynp.github.io/2013/08/01/visualising-on-line-conversations-mooc-for-credit-discussion/"/>
+    <updated>2013-08-01T00:38:45-04:00</updated>
+    <id>http://alekseynp.github.io/2013/08/01/visualising-on-line-conversations-mooc-for-credit-discussion</id>
+    <content type="html"><![CDATA[<p>Visualizing discussions is an interesting challenge. In this post I use a simple technique in the context of discussions in an on-line course.</p>
+
+<p>I have been auditing Dr. Anthony C. Robinson&#8217;s Maps and the Geospatial Revolution on <a href="https://www.coursera.org/">Coursera</a>, a MOOC (Massive Open Online Course). 10% of a student&rsquo;s grade for the course comes from the weekly discussion assignments. If a student makes 20 posts within the 5 week course, they will receive full credit. When venturing into the forum for Week 1, I was struck by the low quality of the &ldquo;discussion&rdquo; taking place. It did not seem at all like an exchange of ideas.</p>
+
+<p>My gut told me that the participation credit was driving bad behavior. The data lover in me wanted to prove it with data. The data visualizer wants to see it to believe it.</p>
+
+<p>I found two threads to compare. In the general discussion forum I found a thread, &ldquo;Where are you located?&rdquo; and in the assignment forum I found &ldquo;Where are you from?&rdquo;. More or less the same question (engaging discussions on the topic of identity aside), but with one key difference: the posts in the assignment forum were for credit. Take a look (click for bigger):</p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/where_r_u_publish1.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/where_r_u_publish1-1024x144.png" alt="where_r_u_publish" /></a></p>
+
+<p>Posts go in chronological order from left to right. Every author is a line. An author who posts only once is a dot. An author who posts more than once has his posts connected by a line.</p>
+
+<p>The difference is clear. While this does not constitute proof, it&rsquo;s certainly compelling.</p>
+
+<p>Statistics of note: The general discussion thread has 1.34 posts per author and 96 characters per post, compared to 1.20 posts per author and 81 characters per post in the discussion assignment.</p>
+
+<p><strong>Edit:</strong> I have been corrected. Apparently all posts in all forums count for credit, though this is not entirely clear from the syllabus. The key difference between the two posts remains, but must be restated: Participants in the assignment forum were there primarily for credit, while those in the general forum were there primarily to discuss.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Discovering Clusters and Relationships in Data With Network Visualisations - Language Network]]></title>
+    <link href="http://alekseynp.github.io/2013/07/28/discovering-clusters-and-relationships-in-data-with-network-visualisations-language-network/"/>
+    <updated>2013-07-28T20:16:18-04:00</updated>
+    <id>http://alekseynp.github.io/2013/07/28/discovering-clusters-and-relationships-in-data-with-network-visualisations-language-network</id>
+    <content type="html"><![CDATA[<p><a href="http://languagenetwork.cotrino.com/">Language Network</a> is an excellent demonstration of a technique for exploring a relational data set. Every language has a % strength of similarity to every other and this defines the connections in the network. Using the strength filter and physical layout simulation, one can explore the relationships in the data set and identify clusters. It can be a little difficult to describe, so click through for yourself.</p>
+
+<p><a href="http://languagenetwork.cotrino.com/"><img src="http://alekseynp.github.io/wp-content/uploads/2013/07/language_network.png" alt="language_network" /></a></p>
+
+<p>During my time in consulting, I independently developed a static version of this technique for use in an analysis for a large retailer. Since then I have been in search of the right open data set in order to demonstrate the technique without violating any confidentiality or intellectual property. It pleases me today to have found Language Network via the <a href="https://github.com/mbostock/d3/wiki/Gallery">d3js examples index</a>.</p>
+
+<p>This technique could be used on any data set where the elements have a quantitatively defined strength of relationship and the user has a desire to explore the clustering within. Specifically this could include any correlation matrix or bespoke similarity scoring formula/algorithm. The correlation matrix could be the output of a typical multivariate analysis, or it could be calculated in other ways, correlating time series or profiles/distributions.</p>
+
+<p>I may have a project in the pipeline which will utilise this technique. We will see&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

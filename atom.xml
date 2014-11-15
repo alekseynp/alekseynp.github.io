@@ -4,7 +4,7 @@
   <title><![CDATA[Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.github.io/atom.xml" rel="self"/>
   <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-14T22:52:58-05:00</updated>
+  <updated>2014-11-14T23:22:32-05:00</updated>
   <id>http://alekseynp.github.io/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Visualizing Confirmed Exoplanets]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/05/16/visualizing-confirmed-exoplanets/"/>
+    <link href="http://alekseynp.github.io/2014/05/16/visualizing-confirmed-exoplanets/"/>
     <updated>2014-05-16T15:30:18-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/05/16/visualizing-confirmed-exoplanets</id>
+    <id>http://alekseynp.github.io/2014/05/16/visualizing-confirmed-exoplanets</id>
     <content type="html"><![CDATA[<p>I’ve just published a post over at the NGRAIN blog, <a href="http://www.ngrain.com/visualize-confirmed-exoplanets/">Visualize confirmed exoplanets</a></p>
 
 <p>I used NGRAIN&rsquo;s Constructor SDK to put together a simple visualization of the distribution of confirmed exoplanets relative to Earth.</p>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[Gephi Layout Plugin: Random 3D Layout]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
+    <link href="http://alekseynp.github.io/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
     <updated>2014-05-15T14:02:45-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
+    <id>http://alekseynp.github.io/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
     <content type="html"><![CDATA[<p><img src="http://alekseynp.github.io/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
 
 <p>For anyone working in 3D in Gephi, this will be a useful and simple initialization layout plugin. Works well with the <a href="https://marketplace.gephi.org/plugin/force-atlas-3d/">Force Atlas 3D Plugin</a>. Without it and using a 2D layout to initialize instead, the 3D results can sometimes be milky-way-shaped, not generally spherical as you would expect, and ultimately not taking full advantage of the third dimension.</p>
@@ -41,9 +41,9 @@
   
   <entry>
     <title type="html"><![CDATA[Augmented Reality Demands 3D Data Visualization]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/04/22/augmented-reality-demands-3d-data-visualization/"/>
+    <link href="http://alekseynp.github.io/2014/04/22/augmented-reality-demands-3d-data-visualization/"/>
     <updated>2014-04-22T11:13:15-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/04/22/augmented-reality-demands-3d-data-visualization</id>
+    <id>http://alekseynp.github.io/2014/04/22/augmented-reality-demands-3d-data-visualization</id>
     <content type="html"><![CDATA[<p>I’ve just written a post over at the NGRAIN blog, <a href="http://www.ngrain.com/augmented-reality-demands-3d-data-visualization/">Augmented Reality demands 3D Data Visualization</a></p>
 
 <blockquote>As Augmented Reality (AR) continues to gain strong momentum, it is clear that data and information now have a physical 3D context, both conceptually and at the point of display. In the past, we were content with excellent 2-dimensional solutions for 2-dimensional displays, free to ignore 3D data viz as fraught with peril and difficult to execute. At a minimum, we must now wrestle with the challenge of presenting 2D visualizations in a 3D world. And, if we limit ourselves to that, we will fail.</blockquote>
@@ -53,9 +53,9 @@
   
   <entry>
     <title type="html"><![CDATA[On Looking Beyond Two Dimensions]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/04/09/on-looking-beyond-two-dimensions/"/>
+    <link href="http://alekseynp.github.io/2014/04/09/on-looking-beyond-two-dimensions/"/>
     <updated>2014-04-09T12:30:20-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/04/09/on-looking-beyond-two-dimensions</id>
+    <id>http://alekseynp.github.io/2014/04/09/on-looking-beyond-two-dimensions</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve just written a post over at the NGRAIN blog, <a href="http://www.ngrain.com/on-looking-beyond-two-dimensions/">On looking beyond two dimensions</a>.</p>
 
 <blockquote>If you don’t look at your data it can deceive you. That was true in two dimensions and is true above. If we live in a world of bivariate visualization we will miss important complex patterns because we are not looking for them. The third dimension must be considered when using visualization in analysis just as it must be rejected as a means to jazz up uninspiring pie charts.</blockquote>
@@ -67,9 +67,9 @@
   
   <entry>
     <title type="html"><![CDATA[Data Visualization Lead at NGRAIN]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/04/08/data-visualization-lead-at-ngrain/"/>
+    <link href="http://alekseynp.github.io/2014/04/08/data-visualization-lead-at-ngrain/"/>
     <updated>2014-04-08T17:09:24-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/04/08/data-visualization-lead-at-ngrain</id>
+    <id>http://alekseynp.github.io/2014/04/08/data-visualization-lead-at-ngrain</id>
     <content type="html"><![CDATA[<p>It&rsquo;s worth announcing that last month I took a position as Data Visualization Lead at <a href="http://www.ngrain.com/">NGRAIN</a> in Vancouver, Canada.</p>
 
 <p>NGRAIN&rsquo;s vision is to see beyond reality, and to help people accelerate decisions by interacting with the world&rsquo;s data in 3D. To make that concrete, we are currently developing cutting edge Augmented Reality applications for the industrial enterprise. 3D data visualization is notoriously difficult to execute, but in Augmented Reality we will no longer have a choice but to confront it, as our reality is 3D. Bringing my expertise to this problem will be an exciting challenge and will require great care.</p>
@@ -80,9 +80,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Ontario Sunshine List Work in the CBC News]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"/>
+    <link href="http://alekseynp.github.io/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"/>
     <updated>2014-04-01T12:13:29-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news</id>
+    <id>http://alekseynp.github.io/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news</id>
     <content type="html"><![CDATA[<p>Just some shameless self-promotion. You can find my work cited in the CBC News from today.</p>
 
 <p>Kazi Stastna writes <a href="http://www.cbc.ca/news/canada/sunshine-list-2014-ontario-s-list-drives-salaries-up-not-down-1.2592793">Sunshine List 2014: Ontario&rsquo;s list drives salaries up, not down</a> and includes:</p>
@@ -109,9 +109,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[I Tried to Sell Open Government Data]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/03/28/i-tried-to-sell-open-government-data/"/>
+    <link href="http://alekseynp.github.io/2014/03/28/i-tried-to-sell-open-government-data/"/>
     <updated>2014-03-28T22:13:28-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/03/28/i-tried-to-sell-open-government-data</id>
+    <id>http://alekseynp.github.io/2014/03/28/i-tried-to-sell-open-government-data</id>
     <content type="html"><![CDATA[<p>I tried to sell open government data, but I won&rsquo;t be the only one.</p>
 
 <p>In 2013 I wrote a series of data journalism articles on the topic of <a href="http://alekseynp.github.io/topic-ontario-public-salary-disclosure/">Ontario Public Sector Salary Disclosure</a>. The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.</p>
@@ -144,9 +144,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[Visual Analytics, Democratization of Analysis, and Visual Literacy]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy/"/>
+    <link href="http://alekseynp.github.io/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy/"/>
     <updated>2014-03-21T22:03:41-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy</id>
+    <id>http://alekseynp.github.io/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy</id>
     <content type="html"><![CDATA[<p><a href="http://youtu.be/hbTb62BeTUc">http://youtu.be/hbTb62BeTUc</a></p>
 
 <p>Regarding:<a href="https://www.youtube.com/watch?v=hbTb62BeTUc"> SAP Visual Intelligence: Big Data Example </a>on YouTube</p>
@@ -193,9 +193,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[American Social Mobility, NPR, and Commentary]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/03/20/american-social-mobility-npr-and-commentary/"/>
+    <link href="http://alekseynp.github.io/2014/03/20/american-social-mobility-npr-and-commentary/"/>
     <updated>2014-03-20T00:40:50-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/03/20/american-social-mobility-npr-and-commentary</id>
+    <id>http://alekseynp.github.io/2014/03/20/american-social-mobility-npr-and-commentary</id>
     <content type="html"><![CDATA[<p>Regarding: <a href="http://www.npr.org/blogs/money/2014/03/18/289013884/who-had-richer-parents-doctors-or-arists">Who Had Richer Parents, Doctors Or Artists? : Planet Money : NPR</a></p>
 
 <p>First of all, hats off to them for asking and answering important questions about modern society. The tldr; is that they ask &ldquo;Who had richer parents, journalists or people working in finance? Doctors or artists? More generally: What&rsquo;s the link between household income during childhood and job choice during adulthood?&rdquo; and based on a US government survey, they produced an answer.</p>
@@ -231,9 +231,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[My US GDP/”Population” Map]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/02/21/my-us-gdppopulation-map/"/>
+    <link href="http://alekseynp.github.io/2014/02/21/my-us-gdppopulation-map/"/>
     <updated>2014-02-21T16:13:51-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/02/21/my-us-gdppopulation-map</id>
+    <id>http://alekseynp.github.io/2014/02/21/my-us-gdppopulation-map</id>
     <content type="html"><![CDATA[<p>My US GDP/&ldquo;Population&rdquo; Map</p>
 
 <p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
@@ -267,9 +267,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[Left and Right Are Important]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/02/17/left-and-right-are-important/"/>
+    <link href="http://alekseynp.github.io/2014/02/17/left-and-right-are-important/"/>
     <updated>2014-02-17T17:05:54-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/02/17/left-and-right-are-important</id>
+    <id>http://alekseynp.github.io/2014/02/17/left-and-right-are-important</id>
     <content type="html"><![CDATA[<p>The major consultancies are turning out to be a goldmine for content for demonstrating the potential for improved data visualisation design. Today&rsquo;s winner is PWC, though their error is not terribly sinful and with some effort one could probably find something worse.</p>
 
 <p>This is a demonstration of the power and importance of left-to-right. The original violates two assumptions readers make about left-to-right:</p>
@@ -317,9 +317,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[KPMG's Grid of Donuts]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/02/16/kpmgs-grid-of-donuts/"/>
+    <link href="http://alekseynp.github.io/2014/02/16/kpmgs-grid-of-donuts/"/>
     <updated>2014-02-16T16:04:58-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/02/16/kpmgs-grid-of-donuts</id>
+    <id>http://alekseynp.github.io/2014/02/16/kpmgs-grid-of-donuts</id>
     <content type="html"><![CDATA[<p>Another day, another poor visual. Apparently I have a quest to complete against bad visuals from consultancies. Today it&rsquo;s KPMG from this tweet:
 <a href="https://twitter.com/KPMG/status/434401678931263488">https://twitter.com/KPMG/status/434401678931263488</a></p>
 
@@ -351,9 +351,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[Analysis of the Determinants of Selling Price for Vancouver NHL Ticket Auctions]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions/"/>
+    <link href="http://alekseynp.github.io/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions/"/>
     <updated>2014-02-15T20:11:10-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions</id>
+    <id>http://alekseynp.github.io/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions</id>
     <content type="html"><![CDATA[<h1>Introduction</h1>
 
 <p>I&rsquo;ve been scraping a lot lately. If data is the new oil, then it&rsquo;s time I started pumping it. I came across this old project of mine from a statistics course in my masters program, dated December 15, 2006. Stubhub today should be a goldmine of data and I hope appropriate data and/or analysis is being passed to the leagues to help them set prices.</p>
@@ -396,9 +396,9 @@ Data was collected for a one month period of auctions completed on eBay, a popul
   
   <entry>
     <title type="html"><![CDATA[Joys of R]]></title>
-    <link href="http://alekseynp.github.io/blog/2014/02/10/joys-of-r/"/>
+    <link href="http://alekseynp.github.io/2014/02/10/joys-of-r/"/>
     <updated>2014-02-10T18:41:19-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2014/02/10/joys-of-r</id>
+    <id>http://alekseynp.github.io/2014/02/10/joys-of-r</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been coding a lot in R lately. Just thought I&rsquo;d share one example of the insanity.</p>
 
 <p>myList = list(&ldquo;a&rdquo;,&ldquo;b&rdquo;)<br/>
@@ -437,9 +437,9 @@ class(&ldquo;a&rdquo;)<br/>
   
   <entry>
     <title type="html"><![CDATA[Outliers Are Easy to See]]></title>
-    <link href="http://alekseynp.github.io/blog/2013/12/15/outliers-are-easy-to-see/"/>
+    <link href="http://alekseynp.github.io/2013/12/15/outliers-are-easy-to-see/"/>
     <updated>2013-12-15T13:37:31-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2013/12/15/outliers-are-easy-to-see</id>
+    <id>http://alekseynp.github.io/2013/12/15/outliers-are-easy-to-see</id>
     <content type="html"><![CDATA[<p>Quick and fun. First step of data analysis. Look at your data.</p>
 
 <p>Outliers.</p>
@@ -450,9 +450,9 @@ class(&ldquo;a&rdquo;)<br/>
   
   <entry>
     <title type="html"><![CDATA[Average Shot Locations in the Paint and at Midrange]]></title>
-    <link href="http://alekseynp.github.io/blog/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/"/>
+    <link href="http://alekseynp.github.io/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/"/>
     <updated>2013-11-07T19:07:15-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange</id>
+    <id>http://alekseynp.github.io/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange</id>
     <content type="html"><![CDATA[<p>Yet another post on visualising and analysing NBA shot location data using location averaging methods.</p>
 
 <p>Previously I have shown averages by team for all shots taken. What about shots taken by zone? Consider the following two charts:</p>
@@ -480,9 +480,9 @@ class(&ldquo;a&rdquo;)<br/>
   
   <entry>
     <title type="html"><![CDATA[NBA Players Shoot From Further as the Game Progresses]]></title>
-    <link href="http://alekseynp.github.io/blog/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/"/>
+    <link href="http://alekseynp.github.io/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/"/>
     <updated>2013-11-07T16:02:15-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses</id>
+    <id>http://alekseynp.github.io/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses</id>
     <content type="html"><![CDATA[<p>On average, players in the NBA take shots 6.5% further from the basket in the 4th period than in the 1st. This is a subtle, but consistent trend across all periods. 1.2% further in the 2nd than the 1st, 2.4% further in the 3rd than the 2nd, and 2.7% further in the 4th than the 3rd.</p>
 
 <p>Most teams show the same trend, consider the graphic Average Distance of Shots by Period below:</p>
@@ -503,9 +503,9 @@ class(&ldquo;a&rdquo;)<br/>
   
   <entry>
     <title type="html"><![CDATA[More on Averages Shot Locations]]></title>
-    <link href="http://alekseynp.github.io/blog/2013/11/05/more-on-averages-shot-locations/"/>
+    <link href="http://alekseynp.github.io/2013/11/05/more-on-averages-shot-locations/"/>
     <updated>2013-11-05T10:58:08-05:00</updated>
-    <id>http://alekseynp.github.io/blog/2013/11/05/more-on-averages-shot-locations</id>
+    <id>http://alekseynp.github.io/2013/11/05/more-on-averages-shot-locations</id>
     <content type="html"><![CDATA[<p>Here are some more visuals based on my analysis of average shot locations from the NBA Regular Season 2012-13&hellip;</p>
 
 <p>See previously:</p>
@@ -558,9 +558,9 @@ class(&ldquo;a&rdquo;)<br/>
   
   <entry>
     <title type="html"><![CDATA[Update: Average Shot Locations - NBA Regular Season 2012-13]]></title>
-    <link href="http://alekseynp.github.io/blog/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/"/>
+    <link href="http://alekseynp.github.io/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/"/>
     <updated>2013-10-24T17:45:40-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13</id>
+    <id>http://alekseynp.github.io/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13</id>
     <content type="html"><![CDATA[<p>Here are two updated charts following up from my<a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/"> previous post</a>.</p>
 
 <p><a href="http://alekseynp.github.io/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png" alt="wgtavg_made_location_top50scorers_201213_regular" /></a></p>
@@ -585,9 +585,9 @@ class(&ldquo;a&rdquo;)<br/>
   
   <entry>
     <title type="html"><![CDATA[Visualising Shot Location in Basketball]]></title>
-    <link href="http://alekseynp.github.io/blog/2013/10/14/visualising-shot-location-in-basketball/"/>
+    <link href="http://alekseynp.github.io/2013/10/14/visualising-shot-location-in-basketball/"/>
     <updated>2013-10-14T15:30:30-04:00</updated>
-    <id>http://alekseynp.github.io/blog/2013/10/14/visualising-shot-location-in-basketball</id>
+    <id>http://alekseynp.github.io/2013/10/14/visualising-shot-location-in-basketball</id>
     <content type="html"><![CDATA[<p>Sports is full of spacial data. Data visualizers love this. Take the points and plot them by x and y location. Instantly the data is in a format that we can relate to and gain insight from. Too many data points? Aggregate and count points by region to create a head map or something similar. Want to compare two sets of points? Put two charts side-by-side. All of this is done with NBA shot position, but it has its shortcomings.</p>
 
 <p>At stats.nba.com you can see shot charts like this:</p>

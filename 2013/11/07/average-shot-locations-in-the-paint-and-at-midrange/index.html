@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Average Shot Locations in the Paint and at Midrange - Aleksey Nozdryn-Plotnicki</title>
+  <meta name="author" content="Aleksey Nozdryn-Plotnicki">
+
+  
+  <meta name="description" content="Yet another post on visualising and analysing NBA shot location data using location averaging methods. Previously I have shown averages by team for &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alekseynp.github.io/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Aleksey Nozdryn-Plotnicki" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Aleksey Nozdryn-Plotnicki</a></h1>
+  
+    <h2>blog, portfolio, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:alekseynp.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/portfolio/">Portfolio</a></li>
+  <li><a href="/topics/">Topics</a></li>
+  <li><a href="/archives/">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Average Shot Locations in the Paint and at Midrange</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-11-07T19:07:15-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>7:07 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Yet another post on visualising and analysing NBA shot location data using location averaging methods.</p>
+
+<p>Previously I have shown averages by team for all shots taken. What about shots taken by zone? Consider the following two charts:</p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png" alt="avg_inthepaint_teams" /></a></p>
+
+<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png" alt="avg_midrange_teams" /></a></p>
+
+<p>Now we can see a level of detail that we couldn&rsquo;t in the average of all shots.</p>
+
+<p>Previously:</p>
+
+<p><a href="http://alekseynp.github.io/2013/11/05/more-on-averages-shot-locations/"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png" alt="for_and_against_640w" /></a></p>
+
+<p>Observations:</p>
+
+<ul>
+<li><p>Previously we saw that the GSW were the longest shooters in the league and indeed they were also long shooters in the paint and at midrange. It is not simply that the GSW take a lot of 3s.</p></li>
+<li><p>Other teams like the NYK take shots from close up in both the paint and at midrange. They were generally longer shooters in the previous analysis, suggesting that they balance those close 2-pts with many 3-pt attempts</p></li>
+<li><p>Previously we saw DEN as the closest shooters overall, and indeed they appear to be close shooters in the paint and moderately close shooters at midrange.</p></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    admin
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-11-07T19:07:15-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>7:07 pm</span></time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/projects/'>projects</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://alekseynp.github.io/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/" data-via="" data-counturl="http://alekseynp.github.io/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/" title="Previous Post: NBA players shoot from further as the game progresses">&laquo; NBA players shoot from further as the game progresses</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/12/15/outliers-are-easy-to-see/" title="Next Post: Outliers are easy to see">Outliers are easy to see &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aleksey Nozdryn-Plotnicki -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
