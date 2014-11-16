@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Critique | Aleksey Nozdryn-Plotnicki]]></title>
-  <link href="http://alekseynp.github.io/categories/critique/atom.xml" rel="self"/>
-  <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-15T20:03:33-05:00</updated>
-  <id>http://alekseynp.github.io/</id>
+  <link href="http://alekseynp.com/categories/critique/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-16T13:24:12-05:00</updated>
+  <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[American Social Mobility, NPR, and Commentary]]></title>
-    <link href="http://alekseynp.github.io/2014/03/20/american-social-mobility-npr-and-commentary/"/>
+    <link href="http://alekseynp.com/2014/03/20/american-social-mobility-npr-and-commentary/"/>
     <updated>2014-03-20T00:40:50-04:00</updated>
-    <id>http://alekseynp.github.io/2014/03/20/american-social-mobility-npr-and-commentary</id>
+    <id>http://alekseynp.com/2014/03/20/american-social-mobility-npr-and-commentary</id>
     <content type="html"><![CDATA[<p>Regarding: <a href="http://www.npr.org/blogs/money/2014/03/18/289013884/who-had-richer-parents-doctors-or-arists">Who Had Richer Parents, Doctors Or Artists? : Planet Money : NPR</a></p>
 
 <p>First of all, hats off to them for asking and answering important questions about modern society. The tldr; is that they ask &ldquo;Who had richer parents, journalists or people working in finance? Doctors or artists? More generally: What&rsquo;s the link between household income during childhood and job choice during adulthood?&rdquo; and based on a US government survey, they produced an answer.</p>
@@ -53,9 +53,9 @@
   
   <entry>
     <title type="html"><![CDATA[Left and Right Are Important]]></title>
-    <link href="http://alekseynp.github.io/2014/02/17/left-and-right-are-important/"/>
+    <link href="http://alekseynp.com/2014/02/17/left-and-right-are-important/"/>
     <updated>2014-02-17T17:05:54-05:00</updated>
-    <id>http://alekseynp.github.io/2014/02/17/left-and-right-are-important</id>
+    <id>http://alekseynp.com/2014/02/17/left-and-right-are-important</id>
     <content type="html"><![CDATA[<p>The major consultancies are turning out to be a goldmine for content for demonstrating the potential for improved data visualisation design. Today&rsquo;s winner is PWC, though their error is not terribly sinful and with some effort one could probably find something worse.</p>
 
 <p>This is a demonstration of the power and importance of left-to-right. The original violates two assumptions readers make about left-to-right:</p>
@@ -103,9 +103,9 @@
   
   <entry>
     <title type="html"><![CDATA[KPMG's Grid of Donuts]]></title>
-    <link href="http://alekseynp.github.io/2014/02/16/kpmgs-grid-of-donuts/"/>
+    <link href="http://alekseynp.com/2014/02/16/kpmgs-grid-of-donuts/"/>
     <updated>2014-02-16T16:04:58-05:00</updated>
-    <id>http://alekseynp.github.io/2014/02/16/kpmgs-grid-of-donuts</id>
+    <id>http://alekseynp.com/2014/02/16/kpmgs-grid-of-donuts</id>
     <content type="html"><![CDATA[<p>Another day, another poor visual. Apparently I have a quest to complete against bad visuals from consultancies. Today it&rsquo;s KPMG from this tweet:
 <a href="https://twitter.com/KPMG/status/434401678931263488">https://twitter.com/KPMG/status/434401678931263488</a></p>
 
@@ -137,9 +137,9 @@
   
   <entry>
     <title type="html"><![CDATA[Venezuelan Bat Pie]]></title>
-    <link href="http://alekseynp.github.io/2013/10/01/venezuelan-bat-pie/"/>
+    <link href="http://alekseynp.com/2013/10/01/venezuelan-bat-pie/"/>
     <updated>2013-10-01T00:59:14-04:00</updated>
-    <id>http://alekseynp.github.io/2013/10/01/venezuelan-bat-pie</id>
+    <id>http://alekseynp.com/2013/10/01/venezuelan-bat-pie</id>
     <content type="html"><![CDATA[<p>Pointing out failures of the Venezuelan government can be a little too easy at times.</p>
 
 <p>Today, points for creativity, but the 3-dimensional Venezuelan pie is an absolute technical failure.</p>
@@ -154,9 +154,9 @@
   
   <entry>
     <title type="html"><![CDATA[Small Multiples of Pies From the Economist?]]></title>
-    <link href="http://alekseynp.github.io/2013/08/20/small-multiples-of-pies-from-the-economist/"/>
+    <link href="http://alekseynp.com/2013/08/20/small-multiples-of-pies-from-the-economist/"/>
     <updated>2013-08-20T12:54:37-04:00</updated>
-    <id>http://alekseynp.github.io/2013/08/20/small-multiples-of-pies-from-the-economist</id>
+    <id>http://alekseynp.com/2013/08/20/small-multiples-of-pies-from-the-economist</id>
     <content type="html"><![CDATA[<p>Really guys?</p>
 
 <p><a href="http://www.economist.com/blogs/graphicdetail/2013/08/daily-chart-12?fsrc=rss">http://www.economist.com/blogs/graphicdetail/2013/08/daily-chart-12?fsrc=rss</a></p>

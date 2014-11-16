@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Infographics | Aleksey Nozdryn-Plotnicki]]></title>
-  <link href="http://alekseynp.github.io/categories/infographics/atom.xml" rel="self"/>
-  <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-15T20:03:33-05:00</updated>
-  <id>http://alekseynp.github.io/</id>
+  <link href="http://alekseynp.com/categories/infographics/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-16T13:24:12-05:00</updated>
+  <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Infographic: Thinking of Buying or Selling a Peugeot Partner in Chile?]]></title>
-    <link href="http://alekseynp.github.io/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/"/>
+    <link href="http://alekseynp.com/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/"/>
     <updated>2013-05-31T21:57:04-04:00</updated>
-    <id>http://alekseynp.github.io/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile</id>
+    <id>http://alekseynp.com/2013/05/31/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile</id>
     <content type="html"><![CDATA[<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/06/partner1.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/06/partner1.png" alt="partner" /></a></p>
 ]]></content>
   </entry>

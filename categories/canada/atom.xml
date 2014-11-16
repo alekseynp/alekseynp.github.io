@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Canada | Aleksey Nozdryn-Plotnicki]]></title>
-  <link href="http://alekseynp.github.io/categories/canada/atom.xml" rel="self"/>
-  <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-15T20:03:33-05:00</updated>
-  <id>http://alekseynp.github.io/</id>
+  <link href="http://alekseynp.com/categories/canada/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-16T13:24:12-05:00</updated>
+  <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Ontario Sunshine List Work in the CBC News]]></title>
-    <link href="http://alekseynp.github.io/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"/>
+    <link href="http://alekseynp.com/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"/>
     <updated>2014-04-01T12:13:29-04:00</updated>
-    <id>http://alekseynp.github.io/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news</id>
+    <id>http://alekseynp.com/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news</id>
     <content type="html"><![CDATA[<p>Just some shameless self-promotion. You can find my work cited in the CBC News from today.</p>
 
 <p>Kazi Stastna writes <a href="http://www.cbc.ca/news/canada/sunshine-list-2014-ontario-s-list-drives-salaries-up-not-down-1.2592793">Sunshine List 2014: Ontario&rsquo;s list drives salaries up, not down</a> and includes:</p>
@@ -44,9 +44,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.github.io/2013/04/19/7-2-raise-for-1
   
   <entry>
     <title type="html"><![CDATA[My Ontario Sunshine List Work in the Financial Post]]></title>
-    <link href="http://alekseynp.github.io/2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post/"/>
+    <link href="http://alekseynp.com/2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post/"/>
     <updated>2013-07-28T01:30:10-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post</id>
+    <id>http://alekseynp.com/2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post</id>
     <content type="html"><![CDATA[<p>A little late posting this, but you can find my work cited in the Financial Post from July 13.</p>
 
 <p>Terence Corcoran writes <a href="http://opinion.financialpost.com/2013/07/08/terence-corcoran-the-sunshine-race-to-the-top/">The sunshine race to the to</a> and includes:</p>
@@ -62,9 +62,9 @@ Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries 
   
   <entry>
     <title type="html"><![CDATA[The Sun Shines Fondly on Ontario University Presidents]]></title>
-    <link href="http://alekseynp.github.io/2013/07/12/the-sun-shines-fondly-on-ontario-university-presidents/"/>
+    <link href="http://alekseynp.com/2013/07/12/the-sun-shines-fondly-on-ontario-university-presidents/"/>
     <updated>2013-07-12T21:10:01-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/12/the-sun-shines-fondly-on-ontario-university-presidents</id>
+    <id>http://alekseynp.com/2013/07/12/the-sun-shines-fondly-on-ontario-university-presidents</id>
     <content type="html"><![CDATA[<p>Since 1996, the ten best paid Ontario university presidents have seen their packages increased on average about 5.1% annually. This compares to:</p>
 
 <ul>
@@ -102,9 +102,9 @@ Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries 
   
   <entry>
     <title type="html"><![CDATA[Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure]]></title>
-    <link href="http://alekseynp.github.io/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/"/>
+    <link href="http://alekseynp.com/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/"/>
     <updated>2013-05-27T23:47:59-04:00</updated>
-    <id>http://alekseynp.github.io/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure</id>
+    <id>http://alekseynp.com/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure</id>
     <content type="html"><![CDATA[<p>Upfront warning: This article is likely to be only interesting to two types of people, those expecting to work with this data from the Ontario Ministry of Finance, and anyone in a position to demand better.</p>
 
 <p>Apart from their obvious failure to publish the data in clean, machine-readable formats like csv or xls, the Ontario Ministry of Finance is making other important mistakes when making releases for the Public Salary Disclosure.</p>
@@ -153,9 +153,9 @@ Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries 
   
   <entry>
     <title type="html"><![CDATA[Pathologists Follow-up, Data From 1996 to 2013 From Ontario "Sunshine List"]]></title>
-    <link href="http://alekseynp.github.io/2013/05/06/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list/"/>
+    <link href="http://alekseynp.com/2013/05/06/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list/"/>
     <updated>2013-05-06T16:31:34-04:00</updated>
-    <id>http://alekseynp.github.io/2013/05/06/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list</id>
+    <id>http://alekseynp.com/2013/05/06/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list</id>
     <content type="html"><![CDATA[<p>This is a follow-up on my article, <a href="http://alekseynp.github.io/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% raise for Ontario’s pathologists in 2012</a>. Evolving from an explorative analysis of the 2013 Ontario Public Sector Salary Disclosure, the &ldquo;Sunshine List&rdquo;, I identified a surprising change in the packages (salary + benefits) of pathologists on the list.</p>
 
 <p><strong>Further Analysis</strong></p>

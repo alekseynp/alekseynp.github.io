@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Case Study | Aleksey Nozdryn-Plotnicki]]></title>
-  <link href="http://alekseynp.github.io/categories/case-study/atom.xml" rel="self"/>
-  <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-15T20:03:33-05:00</updated>
-  <id>http://alekseynp.github.io/</id>
+  <link href="http://alekseynp.com/categories/case-study/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-16T13:24:12-05:00</updated>
+  <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Analysis of the Determinants of Selling Price for Vancouver NHL Ticket Auctions]]></title>
-    <link href="http://alekseynp.github.io/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions/"/>
+    <link href="http://alekseynp.com/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions/"/>
     <updated>2014-02-15T20:11:10-05:00</updated>
-    <id>http://alekseynp.github.io/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions</id>
+    <id>http://alekseynp.com/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions</id>
     <content type="html"><![CDATA[<h1>Introduction</h1>
 
 <p>I&rsquo;ve been scraping a lot lately. If data is the new oil, then it&rsquo;s time I started pumping it. I came across this old project of mine from a statistics course in my masters program, dated December 15, 2006. Stubhub today should be a goldmine of data and I hope appropriate data and/or analysis is being passed to the leagues to help them set prices.</p>
@@ -60,9 +60,9 @@ Data was collected for a one month period of auctions completed on eBay, a popul
   
   <entry>
     <title type="html"><![CDATA[Case Study: Visualizing the Taxonomy of an Organisation's Activities in Strategy/profitability Projects at a Global Organisation]]></title>
-    <link href="http://alekseynp.github.io/2013/07/08/case-study-visualizing-the-taxonomy-of-an-organisations-activities-in-strategyprofitability-projects-at-a-global-organisation/"/>
+    <link href="http://alekseynp.com/2013/07/08/case-study-visualizing-the-taxonomy-of-an-organisations-activities-in-strategyprofitability-projects-at-a-global-organisation/"/>
     <updated>2013-07-08T16:41:30-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/08/case-study-visualizing-the-taxonomy-of-an-organisations-activities-in-strategyprofitability-projects-at-a-global-organisation</id>
+    <id>http://alekseynp.com/2013/07/08/case-study-visualizing-the-taxonomy-of-an-organisations-activities-in-strategyprofitability-projects-at-a-global-organisation</id>
     <content type="html"><![CDATA[<p>Example visual
 <a href="http://alekseynp.github.io/wp-content/uploads/2013/07/activity_taxonomy.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/07/activity_taxonomy-300x300.png" alt="activity_taxonomy" /></a>
 Note: Sample content merely for demonstration.</p>
@@ -116,9 +116,9 @@ Radial Tree
   
   <entry>
     <title type="html"><![CDATA[Case Study: Visualizing the Process Model in a Siebel Implementation at a Public Sector Organisation]]></title>
-    <link href="http://alekseynp.github.io/2013/07/06/case-study-visualizing-the-process-model-in-a-siebel-implementation-at-a-public-sector-organisation/"/>
+    <link href="http://alekseynp.com/2013/07/06/case-study-visualizing-the-process-model-in-a-siebel-implementation-at-a-public-sector-organisation/"/>
     <updated>2013-07-06T16:37:20-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/06/case-study-visualizing-the-process-model-in-a-siebel-implementation-at-a-public-sector-organisation</id>
+    <id>http://alekseynp.com/2013/07/06/case-study-visualizing-the-process-model-in-a-siebel-implementation-at-a-public-sector-organisation</id>
     <content type="html"><![CDATA[<p>Example visual
 <a href="http://alekseynp.github.io/wp-content/uploads/2013/07/process_model.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/07/process_model-265x300.png" alt="process_model" /></a>
 Note: Sample content merely for demonstration.</p>
@@ -169,9 +169,9 @@ Radial Tree
   
   <entry>
     <title type="html"><![CDATA[Case Study: Visualizing the Data Model in a Business Intelligence Change Program at a Global Manufacturer/retailer/distributor]]></title>
-    <link href="http://alekseynp.github.io/2013/07/04/case-study-visualizing-the-data-model-in-a-business-intelligence-change-program-at-a-global-manufacturerretailerdistributor/"/>
+    <link href="http://alekseynp.com/2013/07/04/case-study-visualizing-the-data-model-in-a-business-intelligence-change-program-at-a-global-manufacturerretailerdistributor/"/>
     <updated>2013-07-04T16:33:16-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/04/case-study-visualizing-the-data-model-in-a-business-intelligence-change-program-at-a-global-manufacturerretailerdistributor</id>
+    <id>http://alekseynp.com/2013/07/04/case-study-visualizing-the-data-model-in-a-business-intelligence-change-program-at-a-global-manufacturerretailerdistributor</id>
     <content type="html"><![CDATA[<p>Example visual
 <a href="http://alekseynp.github.io/wp-content/uploads/2013/07/data_model.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/07/data_model-300x300.png" alt="data_model" /></a>
 Note: Sample content merely for demonstration.</p>
@@ -220,9 +220,9 @@ Radial Tree
   
   <entry>
     <title type="html"><![CDATA[Communication in Consulting: Circular Visuals of Hierarchical Information]]></title>
-    <link href="http://alekseynp.github.io/2013/07/02/communication-in-consulting-circular-visuals-of-hierarchical-information/"/>
+    <link href="http://alekseynp.com/2013/07/02/communication-in-consulting-circular-visuals-of-hierarchical-information/"/>
     <updated>2013-07-02T16:28:15-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/02/communication-in-consulting-circular-visuals-of-hierarchical-information</id>
+    <id>http://alekseynp.com/2013/07/02/communication-in-consulting-circular-visuals-of-hierarchical-information</id>
     <content type="html"><![CDATA[<p>Consultants need to communicate all of the time, and that isn&rsquo;t always making PowerPoint slides, though it can sometimes seem like it. Technical consultants often wrestle with surprisingly abstract concepts in fields unfamiliar to their client or parts of the client&rsquo;s organisation. While a consultant&rsquo;s role is partly to shield their client from that complexity, there will also be times where things must be shared with a wider audience.</p>
 
 <p>One such abstraction that comes up again and again is a hierarchical structure or taxonomy of information. This is where an idea is broken down into categories, sub-categories and so on. These structures are often used in order to:</p>

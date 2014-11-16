@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: How To | Aleksey Nozdryn-Plotnicki]]></title>
-  <link href="http://alekseynp.github.io/categories/how-to/atom.xml" rel="self"/>
-  <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-15T20:03:33-05:00</updated>
-  <id>http://alekseynp.github.io/</id>
+  <link href="http://alekseynp.com/categories/how-to/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-16T13:24:12-05:00</updated>
+  <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Make a Heat Map With Hexagons, D3.js, hexbins.js, Open Street Map, Inkscape, and Paint.NET]]></title>
-    <link href="http://alekseynp.github.io/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net/"/>
+    <link href="http://alekseynp.com/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net/"/>
     <updated>2013-08-26T17:55:06-04:00</updated>
-    <id>http://alekseynp.github.io/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net</id>
+    <id>http://alekseynp.com/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net</id>
     <content type="html"><![CDATA[<p>In this post I will be showing how I made my map for the post, <a href="http://alekseynp.github.io/2013/08/17/average-age-of-brooklyns-buildings-mapped/">Average age of Brooklyn&rsquo;s buildings mapped</a>.</p>
 
 <p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4-150x150.png" alt="bk_r5_version4" /></a></p>
@@ -227,9 +227,9 @@ d3.csv("bk-xybuild-nomissing.csv",function(data) {
   
   <entry>
     <title type="html"><![CDATA[Use D3.js on Your Desktop to Publish Static Visualisations]]></title>
-    <link href="http://alekseynp.github.io/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations/"/>
+    <link href="http://alekseynp.com/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations/"/>
     <updated>2013-08-18T20:03:48-04:00</updated>
-    <id>http://alekseynp.github.io/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations</id>
+    <id>http://alekseynp.com/2013/08/18/use-d3-js-on-your-desktop-to-publish-static-visualisations</id>
     <content type="html"><![CDATA[<p>D3.js is a great tool for creating &ldquo;Data Drive Documents&rdquo;. As a JavaScript library, its natural primary use is on the web, rendering visualizations in the browser. It can also, however, be used offline on your PC to generate data driven content on a one-off basis. For someone familiar with D3, it can be a rapid and powerful way of scripting data into visual elements for use in a project that will not necessarily be published live and interactive on the web. In this post I will outline my simple method for using D3.js to script elements in static work.</p>
 
 <p><strong>Use D3.js to render content in the browser</strong></p>
@@ -258,9 +258,9 @@ d3.csv("bk-xybuild-nomissing.csv",function(data) {
   
   <entry>
     <title type="html"><![CDATA[How to Add a Table of Values to a Boxplot in R]]></title>
-    <link href="http://alekseynp.github.io/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r/"/>
+    <link href="http://alekseynp.com/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r/"/>
     <updated>2013-07-28T13:11:41-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r</id>
+    <id>http://alekseynp.com/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r</id>
     <content type="html"><![CDATA[<p>In this post I show how to use R to create a nice boxplot chart with a table showing the boxplot statistics to one side.</p>
 
 <p>As I have<a href="http://alekseynp.github.io/2013/06/05/how-to-make-nice-boxplots-with-r/"> shown before</a>, R can be used to produce nice-looking boxplots, a standard statistical technique that is not a standard chart available in the ubiquitous Microsoft Excel. Boxplots are a useful visualisation, but often your customer will also want to see a table of the values so that they can both see the trend and, for example, look up exact average values. If you try to create this table using Excel PivotTables, you will quickly be disappointed to see that it is not possible to calculate quartiles in a PivotTable. An Excel master will be able to create a bespoke set of formulas to filter the data and utilize the =Percentile() worksheet function, but there must be a better way&hellip; and there is.</p>
@@ -419,9 +419,9 @@ myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/
   
   <entry>
     <title type="html"><![CDATA[How I Made: The Sun Shines Fondly on Ontario University Presidents]]></title>
-    <link href="http://alekseynp.github.io/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents/"/>
+    <link href="http://alekseynp.com/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents/"/>
     <updated>2013-07-15T21:34:41-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents</id>
+    <id>http://alekseynp.com/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents</id>
     <content type="html"><![CDATA[<p>In this post I will share my R script that produce the visual from <a href="http://alekseynp.github.io/2013/07/13/the-sun-shines-fondly-on-ontario-university-presidents/">The sun shines fondly on Ontario university presidents</a>. The visual is a 10 x 3 grid of charts, what might be called small multiples. As you can see, the charts are time series, each with the same context-setting lines, and each with a unique series for a given university.<strong><a href="http://alekseynp.github.io/wp-admin/post.php?post=546&amp;action=edit">
 </a></strong></p>
 
@@ -551,9 +551,9 @@ myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/
   
   <entry>
     <title type="html"><![CDATA[How to Make Nice Boxplots With R]]></title>
-    <link href="http://alekseynp.github.io/2013/06/04/how-to-make-nice-boxplots-with-r/"/>
+    <link href="http://alekseynp.com/2013/06/04/how-to-make-nice-boxplots-with-r/"/>
     <updated>2013-06-04T23:26:20-04:00</updated>
-    <id>http://alekseynp.github.io/2013/06/04/how-to-make-nice-boxplots-with-r</id>
+    <id>http://alekseynp.com/2013/06/04/how-to-make-nice-boxplots-with-r</id>
     <content type="html"><![CDATA[<p>Anyone who has tried to create a boxplot in Microsoft Excel will know that there must be a better way. Boxplots are a powerful, standard statistical tool. They aren&rsquo;t that popular in the business community, as they are a little on the technical side, and perhaps this is why they are shunned by Microsoft. In any case, analytics professionals require a reproducible approach for generating good, clean boxplots.</p>
 
 <p>My recent infographic, <a href="http://alekseynp.github.io/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/">Thinking of buying or selling a Peugeot Partner in Chile?</a>, I featured two boxplots and here is how I made them.</p>

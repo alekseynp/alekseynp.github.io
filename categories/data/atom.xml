@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Data | Aleksey Nozdryn-Plotnicki]]></title>
-  <link href="http://alekseynp.github.io/categories/data/atom.xml" rel="self"/>
-  <link href="http://alekseynp.github.io/"/>
-  <updated>2014-11-15T20:03:33-05:00</updated>
-  <id>http://alekseynp.github.io/</id>
+  <link href="http://alekseynp.com/categories/data/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-16T13:24:12-05:00</updated>
+  <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[I Tried to Sell Open Government Data]]></title>
-    <link href="http://alekseynp.github.io/2014/03/28/i-tried-to-sell-open-government-data/"/>
+    <link href="http://alekseynp.com/2014/03/28/i-tried-to-sell-open-government-data/"/>
     <updated>2014-03-28T22:13:28-04:00</updated>
-    <id>http://alekseynp.github.io/2014/03/28/i-tried-to-sell-open-government-data</id>
+    <id>http://alekseynp.com/2014/03/28/i-tried-to-sell-open-government-data</id>
     <content type="html"><![CDATA[<p>I tried to sell open government data, but I won&rsquo;t be the only one.</p>
 
 <p>In 2013 I wrote a series of data journalism articles on the topic of <a href="http://alekseynp.github.io/topic-ontario-public-salary-disclosure/">Ontario Public Sector Salary Disclosure</a>. The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.</p>
@@ -50,9 +50,9 @@
   
   <entry>
     <title type="html"><![CDATA[Texas Death Row Execution Data]]></title>
-    <link href="http://alekseynp.github.io/2013/07/27/texas-death-row-execution-data/"/>
+    <link href="http://alekseynp.com/2013/07/27/texas-death-row-execution-data/"/>
     <updated>2013-07-27T23:06:53-04:00</updated>
-    <id>http://alekseynp.github.io/2013/07/27/texas-death-row-execution-data</id>
+    <id>http://alekseynp.com/2013/07/27/texas-death-row-execution-data</id>
     <content type="html"><![CDATA[<p>Andy Kirk over at <a href="http://www.visualisingdata.com/">Visualising Data</a> wrote recently about the <a href="http://www.visualisingdata.com/index.php/2013/07/texas-death-row-execution-data/">Texas Death Row Education Data</a>. Texas has executed it&rsquo;s 500th person since it began executing people again and provides a <a href="http://www.tdcj.state.tx.us/stat/dr_executed_offenders.html">wealth of data</a> about those people. Andy shared <a href="https://docs.google.com/spreadsheet/ccc?key=0ArNsipRBvi69dEUxZHVuRTc4ZlctREdldExsOW5rMUE#gid=0">a working copy the data </a>as scraped from the site. I&rsquo;m moving the ball forward here by sharing my updated copy of the data.</p>
 
 <p>You can find my dataset here: <a href="https://docs.google.com/spreadsheet/ccc?key=0AohPSKdfKZm1dE8tZlpZeWtIT1dDckFrTUZucG1sY3c#gid=0">get the data</a></p>
