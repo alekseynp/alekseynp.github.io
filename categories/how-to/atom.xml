@@ -4,7 +4,7 @@
   <title><![CDATA[Category: How To | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/how-to/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2014-11-16T13:31:27-05:00</updated>
+  <updated>2014-11-16T14:24:44-05:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -18,9 +18,9 @@
     <link href="http://alekseynp.com/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net/"/>
     <updated>2013-08-26T17:55:06-04:00</updated>
     <id>http://alekseynp.com/2013/08/26/how-to-make-a-heat-map-with-hexagons-d3-js-hexbins-js-open-street-map-inkscape-and-paint-net</id>
-    <content type="html"><![CDATA[<p>In this post I will be showing how I made my map for the post, <a href="http://alekseynp.github.io/2013/08/17/average-age-of-brooklyns-buildings-mapped/">Average age of Brooklyn&rsquo;s buildings mapped</a>.</p>
+    <content type="html"><![CDATA[<p>In this post I will be showing how I made my map for the post, <a href="http://alekseynp.com/2013/08/17/average-age-of-brooklyns-buildings-mapped/">Average age of Brooklyn&rsquo;s buildings mapped</a>.</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4-150x150.png" alt="bk_r5_version4" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/bk_r5_version4-150x150.png" alt="bk_r5_version4" /></a></p>
 
 <p>I did it with:</p>
 
@@ -34,7 +34,7 @@
 
 <p><strong>Overall Technique</strong></p>
 
-<p>The overall technique is based on using D3.js offline in the browser on a one-off basis to create a static visual that you will use elsewhere. I outline the technique here in my post, <a href="http://alekseynp.github.io/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
+<p>The overall technique is based on using D3.js offline in the browser on a one-off basis to create a static visual that you will use elsewhere. I outline the technique here in my post, <a href="http://alekseynp.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
 
 <p><strong>Get Data</strong></p>
 
@@ -138,11 +138,11 @@ var y = d3.scale.linear()
 
 <p>The result should look something like this:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400-150x150.png" alt="radius_5_400" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/radius_5_400-150x150.png" alt="radius_5_400" /></a></p>
 
 <p><strong>Extract SVG from the Browser</strong></p>
 
-<p>Use Firefox to copy and paste the SVG that is generated out of the browser, into a text editor, and save it off as an SVG file. I explain more here: <a href="http://alekseynp.github.io/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
+<p>Use Firefox to copy and paste the SVG that is generated out of the browser, into a text editor, and save it off as an SVG file. I explain more here: <a href="http://alekseynp.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/">Use D3.js on your desktop to publish static visualisations</a></p>
 
 <p><strong>Get a Basemap from Open Street Map</strong></p>
 
@@ -152,11 +152,11 @@ var y = d3.scale.linear()
 
 <p>Go to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org</a> and click on the Share icon on the right-hand side.</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/share.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/share.png" alt="share" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/share.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/share.png" alt="share" /></a></p>
 
 <p>You will see a menu that allows you to export PNGs from Open Street Map. There are some practical limits to how much detail you are allowed to get based on how large an area you select, but in any case it should be sufficient to make a large-ish map. If not, maybe you&rsquo;ll have to piece together some pieces manually.</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/image.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/image.png" alt="image" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/image.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/image.png" alt="image" /></a></p>
 
 <p><strong>Convert SVG to PNG</strong></p>
 
@@ -244,7 +244,7 @@ d3.csv("bk-xybuild-nomissing.csv",function(data) {
 
 <p>Firefox comes with its own inspector, so you don&rsquo;t even have to use Firebug. If you right click on your image and pick Inspect Element, you should gain access to a tree-view of the Document Objecet Model that will allow you to find the code for your svg. It will look like <svg>&hellip;stuffhere&hellip;</svg></p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/08/innerhtml.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/08/innerhtml.png" alt="innerhtml" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/innerhtml.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/innerhtml.png" alt="innerhtml" /></a></p>
 
 <p>In this example here, the SVG content we want is &ldquo;<svg height="1100" width="1100" > .. </svg>. All this is just a bunch of text and we want to get it onto the clipboard. The way we do this is to right-click on the node that contains the SVG and choose Copy Inner HTML. In this case that is the <div id="chart" >.</p>
 
@@ -263,11 +263,11 @@ d3.csv("bk-xybuild-nomissing.csv",function(data) {
     <id>http://alekseynp.com/2013/07/28/how-to-add-a-table-of-values-to-a-boxplot-in-r</id>
     <content type="html"><![CDATA[<p>In this post I show how to use R to create a nice boxplot chart with a table showing the boxplot statistics to one side.</p>
 
-<p>As I have<a href="http://alekseynp.github.io/2013/06/05/how-to-make-nice-boxplots-with-r/"> shown before</a>, R can be used to produce nice-looking boxplots, a standard statistical technique that is not a standard chart available in the ubiquitous Microsoft Excel. Boxplots are a useful visualisation, but often your customer will also want to see a table of the values so that they can both see the trend and, for example, look up exact average values. If you try to create this table using Excel PivotTables, you will quickly be disappointed to see that it is not possible to calculate quartiles in a PivotTable. An Excel master will be able to create a bespoke set of formulas to filter the data and utilize the =Percentile() worksheet function, but there must be a better way&hellip; and there is.</p>
+<p>As I have<a href="http://alekseynp.com/2013/06/05/how-to-make-nice-boxplots-with-r/"> shown before</a>, R can be used to produce nice-looking boxplots, a standard statistical technique that is not a standard chart available in the ubiquitous Microsoft Excel. Boxplots are a useful visualisation, but often your customer will also want to see a table of the values so that they can both see the trend and, for example, look up exact average values. If you try to create this table using Excel PivotTables, you will quickly be disappointed to see that it is not possible to calculate quartiles in a PivotTable. An Excel master will be able to create a bespoke set of formulas to filter the data and utilize the =Percentile() worksheet function, but there must be a better way&hellip; and there is.</p>
 
 <p>Here is the demo output using R (click for larger):</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/07/demo.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/07/demo-300x120.png" alt="demo" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/07/demo.png"><img src="http://alekseynp.com/wp-content/uploads/2013/07/demo-300x120.png" alt="demo" /></a></p>
 
 <p>How to create this using R? See further below for my complete script.</p>
 
@@ -422,10 +422,10 @@ myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/
     <link href="http://alekseynp.com/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents/"/>
     <updated>2013-07-15T21:34:41-04:00</updated>
     <id>http://alekseynp.com/2013/07/15/how-i-made-the-sun-shines-fondly-on-ontario-university-presidents</id>
-    <content type="html"><![CDATA[<p>In this post I will share my R script that produce the visual from <a href="http://alekseynp.github.io/2013/07/13/the-sun-shines-fondly-on-ontario-university-presidents/">The sun shines fondly on Ontario university presidents</a>. The visual is a 10 x 3 grid of charts, what might be called small multiples. As you can see, the charts are time series, each with the same context-setting lines, and each with a unique series for a given university.<strong><a href="http://alekseynp.github.io/wp-admin/post.php?post=546&amp;action=edit">
+    <content type="html"><![CDATA[<p>In this post I will share my R script that produce the visual from <a href="http://alekseynp.com/2013/07/13/the-sun-shines-fondly-on-ontario-university-presidents/">The sun shines fondly on Ontario university presidents</a>. The visual is a 10 x 3 grid of charts, what might be called small multiples. As you can see, the charts are time series, each with the same context-setting lines, and each with a unique series for a given university.<strong><a href="http://alekseynp.com/wp-admin/post.php?post=546&amp;action=edit">
 </a></strong></p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/07/university-presidents.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/07/university-presidents-391x1024.png" alt="university presidents" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/07/university-presidents.png"><img src="http://alekseynp.com/wp-content/uploads/2013/07/university-presidents-391x1024.png" alt="university presidents" /></a></p>
 
 <p>I used all open source tools:</p>
 
@@ -556,7 +556,7 @@ myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/
     <id>http://alekseynp.com/2013/06/04/how-to-make-nice-boxplots-with-r</id>
     <content type="html"><![CDATA[<p>Anyone who has tried to create a boxplot in Microsoft Excel will know that there must be a better way. Boxplots are a powerful, standard statistical tool. They aren&rsquo;t that popular in the business community, as they are a little on the technical side, and perhaps this is why they are shunned by Microsoft. In any case, analytics professionals require a reproducible approach for generating good, clean boxplots.</p>
 
-<p>My recent infographic, <a href="http://alekseynp.github.io/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/">Thinking of buying or selling a Peugeot Partner in Chile?</a>, I featured two boxplots and here is how I made them.</p>
+<p>My recent infographic, <a href="http://alekseynp.com/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/">Thinking of buying or selling a Peugeot Partner in Chile?</a>, I featured two boxplots and here is how I made them.</p>
 
 <p>I used <a href="https://www.google.com.pe/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fwww.r-project.org%2F&amp;ei=MFupUa-oDJK40gHAmYH4Dw&amp;usg=AFQjCNFq9BSTD_8y4svhPlIv_58OxEpd5A&amp;sig2=_ziAUMJRWN86JBwlo_VjJw&amp;bvm=bv.47244034,d.dmQ">R</a>, an open source statistics, analytics, and charting software. It is used extremely widely and many would consider it the de facto standard.</p>
 
@@ -622,11 +622,11 @@ myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/
 
 <p>What we get from this script:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/06/output.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/06/output-300x200.png" alt="output" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/06/output.png"><img src="http://alekseynp.com/wp-content/uploads/2013/06/output-300x200.png" alt="output" /></a></p>
 
 <p>What we would get from the default:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/06/output_default.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/06/output_default-300x200.png" alt="output_default" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/06/output_default.png"><img src="http://alekseynp.com/wp-content/uploads/2013/06/output_default-300x200.png" alt="output_default" /></a></p>
 
 <p>One aspect of this approach to highlight is the SVG device output. By scripting the size of the SVG output and writing it to disk, we take more control over the process, creating a more scripted and reproducible outcome.</p>
 

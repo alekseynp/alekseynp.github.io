@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Projects | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/projects/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2014-11-16T13:31:27-05:00</updated>
+  <updated>2014-11-16T14:24:44-05:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -18,7 +18,7 @@
     <link href="http://alekseynp.com/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
     <updated>2014-05-15T14:02:45-04:00</updated>
     <id>http://alekseynp.com/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
-    <content type="html"><![CDATA[<p><img src="http://alekseynp.github.io/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
+    <content type="html"><![CDATA[<p><img src="http://alekseynp.com/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
 
 <p>For anyone working in 3D in Gephi, this will be a useful and simple initialization layout plugin. Works well with the <a href="https://marketplace.gephi.org/plugin/force-atlas-3d/">Force Atlas 3D Plugin</a>. Without it and using a 2D layout to initialize instead, the 3D results can sometimes be milky-way-shaped, not generally spherical as you would expect, and ultimately not taking full advantage of the third dimension.</p>
 ]]></content>
@@ -31,7 +31,7 @@
     <id>http://alekseynp.com/2014/02/21/my-us-gdppopulation-map</id>
     <content type="html"><![CDATA[<p>My US GDP/&ldquo;Population&rdquo; Map</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://alekseynp.github.io/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://alekseynp.com/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
 
 <p>Yes, the quality on this is not super high, but the point is to experiment with an idea.</p>
 
@@ -51,8 +51,8 @@
 <p>I have a thing for trying out abstract ideas in spacial analysis. Like:</p>
 
 <ul>
-<li><p><a href="http://alekseynp.github.io/2013/10/14/visualising-shot-location-in-basketball/">NBA Basketball</a></p></li>
-<li><p><a href="http://alekseynp.github.io/2012/08/14/new-project-global-games-regional-sports-london-2012/">Olympic Medals</a></p></li>
+<li><p><a href="http://alekseynp.com/2013/10/14/visualising-shot-location-in-basketball/">NBA Basketball</a></p></li>
+<li><p><a href="http://alekseynp.com/2012/08/14/new-project-global-games-regional-sports-london-2012/">Olympic Medals</a></p></li>
 </ul>
 
 
@@ -69,15 +69,15 @@
 
 <p>Previously I have shown averages by team for all shots taken. What about shots taken by zone? Consider the following two charts:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png" alt="avg_inthepaint_teams" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png" alt="avg_inthepaint_teams" /></a></p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png" alt="avg_midrange_teams" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/avg_midrange_teams.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/avg_midrange_teams.png" alt="avg_midrange_teams" /></a></p>
 
 <p>Now we can see a level of detail that we couldn&rsquo;t in the average of all shots.</p>
 
 <p>Previously:</p>
 
-<p><a href="http://alekseynp.github.io/2013/11/05/more-on-averages-shot-locations/"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png" alt="for_and_against_640w" /></a></p>
+<p><a href="http://alekseynp.com/2013/11/05/more-on-averages-shot-locations/"><img src="http://alekseynp.com/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png" alt="for_and_against_640w" /></a></p>
 
 <p>Observations:</p>
 
@@ -99,7 +99,7 @@
 
 <p>Most teams show the same trend, consider the graphic Average Distance of Shots by Period below:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_allteams.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_allteams.png" alt="avg_distance_period_allteams" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png" alt="avg_distance_period_allteams" /></a></p>
 
 <p>Nearly all teams show an increasing distance by period, but there are some notable exceptions. A few teams like NYK, UTA, ATL, and ORL show an opposite trend.</p>
 
@@ -107,7 +107,7 @@
 
 <p>What is true at the global level and largely true at the team level is again reflected in the players. Here are the average distance for the top 100 scorers:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_100players.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_100players.png" alt="avg_distance_period_100players" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_100players.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_100players.png" alt="avg_distance_period_100players" /></a></p>
 
 <p>More noise, but the trend is still visible!</p>
 ]]></content>
@@ -123,14 +123,14 @@
 <p>See previously:</p>
 
 <ul>
-<li><p><a href="http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">Average Made Shot Location - NBA Regular Season 2012-13</a></p></li>
-<li><p><a href="http://alekseynp.github.io/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/">Update: Average shot locations - NBA Regular Season 2012-13</a></p></li>
+<li><p><a href="http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">Average Made Shot Location - NBA Regular Season 2012-13</a></p></li>
+<li><p><a href="http://alekseynp.com/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/">Update: Average shot locations - NBA Regular Season 2012-13</a></p></li>
 </ul>
 
 
 <p>Average Location of Shots Made - NBA 2012-13 Regular Season by teams and against teams&hellip;</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1.png" alt="for_and_against_640w" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/for_and_against_640w1.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/for_and_against_640w1.png" alt="for_and_against_640w" /></a></p>
 
 <ul>
 <li><p>Shots made by a team show more variation than shots made against a team. Where you shoot from depends more on who you are than who you are playing against &ndash; fine.</p></li>
@@ -144,7 +144,7 @@
 
 <p>Average Shot Location by Team by Win/Loss - NBA Regular Season 2012-13</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png" alt="sketch_wins_losses_byteam_v2" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png" alt="sketch_wins_losses_byteam_v2" /></a></p>
 
 <p>Every line represents a team and connects the two points for that team. The white dot for a team is the average location of shots attempted in games that team won. The black dot for a team is the average location of shots attempted in games that team lost.</p>
 
@@ -160,11 +160,11 @@
 
 <p>Same chart but filtering for only successful shots&hellip; same story, though less evidence that closer shots are important for winning:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png" alt="sketch_wins_losses_byteam_made_v2" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png" alt="sketch_wins_losses_byteam_made_v2" /></a></p>
 
 <p>We could also look at the games for an individual team&hellip; and I think learn nothing:</p>
 
-<p><a href="http://alekseynp.github.io/wp-content/uploads/2013/11/1610612737-.png"><img src="http://alekseynp.github.io/wp-content/uploads/2013/11/1610612737-.png" alt="1610612737" /></a></p>
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/1610612737-.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/1610612737-.png" alt="1610612737" /></a></p>
 ]]></content>
   </entry>
   
