@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2014-02-16 05:30:12+00:00
 layout: post
@@ -18,13 +18,13 @@ Over at [ThinkOR](http://thinkor.org), Dawen Peng [has](http://www.thinkor.org/2
 
 Today she brought [this over at the Wall Street Journal](http://mobile.blogs.wsj.com/cio/2014/02/14/it-takes-teams-to-solve-the-data-scientist-shortage/?mg=blogs-wsj) to my attention:
 
-[![BN-BN727_0214_c_FR_20140214152402](http://thinkdatavis.com/wp-content/uploads/2014/02/BN-BN727_0214_c_FR_20140214152402.jpg)](http://thinkdatavis.com/wp-content/uploads/2014/02/BN-BN727_0214_c_FR_20140214152402.jpg)
+[![BN-BN727_0214_c_FR_20140214152402](http://alekseynp.github.io/wp-content/uploads/2014/02/BN-BN727_0214_c_FR_20140214152402.jpg)](http://alekseynp.github.io/wp-content/uploads/2014/02/BN-BN727_0214_c_FR_20140214152402.jpg)
 
 _From Accenture, captioned: The 7 Skills of Data Scientists: Executives are struggling to find individuals who possess all eight data scientist skills and abilities. A data scientist team can serve as an alternative._
 
 I've spent some time in organisations not dissimilar to Accenture, so I am familiar with this sort of thought-leadership-white-paper-graphically-stylish diagram.  While certainly beautiful, it fails to get any useful message across. I could go into technical reasons why, but I think the alternative that I threw together will demonstrate how much is lost in the original.
 
-[![Accenture Data Science](http://thinkdatavis.com/wp-content/uploads/2014/02/Accenture-Data-Science.png)](http://thinkdatavis.com/wp-content/uploads/2014/02/Accenture-Data-Science.png)
+[![Accenture Data Science](http://alekseynp.github.io/wp-content/uploads/2014/02/Accenture-Data-Science.png)](http://alekseynp.github.io/wp-content/uploads/2014/02/Accenture-Data-Science.png)
 
 Lost in the original is:
 
@@ -46,4 +46,4 @@ Lost in the original is:
   * Once you remove the two skills unique to the Software Engineer and Systems Architect, almost all individuals have at least low in all skills
 
 
-I've tried to [shame companies](http://thinkdatavis.com/2013/08/08/faux-pas-in-white-papers-visier/) that make gross visualization errors in their white papers before. Maybe it's time Accenture contracted an editor for this stuff? Especially when you are trying to write thought leadership that includes the role of Visualization in a Data Science team, you need to do this stuff well.
+I've tried to [shame companies](http://alekseynp.github.io/2013/08/08/faux-pas-in-white-papers-visier/) that make gross visualization errors in their white papers before. Maybe it's time Accenture contracted an editor for this stuff? Especially when you are trying to write thought leadership that includes the role of Visualization in a Data Science team, you need to do this stuff well.

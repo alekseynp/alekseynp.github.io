@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2012-08-20 17:35:36+00:00
 layout: post
@@ -16,9 +16,9 @@ tags:
 
 The 2012 London Summer Olympics are over and the medals are tallied. As it is probably the most nationalistic event of the year, we all look to the medal tables to see how our nation did. So, "Who won the Olympics?". Like any good question, the answer is: It depends.
 
-I've created this visualisation to explore that question: [http://thinkdatavis.com/portfolio/who-won-the-olympics.html](http://thinkdatavis.com/portfolio/who-won-the-olympics.html)
+I've created this visualisation to explore that question: [http://alekseynp.github.io/portfolio/who-won-the-olympics.html](http://alekseynp.github.io/portfolio/who-won-the-olympics.html)
 
-[![](http://54.214.234.254/wp-content/uploads/2012/08/screenshot.png)](http://thinkdatavis.com/portfolio/who-won-the-olympics.html)
+[![](http://alekseynp.github.io/wp-content/uploads/2012/08/screenshot.png)](http://alekseynp.github.io/portfolio/who-won-the-olympics.html)
 
 It's not as well designed and doesn't have the affordance that I would like, but I'm publishing today in its draft form.
 

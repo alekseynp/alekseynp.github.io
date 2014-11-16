@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2014-05-16 19:30:18+00:00
 layout: post

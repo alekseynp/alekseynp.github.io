@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2014-05-15 18:02:45+00:00
 layout: post
@@ -14,7 +14,7 @@ tags:
 - NGRAIN
 ---
 
-![bigRandomCube](http://thinkdatavis.com/wp-content/uploads/2014/05/bigRandomCube-300x266.png)Yesterday, I released a simple plugin, [Random 3D Layout t](https://marketplace.gephi.org/plugin/random-3d-layout/)o the  Gephi Marketplace [here](https://marketplace.gephi.org/plugin/random-3d-layout/). It's very simple, and I developed it as part of my work at [NGRAIN](http://www.ngrain.com).
+![bigRandomCube](http://alekseynp.github.io/wp-content/uploads/2014/05/bigRandomCube-300x266.png)Yesterday, I released a simple plugin, [Random 3D Layout t](https://marketplace.gephi.org/plugin/random-3d-layout/)o the  Gephi Marketplace [here](https://marketplace.gephi.org/plugin/random-3d-layout/). It's very simple, and I developed it as part of my work at [NGRAIN](http://www.ngrain.com).
 
 
 

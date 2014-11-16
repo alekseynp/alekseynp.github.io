@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-04-19 16:40:12+00:00
 layout: post
@@ -15,7 +15,7 @@ tags:
 - Ontario Public Sector Salary Disclosure
 ---
 
-[![graphv2](http://54.214.234.254/wp-content/uploads/2013/04/graphv2.png)](http://54.214.234.254/wp-content/uploads/2013/04/graphv2.png)
+[![graphv2](http://alekseynp.github.io/wp-content/uploads/2013/04/graphv2.png)](http://alekseynp.github.io/wp-content/uploads/2013/04/graphv2.png)
 
 
 

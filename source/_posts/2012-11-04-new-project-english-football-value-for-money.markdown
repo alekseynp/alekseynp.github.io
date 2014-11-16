@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2012-11-04 22:34:06+00:00
 layout: post
@@ -19,10 +19,10 @@ The Guardian Data Blog has made available for download both the BBC Price of Foo
 
 
 
-[**English Footbal Tickets: Value For Money**](http://thinkdatavis.com/portfolio/english-football-tickets-value-for-money.html)  
+[**English Footbal Tickets: Value For Money**](http://alekseynp.github.io/portfolio/english-football-tickets-value-for-money.html)  
 
 
-[![](http://54.214.234.254/wp-content/uploads/2012/11/footievalue.png)](http://thinkdatavis.com/portfolio/english-football-tickets-value-for-money.html)
+[![](http://alekseynp.github.io/wp-content/uploads/2012/11/footievalue.png)](http://alekseynp.github.io/portfolio/english-football-tickets-value-for-money.html)
 
 
 

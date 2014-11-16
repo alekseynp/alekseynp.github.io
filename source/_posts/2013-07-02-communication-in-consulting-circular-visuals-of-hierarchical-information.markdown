@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-07-02 20:28:15+00:00
 layout: post
@@ -40,9 +40,9 @@ Here are three applications that I have seen or been involved in...
 
 Context: Business Intelligence change program
 Organisation: Global manufacturer/retailer/distributor
-[![data_model](http://thinkdatavis.com/wp-content/uploads/2013/07/data_model-300x300.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/data_model.png)
+[![data_model](http://alekseynp.github.io/wp-content/uploads/2013/07/data_model-300x300.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/data_model.png)
 Note: Sample content merely for demonstration.
-Read more: [Case study](http://thinkdatavis.com/2013/07/04/case-study-visualizing-the-data-model-in-a-business-intelligence-change-program-at-a-global-manufacturerretailerdistributor/)
+Read more: [Case study](http://alekseynp.github.io/2013/07/04/case-study-visualizing-the-data-model-in-a-business-intelligence-change-program-at-a-global-manufacturerretailerdistributor/)
 
 
 
@@ -50,9 +50,9 @@ Read more: [Case study](http://thinkdatavis.com/2013/07/04/case-study-visualizin
 
 Context: Siebel implementation
 Organisation: Public sector organisation
-[![process_model](http://thinkdatavis.com/wp-content/uploads/2013/07/process_model-265x300.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/process_model.png)
+[![process_model](http://alekseynp.github.io/wp-content/uploads/2013/07/process_model-265x300.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/process_model.png)
 Note: Sample content merely for demonstration.
-Read more: [Case study](http://thinkdatavis.com/2013/07/06/case-study-visualizing-the-process-model-in-a-siebel-implementation-at-a-public-sector-organisation/)
+Read more: [Case study](http://alekseynp.github.io/2013/07/06/case-study-visualizing-the-process-model-in-a-siebel-implementation-at-a-public-sector-organisation/)
 
 
 
@@ -60,9 +60,9 @@ Read more: [Case study](http://thinkdatavis.com/2013/07/06/case-study-visualizin
 
 Context: Strategy/profitability projects
 Organisation: Global organisation
-[![activity_taxonomy](http://thinkdatavis.com/wp-content/uploads/2013/07/activity_taxonomy-300x300.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/activity_taxonomy.png)
+[![activity_taxonomy](http://alekseynp.github.io/wp-content/uploads/2013/07/activity_taxonomy-300x300.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/activity_taxonomy.png)
 Note: Sample content merely for demonstration.
-Read more: [Case study](http://thinkdatavis.com/2013/07/08/case-study-visualizing-the-taxonomy-of-an-organisations-activities-in-strategyprofitability-projects-at-a-global-organisation/)
+Read more: [Case study](http://alekseynp.github.io/2013/07/08/case-study-visualizing-the-taxonomy-of-an-organisations-activities-in-strategyprofitability-projects-at-a-global-organisation/)
 
 
 
@@ -83,14 +83,14 @@ I have previously published tools to the web for generating visuals of hierarchi
 <tbody >
 <tr >
 
-<td style="text-align: center; vertical-align: top; border: 1px solid #dddddd; padding: 10px; margin: 2px; border-radius: 6px 6px 6px 6px;" >[![](http://thinkdatavis.com/portfolio/images/info_wheel_4_alpha_icon.png)
+<td style="text-align: center; vertical-align: top; border: 1px solid #dddddd; padding: 10px; margin: 2px; border-radius: 6px 6px 6px 6px;" >[![](http://alekseynp.github.io/portfolio/images/info_wheel_4_alpha_icon.png)
 Info Wheel
-(4-level)](http://thinkdatavis.com/portfolio/create-visualisations/infowheel4/infoWheel.html)
+(4-level)](http://alekseynp.github.io/portfolio/create-visualisations/infowheel4/infoWheel.html)
 </td>
 
-<td style="text-align: center; vertical-align: top; border: 1px solid #dddddd; padding: 10px; margin: 2px; border-radius: 6px 6px 6px 6px;" >[![](http://thinkdatavis.com/portfolio/images/node_tree_4_alpha_icon.png)
+<td style="text-align: center; vertical-align: top; border: 1px solid #dddddd; padding: 10px; margin: 2px; border-radius: 6px 6px 6px 6px;" >[![](http://alekseynp.github.io/portfolio/images/node_tree_4_alpha_icon.png)
 Radial Tree
-(4-level)](http://thinkdatavis.com/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html)
+(4-level)](http://alekseynp.github.io/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html)
 </td>
 </tr>
 </tbody>

@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-08-08 04:19:26+00:00
 layout: post
@@ -13,7 +13,7 @@ tags:
 - White paper
 ---
 
-[![Gratuitous-pies](http://thinkdatavis.com/wp-content/uploads/2013/08/Gratuitous-pies.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/Gratuitous-pies.png)Over at [FlowingData](http://flowingdata.com/2013/08/07/piemaster/), this "mutant pie chart" was shared as a sinful act in the Data Viz community. It looks very wizzy and innovative, but it breaks nearly every rule in the book:
+[![Gratuitous-pies](http://alekseynp.github.io/wp-content/uploads/2013/08/Gratuitous-pies.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/Gratuitous-pies.png)Over at [FlowingData](http://flowingdata.com/2013/08/07/piemaster/), this "mutant pie chart" was shared as a sinful act in the Data Viz community. It looks very wizzy and innovative, but it breaks nearly every rule in the book:
 
 
 
@@ -33,7 +33,7 @@ Well with the power of Google I'm prepared to out them... This is from [Visier's
 
 Move forwards one year and the[ 2013 report is available](http://info.visier.com/2013-workforce-analytics-and-planning-survey-report). More of the same gratuitous, unnecessary, and indeed harmful 3-d perspectives, but also another gem.
 
-[![visier](http://thinkdatavis.com/wp-content/uploads/2013/08/visier.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/visier.png)So what's going on here? At first glance (the most important glance) it appears that priorities are... trending... towards other...? Not as bad as the pies, but:
+[![visier](http://alekseynp.github.io/wp-content/uploads/2013/08/visier.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/visier.png)So what's going on here? At first glance (the most important glance) it appears that priorities are... trending... towards other...? Not as bad as the pies, but:
 
 
 
@@ -52,7 +52,7 @@ Move forwards one year and the[ 2013 report is available](http://info.visier.com
 
 And this is the obligatory part of the post where I spent a tiny amount of time redesigning a better version of what I criticized.
 
-[![visier2](http://thinkdatavis.com/wp-content/uploads/2013/08/visier2.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/visier2.png)
+[![visier2](http://alekseynp.github.io/wp-content/uploads/2013/08/visier2.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/visier2.png)
 
 **What should Visier and companies like it learn from this?**
 

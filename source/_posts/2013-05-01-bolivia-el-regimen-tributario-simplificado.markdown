@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-05-01 16:01:12+00:00
 layout: post
@@ -29,7 +29,7 @@ Naturally I saw the infographic, didn't like it, and as an exercise, spruced it 
 ## Improved:
 
 
-[![bolivian bars](http://54.214.234.254/wp-content/uploads/2013/05/bolivian-bars.png)](http://54.214.234.254/wp-content/uploads/2013/05/bolivian-bars.png)
+[![bolivian bars](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars.png)](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars.png)
 
 
 
@@ -38,4 +38,4 @@ Naturally I saw the infographic, didn't like it, and as an exercise, spruced it 
 ## Original:
 
 
-[![bolivian bars original](http://54.214.234.254/wp-content/uploads/2013/05/bolivian-bars-original.png)](http://54.214.234.254/wp-content/uploads/2013/05/bolivian-bars-original.png)
+[![bolivian bars original](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars-original.png)](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars-original.png)

@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-11-07 21:02:15+00:00
 layout: post
@@ -18,7 +18,7 @@ On average, players in the NBA take shots 6.5% further from the basket in the 4t
 
 Most teams show the same trend, consider the graphic Average Distance of Shots by Period below:
 
-[![avg_distance_period_allteams](http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png)](http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png)
+[![avg_distance_period_allteams](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_allteams.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_allteams.png)
 
 
 
@@ -28,6 +28,6 @@ It's not clear at this point what is leading this. Greater defense in later peri
 
 What is true at the global level and largely true at the team level is again reflected in the players. Here are the average distance for the top 100 scorers:
 
-[![avg_distance_period_100players](http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_100players.png)](http://thinkdatavis.com/wp-content/uploads/2013/11/avg_distance_period_100players.png)
+[![avg_distance_period_100players](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_100players.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_distance_period_100players.png)
 
 More noise, but the trend is still visible!

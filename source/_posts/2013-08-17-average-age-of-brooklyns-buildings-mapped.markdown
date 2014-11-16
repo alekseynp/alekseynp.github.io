@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-08-17 04:12:25+00:00
 layout: post
@@ -17,7 +17,7 @@ tags:
 
 I saw [this](http://bklynr.com/block-by-block-brooklyns-past-and-present/) recently [here](http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/). It's a map showing the age of Brooklyn's buildings.
 
-[![bklynr](http://thinkdatavis.com/wp-content/uploads/2013/08/bklynr.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/bklynr.png)
+[![bklynr](http://alekseynp.github.io/wp-content/uploads/2013/08/bklynr.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/bklynr.png)
 
 **What do I get from the map?**
 
@@ -27,7 +27,7 @@ Every data point is plotted, so if I were a Brooklyner, I would probably find my
 
 So I made this. Yes, a post will follow on how.
 
-[![bk_r5_version4](http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4-923x1024.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4.png)
+[![bk_r5_version4](http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4-923x1024.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4.png)
 
 (click for the huge version)
 
@@ -37,7 +37,7 @@ By showing the average build year for buildings in each hexagon, rather than plo
 
 The size or "radius" of the hexagons is an important parameter of the visualization. As you can see clearly below, our ability to spot patterns of a certain size requires aggregation of a similar size. Compare the first with the last and you'll see.
 
-[![radius_5_400](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png)[![radius_10_400](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_10_4001.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_10_4001.png)[![radius_20_400](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_20_400.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_20_400.png)[![radius_30_400](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_30_400.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_30_400.png)
+[![radius_5_400](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400.png)[![radius_10_400](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_10_4001.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_10_4001.png)[![radius_20_400](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_20_400.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_20_400.png)[![radius_30_400](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_30_400.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_30_400.png)
 
 
 

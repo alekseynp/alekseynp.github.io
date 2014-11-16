@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-02-25 19:20:28+00:00
 layout: post
@@ -14,11 +14,11 @@ tags:
 
 Today I am releasing a tool that allows users to create and export an Information Wheel.  
 
-[Click here](http://thinkdatavis.com/portfolio/create-visualisations/infowheel4/infoWheel.html) to access the tool.
+[Click here](http://alekseynp.github.io/portfolio/create-visualisations/infowheel4/infoWheel.html) to access the tool.
 
   
 
-[![](http://thinkdatavis.com/portfolio/images/infowheel_blog.png)](http://thinkdatavis.com/portfolio/create-visualisations/infowheel4/infoWheel.html)  
+[![](http://alekseynp.github.io/portfolio/images/infowheel_blog.png)](http://alekseynp.github.io/portfolio/create-visualisations/infowheel4/infoWheel.html)  
 
 
 

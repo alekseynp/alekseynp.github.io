@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2012-08-14 15:20:37+00:00
 layout: post
@@ -17,9 +17,9 @@ tags:
 
 Today I am publishing a project that I have been working on over the last couple of weeks during the 2012 Summer Olympics here in London. The essential question I asked was: If you calculate the weighted geographical midpoint of each sport at the Olympics, do you get an interesting result? I think the answer is yes, and I built a visualisation to support exploring it.
 
-Please find the visualisation here: [http://thinkdatavis.com/portfolio/global-games-regional-sports-london-2012-olympics.html](http://thinkdatavis.com/portfolio/global-games-regional-sports-london-2012-olympics.html)
+Please find the visualisation here: [http://alekseynp.github.io/portfolio/global-games-regional-sports-london-2012-olympics.html](http://alekseynp.github.io/portfolio/global-games-regional-sports-london-2012-olympics.html)
 
-[![](http://54.214.234.254/wp-content/uploads/2012/08/screenshot2.png)](http://thinkdatavis.com/portfolio/global-games-regional-sports-london-2012-olympics.html)
+[![](http://alekseynp.github.io/wp-content/uploads/2012/08/screenshot2.png)](http://alekseynp.github.io/portfolio/global-games-regional-sports-london-2012-olympics.html)
 
 **Sample Insights**
 

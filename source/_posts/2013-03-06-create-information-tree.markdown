@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-03-06 22:44:25+00:00
 layout: post
@@ -14,11 +14,11 @@ tags:
 
 Today I am releasing another tool that allows users to create and export a diagram/visualisation. Today it is an Information Tree.  
 
-[Click here](http://thinkdatavis.com/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html) to access the tool.
+[Click here](http://alekseynp.github.io/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html) to access the tool.
 
   
 
-[![](http://thinkdatavis.com/portfolio/images/node_tree_blog.png)](http://thinkdatavis.com/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html)  
+[![](http://alekseynp.github.io/portfolio/images/node_tree_blog.png)](http://alekseynp.github.io/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html)  
 
 
 

@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-12-15 18:37:31+00:00
 layout: post
@@ -12,4 +12,4 @@ Quick and fun. First step of data analysis. Look at your data.
 
 Outliers.
 
-[![outliers](http://thinkdatavis.com/wp-content/uploads/2013/12/outliers.png)](http://thinkdatavis.com/wp-content/uploads/2013/12/outliers.png)
+[![outliers](http://alekseynp.github.io/wp-content/uploads/2013/12/outliers.png)](http://alekseynp.github.io/wp-content/uploads/2013/12/outliers.png)

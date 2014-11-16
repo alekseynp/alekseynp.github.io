@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2014-02-17 22:05:54+00:00
 layout: post
@@ -30,7 +30,7 @@ In the original 2014 is shown to the left of 2013 and the bars are ordered high,
 
 [The Original](http://www.pwc.com/gx/en/asset-management/emerging-trends-real-estate/european-investment-market-forecast.jhtml):
 
-[![business-prospects](http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects.gif)](http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects.gif)
+[![business-prospects](http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects.gif)](http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects.gif)
 
 
 
@@ -49,7 +49,7 @@ What if we simply change the left-to-right ordering of everything?
 
 Left-to-right changes:
 
-[![business-prospects_v2](http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects_v2.gif)](http://thinkdatavis.com/wp-content/uploads/2014/02/business-prospects_v2.gif)
+[![business-prospects_v2](http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects_v2.gif)](http://alekseynp.github.io/wp-content/uploads/2014/02/business-prospects_v2.gif)
 
 
 
@@ -57,7 +57,7 @@ So now we at least get the impression that things are good before we start study
 
 I also experimented with a line design here:
 
-[![pwc2](http://thinkdatavis.com/wp-content/uploads/2014/02/pwc2.png)](http://thinkdatavis.com/wp-content/uploads/2014/02/pwc2.png)
+[![pwc2](http://alekseynp.github.io/wp-content/uploads/2014/02/pwc2.png)](http://alekseynp.github.io/wp-content/uploads/2014/02/pwc2.png)
 
 
 

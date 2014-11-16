@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2012-12-18 17:00:35+00:00
 layout: post
@@ -31,6 +31,6 @@ You can learn more about k-means clustering [here](http://en.wikipedia.org/wiki/
 
 
 
-[K-means Clustering](http://thinkdatavis.com/portfolio/k-means.html)  
+[K-means Clustering](http://alekseynp.github.io/portfolio/k-means.html)  
 
-[![](http://54.214.234.254/wp-content/uploads/2012/12/kmeans.png)](http://thinkdatavis.com/portfolio/k-means.html)
+[![](http://alekseynp.github.io/wp-content/uploads/2012/12/kmeans.png)](http://alekseynp.github.io/portfolio/k-means.html)

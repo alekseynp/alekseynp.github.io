@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-12-03 01:52:06+00:00
 layout: post
@@ -28,23 +28,23 @@ Clients hire Aleksey to:
 
 <table style="padding:25px; border-collapse:collapse; width:500px;" ><tr >
 
-<td >[![passing](http://thinkdatavis.com/wp-content/uploads/2013/07/passing.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/passing.png)
+<td >[![passing](http://alekseynp.github.io/wp-content/uploads/2013/07/passing.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/passing.png)
 </td>
 
-<td >[![london](http://thinkdatavis.com/wp-content/uploads/2013/07/london.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/london.png)
+<td >[![london](http://alekseynp.github.io/wp-content/uploads/2013/07/london.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/london.png)
 </td>
 
-<td >[![kmeans](http://thinkdatavis.com/wp-content/uploads/2013/07/kmeans.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/kmeans.png)
+<td >[![kmeans](http://alekseynp.github.io/wp-content/uploads/2013/07/kmeans.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/kmeans.png)
 </td>
 </tr><tr >
 
-<td >[![chileautos](http://thinkdatavis.com/wp-content/uploads/2013/07/chileautos.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/chileautos.png)
+<td >[![chileautos](http://alekseynp.github.io/wp-content/uploads/2013/07/chileautos.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/chileautos.png)
 </td>
 
-<td >[![dataj1](http://thinkdatavis.com/wp-content/uploads/2013/07/dataj1.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/dataj1.png)
+<td >[![dataj1](http://alekseynp.github.io/wp-content/uploads/2013/07/dataj1.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/dataj1.png)
 </td>
 
-<td >[![training](http://thinkdatavis.com/wp-content/uploads/2013/07/training.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/training.png)
+<td >[![training](http://alekseynp.github.io/wp-content/uploads/2013/07/training.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/training.png)
 </td>
 </tr></table>
 

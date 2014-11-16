@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-08-26 21:55:06+00:00
 layout: post
@@ -15,9 +15,9 @@ tags:
 - how to
 ---
 
-In this post I will be showing how I made my map for the post, [Average age of Brooklyn's buildings mapped](http://thinkdatavis.com/2013/08/17/average-age-of-brooklyns-buildings-mapped/).
+In this post I will be showing how I made my map for the post, [Average age of Brooklyn's buildings mapped](http://alekseynp.github.io/2013/08/17/average-age-of-brooklyns-buildings-mapped/).
 
-[![bk_r5_version4](http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4-150x150.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/bk_r5_version4.png)
+[![bk_r5_version4](http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4-150x150.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/bk_r5_version4.png)
 
 I did it with:
 
@@ -38,7 +38,7 @@ I did it with:
 
 **Overall Technique**
 
-The overall technique is based on using D3.js offline in the browser on a one-off basis to create a static visual that you will use elsewhere. I outline the technique here in my post, [Use D3.js on your desktop to publish static visualisations](http://thinkdatavis.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/)
+The overall technique is based on using D3.js offline in the browser on a one-off basis to create a static visual that you will use elsewhere. I outline the technique here in my post, [Use D3.js on your desktop to publish static visualisations](http://alekseynp.github.io/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/)
 
 
 
@@ -155,13 +155,13 @@ Finally we do the very normal D3 thing of binding the hexBinsData to hexagon pat
 
 The result should look something like this:
 
-[![radius_5_400](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400-150x150.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/radius_5_400.png)
+[![radius_5_400](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400-150x150.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/radius_5_400.png)
 
 
 
 **Extract SVG from the Browser**
 
-Use Firefox to copy and paste the SVG that is generated out of the browser, into a text editor, and save it off as an SVG file. I explain more here: [Use D3.js on your desktop to publish static visualisations](http://thinkdatavis.com/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/)
+Use Firefox to copy and paste the SVG that is generated out of the browser, into a text editor, and save it off as an SVG file. I explain more here: [Use D3.js on your desktop to publish static visualisations](http://alekseynp.github.io/2013/08/19/use-d3-js-on-your-desktop-to-publish-static-visualisations/)
 
 
 
@@ -173,11 +173,11 @@ With the heat we created above, we want to layer this on top of a map of Brookly
 
 Go to [http://www.openstreetmap.org](http://www.openstreetmap.org/) and click on the Share icon on the right-hand side.
 
-[![share](http://thinkdatavis.com/wp-content/uploads/2013/08/share.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/share.png)
+[![share](http://alekseynp.github.io/wp-content/uploads/2013/08/share.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/share.png)
 
 You will see a menu that allows you to export PNGs from Open Street Map. There are some practical limits to how much detail you are allowed to get based on how large an area you select, but in any case it should be sufficient to make a large-ish map. If not, maybe you'll have to piece together some pieces manually.
 
-[![image](http://thinkdatavis.com/wp-content/uploads/2013/08/image.png)](http://thinkdatavis.com/wp-content/uploads/2013/08/image.png)
+[![image](http://alekseynp.github.io/wp-content/uploads/2013/08/image.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/image.png)
 
 
 

@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-11-05 15:58:08+00:00
 layout: post
@@ -20,17 +20,17 @@ See previously:
 
 
 	
-  * [Average Made Shot Location - NBA Regular Season 2012-13](http://thinkdatavis.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/)
+  * [Average Made Shot Location - NBA Regular Season 2012-13](http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/)
 
 	
-  * [Update: Average shot locations - NBA Regular Season 2012-13](http://thinkdatavis.com/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/)
+  * [Update: Average shot locations - NBA Regular Season 2012-13](http://alekseynp.github.io/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/)
 
 
 
 
 Average Location of Shots Made - NBA 2012-13 Regular Season by teams and against teams...
 
-[![for_and_against_640w](http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1.png)](http://thinkdatavis.com/wp-content/uploads/2013/11/for_and_against_640w1.png)
+[![for_and_against_640w](http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1.png)
 
 
 
@@ -53,7 +53,7 @@ Sketch (not poblished):
 
 Average Shot Location by Team by Win/Loss - NBA Regular Season 2012-13
 
-[![sketch_wins_losses_byteam_v2](http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png)](http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png)
+[![sketch_wins_losses_byteam_v2](http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_v22.png)
 
 Every line represents a team and connects the two points for that team. The white dot for a team is the average location of shots attempted in games that team won. The black dot for a team is the average location of shots attempted in games that team lost.
 
@@ -76,7 +76,7 @@ Analysis:
 
 Same chart but filtering for only successful shots... same story, though less evidence that closer shots are important for winning:
 
-[![sketch_wins_losses_byteam_made_v2](http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png)](http://thinkdatavis.com/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png)
+[![sketch_wins_losses_byteam_made_v2](http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/sketch_wins_losses_byteam_made_v2.png)
 
 
 
@@ -84,4 +84,4 @@ We could also look at the games for an individual team... and I think learn noth
 
 
 
-[![1610612737](http://thinkdatavis.com/wp-content/uploads/2013/11/1610612737-.png)](http://thinkdatavis.com/wp-content/uploads/2013/11/1610612737-.png)
+[![1610612737](http://alekseynp.github.io/wp-content/uploads/2013/11/1610612737-.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/1610612737-.png)

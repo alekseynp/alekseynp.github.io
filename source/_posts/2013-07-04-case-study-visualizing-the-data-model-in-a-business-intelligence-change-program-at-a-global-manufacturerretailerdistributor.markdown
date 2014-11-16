@@ -1,5 +1,5 @@
 ---
-author: admin
+author: Aleksey Nozdryn-Plotnicki
 comments: true
 date: 2013-07-04 20:33:16+00:00
 layout: post
@@ -16,7 +16,7 @@ tags:
 ---
 
 Example visual
-[![data_model](http://thinkdatavis.com/wp-content/uploads/2013/07/data_model-300x300.png)](http://thinkdatavis.com/wp-content/uploads/2013/07/data_model.png)
+[![data_model](http://alekseynp.github.io/wp-content/uploads/2013/07/data_model-300x300.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/data_model.png)
 Note: Sample content merely for demonstration.
 
 **The Content**
@@ -43,14 +43,14 @@ I have previously published tools to the web for generating visuals of hierarchi
 <table style="font-size:10px; border-spacing:30px;" >
   <tr >
     
-<td style="text-align:center; vertical-align:top; border:1px solid #dddddd; padding:10px; margin:2px; border-radius:6px 6px 6px 6px;" >[![](http://thinkdatavis.com/portfolio/images/info_wheel_4_alpha_icon.png)  
+<td style="text-align:center; vertical-align:top; border:1px solid #dddddd; padding:10px; margin:2px; border-radius:6px 6px 6px 6px;" >[![](http://alekseynp.github.io/portfolio/images/info_wheel_4_alpha_icon.png)  
 Info Wheel  
-(4-level)](http://thinkdatavis.com/portfolio/create-visualisations/infowheel4/infoWheel.html)
+(4-level)](http://alekseynp.github.io/portfolio/create-visualisations/infowheel4/infoWheel.html)
 </td>
     
-<td style="text-align:center; vertical-align:top; border:1px solid #dddddd; padding:10px; margin:2px; border-radius:6px 6px 6px 6px;" >[![](http://thinkdatavis.com/portfolio/images/node_tree_4_alpha_icon.png)  
+<td style="text-align:center; vertical-align:top; border:1px solid #dddddd; padding:10px; margin:2px; border-radius:6px 6px 6px 6px;" >[![](http://alekseynp.github.io/portfolio/images/node_tree_4_alpha_icon.png)  
 Radial Tree  
-(4-level)](http://thinkdatavis.com/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html)
+(4-level)](http://alekseynp.github.io/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html)
 </td>
   </tr>
 </table>
