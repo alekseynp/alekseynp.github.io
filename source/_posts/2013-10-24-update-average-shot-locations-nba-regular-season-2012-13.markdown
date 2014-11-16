@@ -14,11 +14,11 @@ tags:
 - sports
 ---
 
-Here are two updated charts following up from my[ previous post](http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/).
+Here are two updated charts following up from my[ previous post](http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/).
 
-[![wgtavg_made_location_top50scorers_201213_regular](http://alekseynp.github.io/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png)](http://alekseynp.github.io/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png)
+[![wgtavg_made_location_top50scorers_201213_regular](http://alekseynp.com/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png)](http://alekseynp.com/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png)
 
-[![avg_made_location_top50scorers_201213_regular](http://alekseynp.github.io/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png)](http://alekseynp.github.io/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png)
+[![avg_made_location_top50scorers_201213_regular](http://alekseynp.com/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png)](http://alekseynp.com/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png)
 
 What's new?
 
@@ -41,4 +41,4 @@ What's new?
 
 **Collaboration**
 
-Collaboration is an important thing. Earlier with my weak knowledge of basketball I published what I thought would be an interesting visual [here](http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/). Seems I was correct. But with a little conversation with the guys at [deadspin.com](deadspin.com), some very easy improvements could be made.
+Collaboration is an important thing. Earlier with my weak knowledge of basketball I published what I thought would be an interesting visual [here](http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/). Seems I was correct. But with a little conversation with the guys at [deadspin.com](deadspin.com), some very easy improvements could be made.

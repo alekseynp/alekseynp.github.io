@@ -14,11 +14,11 @@ tags:
 
 Today I am releasing a tool that allows users to create and export an Information Wheel.  
 
-[Click here](http://alekseynp.github.io/portfolio/create-visualisations/infowheel4/infoWheel.html) to access the tool.
+[Click here](http://alekseynp.com/portfolio/create-visualisations/infowheel4/infoWheel.html) to access the tool.
 
   
 
-[![](http://alekseynp.github.io/portfolio/images/infowheel_blog.png)](http://alekseynp.github.io/portfolio/create-visualisations/infowheel4/infoWheel.html)  
+[![](http://alekseynp.com/portfolio/images/infowheel_blog.png)](http://alekseynp.com/portfolio/create-visualisations/infowheel4/infoWheel.html)  
 
 
 

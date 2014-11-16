@@ -26,7 +26,7 @@ The second chart is delightfully complex for journalism, but I felt even I, as a
 
 Enter my adjustment:
 
-[![social_mobility_final](http://alekseynp.github.io/wp-content/uploads/2014/03/social_mobility_final.png)](http://alekseynp.github.io/wp-content/uploads/2014/03/social_mobility_final.png)
+[![social_mobility_final](http://alekseynp.com/wp-content/uploads/2014/03/social_mobility_final.png)](http://alekseynp.com/wp-content/uploads/2014/03/social_mobility_final.png)
 
 I...
 

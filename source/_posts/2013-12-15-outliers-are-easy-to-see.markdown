@@ -12,4 +12,4 @@ Quick and fun. First step of data analysis. Look at your data.
 
 Outliers.
 
-[![outliers](http://alekseynp.github.io/wp-content/uploads/2013/12/outliers.png)](http://alekseynp.github.io/wp-content/uploads/2013/12/outliers.png)
+[![outliers](http://alekseynp.com/wp-content/uploads/2013/12/outliers.png)](http://alekseynp.com/wp-content/uploads/2013/12/outliers.png)

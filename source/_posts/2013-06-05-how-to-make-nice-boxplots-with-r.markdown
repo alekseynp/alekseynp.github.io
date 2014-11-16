@@ -15,7 +15,7 @@ tags:
 
 Anyone who has tried to create a boxplot in Microsoft Excel will know that there must be a better way. Boxplots are a powerful, standard statistical tool. They aren't that popular in the business community, as they are a little on the technical side, and perhaps this is why they are shunned by Microsoft. In any case, analytics professionals require a reproducible approach for generating good, clean boxplots.
 
-My recent infographic, [Thinking of buying or selling a Peugeot Partner in Chile?](http://alekseynp.github.io/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/), I featured two boxplots and here is how I made them.
+My recent infographic, [Thinking of buying or selling a Peugeot Partner in Chile?](http://alekseynp.com/2013/06/01/infographic-thinking-of-buying-or-selling-a-peugeot-partner-in-chile/), I featured two boxplots and here is how I made them.
 
 I used [R](https://www.google.com.pe/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CCoQFjAA&url=http%3A%2F%2Fwww.r-project.org%2F&ei=MFupUa-oDJK40gHAmYH4Dw&usg=AFQjCNFq9BSTD_8y4svhPlIv_58OxEpd5A&sig2=_ziAUMJRWN86JBwlo_VjJw&bvm=bv.47244034,d.dmQ), an open source statistics, analytics, and charting software. It is used extremely widely and many would consider it the de facto standard.
 
@@ -94,11 +94,11 @@ I scraped the data from chileautos.cl and output a CSV file from the process for
 
 What we get from this script:
 
-[![output](http://alekseynp.github.io/wp-content/uploads/2013/06/output-300x200.png)](http://alekseynp.github.io/wp-content/uploads/2013/06/output.png)
+[![output](http://alekseynp.com/wp-content/uploads/2013/06/output-300x200.png)](http://alekseynp.com/wp-content/uploads/2013/06/output.png)
 
 What we would get from the default:
 
-[![output_default](http://alekseynp.github.io/wp-content/uploads/2013/06/output_default-300x200.png)](http://alekseynp.github.io/wp-content/uploads/2013/06/output_default.png)
+[![output_default](http://alekseynp.com/wp-content/uploads/2013/06/output_default-300x200.png)](http://alekseynp.com/wp-content/uploads/2013/06/output_default.png)
 
 One aspect of this approach to highlight is the SVG device output. By scripting the size of the SVG output and writing it to disk, we take more control over the process, creating a more scripted and reproducible outcome.
 

@@ -18,8 +18,8 @@ Today, points for creativity, but the 3-dimensional Venezuelan pie is an absolut
 
 Case in point, compare the yellow 12% slice to the 25% and 48% slices. The reader has no chance to use either area or angles to compare the data values, and are left simply to read the values and ignore the visual aid.
 
-[![DSC_8769](http://alekseynp.github.io/wp-content/uploads/2013/10/DSC_8769-1024x685.jpg)](http://alekseynp.github.io/wp-content/uploads/2013/10/DSC_8769.jpg)
+[![DSC_8769](http://alekseynp.com/wp-content/uploads/2013/10/DSC_8769-1024x685.jpg)](http://alekseynp.com/wp-content/uploads/2013/10/DSC_8769.jpg)
 
 
 
-[![DSC_8768](http://alekseynp.github.io/wp-content/uploads/2013/10/DSC_8768-685x1024.jpg)](http://alekseynp.github.io/wp-content/uploads/2013/10/DSC_8768.jpg)
+[![DSC_8768](http://alekseynp.com/wp-content/uploads/2013/10/DSC_8768-685x1024.jpg)](http://alekseynp.com/wp-content/uploads/2013/10/DSC_8768.jpg)

@@ -28,23 +28,23 @@ Clients hire Aleksey to:
 
 <table style="padding:25px; border-collapse:collapse; width:500px;" ><tr >
 
-<td >[![passing](http://alekseynp.github.io/wp-content/uploads/2013/07/passing.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/passing.png)
+<td >[![passing](http://alekseynp.com/wp-content/uploads/2013/07/passing.png)](http://alekseynp.com/wp-content/uploads/2013/07/passing.png)
 </td>
 
-<td >[![london](http://alekseynp.github.io/wp-content/uploads/2013/07/london.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/london.png)
+<td >[![london](http://alekseynp.com/wp-content/uploads/2013/07/london.png)](http://alekseynp.com/wp-content/uploads/2013/07/london.png)
 </td>
 
-<td >[![kmeans](http://alekseynp.github.io/wp-content/uploads/2013/07/kmeans.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/kmeans.png)
+<td >[![kmeans](http://alekseynp.com/wp-content/uploads/2013/07/kmeans.png)](http://alekseynp.com/wp-content/uploads/2013/07/kmeans.png)
 </td>
 </tr><tr >
 
-<td >[![chileautos](http://alekseynp.github.io/wp-content/uploads/2013/07/chileautos.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/chileautos.png)
+<td >[![chileautos](http://alekseynp.com/wp-content/uploads/2013/07/chileautos.png)](http://alekseynp.com/wp-content/uploads/2013/07/chileautos.png)
 </td>
 
-<td >[![dataj1](http://alekseynp.github.io/wp-content/uploads/2013/07/dataj1.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/dataj1.png)
+<td >[![dataj1](http://alekseynp.com/wp-content/uploads/2013/07/dataj1.png)](http://alekseynp.com/wp-content/uploads/2013/07/dataj1.png)
 </td>
 
-<td >[![training](http://alekseynp.github.io/wp-content/uploads/2013/07/training.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/training.png)
+<td >[![training](http://alekseynp.com/wp-content/uploads/2013/07/training.png)](http://alekseynp.com/wp-content/uploads/2013/07/training.png)
 </td>
 </tr></table>
 

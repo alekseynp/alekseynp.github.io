@@ -19,10 +19,10 @@ The guys over at [MCFC Analytics](http://www.mcfc.co.uk/the-club/mcfc-analytics)
 
 
 
-[**Passing Direction of Premier League Football Players**](http://alekseynp.github.io/portfolio/mcfc-opta-passing-permier-league-2011-12.html)
+[**Passing Direction of Premier League Football Players**](http://alekseynp.com/portfolio/mcfc-opta-passing-permier-league-2011-12.html)
   
 
-[![](http://alekseynp.github.io/wp-content/uploads/2012/08/passingDirection1.png)](http://alekseynp.github.io/portfolio/mcfc-opta-passing-permier-league-2011-12.html)  
+[![](http://alekseynp.com/wp-content/uploads/2012/08/passingDirection1.png)](http://alekseynp.com/portfolio/mcfc-opta-passing-permier-league-2011-12.html)  
 
 
 

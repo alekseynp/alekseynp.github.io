@@ -19,9 +19,9 @@ Here's one I had ready to go four weeks ago, but the unreliability of my current
 
   
 
-[**Paid to Win**](http://alekseynp.github.io/portfolio/paid-to-win.html)  
+[**Paid to Win**](http://alekseynp.com/portfolio/paid-to-win.html)  
 
-[![](http://alekseynp.github.io/wp-content/uploads/2012/12/paidtowin.png)](http://alekseynp.github.io/portfolio/paid-to-win.html)  
+[![](http://alekseynp.com/wp-content/uploads/2012/12/paidtowin.png)](http://alekseynp.com/portfolio/paid-to-win.html)  
 
   
 
@@ -29,7 +29,7 @@ Click through for the interactive version.
 
   
 
-This is again quite similar to the [English Football Value for Money](http://alekseynp.github.io/portfolio/english-football-tickets-value-for-money.html) piece I did previously and is mainly just a data remix with an extra dimension to filter on. It's an interesting way to explore a ranking against two parameters at the same time.  
+This is again quite similar to the [English Football Value for Money](http://alekseynp.com/portfolio/english-football-tickets-value-for-money.html) piece I did previously and is mainly just a data remix with an extra dimension to filter on. It's an interesting way to explore a ranking against two parameters at the same time.  
 
   
 

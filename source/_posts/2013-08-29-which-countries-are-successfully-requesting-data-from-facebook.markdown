@@ -14,7 +14,7 @@ tags:
 - Transparency
 ---
 
-[![facebook_requests_v1_publish](http://alekseynp.github.io/wp-content/uploads/2013/08/facebook_requests_v1_publish.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/facebook_requests_v1_publish.png)
+[![facebook_requests_v1_publish](http://alekseynp.com/wp-content/uploads/2013/08/facebook_requests_v1_publish.png)](http://alekseynp.com/wp-content/uploads/2013/08/facebook_requests_v1_publish.png)
 
 Recently [Facebook published a report](http://newsroom.fb.com/News/699/Global-Government-Requests-Report) covering the first 6 months of 2013, disclosing which countries have made data requests from Facebook, and to what proportion of requests did Facebook respond with at least some data. "Transparency and trust are core values at Facebook." And good on them for at least trying not to be evil. Unfortunately, in this case "transparency" has amounted to a single HTML table with 71 rows of data. Given the enormous audience for this information, perhaps some data visualisation would have been appropriate. After all, what is "transparency" if people can't really "see" the data?
 

@@ -29,7 +29,7 @@ Naturally I saw the infographic, didn't like it, and as an exercise, spruced it 
 ## Improved:
 
 
-[![bolivian bars](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars.png)](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars.png)
+[![bolivian bars](http://alekseynp.com/wp-content/uploads/2013/05/bolivian-bars.png)](http://alekseynp.com/wp-content/uploads/2013/05/bolivian-bars.png)
 
 
 
@@ -38,4 +38,4 @@ Naturally I saw the infographic, didn't like it, and as an exercise, spruced it 
 ## Original:
 
 
-[![bolivian bars original](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars-original.png)](http://alekseynp.github.io/wp-content/uploads/2013/05/bolivian-bars-original.png)
+[![bolivian bars original](http://alekseynp.com/wp-content/uploads/2013/05/bolivian-bars-original.png)](http://alekseynp.com/wp-content/uploads/2013/05/bolivian-bars-original.png)

@@ -15,11 +15,11 @@ tags:
 
 In this post I show how to use R to create a nice boxplot chart with a table showing the boxplot statistics to one side.
 
-As I have[ shown before](http://alekseynp.github.io/2013/06/05/how-to-make-nice-boxplots-with-r/), R can be used to produce nice-looking boxplots, a standard statistical technique that is not a standard chart available in the ubiquitous Microsoft Excel. Boxplots are a useful visualisation, but often your customer will also want to see a table of the values so that they can both see the trend and, for example, look up exact average values. If you try to create this table using Excel PivotTables, you will quickly be disappointed to see that it is not possible to calculate quartiles in a PivotTable. An Excel master will be able to create a bespoke set of formulas to filter the data and utilize the =Percentile() worksheet function, but there must be a better way... and there is.
+As I have[ shown before](http://alekseynp.com/2013/06/05/how-to-make-nice-boxplots-with-r/), R can be used to produce nice-looking boxplots, a standard statistical technique that is not a standard chart available in the ubiquitous Microsoft Excel. Boxplots are a useful visualisation, but often your customer will also want to see a table of the values so that they can both see the trend and, for example, look up exact average values. If you try to create this table using Excel PivotTables, you will quickly be disappointed to see that it is not possible to calculate quartiles in a PivotTable. An Excel master will be able to create a bespoke set of formulas to filter the data and utilize the =Percentile() worksheet function, but there must be a better way... and there is.
 
 Here is the demo output using R (click for larger):
 
-[![demo](http://alekseynp.github.io/wp-content/uploads/2013/07/demo-300x120.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/demo.png)
+[![demo](http://alekseynp.com/wp-content/uploads/2013/07/demo-300x120.png)](http://alekseynp.com/wp-content/uploads/2013/07/demo.png)
 
 How to create this using R? See further below for my complete script.
 

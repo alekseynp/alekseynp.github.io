@@ -13,4 +13,4 @@ tags:
 - overlanding
 ---
 
-[![partner](http://alekseynp.github.io/wp-content/uploads/2013/06/partner1.png)](http://alekseynp.github.io/wp-content/uploads/2013/06/partner1.png)
+[![partner](http://alekseynp.com/wp-content/uploads/2013/06/partner1.png)](http://alekseynp.com/wp-content/uploads/2013/06/partner1.png)

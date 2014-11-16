@@ -14,13 +14,13 @@ tags:
 - Ontario Public Sector Salary Disclosure
 ---
 
-This is a follow-up on my article, [20-25% raise for Ontario’s pathologists in 2012](http://alekseynp.github.io/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/). Evolving from an explorative analysis of the 2013 Ontario Public Sector Salary Disclosure, the "Sunshine List", I identified a surprising change in the packages (salary + benefits) of pathologists on the list.
+This is a follow-up on my article, [20-25% raise for Ontario’s pathologists in 2012](http://alekseynp.com/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/). Evolving from an explorative analysis of the 2013 Ontario Public Sector Salary Disclosure, the "Sunshine List", I identified a surprising change in the packages (salary + benefits) of pathologists on the list.
 
 **Further Analysis**
 
 Extending the analysis backwards to 1996, the start of the “Sunshine List” we can get a more complete picture of salary changes for Ontario pathologists.
 
-[![pathologistsovertime](http://alekseynp.github.io/wp-content/uploads/2013/05/pathologistsovertime.png)](http://alekseynp.github.io/wp-content/uploads/2013/05/pathologistsovertime.png)
+[![pathologistsovertime](http://alekseynp.com/wp-content/uploads/2013/05/pathologistsovertime.png)](http://alekseynp.com/wp-content/uploads/2013/05/pathologistsovertime.png)
 
 The analysis and the visual shows that:
 

@@ -11,7 +11,7 @@ tags:
 - Humor
 ---
 
-[![20130615_124724 - Edited](http://alekseynp.github.io/wp-content/uploads/2013/07/20130615_124724-Edited.jpg)](http://alekseynp.github.io/wp-content/uploads/2013/07/20130615_124724-Edited.jpg)
+[![20130615_124724 - Edited](http://alekseynp.com/wp-content/uploads/2013/07/20130615_124724-Edited.jpg)](http://alekseynp.com/wp-content/uploads/2013/07/20130615_124724-Edited.jpg)
 So... Which way to Lima?
 
 Gestalt principles are important to learn if you're going to be designing information graphics. One such principle is that of nearness or proximity.... "... all else being equal, perception tends to group stimuli that are close together as part of the same object" (thanks [Wikipedia](http://en.wikipedia.org/wiki/Principles_of_grouping)) Which arrow is associated with which label?

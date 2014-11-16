@@ -15,7 +15,7 @@ tags:
 - Ontario Public Sector Salary Disclosure
 ---
 
-[![graphv2](http://alekseynp.github.io/wp-content/uploads/2013/04/graphv2.png)](http://alekseynp.github.io/wp-content/uploads/2013/04/graphv2.png)
+[![graphv2](http://alekseynp.com/wp-content/uploads/2013/04/graphv2.png)](http://alekseynp.com/wp-content/uploads/2013/04/graphv2.png)
 
 
 

@@ -27,4 +27,4 @@ All you have to do is try and use the chart at the top to answer simple question
 
 Obviously I'm going to recommend a bar chart instead, which would have a different aspect ratio and might not work well in the space allowed by the graphic. A good alternative to a bar chart would be to put in a line in each of the charts representing the average result. I've sketched it below:
 
-[![economist_better](http://alekseynp.github.io/wp-content/uploads/2013/08/economist_better-973x1024.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/economist_better.png)
+[![economist_better](http://alekseynp.com/wp-content/uploads/2013/08/economist_better-973x1024.png)](http://alekseynp.com/wp-content/uploads/2013/08/economist_better.png)

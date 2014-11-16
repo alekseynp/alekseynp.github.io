@@ -16,11 +16,11 @@ tags:
 - sports
 ---
 
-I [previously posted](http://alekseynp.github.io/new-project-global-games-regional-sports-london-2012/) a project I worked on for the London 2012 Olympics. Well, I did some digging around and I managed to find data for the Vancouver 2010 Winter Olympics, so I wrangled it into the format I had previously used, made some tweaks, and republished my Global Games, Regional Sports analysis, but this time with different data. Does that make this some kind of data-remix?
+I [previously posted](http://alekseynp.com/new-project-global-games-regional-sports-london-2012/) a project I worked on for the London 2012 Olympics. Well, I did some digging around and I managed to find data for the Vancouver 2010 Winter Olympics, so I wrangled it into the format I had previously used, made some tweaks, and republished my Global Games, Regional Sports analysis, but this time with different data. Does that make this some kind of data-remix?
 
-Please find the result here: [http://alekseynp.github.io/portfolio/global-games-regional-sports-vancouver-2010-olympics.html](http://alekseynp.github.io/portfolio/global-games-regional-sports-vancouver-2010-olympics.html)
+Please find the result here: [http://alekseynp.com/portfolio/global-games-regional-sports-vancouver-2010-olympics.html](http://alekseynp.com/portfolio/global-games-regional-sports-vancouver-2010-olympics.html)
 
-[![](http://alekseynp.github.io/wp-content/uploads/2012/08/screenshot1.png)](http://alekseynp.github.io/portfolio/global-games-regional-sports-vancouver-2010-olympics.html)
+[![](http://alekseynp.com/wp-content/uploads/2012/08/screenshot1.png)](http://alekseynp.com/portfolio/global-games-regional-sports-vancouver-2010-olympics.html)
 
 **Sample Insights**
 

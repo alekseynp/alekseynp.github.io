@@ -19,10 +19,10 @@ The Guardian Data Blog has made available for download both the BBC Price of Foo
 
 
 
-[**English Footbal Tickets: Value For Money**](http://alekseynp.github.io/portfolio/english-football-tickets-value-for-money.html)  
+[**English Footbal Tickets: Value For Money**](http://alekseynp.com/portfolio/english-football-tickets-value-for-money.html)  
 
 
-[![](http://alekseynp.github.io/wp-content/uploads/2012/11/footievalue.png)](http://alekseynp.github.io/portfolio/english-football-tickets-value-for-money.html)
+[![](http://alekseynp.com/wp-content/uploads/2012/11/footievalue.png)](http://alekseynp.com/portfolio/english-football-tickets-value-for-money.html)
 
 
 

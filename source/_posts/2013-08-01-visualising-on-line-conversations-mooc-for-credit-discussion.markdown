@@ -21,7 +21,7 @@ My gut told me that the participation credit was driving bad behavior. The data 
 
 I found two threads to compare. In the general discussion forum I found a thread, "Where are you located?" and in the assignment forum I found "Where are you from?". More or less the same question (engaging discussions on the topic of identity aside), but with one key difference: the posts in the assignment forum were for credit. Take a look (click for bigger):
 
-[![where_r_u_publish](http://alekseynp.github.io/wp-content/uploads/2013/08/where_r_u_publish1-1024x144.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/where_r_u_publish1.png)
+[![where_r_u_publish](http://alekseynp.com/wp-content/uploads/2013/08/where_r_u_publish1-1024x144.png)](http://alekseynp.com/wp-content/uploads/2013/08/where_r_u_publish1.png)
 
 Posts go in chronological order from left to right. Every author is a line. An author who posts only once is a dot. An author who posts more than once has his posts connected by a line.
 

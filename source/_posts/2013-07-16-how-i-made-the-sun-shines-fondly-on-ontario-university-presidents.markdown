@@ -14,10 +14,10 @@ tags:
 - R
 ---
 
-In this post I will share my R script that produce the visual from [The sun shines fondly on Ontario university presidents](http://alekseynp.github.io/2013/07/13/the-sun-shines-fondly-on-ontario-university-presidents/). The visual is a 10 x 3 grid of charts, what might be called small multiples. As you can see, the charts are time series, each with the same context-setting lines, and each with a unique series for a given university.**[
-](http://alekseynp.github.io/wp-admin/post.php?post=546&action=edit)**
+In this post I will share my R script that produce the visual from [The sun shines fondly on Ontario university presidents](http://alekseynp.com/2013/07/13/the-sun-shines-fondly-on-ontario-university-presidents/). The visual is a 10 x 3 grid of charts, what might be called small multiples. As you can see, the charts are time series, each with the same context-setting lines, and each with a unique series for a given university.**[
+](http://alekseynp.com/wp-admin/post.php?post=546&action=edit)**
 
-[![university presidents](http://alekseynp.github.io/wp-content/uploads/2013/07/university-presidents-391x1024.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/university-presidents.png)
+[![university presidents](http://alekseynp.com/wp-content/uploads/2013/07/university-presidents-391x1024.png)](http://alekseynp.com/wp-content/uploads/2013/07/university-presidents.png)
 
 I used all open source tools:
 

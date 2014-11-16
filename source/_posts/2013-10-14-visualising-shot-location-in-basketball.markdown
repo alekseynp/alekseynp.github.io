@@ -18,17 +18,17 @@ Sports is full of spacial data. Data visualizers love this. Take the points and 
 
 At stats.nba.com you can see shot charts like this:
 
-[![short_chart_thumbnail](http://alekseynp.github.io/wp-content/uploads/2013/10/short_chart_thumbnail.png)](http://stats.nba.com/playerShotchart.html?PlayerID=201142&viewShots=true&zoneDetails=false&zoneOverlays=false) [![shot_chart_thumbnail2](http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail2.png)](http://stats.nba.com/playerShotchart.html?PlayerID=201142&viewShots=false&zoneDetails=true&zoneOverlays=true&zone-mode=zone)
+[![short_chart_thumbnail](http://alekseynp.com/wp-content/uploads/2013/10/short_chart_thumbnail.png)](http://stats.nba.com/playerShotchart.html?PlayerID=201142&viewShots=true&zoneDetails=false&zoneOverlays=false) [![shot_chart_thumbnail2](http://alekseynp.com/wp-content/uploads/2013/10/shot_chart_thumbnail2.png)](http://stats.nba.com/playerShotchart.html?PlayerID=201142&viewShots=false&zoneDetails=true&zoneOverlays=true&zone-mode=zone)
 
 
 
 At hotshotcharts.com you can see shot charts heated by success rate:
 
-[![shot_chart_thumbnail3](http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail3.png)](http://hotshotcharts.com/)
+[![shot_chart_thumbnail3](http://alekseynp.com/wp-content/uploads/2013/10/shot_chart_thumbnail3.png)](http://hotshotcharts.com/)
 
 Even at the much (rightly) worshiped New York Times they're doing charts like this:
 
-[![shot_chart_thumbnail4](http://alekseynp.github.io/wp-content/uploads/2013/10/shot_chart_thumbnail4.png)](http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html?_r=0)
+[![shot_chart_thumbnail4](http://alekseynp.com/wp-content/uploads/2013/10/shot_chart_thumbnail4.png)](http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html?_r=0)
 
 
 
@@ -42,13 +42,13 @@ Why? Too much data. The points are not together for easy comparison.
 
 What I am experimenting with is greater use of aggregation in these circumstances. What if we take average positions to aggregate thousands of data points and then plot those averages together to gain insights?
 
-Here is [my first piece](http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/) on basketball:
+Here is [my first piece](http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/) on basketball:
 
-[![final](http://alekseynp.github.io/wp-content/uploads/2013/10/final-298x300.png)](http://alekseynp.github.io/wp-content/uploads/2013/10/final.png)
+[![final](http://alekseynp.com/wp-content/uploads/2013/10/final-298x300.png)](http://alekseynp.com/wp-content/uploads/2013/10/final.png)
 
 
 
-Unfortunately the concept of average location is a bit abstract, and thus that creates a greater overhead of effort for the viewer to overcome before they start getting value out of the graphic. However, after that we can start to compare players in a way that we never have before. See the first post [here](http://alekseynp.github.io/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/).
+Unfortunately the concept of average location is a bit abstract, and thus that creates a greater overhead of effort for the viewer to overcome before they start getting value out of the graphic. However, after that we can start to compare players in a way that we never have before. See the first post [here](http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/).
 
 
 

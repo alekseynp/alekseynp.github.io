@@ -31,6 +31,6 @@ You can learn more about k-means clustering [here](http://en.wikipedia.org/wiki/
 
 
 
-[K-means Clustering](http://alekseynp.github.io/portfolio/k-means.html)  
+[K-means Clustering](http://alekseynp.com/portfolio/k-means.html)  
 
-[![](http://alekseynp.github.io/wp-content/uploads/2012/12/kmeans.png)](http://alekseynp.github.io/portfolio/k-means.html)
+[![](http://alekseynp.com/wp-content/uploads/2012/12/kmeans.png)](http://alekseynp.com/portfolio/k-means.html)

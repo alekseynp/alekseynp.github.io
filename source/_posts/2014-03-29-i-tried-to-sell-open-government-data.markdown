@@ -18,7 +18,7 @@ tags:
 
 I tried to sell open government data, but I won't be the only one.
 
-In 2013 I wrote a series of data journalism articles on the topic of [Ontario Public Sector Salary Disclosure](http://alekseynp.github.io/topic-ontario-public-salary-disclosure/). The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.
+In 2013 I wrote a series of data journalism articles on the topic of [Ontario Public Sector Salary Disclosure](http://alekseynp.com/topic-ontario-public-salary-disclosure/). The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.
 
 In late 2013 I was approached by someone who was looking for the data behind my analysis. I agreed to share the data on a few conditions, one of which was non-commercial use that they were unable to meet. And so I offered to sell them the data. Free, open, public data.
 
@@ -34,7 +34,7 @@ My simplest and most direct defense is: My customer knew that the data was freel
 
 Nobody owns the truth, but once they have measured it, processed it, and made it available in a useful format, then they have something that they could sell to you. If I sold you a map based on free government data or delivered you a service based on it, you would accept that.
 
-I wrote about the [Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure](http://alekseynp.github.io/2013/05/28/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/) and [Current publishing of Ontario “Sunshine List” not good enough](http://alekseynp.github.io/2013/04/22/current-publishing-of-ontario-sunshine-list-not-good-enough/). This data was "open" but not truly "open" and it required considerable effort to process before I could analyse it.
+I wrote about the [Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure](http://alekseynp.com/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/) and [Current publishing of Ontario “Sunshine List” not good enough](http://alekseynp.com/2013/04/22/current-publishing-of-ontario-sunshine-list-not-good-enough/). This data was "open" but not truly "open" and it required considerable effort to process before I could analyse it.
 
 **ProPublica**
 

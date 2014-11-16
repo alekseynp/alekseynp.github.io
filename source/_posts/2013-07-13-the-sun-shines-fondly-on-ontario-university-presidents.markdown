@@ -28,11 +28,11 @@ Since 1996, the ten best paid Ontario university presidents have seen their pack
   * 5.5% annually for Pathologists since 1996
 
 
-While not as shocking as the single-year 22% raise that I [previously identified for pathologists](http://alekseynp.github.io/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/), this is evidence that university presidents are in the elite club for whom the sun shines strongly. As I have [shown previously](http://alekseynp.github.io/2013/05/06/second-largest-growth-gap-in-2012-for-ontario-sunshine-list/), those at the top in Ontario not only higher salaries, and bigger raises in absolute dollars, but also larger percentage increases annually which compound and lead to bigger gap between them and everyone else.
+While not as shocking as the single-year 22% raise that I [previously identified for pathologists](http://alekseynp.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/), this is evidence that university presidents are in the elite club for whom the sun shines strongly. As I have [shown previously](http://alekseynp.com/2013/05/06/second-largest-growth-gap-in-2012-for-ontario-sunshine-list/), those at the top in Ontario not only higher salaries, and bigger raises in absolute dollars, but also larger percentage increases annually which compound and lead to bigger gap between them and everyone else.
 
 Explore the data below:
 
-[![university presidents](http://alekseynp.github.io/wp-content/uploads/2013/07/university-presidents.png)](http://alekseynp.github.io/wp-content/uploads/2013/07/university-presidents.png)
+[![university presidents](http://alekseynp.com/wp-content/uploads/2013/07/university-presidents.png)](http://alekseynp.com/wp-content/uploads/2013/07/university-presidents.png)
 
 **Questions and Answers**
 

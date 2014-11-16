@@ -14,7 +14,7 @@ tags:
 - sports
 ---
 
-[![final](http://alekseynp.github.io/wp-content/uploads/2013/10/final.png)](http://alekseynp.github.io/wp-content/uploads/2013/10/final.png)
+[![final](http://alekseynp.com/wp-content/uploads/2013/10/final.png)](http://alekseynp.com/wp-content/uploads/2013/10/final.png)
 
 In the 2012-13 regular season, tens of thousands of shots were taken. How can we visualize these in a useful manner? What is the average location of successful shot attempts? How do the top 50 players compare?
 
@@ -52,4 +52,4 @@ More about this from a data visualization perspective in another post.
 
 See also my work on the average passing direction in the English Premier League (Football (Soccer)):
 
-[![passingDirection](http://alekseynp.github.io/wp-content/uploads/2012/08/passingDirection1.png)](http://alekseynp.github.io/portfolio/mcfc-opta-passing-permier-league-2011-12.html)
+[![passingDirection](http://alekseynp.com/wp-content/uploads/2012/08/passingDirection1.png)](http://alekseynp.com/portfolio/mcfc-opta-passing-permier-league-2011-12.html)

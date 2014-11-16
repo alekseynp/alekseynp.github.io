@@ -18,15 +18,15 @@ Yet another post on visualising and analysing NBA shot location data using locat
 
 Previously I have shown averages by team for all shots taken. What about shots taken by zone? Consider the following two charts:
 
-[![avg_inthepaint_teams](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_inthepaint_teams.png)
+[![avg_inthepaint_teams](http://alekseynp.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png)](http://alekseynp.com/wp-content/uploads/2013/11/avg_inthepaint_teams.png)
 
-[![avg_midrange_teams](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png)](http://alekseynp.github.io/wp-content/uploads/2013/11/avg_midrange_teams.png)
+[![avg_midrange_teams](http://alekseynp.com/wp-content/uploads/2013/11/avg_midrange_teams.png)](http://alekseynp.com/wp-content/uploads/2013/11/avg_midrange_teams.png)
 
 Now we can see a level of detail that we couldn't in the average of all shots.
 
 Previously:
 
-[![for_and_against_640w](http://alekseynp.github.io/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png)](http://alekseynp.github.io/2013/11/05/more-on-averages-shot-locations/)
+[![for_and_against_640w](http://alekseynp.com/wp-content/uploads/2013/11/for_and_against_640w1-150x150.png)](http://alekseynp.com/2013/11/05/more-on-averages-shot-locations/)
 
 Observations:
 

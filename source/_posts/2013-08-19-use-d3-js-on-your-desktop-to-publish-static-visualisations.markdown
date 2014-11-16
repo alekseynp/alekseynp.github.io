@@ -29,7 +29,7 @@ Now that you've used D3 to render SVG in the browser based on your data, you can
 
 Firefox comes with its own inspector, so you don't even have to use Firebug. If you right click on your image and pick Inspect Element, you should gain access to a tree-view of the Document Objecet Model that will allow you to find the code for your svg. It will look like <svg>...stuffhere...</svg>
 
-[![innerhtml](http://alekseynp.github.io/wp-content/uploads/2013/08/innerhtml.png)](http://alekseynp.github.io/wp-content/uploads/2013/08/innerhtml.png)
+[![innerhtml](http://alekseynp.com/wp-content/uploads/2013/08/innerhtml.png)](http://alekseynp.com/wp-content/uploads/2013/08/innerhtml.png)
 
 In this example here, the SVG content we want is "<svg height="1100" width="1100" > .. </svg>. All this is just a bunch of text and we want to get it onto the clipboard. The way we do this is to right-click on the node that contains the SVG and choose Copy Inner HTML. In this case that is the <div id="chart" >.
 
