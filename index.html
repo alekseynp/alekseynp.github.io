@@ -9,7 +9,7 @@
   <meta name="author" content="Aleksey Nozdryn-Plotnicki">
 
   
-  <meta name="description" content="I’ve just published a post over at the NGRAIN blog, Visualize confirmed exoplanets I used NGRAIN&rsquo;s Constructor SDK to put together a simple &hellip;">
+  <meta name="description" content="What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,6 +21,7 @@
   <link rel="canonical" href="http://alekseynp.com">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="/atom.xml" rel="alternate" title="Aleksey Nozdryn-Plotnicki" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -90,6 +91,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2014/11/22/regressing-my-gas-log/">Regressing My Gas Log</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-11-22T14:30:18-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>2:30 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.</p>
+
+<p>Raw data, <strong>Fill Ups</strong>:</p>
+
+<table><thead><tr><th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th></tr></thead>
+<tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
+<tr><td>576.4</td><td>59.53</td><td>10.32789729</td><td>0</td><td>1</td></tr>
+<tr><td>505.2</td><td>51.602</td><td>10.2141726</td><td>0</td><td>1</td></tr>
+<tr><td>522</td><td>54.273</td><td>10.39712644</td><td>0</td><td>1</td></tr>
+<tr><td>305.3</td><td>32.433</td><td>10.62332132</td><td>0</td><td>1</td></tr>
+<tr><td>1111.4</td><td>108.578</td><td>10.73541625</td><td>0.2</td><td>0.8</td></tr>
+<tr><td>508.1</td><td>53.112</td><td>10.45306042</td><td>0.1</td><td>0.9</td></tr>
+<tr><td>496.4</td><td>52.4393</td><td>10.56392023</td><td>0.1</td><td>0.9</td></tr>
+<tr><td>442.1</td><td>44.5392</td><td>10.07446279</td><td>0</td><td>1</td></tr>
+<tr><td>393.4</td><td>43.239</td><td>10.9911032</td><td>0.1</td><td>0.9</td></tr>
+<tr><td>429.2</td><td>45.345</td><td>10.56500466</td><td>0</td><td>1</td></tr>
+<tr><td>476.7</td><td>58.217</td><td>12.21250262</td><td>0.85</td><td>0.15</td></tr></table>
+
+
+<p><br></p>
+
+<p>In google docs it is a simple thing to run <code>=SLOPE(efficiency rows,est_mix_city rows)</code> and <code>=INTERCEPT(efficiency rows,est_mix_city rows)</code> giving me 10.381 and 1.967.</p>
+
+<p>Simple interpretation is then:</p>
+
+<ul>
+<li><p>With a city mix of 0 and therefore 100% highway, I would get 10.381 + 1.967*0 = 10.381 L/100 km.</p></li>
+<li><p>With a city mix of 1 and therefore 100% city, I would get 10.381 + 1.967*1 = 12.348 L/100 km.</p></li>
+</ul>
+
+
+<p>Before you make any snide comments, I drive a two-ton 20-year-old 4x4 diesel van. You&rsquo;ll notice mostly not in the city. It&rsquo;s good at some things, not so good at others.</p>
+
+<p>Yes, there are probably better techniques to get an estimate that perhaps weighs bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
+
+<p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
+
+<h3></h3>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -489,63 +557,6 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 <p>An important and complicated question to answer is still missing: Nurses, for example, come of households at the 50th percentile. But is this all nurses coming from households all at the 50th percentile? Or nurses coming from households with incomes across the entire range, who on average are at the 50th percentile? If we knew the answer to that, then we would really start to learn about the potential for social mobility.</p>
 
 <p>Ultimately they say that, &ldquo;These graphs aren&rsquo;t intended to answer broader questions about inequality and social mobility.&rdquo; But I don&rsquo;t see why they shouldn&rsquo;t be part of the debate.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2014/02/21/my-us-gdppopulation-map/">My US GDP/”Population” Map</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-02-21T16:13:51-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>4:13 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My US GDP/&ldquo;Population&rdquo; Map</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/02/us_east_west_gdp.png"><img src="http://alekseynp.com/wp-content/uploads/2014/02/us_east_west_gdp.png" alt="us_east_west_gdp" /></a></p>
-
-<p>Yes, the quality on this is not super high, but the point is to experiment with an idea.</p>
-
-<p>There has been a lot of controversy floating around about a map.</p>
-
-<ul>
-<li><p><a href="http://www.visualisingdata.com/index.php/2014/02/defending-the-incredible-gdp-map/">Visualising Data</a></p></li>
-<li><p><a href="http://andywoodruff.com/blog/its-just-a-population-map/">Andrew Woodruff</a></p></li>
-<li><p><a href="http://www.thefunctionalart.com/2014/02/the-incredible-gdp-map-that-shows-that.html">The Functional Art</a></p></li>
-</ul>
-
-
-<p>&hellip; to name a few.</p>
-
-<p>The map being this: <a href="http://www.reddit.com/r/MapPorn/comments/1y371s/">http://www.reddit.com/r/MapPorn/comments/1y371s/</a></p>
-
-<p>I have a thing for trying out abstract ideas in spacial analysis. Like:</p>
-
-<ul>
-<li><p><a href="http://alekseynp.com/2013/10/14/visualising-shot-location-in-basketball/">NBA Basketball</a></p></li>
-<li><p><a href="http://alekseynp.com/2012/08/14/new-project-global-games-regional-sports-london-2012/">Olympic Medals</a></p></li>
-</ul>
-
-
-<p>As a western Canadian, I&rsquo;m very aware of the east-west dynamics in the US and Canada, so I thought I would follow a hunch and make this map. I think it demonstrates nicely how lop-sided the US is.</p>
 </div>
   
   

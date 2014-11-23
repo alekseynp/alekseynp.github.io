@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://alekseynp.com/2014/11/22/regressing-my-gas-log/</loc>
+    <lastmod>2014-11-22T14:30:18-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://alekseynp.com/2014/05/16/visualizing-confirmed-exoplanets/</loc>
     <lastmod>2014-05-16T15:30:18-04:00</lastmod>
     <priority>0.8</priority>
@@ -312,97 +317,97 @@
   </url>
   <url>
     <loc>http://alekseynp.com/</loc>
-    <lastmod>2014-11-17T02:17:19-05:00</lastmod>
+    <lastmod>2014-11-22T23:21:20-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/archives/</loc>
-    <lastmod>2014-11-17T02:17:19-05:00</lastmod>
+    <lastmod>2014-11-22T23:21:20-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/about/</loc>
-    <lastmod>2014-11-17T02:17:19-05:00</lastmod>
+    <lastmod>2014-11-22T23:21:20-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/topics/</loc>
-    <lastmod>2014-11-17T02:17:19-05:00</lastmod>
+    <lastmod>2014-11-22T23:21:20-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/</loc>
-    <lastmod>2014-11-17T02:17:19-05:00</lastmod>
+    <lastmod>2014-11-22T23:21:20-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/create-visualisations.html</loc>
-    <lastmod>2014-11-10T02:32:38-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/english-football-tickets-value-for-money.html</loc>
-    <lastmod>2014-11-10T02:32:00-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/global-games-regional-sports-vancouver-2010-olympics.html</loc>
-    <lastmod>2014-11-10T02:23:54-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/who-won-the-olympics.html</loc>
-    <lastmod>2014-11-10T02:31:12-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html</loc>
-    <lastmod>2014-11-10T01:06:19-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/create-visualisations/reingold-Tilford_Tree4/jscolor/demo.html</loc>
-    <lastmod>2014-11-10T01:06:20-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/create-visualisations/infowheel4/jscolor/demo.html</loc>
-    <lastmod>2014-11-10T01:06:21-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/create-visualisations/infowheel4/infoWheel.html</loc>
-    <lastmod>2014-11-16T14:35:32-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/k-means.html</loc>
-    <lastmod>2014-11-10T02:28:02-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/paid-to-win.html</loc>
-    <lastmod>2014-11-10T02:30:21-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/mcfc-opta-passing-permier-league-2011-12.html</loc>
-    <lastmod>2014-11-10T02:29:18-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/portfolio/global-games-regional-sports-london-2012-olympics.html</loc>
-    <lastmod>2014-11-10T02:22:26-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://alekseynp.com/wp-content/uploads/backwpup-43c6d9-logs/backwpup_log_43c6d9_2014-04-22_15-03-00.html</loc>
-    <lastmod>2014-11-10T01:07:07-05:00</lastmod>
+    <lastmod>2014-11-22T21:45:50-05:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

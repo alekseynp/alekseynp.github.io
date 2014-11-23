@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Geek Life | Aleksey Nozdryn-Plotnicki]]></title>
+  <link href="http://alekseynp.com/categories/geek-life/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2014-11-22T23:21:20-05:00</updated>
+  <id>http://alekseynp.com/</id>
+  <author>
+    <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Regressing My Gas Log]]></title>
+    <link href="http://alekseynp.com/2014/11/22/regressing-my-gas-log/"/>
+    <updated>2014-11-22T14:30:18-05:00</updated>
+    <id>http://alekseynp.com/2014/11/22/regressing-my-gas-log</id>
+    <content type="html"><![CDATA[<p>What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.</p>
+
+<p>Raw data, <strong>Fill Ups</strong>:</p>
+
+<table><thead><tr><th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th></tr></thead>
+<tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
+<tr><td>576.4</td><td>59.53</td><td>10.32789729</td><td>0</td><td>1</td></tr>
+<tr><td>505.2</td><td>51.602</td><td>10.2141726</td><td>0</td><td>1</td></tr>
+<tr><td>522</td><td>54.273</td><td>10.39712644</td><td>0</td><td>1</td></tr>
+<tr><td>305.3</td><td>32.433</td><td>10.62332132</td><td>0</td><td>1</td></tr>
+<tr><td>1111.4</td><td>108.578</td><td>10.73541625</td><td>0.2</td><td>0.8</td></tr>
+<tr><td>508.1</td><td>53.112</td><td>10.45306042</td><td>0.1</td><td>0.9</td></tr>
+<tr><td>496.4</td><td>52.4393</td><td>10.56392023</td><td>0.1</td><td>0.9</td></tr>
+<tr><td>442.1</td><td>44.5392</td><td>10.07446279</td><td>0</td><td>1</td></tr>
+<tr><td>393.4</td><td>43.239</td><td>10.9911032</td><td>0.1</td><td>0.9</td></tr>
+<tr><td>429.2</td><td>45.345</td><td>10.56500466</td><td>0</td><td>1</td></tr>
+<tr><td>476.7</td><td>58.217</td><td>12.21250262</td><td>0.85</td><td>0.15</td></tr></table>
+
+
+<p><br></p>
+
+<p>In google docs it is a simple thing to run <code>=SLOPE(efficiency rows,est_mix_city rows)</code> and <code>=INTERCEPT(efficiency rows,est_mix_city rows)</code> giving me 10.381 and 1.967.</p>
+
+<p>Simple interpretation is then:</p>
+
+<ul>
+<li><p>With a city mix of 0 and therefore 100% highway, I would get 10.381 + 1.967*0 = 10.381 L/100 km.</p></li>
+<li><p>With a city mix of 1 and therefore 100% city, I would get 10.381 + 1.967*1 = 12.348 L/100 km.</p></li>
+</ul>
+
+
+<p>Before you make any snide comments, I drive a two-ton 20-year-old 4x4 diesel van. You&rsquo;ll notice mostly not in the city. It&rsquo;s good at some things, not so good at others.</p>
+
+<p>Yes, there are probably better techniques to get an estimate that perhaps weighs bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
+
+<p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
+
+<h3></h3>
+]]></content>
+  </entry>
+  
+</feed>
