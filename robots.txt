@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: http://alekseynp.github.io/sitemap.xml
