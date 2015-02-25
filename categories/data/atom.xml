@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Data | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/data/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2014-11-22T23:21:20-05:00</updated>
+  <updated>2015-02-24T18:59:54-08:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[I Tried to Sell Open Government Data]]></title>
     <link href="http://alekseynp.com/2014/03/28/i-tried-to-sell-open-government-data/"/>
-    <updated>2014-03-28T22:13:28-04:00</updated>
+    <updated>2014-03-28T19:13:28-07:00</updated>
     <id>http://alekseynp.com/2014/03/28/i-tried-to-sell-open-government-data</id>
     <content type="html"><![CDATA[<p>I tried to sell open government data, but I won&rsquo;t be the only one.</p>
 
@@ -51,7 +51,7 @@
   <entry>
     <title type="html"><![CDATA[Texas Death Row Execution Data]]></title>
     <link href="http://alekseynp.com/2013/07/27/texas-death-row-execution-data/"/>
-    <updated>2013-07-27T23:06:53-04:00</updated>
+    <updated>2013-07-27T20:06:53-07:00</updated>
     <id>http://alekseynp.com/2013/07/27/texas-death-row-execution-data</id>
     <content type="html"><![CDATA[<p>Andy Kirk over at <a href="http://www.visualisingdata.com/">Visualising Data</a> wrote recently about the <a href="http://www.visualisingdata.com/index.php/2013/07/texas-death-row-execution-data/">Texas Death Row Education Data</a>. Texas has executed it&rsquo;s 500th person since it began executing people again and provides a <a href="http://www.tdcj.state.tx.us/stat/dr_executed_offenders.html">wealth of data</a> about those people. Andy shared <a href="https://docs.google.com/spreadsheet/ccc?key=0ArNsipRBvi69dEUxZHVuRTc4ZlctREdldExsOW5rMUE#gid=0">a working copy the data </a>as scraped from the site. I&rsquo;m moving the ball forward here by sharing my updated copy of the data.</p>
 

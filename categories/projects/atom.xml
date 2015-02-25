@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Projects | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/projects/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2014-11-22T23:21:20-05:00</updated>
+  <updated>2015-02-24T18:59:54-08:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Gephi Layout Plugin: Random 3D Layout]]></title>
     <link href="http://alekseynp.com/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
-    <updated>2014-05-15T14:02:45-04:00</updated>
+    <updated>2014-05-15T11:02:45-07:00</updated>
     <id>http://alekseynp.com/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
     <content type="html"><![CDATA[<p><img src="http://alekseynp.com/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
 
@@ -27,7 +27,7 @@
   <entry>
     <title type="html"><![CDATA[My US GDP/”Population” Map]]></title>
     <link href="http://alekseynp.com/2014/02/21/my-us-gdppopulation-map/"/>
-    <updated>2014-02-21T16:13:51-05:00</updated>
+    <updated>2014-02-21T13:13:51-08:00</updated>
     <id>http://alekseynp.com/2014/02/21/my-us-gdppopulation-map</id>
     <content type="html"><![CDATA[<p>My US GDP/&ldquo;Population&rdquo; Map</p>
 
@@ -63,7 +63,7 @@
   <entry>
     <title type="html"><![CDATA[Average Shot Locations in the Paint and at Midrange]]></title>
     <link href="http://alekseynp.com/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/"/>
-    <updated>2013-11-07T19:07:15-05:00</updated>
+    <updated>2013-11-07T16:07:15-08:00</updated>
     <id>http://alekseynp.com/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange</id>
     <content type="html"><![CDATA[<p>Yet another post on visualising and analysing NBA shot location data using location averaging methods.</p>
 
@@ -93,7 +93,7 @@
   <entry>
     <title type="html"><![CDATA[NBA Players Shoot From Further as the Game Progresses]]></title>
     <link href="http://alekseynp.com/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/"/>
-    <updated>2013-11-07T16:02:15-05:00</updated>
+    <updated>2013-11-07T13:02:15-08:00</updated>
     <id>http://alekseynp.com/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses</id>
     <content type="html"><![CDATA[<p>On average, players in the NBA take shots 6.5% further from the basket in the 4th period than in the 1st. This is a subtle, but consistent trend across all periods. 1.2% further in the 2nd than the 1st, 2.4% further in the 3rd than the 2nd, and 2.7% further in the 4th than the 3rd.</p>
 
@@ -116,7 +116,7 @@
   <entry>
     <title type="html"><![CDATA[More on Averages Shot Locations]]></title>
     <link href="http://alekseynp.com/2013/11/05/more-on-averages-shot-locations/"/>
-    <updated>2013-11-05T10:58:08-05:00</updated>
+    <updated>2013-11-05T07:58:08-08:00</updated>
     <id>http://alekseynp.com/2013/11/05/more-on-averages-shot-locations</id>
     <content type="html"><![CDATA[<p>Here are some more visuals based on my analysis of average shot locations from the NBA Regular Season 2012-13&hellip;</p>
 

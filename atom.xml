@@ -4,7 +4,7 @@
   <title><![CDATA[Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2014-11-22T23:21:20-05:00</updated>
+  <updated>2015-02-24T18:59:54-08:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -14,55 +14,77 @@
 
   
   <entry>
+    <title type="html"><![CDATA[\"Charter\" Schools Have Worse Immunization Rates in California]]></title>
+    <link href="http://alekseynp.com/2015/02/24/california-charter-kindergartens/"/>
+    <updated>2015-02-24T10:30:18-08:00</updated>
+    <id>http://alekseynp.com/2015/02/24/california-charter-kindergartens</id>
+    <content type="html"><![CDATA[<p>In California, if your Kindergarten has the word &ldquo;Charter&rdquo; in its name, that says a lot about its measles vaccination rate.</p>
+
+<p><img src="http://alekseynp.com/images/Charter_Measels.png" alt="" /></p>
+
+<ul>
+<li>&ldquo;Charter&rdquo; kindergartens are almost twice as likely to have a measles vaccination rate below 92-94% for herd immunity.</li>
+<li>&ldquo;Charter&rdquo; kindergartens have an average measles immunization rate of 83.8% compared to 91.8% in other schools.</li>
+<li>Personal Beliefs Exemptions were 10.8% in &ldquo;Charter&rdquo; schools compared to 3% in all others.</li>
+</ul>
+
+
+<p>Credit: Pattern first identified via visual inspection of <a href="http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html?_r=0">Vaccination Rates for Every Kindergarten in California</a> from the <a href="http://www.nytimes.com/">New York Times</a>.</p>
+
+<p>Data: Available on the <a href="https://chhs.data.ca.gov">California Health and Human Services Open Data Portal</a>. Specifically the School Immunizations in Kindergarten 2014-15 dataset, <a href="https://cdph.data.ca.gov/Diseases-and-Conditions/School-Immunizations-In-Kindergarten-2014-2015/4y8p-xn54">here</a></p>
+
+<h2>#</h2>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Regressing My Gas Log]]></title>
     <link href="http://alekseynp.com/2014/11/22/regressing-my-gas-log/"/>
-    <updated>2014-11-22T14:30:18-05:00</updated>
+    <updated>2014-11-22T11:30:18-08:00</updated>
     <id>http://alekseynp.com/2014/11/22/regressing-my-gas-log</id>
     <content type="html"><![CDATA[<p>What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.</p>
 
 <p>Raw data, <strong>Fill Ups</strong>:</p>
 
-<table><thead><tr><th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th></tr></thead>
-<tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
-<tr><td>576.4</td><td>59.53</td><td>10.32789729</td><td>0</td><td>1</td></tr>
-<tr><td>505.2</td><td>51.602</td><td>10.2141726</td><td>0</td><td>1</td></tr>
-<tr><td>522</td><td>54.273</td><td>10.39712644</td><td>0</td><td>1</td></tr>
-<tr><td>305.3</td><td>32.433</td><td>10.62332132</td><td>0</td><td>1</td></tr>
-<tr><td>1111.4</td><td>108.578</td><td>10.73541625</td><td>0.2</td><td>0.8</td></tr>
-<tr><td>508.1</td><td>53.112</td><td>10.45306042</td><td>0.1</td><td>0.9</td></tr>
-<tr><td>496.4</td><td>52.4393</td><td>10.56392023</td><td>0.1</td><td>0.9</td></tr>
-<tr><td>442.1</td><td>44.5392</td><td>10.07446279</td><td>0</td><td>1</td></tr>
-<tr><td>393.4</td><td>43.239</td><td>10.9911032</td><td>0.1</td><td>0.9</td></tr>
-<tr><td>429.2</td><td>45.345</td><td>10.56500466</td><td>0</td><td>1</td></tr>
-<tr><td>476.7</td><td>58.217</td><td>12.21250262</td><td>0.85</td><td>0.15</td></tr></table>
+<table style='border-collapse: separate; border-spacing: 10px;'>
+  <thead>
+    <th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th>
+  </thead>
+  <tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
+  <tr><td>576.4 </td><td> 59.53 </td><td> 10.32789729 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>505.2 </td><td> 51.602 </td><td> 10.2141726 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>522 </td><td> 54.273 </td><td> 10.39712644 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>305.3 </td><td> 32.433 </td><td> 10.62332132 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>1111.4 </td><td> 108.578 </td><td> 10.73541625 </td><td> 0.2 </td><td> 0.8</td></tr>
+  <tr><td>508.1 </td><td> 53.112 </td><td> 10.45306042 </td><td> 0.1 </td><td> 0.9</td></tr>
+  <tr><td>496.4 </td><td> 52.4393 </td><td> 10.56392023 </td><td> 0.1 </td><td> 0.9</td></tr>
+  <tr><td>442.1 </td><td> 44.5392 </td><td> 10.07446279 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>393.4 </td><td> 43.239 </td><td> 10.9911032 </td><td> 0.1 </td><td> 0.9</td></tr>
+  <tr><td>429.2 </td><td> 45.345 </td><td> 10.56500466 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>476.7 </td><td> 58.217 </td><td> 12.21250262 </td><td> 0.85 </td><td> 0.15</td></tr>
+</table>
 
-
-<p><br></p>
 
 <p>In google docs it is a simple thing to run <code>=SLOPE(efficiency rows,est_mix_city rows)</code> and <code>=INTERCEPT(efficiency rows,est_mix_city rows)</code> giving me 10.381 and 1.967.</p>
 
-<p>Simple interpretation is then:</p>
-
-<ul>
-<li><p>With a city mix of 0 and therefore 100% highway, I would get 10.381 + 1.967*0 = 10.381 L/100 km.</p></li>
-<li><p>With a city mix of 1 and therefore 100% city, I would get 10.381 + 1.967*1 = 12.348 L/100 km.</p></li>
-</ul>
-
+<p>Simple interpretation is then:
+- With a city mix of 0 and therefore 100% highway, I would get 10.381 + 1.967<em>0 = 10.381 L/100 km.
+- With a city mis of 1 and therefore 100% city, I would get 10.381 + 1.967</em>1 = 12.348 L/100 km.</p>
 
 <p>Before you make any snide comments, I drive a two-ton 20-year-old 4x4 diesel van. You&rsquo;ll notice mostly not in the city. It&rsquo;s good at some things, not so good at others.</p>
 
-<p>Yes, there are probably better techniques to get an estimate that perhaps weighs bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
+<p>Yes, there are probably better techniques to get an estimate that perhaps weight bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
 
 <p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
 
-<h3></h3>
+<h2>#</h2>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Visualizing Confirmed Exoplanets]]></title>
     <link href="http://alekseynp.com/2014/05/16/visualizing-confirmed-exoplanets/"/>
-    <updated>2014-05-16T15:30:18-04:00</updated>
+    <updated>2014-05-16T12:30:18-07:00</updated>
     <id>http://alekseynp.com/2014/05/16/visualizing-confirmed-exoplanets</id>
     <content type="html"><![CDATA[<p>I’ve just published a post over at the NGRAIN blog, <a href="http://www.ngrain.com/visualize-confirmed-exoplanets/">Visualize confirmed exoplanets</a></p>
 
@@ -77,7 +99,7 @@
   <entry>
     <title type="html"><![CDATA[Gephi Layout Plugin: Random 3D Layout]]></title>
     <link href="http://alekseynp.com/2014/05/15/gephi-layout-plugin-random-3d-layout/"/>
-    <updated>2014-05-15T14:02:45-04:00</updated>
+    <updated>2014-05-15T11:02:45-07:00</updated>
     <id>http://alekseynp.com/2014/05/15/gephi-layout-plugin-random-3d-layout</id>
     <content type="html"><![CDATA[<p><img src="http://alekseynp.com/wp-content/uploads/2014/05/bigRandomCube-300x266.png" alt="bigRandomCube" />Yesterday, I released a simple plugin, <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">Random 3D Layout t</a>o the  Gephi Marketplace <a href="https://marketplace.gephi.org/plugin/random-3d-layout/">here</a>. It&rsquo;s very simple, and I developed it as part of my work at <a href="http://www.ngrain.com">NGRAIN</a>.</p>
 
@@ -88,7 +110,7 @@
   <entry>
     <title type="html"><![CDATA[Augmented Reality Demands 3D Data Visualization]]></title>
     <link href="http://alekseynp.com/2014/04/22/augmented-reality-demands-3d-data-visualization/"/>
-    <updated>2014-04-22T11:13:15-04:00</updated>
+    <updated>2014-04-22T08:13:15-07:00</updated>
     <id>http://alekseynp.com/2014/04/22/augmented-reality-demands-3d-data-visualization</id>
     <content type="html"><![CDATA[<p>I’ve just written a post over at the NGRAIN blog, <a href="http://www.ngrain.com/augmented-reality-demands-3d-data-visualization/">Augmented Reality demands 3D Data Visualization</a></p>
 
@@ -100,7 +122,7 @@
   <entry>
     <title type="html"><![CDATA[On Looking Beyond Two Dimensions]]></title>
     <link href="http://alekseynp.com/2014/04/09/on-looking-beyond-two-dimensions/"/>
-    <updated>2014-04-09T12:30:20-04:00</updated>
+    <updated>2014-04-09T09:30:20-07:00</updated>
     <id>http://alekseynp.com/2014/04/09/on-looking-beyond-two-dimensions</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve just written a post over at the NGRAIN blog, <a href="http://www.ngrain.com/on-looking-beyond-two-dimensions/">On looking beyond two dimensions</a>.</p>
 
@@ -114,7 +136,7 @@
   <entry>
     <title type="html"><![CDATA[Data Visualization Lead at NGRAIN]]></title>
     <link href="http://alekseynp.com/2014/04/08/data-visualization-lead-at-ngrain/"/>
-    <updated>2014-04-08T17:09:24-04:00</updated>
+    <updated>2014-04-08T14:09:24-07:00</updated>
     <id>http://alekseynp.com/2014/04/08/data-visualization-lead-at-ngrain</id>
     <content type="html"><![CDATA[<p>It&rsquo;s worth announcing that last month I took a position as Data Visualization Lead at <a href="http://www.ngrain.com/">NGRAIN</a> in Vancouver, Canada.</p>
 
@@ -127,7 +149,7 @@
   <entry>
     <title type="html"><![CDATA[My Ontario Sunshine List Work in the CBC News]]></title>
     <link href="http://alekseynp.com/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"/>
-    <updated>2014-04-01T12:13:29-04:00</updated>
+    <updated>2014-04-01T09:13:29-07:00</updated>
     <id>http://alekseynp.com/2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news</id>
     <content type="html"><![CDATA[<p>Just some shameless self-promotion. You can find my work cited in the CBC News from today.</p>
 
@@ -156,7 +178,7 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   <entry>
     <title type="html"><![CDATA[I Tried to Sell Open Government Data]]></title>
     <link href="http://alekseynp.com/2014/03/28/i-tried-to-sell-open-government-data/"/>
-    <updated>2014-03-28T22:13:28-04:00</updated>
+    <updated>2014-03-28T19:13:28-07:00</updated>
     <id>http://alekseynp.com/2014/03/28/i-tried-to-sell-open-government-data</id>
     <content type="html"><![CDATA[<p>I tried to sell open government data, but I won&rsquo;t be the only one.</p>
 
@@ -191,7 +213,7 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   <entry>
     <title type="html"><![CDATA[Visual Analytics, Democratization of Analysis, and Visual Literacy]]></title>
     <link href="http://alekseynp.com/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy/"/>
-    <updated>2014-03-21T22:03:41-04:00</updated>
+    <updated>2014-03-21T19:03:41-07:00</updated>
     <id>http://alekseynp.com/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy</id>
     <content type="html"><![CDATA[<p><a href="http://youtu.be/hbTb62BeTUc">http://youtu.be/hbTb62BeTUc</a></p>
 
@@ -239,9 +261,9 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   
   <entry>
     <title type="html"><![CDATA[American Social Mobility, NPR, and Commentary]]></title>
-    <link href="http://alekseynp.com/2014/03/20/american-social-mobility-npr-and-commentary/"/>
-    <updated>2014-03-20T00:40:50-04:00</updated>
-    <id>http://alekseynp.com/2014/03/20/american-social-mobility-npr-and-commentary</id>
+    <link href="http://alekseynp.com/2014/03/19/american-social-mobility-npr-and-commentary/"/>
+    <updated>2014-03-19T21:40:50-07:00</updated>
+    <id>http://alekseynp.com/2014/03/19/american-social-mobility-npr-and-commentary</id>
     <content type="html"><![CDATA[<p>Regarding: <a href="http://www.npr.org/blogs/money/2014/03/18/289013884/who-had-richer-parents-doctors-or-arists">Who Had Richer Parents, Doctors Or Artists? : Planet Money : NPR</a></p>
 
 <p>First of all, hats off to them for asking and answering important questions about modern society. The tldr; is that they ask &ldquo;Who had richer parents, journalists or people working in finance? Doctors or artists? More generally: What&rsquo;s the link between household income during childhood and job choice during adulthood?&rdquo; and based on a US government survey, they produced an answer.</p>
@@ -278,7 +300,7 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   <entry>
     <title type="html"><![CDATA[My US GDP/”Population” Map]]></title>
     <link href="http://alekseynp.com/2014/02/21/my-us-gdppopulation-map/"/>
-    <updated>2014-02-21T16:13:51-05:00</updated>
+    <updated>2014-02-21T13:13:51-08:00</updated>
     <id>http://alekseynp.com/2014/02/21/my-us-gdppopulation-map</id>
     <content type="html"><![CDATA[<p>My US GDP/&ldquo;Population&rdquo; Map</p>
 
@@ -314,7 +336,7 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   <entry>
     <title type="html"><![CDATA[Left and Right Are Important]]></title>
     <link href="http://alekseynp.com/2014/02/17/left-and-right-are-important/"/>
-    <updated>2014-02-17T17:05:54-05:00</updated>
+    <updated>2014-02-17T14:05:54-08:00</updated>
     <id>http://alekseynp.com/2014/02/17/left-and-right-are-important</id>
     <content type="html"><![CDATA[<p>The major consultancies are turning out to be a goldmine for content for demonstrating the potential for improved data visualisation design. Today&rsquo;s winner is PWC, though their error is not terribly sinful and with some effort one could probably find something worse.</p>
 
@@ -364,7 +386,7 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   <entry>
     <title type="html"><![CDATA[KPMG's Grid of Donuts]]></title>
     <link href="http://alekseynp.com/2014/02/16/kpmgs-grid-of-donuts/"/>
-    <updated>2014-02-16T16:04:58-05:00</updated>
+    <updated>2014-02-16T13:04:58-08:00</updated>
     <id>http://alekseynp.com/2014/02/16/kpmgs-grid-of-donuts</id>
     <content type="html"><![CDATA[<p>Another day, another poor visual. Apparently I have a quest to complete against bad visuals from consultancies. Today it&rsquo;s KPMG from this tweet:
 <a href="https://twitter.com/KPMG/status/434401678931263488">https://twitter.com/KPMG/status/434401678931263488</a></p>
@@ -398,7 +420,7 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
   <entry>
     <title type="html"><![CDATA[Analysis of the Determinants of Selling Price for Vancouver NHL Ticket Auctions]]></title>
     <link href="http://alekseynp.com/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions/"/>
-    <updated>2014-02-15T20:11:10-05:00</updated>
+    <updated>2014-02-15T17:11:10-08:00</updated>
     <id>http://alekseynp.com/2014/02/15/analysis-of-the-determinants-of-selling-price-for-vancouver-nhl-ticket-auctions</id>
     <content type="html"><![CDATA[<h1>Introduction</h1>
 
@@ -443,7 +465,7 @@ Data was collected for a one month period of auctions completed on eBay, a popul
   <entry>
     <title type="html"><![CDATA[Joys of R]]></title>
     <link href="http://alekseynp.com/2014/02/10/joys-of-r/"/>
-    <updated>2014-02-10T18:41:19-05:00</updated>
+    <updated>2014-02-10T15:41:19-08:00</updated>
     <id>http://alekseynp.com/2014/02/10/joys-of-r</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been coding a lot in R lately. Just thought I&rsquo;d share one example of the insanity.</p>
 
@@ -484,7 +506,7 @@ class(&ldquo;a&rdquo;)<br/>
   <entry>
     <title type="html"><![CDATA[Outliers Are Easy to See]]></title>
     <link href="http://alekseynp.com/2013/12/15/outliers-are-easy-to-see/"/>
-    <updated>2013-12-15T13:37:31-05:00</updated>
+    <updated>2013-12-15T10:37:31-08:00</updated>
     <id>http://alekseynp.com/2013/12/15/outliers-are-easy-to-see</id>
     <content type="html"><![CDATA[<p>Quick and fun. First step of data analysis. Look at your data.</p>
 
@@ -497,7 +519,7 @@ class(&ldquo;a&rdquo;)<br/>
   <entry>
     <title type="html"><![CDATA[Average Shot Locations in the Paint and at Midrange]]></title>
     <link href="http://alekseynp.com/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange/"/>
-    <updated>2013-11-07T19:07:15-05:00</updated>
+    <updated>2013-11-07T16:07:15-08:00</updated>
     <id>http://alekseynp.com/2013/11/07/average-shot-locations-in-the-paint-and-at-midrange</id>
     <content type="html"><![CDATA[<p>Yet another post on visualising and analysing NBA shot location data using location averaging methods.</p>
 
@@ -527,7 +549,7 @@ class(&ldquo;a&rdquo;)<br/>
   <entry>
     <title type="html"><![CDATA[NBA Players Shoot From Further as the Game Progresses]]></title>
     <link href="http://alekseynp.com/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/"/>
-    <updated>2013-11-07T16:02:15-05:00</updated>
+    <updated>2013-11-07T13:02:15-08:00</updated>
     <id>http://alekseynp.com/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses</id>
     <content type="html"><![CDATA[<p>On average, players in the NBA take shots 6.5% further from the basket in the 4th period than in the 1st. This is a subtle, but consistent trend across all periods. 1.2% further in the 2nd than the 1st, 2.4% further in the 3rd than the 2nd, and 2.7% further in the 4th than the 3rd.</p>
 
@@ -550,7 +572,7 @@ class(&ldquo;a&rdquo;)<br/>
   <entry>
     <title type="html"><![CDATA[More on Averages Shot Locations]]></title>
     <link href="http://alekseynp.com/2013/11/05/more-on-averages-shot-locations/"/>
-    <updated>2013-11-05T10:58:08-05:00</updated>
+    <updated>2013-11-05T07:58:08-08:00</updated>
     <id>http://alekseynp.com/2013/11/05/more-on-averages-shot-locations</id>
     <content type="html"><![CDATA[<p>Here are some more visuals based on my analysis of average shot locations from the NBA Regular Season 2012-13&hellip;</p>
 
@@ -599,33 +621,6 @@ class(&ldquo;a&rdquo;)<br/>
 <p>We could also look at the games for an individual team&hellip; and I think learn nothing:</p>
 
 <p><a href="http://alekseynp.com/wp-content/uploads/2013/11/1610612737-.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/1610612737-.png" alt="1610612737" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update: Average Shot Locations - NBA Regular Season 2012-13]]></title>
-    <link href="http://alekseynp.com/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/"/>
-    <updated>2013-10-24T17:45:40-04:00</updated>
-    <id>http://alekseynp.com/2013/10/24/update-average-shot-locations-nba-regular-season-2012-13</id>
-    <content type="html"><![CDATA[<p>Here are two updated charts following up from my<a href="http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/"> previous post</a>.</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png"><img src="http://alekseynp.com/wp-content/uploads/2013/10/wgtavg_made_location_top50scorers_201213_regular.png" alt="wgtavg_made_location_top50scorers_201213_regular" /></a></p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png"><img src="http://alekseynp.com/wp-content/uploads/2013/10/avg_made_location_top50scorers_201213_regular.png" alt="avg_made_location_top50scorers_201213_regular" /></a></p>
-
-<p>What&rsquo;s new?</p>
-
-<ul>
-<li><p>The players included are no longer someone else&#8217; list of 50 notable players, but rather the 50 players who scored the most points in the 2012-13 regular season</p></li>
-<li><p>More of the courts lines have been included to provide greater context to the data</p></li>
-<li><p>The first chart shows the average position that points are scored from. This is a weighted average that puts more emphasis on 3 pointers and further demonstrates how exceptional Stephen Curry is, as the guys at <a href="http://regressing.deadspin.com/stephen-currys-numbers-are-as-unlikely-and-wonderful-a-1449057524">deadspin have noted</a></p></li>
-<li><p>The second chart shows the average position of made shots as per the original</p></li>
-</ul>
-
-
-<p><strong>Collaboration</strong></p>
-
-<p>Collaboration is an important thing. Earlier with my weak knowledge of basketball I published what I thought would be an interesting visual <a href="http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>. Seems I was correct. But with a little conversation with the guys at <a href="deadspin.com">deadspin.com</a>, some very easy improvements could be made.</p>
 ]]></content>
   </entry>
   

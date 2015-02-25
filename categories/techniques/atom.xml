@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Techniques | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/techniques/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2014-11-22T23:21:20-05:00</updated>
+  <updated>2015-02-24T18:59:54-08:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Visualising Shot Location in Basketball]]></title>
     <link href="http://alekseynp.com/2013/10/14/visualising-shot-location-in-basketball/"/>
-    <updated>2013-10-14T15:30:30-04:00</updated>
+    <updated>2013-10-14T12:30:30-07:00</updated>
     <id>http://alekseynp.com/2013/10/14/visualising-shot-location-in-basketball</id>
     <content type="html"><![CDATA[<p>Sports is full of spacial data. Data visualizers love this. Take the points and plot them by x and y location. Instantly the data is in a format that we can relate to and gain insight from. Too many data points? Aggregate and count points by region to create a head map or something similar. Want to compare two sets of points? Put two charts side-by-side. All of this is done with NBA shot position, but it has its shortcomings.</p>
 
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[Average Age of Brooklyn's Buildings Mapped]]></title>
-    <link href="http://alekseynp.com/2013/08/17/average-age-of-brooklyns-buildings-mapped/"/>
-    <updated>2013-08-17T00:12:25-04:00</updated>
-    <id>http://alekseynp.com/2013/08/17/average-age-of-brooklyns-buildings-mapped</id>
+    <link href="http://alekseynp.com/2013/08/16/average-age-of-brooklyns-buildings-mapped/"/>
+    <updated>2013-08-16T21:12:25-07:00</updated>
+    <id>http://alekseynp.com/2013/08/16/average-age-of-brooklyns-buildings-mapped</id>
     <content type="html"><![CDATA[<p>I saw <a href="http://bklynr.com/block-by-block-brooklyns-past-and-present/">this</a> recently <a href="http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/">here</a>. It&rsquo;s a map showing the age of Brooklyn&rsquo;s buildings.</p>
 
 <p><a href="http://alekseynp.com/wp-content/uploads/2013/08/bklynr.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/bklynr.png" alt="bklynr" /></a></p>
@@ -87,9 +87,9 @@
   
   <entry>
     <title type="html"><![CDATA[Visualising On-line Conversations: MOOC For-credit "Discussion"]]></title>
-    <link href="http://alekseynp.com/2013/08/01/visualising-on-line-conversations-mooc-for-credit-discussion/"/>
-    <updated>2013-08-01T00:38:45-04:00</updated>
-    <id>http://alekseynp.com/2013/08/01/visualising-on-line-conversations-mooc-for-credit-discussion</id>
+    <link href="http://alekseynp.com/2013/07/31/visualising-on-line-conversations-mooc-for-credit-discussion/"/>
+    <updated>2013-07-31T21:38:45-07:00</updated>
+    <id>http://alekseynp.com/2013/07/31/visualising-on-line-conversations-mooc-for-credit-discussion</id>
     <content type="html"><![CDATA[<p>Visualizing discussions is an interesting challenge. In this post I use a simple technique in the context of discussions in an on-line course.</p>
 
 <p>I have been auditing Dr. Anthony C. Robinson&#8217;s Maps and the Geospatial Revolution on <a href="https://www.coursera.org/">Coursera</a>, a MOOC (Massive Open Online Course). 10% of a student&rsquo;s grade for the course comes from the weekly discussion assignments. If a student makes 20 posts within the 5 week course, they will receive full credit. When venturing into the forum for Week 1, I was struck by the low quality of the &ldquo;discussion&rdquo; taking place. It did not seem at all like an exchange of ideas.</p>
@@ -113,7 +113,7 @@
   <entry>
     <title type="html"><![CDATA[Discovering Clusters and Relationships in Data With Network Visualisations - Language Network]]></title>
     <link href="http://alekseynp.com/2013/07/28/discovering-clusters-and-relationships-in-data-with-network-visualisations-language-network/"/>
-    <updated>2013-07-28T20:16:18-04:00</updated>
+    <updated>2013-07-28T17:16:18-07:00</updated>
     <id>http://alekseynp.com/2013/07/28/discovering-clusters-and-relationships-in-data-with-network-visualisations-language-network</id>
     <content type="html"><![CDATA[<p><a href="http://languagenetwork.cotrino.com/">Language Network</a> is an excellent demonstration of a technique for exploring a relational data set. Every language has a % strength of similarity to every other and this defines the connections in the network. Using the strength filter and physical layout simulation, one can explore the relationships in the data set and identify clusters. It can be a little difficult to describe, so click through for yourself.</p>
 
