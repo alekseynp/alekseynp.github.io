@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Data Journalism | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/data-journalism/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2015-02-26T19:30:52-08:00</updated>
+  <updated>2015-03-07T16:56:01-08:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ontario Sunshine List Open Scraper]]></title>
+    <link href="http://alekseynp.com/2015/03/07/ontario-sunshine-list-scraper/"/>
+    <updated>2015-03-07T08:30:00-08:00</updated>
+    <id>http://alekseynp.com/2015/03/07/ontario-sunshine-list-scraper</id>
+    <content type="html"><![CDATA[<p>Today I am announcing my open Ontario Sunshine List Scraper released under the MIT License.</p>
+
+<p><strong>You can download the data directly <a href="https://github.com/alekseynp/ontario_sunshine_list/blob/master/output/data.csv">here</a>.</strong> I will likely move this later.</p>
+
+<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
+
+<p>Today&rsquo;s version of the code has two key limitations:</p>
+
+<ul>
+<li>Only the initial disclosure is scraped. Addenda are not scraped or processed.</li>
+<li>2015 disclosure has not yet been published or included</li>
+</ul>
+
+
+<p>Please feel free to fork the repo and build ahead.</p>
+
+<p>Anyone can create their own CSV like this:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import ontario_sunshine_list as osl&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;col = osl.Collector()
+</span><span class='line'>col.run(&lsquo;/home/aleksey/data/sunshine/&rsquo;)&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;scr = osl.Scraper()
+</span><span class='line'>df = scr.run(&lsquo;/home/aleksey/data/sunshine/&rsquo;)&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;cle = osl.Cleaner()
+</span><span class='line'>df = cle.run(df)&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;df.to_csv(&lsquo;/home/aleksey/data.csv&rsquo;, encoding=&lsquo;utf-8&rsquo;)</span></code></pre></td></tr></table></div></figure></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[\"Charter\" Schools Have Worse Immunization Rates in California]]></title>
@@ -32,8 +81,6 @@
 <p>Credit: Pattern first identified via visual inspection of <a href="http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html?_r=0">Vaccination Rates for Every Kindergarten in California</a> from the <a href="http://www.nytimes.com/">New York Times</a>.</p>
 
 <p>Data: Available on the <a href="https://chhs.data.ca.gov">California Health and Human Services Open Data Portal</a>. Specifically the School Immunizations in Kindergarten 2014-15 dataset, <a href="https://cdph.data.ca.gov/Diseases-and-Conditions/School-Immunizations-In-Kindergarten-2014-2015/4y8p-xn54">here</a></p>
-
-<h2>#</h2>
 ]]></content>
   </entry>
   
@@ -138,24 +185,6 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 <p><strong>Meta</strong></p>
 
 <p>Logarithmic scales are probably not the best practice in data journalism, but it was worth it in order to spread out the dots and see the different countries.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My Ontario Sunshine List Work in the Financial Post]]></title>
-    <link href="http://alekseynp.com/2013/07/27/my-ontario-sunshine-list-work-in-the-financial-post/"/>
-    <updated>2013-07-27T22:30:10-07:00</updated>
-    <id>http://alekseynp.com/2013/07/27/my-ontario-sunshine-list-work-in-the-financial-post</id>
-    <content type="html"><![CDATA[<p>A little late posting this, but you can find my work cited in the Financial Post from July 13.</p>
-
-<p>Terence Corcoran writes <a href="http://opinion.financialpost.com/2013/07/08/terence-corcoran-the-sunshine-race-to-the-top/">The sunshine race to the to</a> and includes:</p>
-
-<blockquote>&#8220;A quick and dirty snapshot of trends was recently highlighted by statistical blogger Aleksey Nozdryn-Plotnicki. Following release of the 2013 Ontario sunshine list, Mr. Nozdryn-Plotnicki’s posted a graph that showed big increases in the salaries of the province’s top 1000 income earners (see graph below). The highest paid individuals in the province recorded wage gains of 7.2% during 2012 “where everyone else saw 2.2%,” said Mr. Nozdryn-Plotnicki in a posting on his site, thinkdatavis.com. One year doesn’t make a trend, but similarly shaped graphs can be found for 2008, 2006, 2004 and 2000.
-
-Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries have increased 5.5% annually since 1996. During the first decade following the sunshine laws, pathologist packages increased 6.6% annually. That was followed by a four-year flat period. Then, in 2012, the pathologists recorded a single-year gain of 22%.&#8221;</blockquote>
-
-
-<p>For those outside Canada, the Financial Post is a part of the National Post and <a href="http://en.wikipedia.org/wiki/List_of_newspapers_in_Canada_by_circulation">according to Wikipedia</a> had a weekly circulation of 800,000 in 2011.</p>
 ]]></content>
   </entry>
   

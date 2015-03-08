@@ -9,7 +9,7 @@
   <meta name="author" content="Aleksey Nozdryn-Plotnicki">
 
   
-  <meta name="description" content="In California, if your Kindergarten has the word &ldquo;Charter&rdquo; in its name, that says a lot about its measles vaccination rate. &ldquo; &hellip;">
+  <meta name="description" content="Today I am announcing my open Ontario Sunshine List Scraper released under the MIT License. You can download the data directly here. I will likely &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,78 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/2015/03/07/ontario-sunshine-list-scraper/">Ontario Sunshine List Open Scraper</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-03-07T08:30:00-08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:30 am</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I am announcing my open Ontario Sunshine List Scraper released under the MIT License.</p>
+
+<p><strong>You can download the data directly <a href="https://github.com/alekseynp/ontario_sunshine_list/blob/master/output/data.csv">here</a>.</strong> I will likely move this later.</p>
+
+<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
+
+<p>Today&rsquo;s version of the code has two key limitations:</p>
+
+<ul>
+<li>Only the initial disclosure is scraped. Addenda are not scraped or processed.</li>
+<li>2015 disclosure has not yet been published or included</li>
+</ul>
+
+
+<p>Please feel free to fork the repo and build ahead.</p>
+
+<p>Anyone can create their own CSV like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import ontario_sunshine_list as osl
+</span><span class='line'>
+</span><span class='line'>col = osl.Collector()
+</span><span class='line'>col.run('/home/aleksey/data/sunshine/')
+</span><span class='line'>
+</span><span class='line'>scr = osl.Scraper()
+</span><span class='line'>df = scr.run('/home/aleksey/data/sunshine/')
+</span><span class='line'>
+</span><span class='line'>cle = osl.Cleaner()
+</span><span class='line'>df = cle.run(df)
+</span><span class='line'>
+</span><span class='line'>df.to_csv('/home/aleksey/data.csv', encoding='utf-8')</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/2015/02/24/california-charter-kindergartens/">&#34;Charter&#34; Schools Have Worse Immunization Rates in California</a></h1>
     
     
@@ -127,8 +199,6 @@
 <p>Credit: Pattern first identified via visual inspection of <a href="http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html?_r=0">Vaccination Rates for Every Kindergarten in California</a> from the <a href="http://www.nytimes.com/">New York Times</a>.</p>
 
 <p>Data: Available on the <a href="https://chhs.data.ca.gov">California Health and Human Services Open Data Portal</a>. Specifically the School Immunizations in Kindergarten 2014-15 dataset, <a href="https://cdph.data.ca.gov/Diseases-and-Conditions/School-Immunizations-In-Kindergarten-2014-2015/4y8p-xn54">here</a></p>
-
-<h2>#</h2>
 </div>
   
   
@@ -192,8 +262,6 @@
 <p>Yes, there are probably better techniques to get an estimate that perhaps weight bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
 
 <p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
-
-<h2>#</h2>
 </div>
   
   
@@ -228,8 +296,6 @@
 <p>I used NGRAIN&rsquo;s Constructor SDK to put together a simple visualization of the distribution of confirmed exoplanets relative to Earth.</p>
 
 <p>By no means a feature-rich interactive visualization, it&rsquo;s simple, powerful, and interesting.</p>
-
-<h3></h3>
 </div>
   
   
@@ -470,76 +536,6 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 
 
 <p>And relevantly, they have data sets for sale based on data acquired through the American Freedom of Information Act.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2014/03/21/visual-analytics-democratization-of-analysis-and-visual-literacy/">Visual Analytics, Democratization of Analysis, and Visual Literacy</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-03-21T19:03:41-07:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>7:03 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://youtu.be/hbTb62BeTUc">http://youtu.be/hbTb62BeTUc</a></p>
-
-<p>Regarding:<a href="https://www.youtube.com/watch?v=hbTb62BeTUc"> SAP Visual Intelligence: Big Data Example </a>on YouTube</p>
-
-<p>First I had better say the positive things. I appreciate that this is a feature demonstration and not a case study. The presenter goes through the feature set of their product in an admirable and straightforward way. It is an impressive feature set and an impressive product. They are not trying to tell a story, so it is unfair to criticize their story.</p>
-
-<p>Then I can say the &ldquo;but&rdquo;. But! I was struck by the badness of the visualizations. ALL of them! Some highlights are below, but you can watch the video for yourself and see not one well purposed chart.</p>
-
-<p>Sales and quantity sold by product line and quarter at 2:12</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_1.png"><img src="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_1.png" alt="sap_video_1" /></a></p>
-
-<p>Sales and quantity sold by product line and quarter at 3:03</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_4.png"><img src="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_4.png" alt="sap_video_4" /></a></p>
-
-<p>3D Bar Pies (is that even a thing?) at 3:33</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_5.png"><img src="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_5.png" alt="sap_video_5" /></a></p>
-
-<p>Variably-sized pies on a map at 3:57</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_6.png"><img src="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_6.png" alt="sap_video_6" /></a></p>
-
-<p>Sales revenue by city by quarter at 4:52</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_7.png"><img src="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_7.png" alt="sap_video_7" /></a></p>
-
-<p>Sales revenue by city at 6:27</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_8.png"><img src="http://alekseynp.com/wp-content/uploads/2014/03/sap_video_8.png" alt="sap_video_8" /></a></p>
-
-<p>The Visual Analytics movement seeks to democratize data analysis by making it easy to use and highly visual. They want to push analysis up towards senior management and outwards away from the analysts. Which is a laudable goal, but when we get there and people are creating stuff like we see in this video, we will have failed.</p>
-
-<p>This illustrates two major calls to action:</p>
-
-<ol>
-<li><p> Designers: How do you design a Visual Analytics product that guides its users to make good data viz design decisions?</p></li>
-<li><p> Trainers: Go out there and spread the good word. Time to get <a href="http://visualisingdata.com/">Andy Kirk</a> in to train your organization!</p></li>
-</ol>
-
 </div>
   
   
