@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Canada | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/canada/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2015-03-24T20:49:31-07:00</updated>
+  <updated>2015-03-24T20:51:15-07:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -50,20 +50,30 @@
 <p>Please feel free to fork the repo and build ahead.</p>
 
 <p>Anyone can create their own CSV like this:
-&#8220;`
-import ontario_sunshine_list as osl</p>
-
-<p>col = osl.Collector()
-col.run(&lsquo;/home/aleksey/data/sunshine/&rsquo;)</p>
-
-<p>scr = osl.Scraper()
-df = scr.run(&lsquo;/home/aleksey/data/sunshine/&rsquo;)</p>
-
-<p>cle = osl.Cleaner()
-df = cle.run(df)</p>
-
-<p>df.to_csv(&lsquo;/home/aleksey/data.csv&rsquo;, encoding=&lsquo;utf-8&rsquo;)
-&#8220;`</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import ontario_sunshine_list as osl&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;col = osl.Collector()
+</span><span class='line'>col.run(&lsquo;/home/aleksey/data/sunshine/&rsquo;)&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;scr = osl.Scraper()
+</span><span class='line'>df = scr.run(&lsquo;/home/aleksey/data/sunshine/&rsquo;)&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;cle = osl.Cleaner()
+</span><span class='line'>df = cle.run(df)&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;df.to_csv(&lsquo;/home/aleksey/data.csv&rsquo;, encoding=&lsquo;utf-8&rsquo;)</span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
   </entry>
   
