@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Data Journalism | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/data-journalism/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2015-03-07T16:56:01-08:00</updated>
+  <updated>2015-03-24T20:43:03-07:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ontarion Sunshine List Pathologists Notebook]]></title>
+    <link href="http://alekseynp.com/2015/03/24/gist-pathologists/"/>
+    <updated>2015-03-24T13:00:00-07:00</updated>
+    <id>http://alekseynp.com/2015/03/24/gist-pathologists</id>
+    <content type="html"><![CDATA[<p>Here is an <a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc">nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List</a>.</p>
+
+<p>It uses data from the <a href="https://github.com/alekseynp/ontario_sunshine_list">Ontario Sunshine List Scraper</a> that I made public on GitHub recently.</p>
+
+<p>It recreates the analysis that went in to my previous article about pathologists on the list: <a href="http://alekseynp.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% Raise for Ontario’s Pathologists in 2012</a></p>
+
+<p>I hope you&rsquo;ll find it useful.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ontario Sunshine List Open Scraper]]></title>
@@ -22,7 +37,7 @@
 
 <p><strong>You can download the data directly <a href="https://github.com/alekseynp/ontario_sunshine_list/blob/master/output/data.csv">here</a>.</strong> I will likely move this later.</p>
 
-<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
+<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here to the GitHub repo</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
 
 <p>Today&rsquo;s version of the code has two key limitations:</p>
 
@@ -145,46 +160,6 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 
 
 <p>And relevantly, they have data sets for sale based on data acquired through the American Freedom of Information Act.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Which Countries Are Successfully Requesting Data From Facebook?]]></title>
-    <link href="http://alekseynp.com/2013/08/29/which-countries-are-successfully-requesting-data-from-facebook/"/>
-    <updated>2013-08-29T08:33:42-07:00</updated>
-    <id>http://alekseynp.com/2013/08/29/which-countries-are-successfully-requesting-data-from-facebook</id>
-    <content type="html"><![CDATA[<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/facebook_requests_v1_publish.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/facebook_requests_v1_publish.png" alt="facebook_requests_v1_publish" /></a></p>
-
-<p>Recently <a href="http://newsroom.fb.com/News/699/Global-Government-Requests-Report">Facebook published a report</a> covering the first 6 months of 2013, disclosing which countries have made data requests from Facebook, and to what proportion of requests did Facebook respond with at least some data. &ldquo;Transparency and trust are core values at Facebook.&rdquo; And good on them for at least trying not to be evil. Unfortunately, in this case &ldquo;transparency&rdquo; has amounted to a single HTML table with 71 rows of data. Given the enormous audience for this information, perhaps some data visualisation would have been appropriate. After all, what is &ldquo;transparency&rdquo; if people can&rsquo;t really &ldquo;see&rdquo; the data?</p>
-
-<p><strong>Proportionality - Requests vs. Facebook Population</strong></p>
-
-<p>I was going to combine the requests data with Facebook populations, but it <a href="http://www.motherjones.com/kevin-drum/2013/08/chart-day-which-countries-snoop-facebook-users-most">looks like this has already been done</a>. This is a classic example of the importance of relative ratios in data reporting and journalism. The result is also important given the position of Germany in the current debate on web privacy. I encourage you to take a look <a href="http://www.motherjones.com/kevin-drum/2013/08/chart-day-which-countries-snoop-facebook-users-most">here</a>.</p>
-
-<p><strong>Successful Requests</strong></p>
-
-<p>Facebook tells us that it is battling hard against any and all requests, and that it only complies with the strict letter of the law. Still it would be interesting to see which countries are more successful than others. We could do this simply by looking at the success ratio in the report, but plotting it against number of requests adds an interesting dimension.</p>
-
-<p>Without being an expert in online data privacy and international law, it&rsquo;s interesting to note a few things:</p>
-
-<ul>
-<li><p>In the bottom left, countries who have made few requests with very little success</p></li>
-<li><p>In the top-right, countries who have made a lot of requests with good success</p>
-
-<ul>
-<li><p>United States, United Kingdom, and Australia leading the pack</p></li>
-<li><p>Canada not together with those nations above</p></li>
-<li><p>Italy, France, Germany, Spain, Portugal clustered - Western Schengen</p></li>
-<li><p>Switzerland and Austria with much lower success rates than those nations above</p></li>
-</ul>
-</li>
-<li><p>Poland a proliferate requester with remarkably little success</p></li>
-</ul>
-
-
-<p><strong>Meta</strong></p>
-
-<p>Logarithmic scales are probably not the best practice in data journalism, but it was worth it in order to spread out the dots and see the different countries.</p>
 ]]></content>
   </entry>
   

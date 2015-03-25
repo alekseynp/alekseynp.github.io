@@ -9,7 +9,7 @@
   <meta name="author" content="Aleksey Nozdryn-Plotnicki">
 
   
-  <meta name="description" content="Over at FlowingData, this &ldquo;mutant pie chart&rdquo; was shared as a sinful act in the Data Viz community. It looks very wizzy and innovative, &hellip;">
+  <meta name="description" content="I saw this recently here. It&rsquo;s a map showing the age of Brooklyn&rsquo;s buildings. What do I get from the map? Every data point is plotted, so &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +90,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2013/08/16/average-age-of-brooklyns-buildings-mapped/">Average Age of Brooklyn&#8217;s Buildings Mapped</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-16T21:12:25-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>9:12 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I saw <a href="http://bklynr.com/block-by-block-brooklyns-past-and-present/">this</a> recently <a href="http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/">here</a>. It&rsquo;s a map showing the age of Brooklyn&rsquo;s buildings.</p>
+
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/bklynr.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/bklynr.png" alt="bklynr" /></a></p>
+
+<p><strong>What do I get from the map?</strong></p>
+
+<p>Every data point is plotted, so if I were a Brooklyner, I would probably find my street or look up my favourite building. For some people this seems to have reduced confidence in the data quality. Having only ever been half-way across the Brooklyn Bridge, instead I looked at the map to try and find interesting trends. Some are certainly visible, but I found myself wanting a map with some aggregation.</p>
+
+<p><strong>What I tried.</strong></p>
+
+<p>So I made this. Yes, a post will follow on how.</p>
+
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/bk_r5_version4.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/bk_r5_version4-923x1024.png" alt="bk_r5_version4" /></a></p>
+
+<p>(click for the huge version)</p>
+
+<p>By showing the average build year for buildings in each hexagon, rather than plotting every single data point, some patterns are more visible. Though I will admit that once you&rsquo;ve seen them in the above map, they are often quite visible in the original.</p>
+
+<p><strong>Hexagon Size</strong></p>
+
+<p>The size or &ldquo;radius&rdquo; of the hexagons is an important parameter of the visualization. As you can see clearly below, our ability to spot patterns of a certain size requires aggregation of a similar size. Compare the first with the last and you&rsquo;ll see.</p>
+
+<p><a href="http://alekseynp.com/wp-content/uploads/2013/08/radius_5_400.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/radius_5_400.png" alt="radius_5_400" /></a><a href="http://alekseynp.com/wp-content/uploads/2013/08/radius_10_4001.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/radius_10_4001.png" alt="radius_10_400" /></a><a href="http://alekseynp.com/wp-content/uploads/2013/08/radius_20_400.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/radius_20_400.png" alt="radius_20_400" /></a><a href="http://alekseynp.com/wp-content/uploads/2013/08/radius_30_400.png"><img src="http://alekseynp.com/wp-content/uploads/2013/08/radius_30_400.png" alt="radius_30_400" /></a></p>
+
+<p><strong>Aggregation</strong></p>
+
+<p>While my map is not a compelling improvement on the original, I think it is a nice demonstration of the power of aggregation. Data visualizers can be overly focused on plotting the data directly. Analysts, however, know that you can rarely accomplish anything without some good aggregation. This intersection of data viz and analysis is undeniably interesting.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -591,10 +647,10 @@ Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries 
 <p>The process was:</p>
 
 <ol>
-<li><p> Data Gathering and Analysis – a deep topic for another post</p></li>
-<li><p> CSV as a bridge between analysis tools and charting tools</p></li>
-<li><p> R to generate base chart</p></li>
-<li><p> Inkscape to clean up</p></li>
+<li><p>Data Gathering and Analysis – a deep topic for another post</p></li>
+<li><p>CSV as a bridge between analysis tools and charting tools</p></li>
+<li><p>R to generate base chart</p></li>
+<li><p>Inkscape to clean up</p></li>
 </ol>
 
 
@@ -760,41 +816,6 @@ Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries 
 <p>Why do many lines start after 1997?</p>
 
 <p>Before this period, the given presidents did not earn more than $100,000 and did not qualify for disclosure.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2013/07/10/south-american-roadsigns-gestalt-proximity/">South American Roadsigns: Gestalt & Proximity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2013-07-10T13:43:49-07:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>1:43 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://alekseynp.com/wp-content/uploads/2013/07/20130615_124724-Edited.jpg"><img src="http://alekseynp.com/wp-content/uploads/2013/07/20130615_124724-Edited.jpg" alt="20130615_124724 - Edited" /></a>
-So&hellip; Which way to Lima?</p>
-
-<p>Gestalt principles are important to learn if you&rsquo;re going to be designing information graphics. One such principle is that of nearness or proximity&hellip;. &ldquo;&hellip; all else being equal, perception tends to group stimuli that are close together as part of the same object&rdquo; (thanks <a href="http://en.wikipedia.org/wiki/Principles_of_grouping">Wikipedia</a>) Which arrow is associated with which label?</p>
-
-<p>There are some fun lessons on visual communication to be had from South American roadsigns that show a surprising variability in quality and lack of consistency, even within a single region of a single country. This example is Peru, but by no means should Peru be singled out.</p>
 </div>
   
   

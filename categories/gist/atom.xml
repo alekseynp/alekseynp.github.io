@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gist | Aleksey Nozdryn-Plotnicki]]></title>
+  <link href="http://alekseynp.com/categories/gist/atom.xml" rel="self"/>
+  <link href="http://alekseynp.com/"/>
+  <updated>2015-03-24T20:43:03-07:00</updated>
+  <id>http://alekseynp.com/</id>
+  <author>
+    <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ontarion Sunshine List Pathologists Notebook]]></title>
+    <link href="http://alekseynp.com/2015/03/24/gist-pathologists/"/>
+    <updated>2015-03-24T13:00:00-07:00</updated>
+    <id>http://alekseynp.com/2015/03/24/gist-pathologists</id>
+    <content type="html"><![CDATA[<p>Here is an <a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc">nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List</a>.</p>
+
+<p>It uses data from the <a href="https://github.com/alekseynp/ontario_sunshine_list">Ontario Sunshine List Scraper</a> that I made public on GitHub recently.</p>
+
+<p>It recreates the analysis that went in to my previous article about pathologists on the list: <a href="http://alekseynp.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% Raise for Ontario’s Pathologists in 2012</a></p>
+
+<p>I hope you&rsquo;ll find it useful.</p>
+]]></content>
+  </entry>
+  
+</feed>

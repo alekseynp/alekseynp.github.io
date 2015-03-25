@@ -9,7 +9,7 @@
   <meta name="author" content="Aleksey Nozdryn-Plotnicki">
 
   
-  <meta name="description" content="Today I am announcing my open Ontario Sunshine List Scraper released under the MIT License. You can download the data directly here. I will likely &hellip;">
+  <meta name="description" content="Here is an nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List. It uses data from the Ontario Sunshine List &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,42 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/2015/03/24/gist-pathologists/">Ontarion Sunshine List Pathologists Notebook</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-03-24T13:00:00-07:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:00 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here is an <a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc">nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List</a>.</p>
+
+<p>It uses data from the <a href="https://github.com/alekseynp/ontario_sunshine_list">Ontario Sunshine List Scraper</a> that I made public on GitHub recently.</p>
+
+<p>It recreates the analysis that went in to my previous article about pathologists on the list: <a href="http://alekseynp.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% Raise for Ontario’s Pathologists in 2012</a></p>
+
+<p>I hope you&rsquo;ll find it useful.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/2015/03/07/ontario-sunshine-list-scraper/">Ontario Sunshine List Open Scraper</a></h1>
     
     
@@ -117,7 +153,7 @@
 
 <p><strong>You can download the data directly <a href="https://github.com/alekseynp/ontario_sunshine_list/blob/master/output/data.csv">here</a>.</strong> I will likely move this later.</p>
 
-<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
+<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here to the GitHub repo</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
 
 <p>Today&rsquo;s version of the code has two key limitations:</p>
 
@@ -230,26 +266,21 @@
 
   <div class="entry-content"><p>What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.</p>
 
-<p>Raw data, <strong>Fill Ups</strong>:</p>
-
-<table style='border-collapse: separate; border-spacing: 10px;'>
-  <thead>
-    <th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th>
-  </thead>
-  <tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
-  <tr><td>576.4 </td><td> 59.53 </td><td> 10.32789729 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>505.2 </td><td> 51.602 </td><td> 10.2141726 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>522 </td><td> 54.273 </td><td> 10.39712644 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>305.3 </td><td> 32.433 </td><td> 10.62332132 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>1111.4 </td><td> 108.578 </td><td> 10.73541625 </td><td> 0.2 </td><td> 0.8</td></tr>
-  <tr><td>508.1 </td><td> 53.112 </td><td> 10.45306042 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>496.4 </td><td> 52.4393 </td><td> 10.56392023 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>442.1 </td><td> 44.5392 </td><td> 10.07446279 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>393.4 </td><td> 43.239 </td><td> 10.9911032 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>429.2 </td><td> 45.345 </td><td> 10.56500466 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>476.7 </td><td> 58.217 </td><td> 12.21250262 </td><td> 0.85 </td><td> 0.15</td></tr>
-</table>
-
+<p>Raw data, <strong>Fill Ups</strong>:
+kms | litress | efficiency | est_mix_city | est_mix_highway
+&mdash; | &mdash; | &mdash; | &mdash; | &mdash;
+420.8 | 46.514 | 11.05370722 | 0.5 | 0.5
+576.4 | 59.53 | 10.32789729 | 0 | 1
+505.2 | 51.602 | 10.2141726 | 0 | 1
+522 | 54.273 | 10.39712644 | 0 | 1
+305.3 | 32.433 | 10.62332132 | 0 | 1
+1111.4 | 108.578 | 10.73541625 | 0.2 | 0.8
+508.1 | 53.112 | 10.45306042 | 0.1 | 0.9
+496.4 | 52.4393 | 10.56392023 | 0.1 | 0.9
+442.1 | 44.5392 | 10.07446279 | 0 | 1
+393.4 | 43.239 | 10.9911032 | 0.1 | 0.9
+429.2 | 45.345 | 10.56500466 | 0 | 1
+476.7 | 58.217 | 12.21250262 | 0.85 | 0.15</p>
 
 <p>In google docs it is a simple thing to run <code>=SLOPE(efficiency rows,est_mix_city rows)</code> and <code>=INTERCEPT(efficiency rows,est_mix_city rows)</code> giving me 10.381 and 1.967.</p>
 
@@ -262,6 +293,8 @@
 <p>Yes, there are probably better techniques to get an estimate that perhaps weight bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
 
 <p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
+
+<h2>#</h2>
 </div>
   
   
@@ -296,6 +329,8 @@
 <p>I used NGRAIN&rsquo;s Constructor SDK to put together a simple visualization of the distribution of confirmed exoplanets relative to Earth.</p>
 
 <p>By no means a feature-rich interactive visualization, it&rsquo;s simple, powerful, and interesting.</p>
+
+<h3></h3>
 </div>
   
   
@@ -480,62 +515,6 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 
 
 <p>For those outside of Canada, the CBC, the Canadian Broadcasting Corporation is a public entity and major player in the Canadian news media market. It&rsquo;s my personal number one source for Canadian news.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2014/03/28/i-tried-to-sell-open-government-data/">I Tried to Sell Open Government Data</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-03-28T19:13:28-07:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:13 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I tried to sell open government data, but I won&rsquo;t be the only one.</p>
-
-<p>In 2013 I wrote a series of data journalism articles on the topic of <a href="http://alekseynp.com/topic-ontario-public-salary-disclosure/">Ontario Public Sector Salary Disclosure</a>. The posts were based on data made available as part of a disclosure initiative in the Canadian province of Ontario. Data was published freely and openly on the Ontario Ministry of Finance website in html and pdf format. I performed a convoluted scraping and processing exercise to build a definitive, unified data set and then performed some analysis in order to identify some interesting headlines.</p>
-
-<p>In late 2013 I was approached by someone who was looking for the data behind my analysis. I agreed to share the data on a few conditions, one of which was non-commercial use that they were unable to meet. And so I offered to sell them the data. Free, open, public data.</p>
-
-<blockquote>Sorry Aleksey. Not going to pay for public data even if private hours went into scraping it.</blockquote>
-
-
-<p>I knew I had entered a moral landscape with shades of grey on a topic that people would be emotional about.</p>
-
-<p>Government data should be free and open! After all it&rsquo;s our data for us! Well except perhaps in instances where user fees would be a more appropriate measure to spread the cost of data production more proportionally to those who will benefit. And the shades are grey.</p>
-
-<p>My simplest and most direct defense is: My customer knew that the data was freely available, but I still had something to sell them.</p>
-
-<p>Nobody owns the truth, but once they have measured it, processed it, and made it available in a useful format, then they have something that they could sell to you. If I sold you a map based on free government data or delivered you a service based on it, you would accept that.</p>
-
-<p>I wrote about the <a href="http://alekseynp.com/2013/05/27/data-sins-of-the-ontario-ministry-of-finance-public-sector-salary-disclosure/">Data Sins of the Ontario Ministry of Finance – Public Sector Salary Disclosure</a> and <a href="http://alekseynp.com/2013/04/22/current-publishing-of-ontario-sunshine-list-not-good-enough/">Current publishing of Ontario “Sunshine List” not good enough</a>. This data was &ldquo;open&rdquo; but not truly &ldquo;open&rdquo; and it required considerable effort to process before I could analyse it.</p>
-
-<p><strong>ProPublica</strong></p>
-
-<p>Why I wrote this today rather than continue to procrastinate is that I saw this: <a href="http://www.propublica.org/article/introducing-the-propublica-data-store">Introducing the ProPublica Data Store</a></p>
-
-<blockquote>For datasets that are the result of significant expenditures of our time and effort, we&#8217;re charging a reasonable one-time fee: In most cases, it&#8217;s $200 for journalists and $2,000 for academic researchers. Those wanting to use data commercially should reach out to us to discuss pricing.</blockquote>
-
-
-<p>And relevantly, they have data sets for sale based on data acquired through the American Freedom of Information Act.</p>
 </div>
   
   

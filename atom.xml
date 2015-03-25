@@ -4,7 +4,7 @@
   <title><![CDATA[Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2015-03-07T16:56:01-08:00</updated>
+  <updated>2015-03-24T20:43:03-07:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ontarion Sunshine List Pathologists Notebook]]></title>
+    <link href="http://alekseynp.com/2015/03/24/gist-pathologists/"/>
+    <updated>2015-03-24T13:00:00-07:00</updated>
+    <id>http://alekseynp.com/2015/03/24/gist-pathologists</id>
+    <content type="html"><![CDATA[<p>Here is an <a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc">nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List</a>.</p>
+
+<p>It uses data from the <a href="https://github.com/alekseynp/ontario_sunshine_list">Ontario Sunshine List Scraper</a> that I made public on GitHub recently.</p>
+
+<p>It recreates the analysis that went in to my previous article about pathologists on the list: <a href="http://alekseynp.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/">20-25% Raise for Ontario’s Pathologists in 2012</a></p>
+
+<p>I hope you&rsquo;ll find it useful.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ontario Sunshine List Open Scraper]]></title>
@@ -22,7 +37,7 @@
 
 <p><strong>You can download the data directly <a href="https://github.com/alekseynp/ontario_sunshine_list/blob/master/output/data.csv">here</a>.</strong> I will likely move this later.</p>
 
-<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
+<p>Anyone can go <a href="https://github.com/alekseynp/ontario_sunshine_list">here to the GitHub repo</a> and download python code that scrapes the <a href="http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/">Ontario Public Sector Salary Disclosure</a> data into a machine-readable format.</p>
 
 <p>Today&rsquo;s version of the code has two key limitations:</p>
 
@@ -93,26 +108,21 @@
     <id>http://alekseynp.com/2014/11/22/regressing-my-gas-log</id>
     <content type="html"><![CDATA[<p>What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.</p>
 
-<p>Raw data, <strong>Fill Ups</strong>:</p>
-
-<table style='border-collapse: separate; border-spacing: 10px;'>
-  <thead>
-    <th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th>
-  </thead>
-  <tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
-  <tr><td>576.4 </td><td> 59.53 </td><td> 10.32789729 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>505.2 </td><td> 51.602 </td><td> 10.2141726 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>522 </td><td> 54.273 </td><td> 10.39712644 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>305.3 </td><td> 32.433 </td><td> 10.62332132 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>1111.4 </td><td> 108.578 </td><td> 10.73541625 </td><td> 0.2 </td><td> 0.8</td></tr>
-  <tr><td>508.1 </td><td> 53.112 </td><td> 10.45306042 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>496.4 </td><td> 52.4393 </td><td> 10.56392023 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>442.1 </td><td> 44.5392 </td><td> 10.07446279 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>393.4 </td><td> 43.239 </td><td> 10.9911032 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>429.2 </td><td> 45.345 </td><td> 10.56500466 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>476.7 </td><td> 58.217 </td><td> 12.21250262 </td><td> 0.85 </td><td> 0.15</td></tr>
-</table>
-
+<p>Raw data, <strong>Fill Ups</strong>:
+kms | litress | efficiency | est_mix_city | est_mix_highway
+&mdash; | &mdash; | &mdash; | &mdash; | &mdash;
+420.8 | 46.514 | 11.05370722 | 0.5 | 0.5
+576.4 | 59.53 | 10.32789729 | 0 | 1
+505.2 | 51.602 | 10.2141726 | 0 | 1
+522 | 54.273 | 10.39712644 | 0 | 1
+305.3 | 32.433 | 10.62332132 | 0 | 1
+1111.4 | 108.578 | 10.73541625 | 0.2 | 0.8
+508.1 | 53.112 | 10.45306042 | 0.1 | 0.9
+496.4 | 52.4393 | 10.56392023 | 0.1 | 0.9
+442.1 | 44.5392 | 10.07446279 | 0 | 1
+393.4 | 43.239 | 10.9911032 | 0.1 | 0.9
+429.2 | 45.345 | 10.56500466 | 0 | 1
+476.7 | 58.217 | 12.21250262 | 0.85 | 0.15</p>
 
 <p>In google docs it is a simple thing to run <code>=SLOPE(efficiency rows,est_mix_city rows)</code> and <code>=INTERCEPT(efficiency rows,est_mix_city rows)</code> giving me 10.381 and 1.967.</p>
 
@@ -125,6 +135,8 @@
 <p>Yes, there are probably better techniques to get an estimate that perhaps weight bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
 
 <p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
+
+<h2>#</h2>
 ]]></content>
   </entry>
   
@@ -138,6 +150,8 @@
 <p>I used NGRAIN&rsquo;s Constructor SDK to put together a simple visualization of the distribution of confirmed exoplanets relative to Earth.</p>
 
 <p>By no means a feature-rich interactive visualization, it&rsquo;s simple, powerful, and interesting.</p>
+
+<h3></h3>
 ]]></content>
   </entry>
   
@@ -297,8 +311,8 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 <p>This illustrates two major calls to action:</p>
 
 <ol>
-<li><p> Designers: How do you design a Visual Analytics product that guides its users to make good data viz design decisions?</p></li>
-<li><p> Trainers: Go out there and spread the good word. Time to get <a href="http://visualisingdata.com/">Andy Kirk</a> in to train your organization!</p></li>
+<li><p>Designers: How do you design a Visual Analytics product that guides its users to make good data viz design decisions?</p></li>
+<li><p>Trainers: Go out there and spread the good word. Time to get <a href="http://visualisingdata.com/">Andy Kirk</a> in to train your organization!</p></li>
 </ol>
 
 ]]></content>
@@ -388,8 +402,8 @@ Nozdryn-Plotnicki [found](http://alekseynp.com/2013/04/19/7-2-raise-for-1000-be
 <p>This is a demonstration of the power and importance of left-to-right. The original violates two assumptions readers make about left-to-right:</p>
 
 <ol>
-<li><p> Things further to the right are later in time</p></li>
-<li><p> Things further to the right are higher, bigger, better.</p></li>
+<li><p>Things further to the right are later in time</p></li>
+<li><p>Things further to the right are higher, bigger, better.</p></li>
 </ol>
 
 
@@ -498,10 +512,10 @@ Data was collected for a one month period of auctions completed on eBay, a popul
 <h1>How I Did It</h1>
 
 <ol>
-<li><p> A scraper was written in C# to collect html pages from eBay of completed auctions for Vancouver Canucks tickets</p></li>
-<li><p> Extensive regular expression matching was done on the auction&rsquo;s free text in order to determine what game the tickets were for, how many tickets there were, and other factors like where the seats were in the stadium</p></li>
-<li><p> Regression models were tried in order to find a good fit</p></li>
-<li><p> Regression coefficients were interpreted to draw conclusions</p></li>
+<li><p>A scraper was written in C# to collect html pages from eBay of completed auctions for Vancouver Canucks tickets</p></li>
+<li><p>Extensive regular expression matching was done on the auction&rsquo;s free text in order to determine what game the tickets were for, how many tickets there were, and other factors like where the seats were in the stadium</p></li>
+<li><p>Regression models were tried in order to find a good fit</p></li>
+<li><p>Regression coefficients were interpreted to draw conclusions</p></li>
 </ol>
 
 ]]></content>
@@ -588,29 +602,6 @@ class(&ldquo;a&rdquo;)<br/>
 <li><p>Previously we saw DEN as the closest shooters overall, and indeed they appear to be close shooters in the paint and moderately close shooters at midrange.</p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[NBA Players Shoot From Further as the Game Progresses]]></title>
-    <link href="http://alekseynp.com/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses/"/>
-    <updated>2013-11-07T13:02:15-08:00</updated>
-    <id>http://alekseynp.com/2013/11/07/nba-players-shoot-from-further-as-the-game-progresses</id>
-    <content type="html"><![CDATA[<p>On average, players in the NBA take shots 6.5% further from the basket in the 4th period than in the 1st. This is a subtle, but consistent trend across all periods. 1.2% further in the 2nd than the 1st, 2.4% further in the 3rd than the 2nd, and 2.7% further in the 4th than the 3rd.</p>
-
-<p>Most teams show the same trend, consider the graphic Average Distance of Shots by Period below:</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_allteams.png" alt="avg_distance_period_allteams" /></a></p>
-
-<p>Nearly all teams show an increasing distance by period, but there are some notable exceptions. A few teams like NYK, UTA, ATL, and ORL show an opposite trend.</p>
-
-<p>It&rsquo;s not clear at this point what is leading this. Greater defense in later periods forces further shots? A greater need for 3-pts pushes shots away from the basket? A greater need for points in less time forces less ideal shots from further out? What about the exceptional teams where they get closer? What are these teams doing in the 4th quarter? Leaning more heavily on particular strengths or players?  Tired players not driving to the net?</p>
-
-<p>What is true at the global level and largely true at the team level is again reflected in the players. Here are the average distance for the top 100 scorers:</p>
-
-<p><a href="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_100players.png"><img src="http://alekseynp.com/wp-content/uploads/2013/11/avg_distance_period_100players.png" alt="avg_distance_period_100players" /></a></p>
-
-<p>More noise, but the trend is still visible!</p>
 ]]></content>
   </entry>
   

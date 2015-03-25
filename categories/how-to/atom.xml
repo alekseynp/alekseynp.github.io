@@ -4,7 +4,7 @@
   <title><![CDATA[Category: How To | Aleksey Nozdryn-Plotnicki]]></title>
   <link href="http://alekseynp.com/categories/how-to/atom.xml" rel="self"/>
   <link href="http://alekseynp.com/"/>
-  <updated>2015-03-07T16:56:01-08:00</updated>
+  <updated>2015-03-24T20:43:03-07:00</updated>
   <id>http://alekseynp.com/</id>
   <author>
     <name><![CDATA[Aleksey Nozdryn-Plotnicki]]></name>
@@ -438,10 +438,10 @@ myBoxStats &lt;span&gt;&lt;-&lt;/span&gt; &lt;a href="http://inside-r.org/r-doc/
 <p>The process was:</p>
 
 <ol>
-<li><p> Data Gathering and Analysis – a deep topic for another post</p></li>
-<li><p> CSV as a bridge between analysis tools and charting tools</p></li>
-<li><p> R to generate base chart</p></li>
-<li><p> Inkscape to clean up</p></li>
+<li><p>Data Gathering and Analysis – a deep topic for another post</p></li>
+<li><p>CSV as a bridge between analysis tools and charting tools</p></li>
+<li><p>R to generate base chart</p></li>
+<li><p>Inkscape to clean up</p></li>
 </ol>
 
 

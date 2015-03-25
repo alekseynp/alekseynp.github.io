@@ -114,26 +114,21 @@
 
 <div class="entry-content"><p>What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.</p>
 
-<p>Raw data, <strong>Fill Ups</strong>:</p>
-
-<table style='border-collapse: separate; border-spacing: 10px;'>
-  <thead>
-    <th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th>
-  </thead>
-  <tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
-  <tr><td>576.4 </td><td> 59.53 </td><td> 10.32789729 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>505.2 </td><td> 51.602 </td><td> 10.2141726 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>522 </td><td> 54.273 </td><td> 10.39712644 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>305.3 </td><td> 32.433 </td><td> 10.62332132 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>1111.4 </td><td> 108.578 </td><td> 10.73541625 </td><td> 0.2 </td><td> 0.8</td></tr>
-  <tr><td>508.1 </td><td> 53.112 </td><td> 10.45306042 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>496.4 </td><td> 52.4393 </td><td> 10.56392023 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>442.1 </td><td> 44.5392 </td><td> 10.07446279 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>393.4 </td><td> 43.239 </td><td> 10.9911032 </td><td> 0.1 </td><td> 0.9</td></tr>
-  <tr><td>429.2 </td><td> 45.345 </td><td> 10.56500466 </td><td> 0 </td><td> 1</td></tr>
-  <tr><td>476.7 </td><td> 58.217 </td><td> 12.21250262 </td><td> 0.85 </td><td> 0.15</td></tr>
-</table>
-
+<p>Raw data, <strong>Fill Ups</strong>:
+kms | litress | efficiency | est_mix_city | est_mix_highway
+&mdash; | &mdash; | &mdash; | &mdash; | &mdash;
+420.8 | 46.514 | 11.05370722 | 0.5 | 0.5
+576.4 | 59.53 | 10.32789729 | 0 | 1
+505.2 | 51.602 | 10.2141726 | 0 | 1
+522 | 54.273 | 10.39712644 | 0 | 1
+305.3 | 32.433 | 10.62332132 | 0 | 1
+1111.4 | 108.578 | 10.73541625 | 0.2 | 0.8
+508.1 | 53.112 | 10.45306042 | 0.1 | 0.9
+496.4 | 52.4393 | 10.56392023 | 0.1 | 0.9
+442.1 | 44.5392 | 10.07446279 | 0 | 1
+393.4 | 43.239 | 10.9911032 | 0.1 | 0.9
+429.2 | 45.345 | 10.56500466 | 0 | 1
+476.7 | 58.217 | 12.21250262 | 0.85 | 0.15</p>
 
 <p>In google docs it is a simple thing to run <code>=SLOPE(efficiency rows,est_mix_city rows)</code> and <code>=INTERCEPT(efficiency rows,est_mix_city rows)</code> giving me 10.381 and 1.967.</p>
 
@@ -146,6 +141,8 @@
 <p>Yes, there are probably better techniques to get an estimate that perhaps weight bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.</p>
 
 <p>(Aside: It&rsquo;s interesting that I am happy to use the term &ldquo;mileage&rdquo; to describe a statistics that I will measure in L/100km)</p>
+
+<h2>#</h2>
 </div>
 
 
