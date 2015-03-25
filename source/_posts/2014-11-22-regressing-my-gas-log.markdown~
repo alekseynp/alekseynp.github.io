@@ -1,0 +1,51 @@
+---
+author: Aleksey Nozdryn-Plotnicki
+comments: true
+date: 2014-11-22 19:30:18+00:00
+layout: post
+slug: regressing-my-gas-log
+title: Regressing My Gas Log
+categories:
+- Geek life
+tags:
+- Regression
+---
+
+What mileage does your vehicle get? Well that depends. City or highway? Well what is your fuel efficiency in each? Today I geeked it up and did a regression on my gas log to determine just this. Yes, I keep a gas log. It pleases my inner scientist and it helps me watch for sudden changes in fuel efficiency.
+
+Raw data, **Fill Ups**:
+<table style='border-collapse: separate; border-spacing: 10px;'>
+  <thead>
+    <th>kms</th><th>litres</th><th>efficiency</th><th>est_mix_city</th><th>est_mix_highway</th>
+  </thead>
+  <tr><td>420.8</td><td>46.514</td><td>11.05370722</td><td>0.5</td><td>0.5</td></tr>
+  <tr><td>576.4 </td><td> 59.53 </td><td> 10.32789729 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>505.2 </td><td> 51.602 </td><td> 10.2141726 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>522 </td><td> 54.273 </td><td> 10.39712644 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>305.3 </td><td> 32.433 </td><td> 10.62332132 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>1111.4 </td><td> 108.578 </td><td> 10.73541625 </td><td> 0.2 </td><td> 0.8</td></tr>
+  <tr><td>508.1 </td><td> 53.112 </td><td> 10.45306042 </td><td> 0.1 </td><td> 0.9</td></tr>
+  <tr><td>496.4 </td><td> 52.4393 </td><td> 10.56392023 </td><td> 0.1 </td><td> 0.9</td></tr>
+  <tr><td>442.1 </td><td> 44.5392 </td><td> 10.07446279 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>393.4 </td><td> 43.239 </td><td> 10.9911032 </td><td> 0.1 </td><td> 0.9</td></tr>
+  <tr><td>429.2 </td><td> 45.345 </td><td> 10.56500466 </td><td> 0 </td><td> 1</td></tr>
+  <tr><td>476.7 </td><td> 58.217 </td><td> 12.21250262 </td><td> 0.85 </td><td> 0.15</td></tr>
+</table>
+
+
+In google docs it is a simple thing to run `=SLOPE(efficiency rows,est_mix_city rows)` and `=INTERCEPT(efficiency rows,est_mix_city rows)` giving me 10.381 and 1.967.
+
+Simple interpretation is then:
+- With a city mix of 0 and therefore 100% highway, I would get 10.381 + 1.967*0 = 10.381 L/100 km.
+- With a city mis of 1 and therefore 100% city, I would get 10.381 + 1.967*1 = 12.348 L/100 km.
+
+Before you make any snide comments, I drive a two-ton 20-year-old 4x4 diesel van. You'll notice mostly not in the city. It's good at some things, not so good at others.
+
+Yes, there are probably better techniques to get an estimate that perhaps weight bigger fill ups higher, or recognize the small number of data points. But whatever, this was a great way to get to a first estimate.
+
+(Aside: It's interesting that I am happy to use the term "mileage" to describe a statistics that I will measure in L/100km)
+
+###
+
+
+
