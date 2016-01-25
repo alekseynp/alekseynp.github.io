@@ -1,5 +1,5 @@
 The following is the privacy policy for the Background Extraction App.
 
-The App does not collect any personally identifiable information from your mobile device. The App does integrate with Flurry Analytics to gather data that is not personally identifiable.
+The App does not collect any personally identifiable information from your mobile device. The App does integrate with Flurry Analytics to gather data that is not personally identifiable.  It collects anonymous usage data that helps us make to make improvements to the App.
 You can find Yahoo's (Flurry Analytics) privacy policy here: https://policies.yahoo.com/us/en/yahoo/privacy/index.htm
 You can opt out here: https://dev.flurry.com/secure/optOut.do
