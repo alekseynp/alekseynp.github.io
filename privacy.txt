@@ -1,4 +1,4 @@
-The following is the privacy policy for the Background Extraction App.
+The following is the privacy policy for Landmark Lens.
 
 The App collects anonymous usage data that helps us make to make improvements to the App. It does not collect any personally identifiable information from your mobile device. The App integrates with Flurry Analytics to gather data that is not personally identifiable.
 You can find Yahoo's (Flurry Analytics) privacy policy here: https://policies.yahoo.com/us/en/yahoo/privacy/index.htm
