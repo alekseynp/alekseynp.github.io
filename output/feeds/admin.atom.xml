@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Aleksey Nozdryn-Plotnicki - admin</title><link href="/" rel="alternate"></link><link href="/feeds/admin.atom.xml" rel="self"></link><id>/</id><updated>2013-11-05T14:17:24+00:00</updated><entry><title>Portfolio</title><link href="/my-portfolio.html" rel="alternate"></link><published>2013-11-05T14:17:24+00:00</published><updated>2013-11-05T14:17:24+00:00</updated><author><name>admin</name></author><id>tag:None,2013-11-05:/my-portfolio.html</id><summary type="html">&lt;h1&gt;&lt;strong&gt;Portfolio&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2&gt;Code&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ontario Sunshine List Open Scraper on &lt;a href="https://github.com/alekseynp/ontario_sunshine_list"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Gephi Plugin, Random 3D Layout on &lt;a href="https://marketplace.gephi.org/plugin/random-3d-layout/"&gt;gephi.org&lt;/a&gt; and &lt;a href="https://github.com/alekseynp/gephi-plugin-Random3DLayout"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Data Journalism&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Referenced in Financial Post: &lt;a href="../2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post/"&gt;My Ontario Sunshine List work in the Financial Post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;References in the CBC &lt;a href="../2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"&gt;My Ontario Sunshine List Work in the CBC News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;My work on …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;&lt;strong&gt;Portfolio&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2&gt;Code&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ontario Sunshine List Open Scraper on &lt;a href="https://github.com/alekseynp/ontario_sunshine_list"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Gephi Plugin, Random 3D Layout on &lt;a href="https://marketplace.gephi.org/plugin/random-3d-layout/"&gt;gephi.org&lt;/a&gt; and &lt;a href="https://github.com/alekseynp/gephi-plugin-Random3DLayout"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Data Journalism&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Referenced in Financial Post: &lt;a href="../2013/07/28/my-ontario-sunshine-list-work-in-the-financial-post/"&gt;My Ontario Sunshine List work in the Financial Post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;References in the CBC &lt;a href="../2014/04/01/my-ontario-sunshine-list-work-in-the-cbc-news/"&gt;My Ontario Sunshine List Work in the CBC News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;My work on Deadspin: &lt;a href="http://regressing.deadspin.com/wheres-your-team-scoring-from-an-early-look-at-nba-di-1460259136"&gt;The chart above, by Aleksey Nozdryn-Plotnicki &amp;hellip;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Also on Deadspin: &lt;a href="http://regressing.deadspin.com/stephen-currys-numbers-are-as-unlikely-and-wonderful-a-1449057524"&gt;&amp;hellip;in the second graph, by Aleksey Nozdryn-Plotnicki&amp;hellip;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Visualizations&lt;/h2&gt;
+
+&lt;h3&gt;Web/Interactive&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="global-games-regional-sports-london-2012-olympics.html"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_london2012_340.png" alt="showcase_london2012_340" /&gt;&lt;/a&gt;   &lt;a href="mcfc-opta-passing-permier-league-2011-12.html"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_passingdirection_340.png" alt="showcase_passingdirection_340" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="english-football-tickets-value-for-money.html"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_footievalue_340.png" alt="showcase_footievalue_340" /&gt;&lt;/a&gt;   &lt;a href="who-won-the-olympics.html"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_whowontheolympics_340.png" alt="showcase_whowontheolympics_340" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="k-means.html"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_kmeans_340.png" alt="showcase_kmeans_340" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="k-means.html"&gt;K-means Clustering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="global-games-regional-sports-london-2012-olympics.html"&gt;Global Games, Regional Sports - London 2012&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="global-games-regional-sports-vancouver-2010-olympics.html"&gt;Global Games, Regional Sports - Vancouver 2010&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="mcfc-opta-passing-permier-league-2011-12.html"&gt;Passing Direction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="paid-to-win.html"&gt;Paid to Win&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="english-football-tickets-value-for-money.html"&gt;English Football Value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="who-won-the-olympics.html"&gt;Who won the Olympics?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Static&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="../2013/07/31/visualising-on-line-conversations-mooc-for-credit-discussion/"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_conversation_340.png" alt="showcase_conversation_340" /&gt;&lt;/a&gt;    &lt;a href="../2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_nbashots_340.png" alt="showcase_nbashots_340" /&gt;&lt;/a&gt; &lt;a href="../2013/08/16/average-age-of-brooklyns-buildings-mapped/"&gt;&lt;img src="../wp-content/uploads/2013/11/showcase_nyc_340.png" alt="showcase_nyc_340" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="../2013/10/24/update-average-shot-locations-nba-regular-season-2012-13/"&gt;Average Shot Locations - NBA Regular Season 2012-13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="../2013/08/16/average-age-of-brooklyns-buildings-mapped/"&gt;Average age of Brooklyn&amp;rsquo;s Buildings Mapped&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="../2013/08/01/visualising-on-line-conversations-mooc-for-credit-discussion/"&gt;Visualising on-line conversation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Web/Tools&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html"&gt;&lt;img src="../wp-content/uploads/2013/11/node_tree_4_alpha_icon.png" alt="node_tree_4_alpha_icon" /&gt;&lt;/a&gt;    &lt;a href="create-visualisations/infowheel4/infoWheel.html"&gt;&lt;img src="../wp-content/uploads/2013/11/info_wheel_4_alpha_icon.png" alt="info_wheel_4_alpha_icon" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="create-visualisations/infowheel4/infoWheel.html"&gt;Create Info Wheel (4-level)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html"&gt;Create Info Tree (4-level)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry></feed>

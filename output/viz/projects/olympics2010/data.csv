@@ -1,0 +1,421 @@
+sportID,Sport,Country,Lat,Lon,participants_Count,medals_Count
+1,Cross-Country Skiing,Algeria,36.5,3,1,0
+1,Cross-Country Skiing,Andorra,42.3,1.3,1,0
+1,Cross-Country Skiing,Argentina,-34.4,-58.3,1,0
+1,Cross-Country Skiing,Armenia,40.1,44.31,2,0
+1,Cross-Country Skiing,Australia,-35.18,149.08,3,0
+1,Cross-Country Skiing,Austria,48.13,16.22,1,0
+1,Cross-Country Skiing,Belarus,53.55,27.33,7,0
+1,Cross-Country Skiing,Bermuda,32.18,-64.48,1,0
+1,Cross-Country Skiing,Bosnia and Herzegovina,43.52,18.25,2,0
+1,Cross-Country Skiing,Brazil,-15.45,-47.57,2,0
+1,Cross-Country Skiing,Bulgaria,42.4,23.18,3,0
+1,Cross-Country Skiing,Canada,45.25,-75.43,15,0
+1,Cross-Country Skiing,China,39.55,116.26,5,0
+1,Cross-Country Skiing,Croatia,45.48,15.58,2,0
+1,Cross-Country Skiing,Czech Republic,50.06,14.26,10,5
+1,Cross-Country Skiing,Denmark,55.43,12.34,1,0
+1,Cross-Country Skiing,Estonia,59.22,24.48,13,1
+1,Cross-Country Skiing,Ethiopia,9.03,38.42,1,0
+1,Cross-Country Skiing,Finland,60.08,25,16,5
+1,Cross-Country Skiing,France,48.5,2.2,13,0
+1,Cross-Country Skiing,Germany,52.32,13.25,15,13
+1,Cross-Country Skiing,Greece,38,23.44,2,0
+1,Cross-Country Skiing,Hungary,47.3,19.03,1,0
+1,Cross-Country Skiing,India,28.37,77.13,1,0
+1,Cross-Country Skiing,Iran,35.4,51.26,3,0
+1,Cross-Country Skiing,Ireland,53.2,-6.15,1,0
+1,Cross-Country Skiing,Italy,41.48,12.36,18,1
+1,Cross-Country Skiing,Japan,35.4,139.45,6,0
+1,Cross-Country Skiing,Kazakhstan,43.19,76.55,11,0
+1,Cross-Country Skiing,Kenya,-1.17,36.49,1,0
+1,Cross-Country Skiing,"Korea, South",37.3,127,2,0
+1,Cross-Country Skiing,Kyrgyzstan,40.07,71.44,1,0
+1,Cross-Country Skiing,Latvia,56.4,106.1,2,0
+1,Cross-Country Skiing,Lithuania,54.4,25.19,4,0
+1,Cross-Country Skiing,Macedonia,42,21.28,3,0
+1,Cross-Country Skiing,Moldova,47,28.5,2,0
+1,Cross-Country Skiing,Mongolia,47.54,106.52,2,0
+1,Cross-Country Skiing,Nepal,27.42,85.19,1,0
+1,Cross-Country Skiing,New Zealand,-41.17,174.47,2,0
+1,Cross-Country Skiing,Norway,59.55,10.45,19,16
+1,Cross-Country Skiing,Peru,-12.06,-77.03,1,0
+1,Cross-Country Skiing,Poland,52.15,21,6,3
+1,Cross-Country Skiing,Portugal,38.44,-9.08,1,0
+1,Cross-Country Skiing,Romania,44.25,26.07,3,0
+1,Cross-Country Skiing,Russia,55.45,37.42,20,6
+1,Cross-Country Skiing,Serbia,44.48,20.28,2,0
+1,Cross-Country Skiing,Slovakia,48.1,17.1,5,2
+1,Cross-Country Skiing,Slovenia,46.04,14.3,7,1
+1,Cross-Country Skiing,South Africa,-25.45,28.12,1,0
+1,Cross-Country Skiing,Spain,40.25,-3.43,4,0
+1,Cross-Country Skiing,Sweden,59.2,1.03,17,11
+1,Cross-Country Skiing,Switzerland,46.57,7.26,12,1
+1,Cross-Country Skiing,Turkey,39.55,32.5,2,0
+1,Cross-Country Skiing,Ukraine,50.25,30.3,8,0
+1,Cross-Country Skiing,United Kingdom,51.3,-0.1,3,0
+1,Cross-Country Skiing,United States,38.55,-77,11,0
+2,Short Track,Australia,-35.18,149.08,2,0
+2,Short Track,Austria,48.13,16.22,1,0
+2,Short Track,Belgium,50.5,4.21,1,0
+2,Short Track,Bulgaria,42.4,23.18,3,0
+2,Short Track,Canada,45.25,-75.43,9,12
+2,Short Track,China,39.55,116.26,10,7
+2,Short Track,Czech Republic,50.06,14.26,1,0
+2,Short Track,France,48.5,2.2,7,0
+2,Short Track,Germany,52.32,13.25,6,0
+2,Short Track,Hungary,47.3,19.03,7,0
+2,Short Track,Italy,41.48,12.36,10,1
+2,Short Track,Japan,35.4,139.45,8,0
+2,Short Track,Kazakhstan,43.19,76.55,1,0
+2,Short Track,"Korea, South",37.3,127,10,12
+2,Short Track,Latvia,56.4,106.1,1,0
+2,Short Track,Netherlands,52.21,4.54,7,0
+2,Short Track,New Zealand,-41.17,174.47,1,0
+2,Short Track,Poland,52.15,21,3,0
+2,Short Track,Romania,44.25,26.07,1,0
+2,Short Track,Russia,55.45,37.42,5,0
+2,Short Track,United Kingdom,51.3,-0.1,7,0
+2,Short Track,United States,38.55,-77,10,14
+3,Biathlon,Australia,-35.18,149.08,1,0
+3,Biathlon,Austria,48.13,16.22,5,5
+3,Biathlon,Belarus,53.55,27.33,10,2
+3,Biathlon,Bosnia and Herzegovina,43.52,18.25,1,0
+3,Biathlon,Bulgaria,42.4,23.18,6,0
+3,Biathlon,Canada,45.25,-75.43,7,0
+3,Biathlon,China,39.55,116.26,6,0
+3,Biathlon,Croatia,45.48,15.58,2,1
+3,Biathlon,Czech Republic,50.06,14.26,10,0
+3,Biathlon,Denmark,55.43,12.34,1,0
+3,Biathlon,Estonia,59.22,24.48,9,0
+3,Biathlon,Finland,60.08,25,4,0
+3,Biathlon,France,48.5,2.2,11,9
+3,Biathlon,Germany,52.32,13.25,12,5
+3,Biathlon,Greece,38,23.44,2,0
+3,Biathlon,Hungary,47.3,19.03,1,0
+3,Biathlon,Italy,41.48,12.36,9,0
+3,Biathlon,Japan,35.4,139.45,2,0
+3,Biathlon,Kazakhstan,43.19,76.55,9,1
+3,Biathlon,"Korea, South",37.3,127,2,0
+3,Biathlon,Latvia,56.4,106.1,9,0
+3,Biathlon,Lithuania,54.4,25.19,1,0
+3,Biathlon,Moldova,47,28.5,2,0
+3,Biathlon,New Zealand,-41.17,174.47,1,0
+3,Biathlon,Norway,59.55,10.45,11,8
+3,Biathlon,Poland,52.15,21,10,0
+3,Biathlon,Romania,44.25,26.07,5,0
+3,Biathlon,Russia,55.45,37.42,12,10
+3,Biathlon,Serbia,44.48,20.28,1,0
+3,Biathlon,Slovakia,48.1,17.1,10,1
+3,Biathlon,Slovenia,46.04,14.3,8,0
+3,Biathlon,Spain,40.25,-3.43,1,0
+3,Biathlon,Sweden,59.2,1.03,10,1
+3,Biathlon,Switzerland,46.57,7.26,6,0
+3,Biathlon,Ukraine,50.25,30.3,11,0
+3,Biathlon,United Kingdom,51.3,-0.1,1,0
+3,Biathlon,United States,38.55,-77,9,0
+4,Speed Skating,Australia,-35.18,149.08,1,0
+4,Speed Skating,Austria,48.13,16.22,1,0
+4,Speed Skating,Belarus,53.55,27.33,1,0
+4,Speed Skating,Canada,45.25,-75.43,16,7
+4,Speed Skating,China,39.55,116.26,13,1
+4,Speed Skating,Czech Republic,50.06,14.26,2,3
+4,Speed Skating,Denmark,55.43,12.34,1,0
+4,Speed Skating,Finland,60.08,25,4,0
+4,Speed Skating,France,48.5,2.2,2,0
+4,Speed Skating,Germany,52.32,13.25,12,7
+4,Speed Skating,Italy,41.48,12.36,5,0
+4,Speed Skating,Japan,35.4,139.45,19,5
+4,Speed Skating,Kazakhstan,43.19,76.55,5,0
+4,Speed Skating,"Korea, North",39,125.47,1,0
+4,Speed Skating,"Korea, South",37.3,127,16,5
+4,Speed Skating,Latvia,56.4,106.1,1,0
+4,Speed Skating,Netherlands,52.21,4.54,19,10
+4,Speed Skating,New Zealand,-41.17,174.47,1,0
+4,Speed Skating,Norway,59.55,10.45,9,1
+4,Speed Skating,Poland,52.15,21,10,3
+4,Speed Skating,Russia,55.45,37.42,17,2
+4,Speed Skating,Sweden,59.2,1.03,3,0
+4,Speed Skating,Switzerland,46.57,7.26,1,0
+4,Speed Skating,United States,38.55,-77,18,7
+5,Ski Jumping,Austria,48.13,16.22,5,6
+5,Ski Jumping,Canada,45.25,-75.43,4,0
+5,Ski Jumping,Czech Republic,50.06,14.26,5,0
+5,Ski Jumping,Finland,60.08,25,5,0
+5,Ski Jumping,France,48.5,2.2,4,0
+5,Ski Jumping,Germany,52.32,13.25,5,4
+5,Ski Jumping,Italy,41.48,12.36,3,0
+5,Ski Jumping,Japan,35.4,139.45,5,0
+5,Ski Jumping,Kazakhstan,43.19,76.55,2,0
+5,Ski Jumping,"Korea, South",37.3,127,3,0
+5,Ski Jumping,Norway,59.55,10.45,5,4
+5,Ski Jumping,Poland,52.15,21,5,2
+5,Ski Jumping,Russia,55.45,37.42,4,0
+5,Ski Jumping,Slovakia,48.1,17.1,1,0
+5,Ski Jumping,Slovenia,46.04,14.3,5,0
+5,Ski Jumping,Switzerland,46.57,7.26,2,2
+5,Ski Jumping,Ukraine,50.25,30.3,3,0
+5,Ski Jumping,United States,38.55,-77,3,0
+6,Alpine Skiing,Albania,41.2,19.49,1,0
+6,Alpine Skiing,Andorra,42.3,1.3,3,0
+6,Alpine Skiing,Argentina,-34.4,-58.3,5,0
+6,Alpine Skiing,Armenia,40.1,44.31,2,0
+6,Alpine Skiing,Australia,-35.18,149.08,2,0
+6,Alpine Skiing,Austria,48.13,16.22,22,4
+6,Alpine Skiing,Azerbaijan,40.22,49.53,2,0
+6,Alpine Skiing,Belarus,53.55,27.33,2,0
+6,Alpine Skiing,Belgium,50.5,4.21,3,0
+6,Alpine Skiing,Bosnia and Herzegovina,43.52,18.25,3,0
+6,Alpine Skiing,Brazil,-15.45,-47.57,2,0
+6,Alpine Skiing,Bulgaria,42.4,23.18,3,0
+6,Alpine Skiing,Canada,45.25,-75.43,22,0
+6,Alpine Skiing,Cayman Islands,19.2,-81.24,1,0
+6,Alpine Skiing,Chile,-50.46,-75.26,3,0
+6,Alpine Skiing,China,39.55,116.26,2,0
+6,Alpine Skiing,Colombia,4.38,-74.05,1,0
+6,Alpine Skiing,Croatia,45.48,15.58,10,2
+6,Alpine Skiing,Cyprus,35.09,33.21,2,0
+6,Alpine Skiing,Czech Republic,50.06,14.26,8,1
+6,Alpine Skiing,Denmark,55.43,12.34,3,0
+6,Alpine Skiing,Estonia,59.22,24.48,2,0
+6,Alpine Skiing,Finland,60.08,25,4,0
+6,Alpine Skiing,France,48.5,2.2,21,0
+6,Alpine Skiing,Georgia,41.43,44.48,3,0
+6,Alpine Skiing,Germany,52.32,13.25,10,3
+6,Alpine Skiing,Ghana,5.33,-0.15,1,0
+6,Alpine Skiing,Greece,38,23.44,3,0
+6,Alpine Skiing,Hungary,47.3,19.03,3,0
+6,Alpine Skiing,Iceland,6.09,-21.51,4,0
+6,Alpine Skiing,India,28.37,77.13,1,0
+6,Alpine Skiing,Iran,35.4,51.26,3,0
+6,Alpine Skiing,Ireland,53.2,-6.15,2,0
+6,Alpine Skiing,Israel,31.47,35.13,1,0
+6,Alpine Skiing,Italy,41.48,12.36,21,1
+6,Alpine Skiing,Japan,35.4,139.45,2,0
+6,Alpine Skiing,Kazakhstan,43.19,76.55,2,0
+6,Alpine Skiing,"Korea, South",37.3,127,3,0
+6,Alpine Skiing,Kyrgyzstan,40.07,71.44,1,0
+6,Alpine Skiing,Latvia,56.4,106.1,3,0
+6,Alpine Skiing,Lebanon,33.52,35.3,3,0
+6,Alpine Skiing,Liechtenstein,47.08,9.32,2,0
+6,Alpine Skiing,Lithuania,54.4,25.19,1,0
+6,Alpine Skiing,Macedonia,42,21.28,1,0
+6,Alpine Skiing,Mexico,19.25,-99.1,1,0
+6,Alpine Skiing,Moldova,47,28.5,2,0
+6,Alpine Skiing,Monaco,43.44,7.25,1,0
+6,Alpine Skiing,Montenegro,42.47,19.28,1,0
+6,Alpine Skiing,Morocco,34.02,-16.51,1,0
+6,Alpine Skiing,Nepal,27.42,85.19,1,0
+6,Alpine Skiing,New Zealand,-41.17,174.47,2,0
+6,Alpine Skiing,Norway,59.55,10.45,6,4
+6,Alpine Skiing,Pakistan,33.4,73.08,1,0
+6,Alpine Skiing,Peru,-12.06,-77.03,2,0
+6,Alpine Skiing,Poland,52.15,21,1,0
+6,Alpine Skiing,Romania,44.25,26.07,3,0
+6,Alpine Skiing,Russia,55.45,37.42,5,0
+6,Alpine Skiing,San Marino,43.56,12.26,2,0
+6,Alpine Skiing,Senegal,14.38,-17.27,1,0
+6,Alpine Skiing,Serbia,44.48,20.28,3,0
+6,Alpine Skiing,Slovakia,48.1,17.1,3,0
+6,Alpine Skiing,Slovenia,46.04,14.3,13,2
+6,Alpine Skiing,South Africa,-25.45,28.12,1,0
+6,Alpine Skiing,Spain,40.25,-3.43,5,0
+6,Alpine Skiing,Sweden,59.2,1.03,14,2
+6,Alpine Skiing,Switzerland,46.57,7.26,14,3
+6,Alpine Skiing,Tajikistan,38.38,68.51,1,0
+6,Alpine Skiing,Turkey,39.55,32.5,2,0
+6,Alpine Skiing,Ukraine,50.25,30.3,2,0
+6,Alpine Skiing,United Kingdom,51.3,-0.1,4,0
+6,Alpine Skiing,United States,38.55,-77,21,8
+6,Alpine Skiing,Uzbekistan,41.16,69.13,2,0
+7,Nordic Combined,Austria,48.13,16.22,5,5
+7,Nordic Combined,Canada,45.25,-75.43,1,0
+7,Nordic Combined,Czech Republic,50.06,14.26,4,0
+7,Nordic Combined,Finland,60.08,25,5,0
+7,Nordic Combined,France,48.5,2.2,5,1
+7,Nordic Combined,Germany,52.32,13.25,5,4
+7,Nordic Combined,Italy,41.48,12.36,4,1
+7,Nordic Combined,Japan,35.4,139.45,5,0
+7,Nordic Combined,Norway,59.55,10.45,5,0
+7,Nordic Combined,Russia,55.45,37.42,2,0
+7,Nordic Combined,Slovenia,46.04,14.3,2,0
+7,Nordic Combined,Switzerland,46.57,7.26,5,0
+7,Nordic Combined,Ukraine,50.25,30.3,1,0
+7,Nordic Combined,United States,38.55,-77,5,7
+8,Bobsleigh,Australia,-35.18,149.08,7,0
+8,Bobsleigh,Austria,48.13,16.22,5,0
+8,Bobsleigh,Belgium,50.5,4.21,2,0
+8,Bobsleigh,Canada,45.25,-75.43,12,8
+8,Bobsleigh,Croatia,45.48,15.58,4,0
+8,Bobsleigh,Czech Republic,50.06,14.26,8,0
+8,Bobsleigh,Germany,52.32,13.25,18,8
+8,Bobsleigh,Ireland,53.2,-6.15,2,0
+8,Bobsleigh,Italy,41.48,12.36,7,0
+8,Bobsleigh,Japan,35.4,139.45,6,0
+8,Bobsleigh,"Korea, South",37.3,127,4,0
+8,Bobsleigh,Latvia,56.4,106.1,9,0
+8,Bobsleigh,Liechtenstein,47.08,9.32,4,0
+8,Bobsleigh,Monaco,43.44,7.25,2,0
+8,Bobsleigh,Netherlands,52.21,4.54,6,0
+8,Bobsleigh,Poland,52.15,21,4,0
+8,Bobsleigh,Romania,44.25,26.07,6,0
+8,Bobsleigh,Russia,55.45,37.42,16,2
+8,Bobsleigh,Serbia,44.48,20.28,4,0
+8,Bobsleigh,Slovakia,48.1,17.1,4,0
+8,Bobsleigh,Switzerland,46.57,7.26,13,0
+8,Bobsleigh,United Kingdom,51.3,-0.1,7,0
+8,Bobsleigh,United States,38.55,-77,18,6
+9,Ice Hockey,Belarus,53.55,27.33,23,0
+9,Ice Hockey,Canada,45.25,-75.43,43,44
+9,Ice Hockey,China,39.55,116.26,21,0
+9,Ice Hockey,Czech Republic,50.06,14.26,23,0
+9,Ice Hockey,Finland,60.08,25,44,44
+9,Ice Hockey,Germany,52.32,13.25,23,0
+9,Ice Hockey,Latvia,56.4,106.1,22,0
+9,Ice Hockey,Norway,59.55,10.45,21,0
+9,Ice Hockey,Russia,55.45,37.42,43,0
+9,Ice Hockey,Slovakia,48.1,17.1,43,0
+9,Ice Hockey,Sweden,59.2,1.03,43,0
+9,Ice Hockey,Switzerland,46.57,7.26,44,0
+9,Ice Hockey,United States,38.55,-77,43,44
+10,Snowboard,Andorra,42.3,1.3,1,0
+10,Snowboard,Australia,-35.18,149.08,8,1
+10,Snowboard,Austria,48.13,16.22,14,2
+10,Snowboard,Brazil,-15.45,-47.57,1,0
+10,Snowboard,Bulgaria,42.4,23.18,1,0
+10,Snowboard,Canada,45.25,-75.43,18,3
+10,Snowboard,China,39.55,116.26,5,0
+10,Snowboard,Czech Republic,50.06,14.26,5,0
+10,Snowboard,Denmark,55.43,12.34,1,0
+10,Snowboard,Finland,60.08,25,5,1
+10,Snowboard,France,48.5,2.2,18,3
+10,Snowboard,Germany,52.32,13.25,8,0
+10,Snowboard,Italy,41.48,12.36,11,0
+10,Snowboard,Japan,35.4,139.45,12,0
+10,Snowboard,"Korea, South",37.3,127,1,0
+10,Snowboard,Netherlands,52.21,4.54,2,1
+10,Snowboard,New Zealand,-41.17,174.47,5,0
+10,Snowboard,Norway,59.55,10.45,10,0
+10,Snowboard,Poland,52.15,21,4,0
+10,Snowboard,Russia,55.45,37.42,6,1
+10,Snowboard,Slovenia,46.04,14.3,7,0
+10,Snowboard,Spain,40.25,-3.43,4,0
+10,Snowboard,Sweden,59.2,1.03,1,0
+10,Snowboard,Switzerland,46.57,7.26,16,1
+10,Snowboard,Ukraine,50.25,30.3,2,0
+10,Snowboard,United Kingdom,51.3,-0.1,4,0
+10,Snowboard,United States,38.55,-77,18,5
+11,Curling,Canada,45.25,-75.43,10,10
+11,Curling,China,39.55,116.26,9,5
+11,Curling,Denmark,55.43,12.34,10,0
+11,Curling,France,48.5,2.2,5,0
+11,Curling,Germany,52.32,13.25,10,0
+11,Curling,Japan,35.4,139.45,5,0
+11,Curling,Norway,59.55,10.45,5,5
+11,Curling,Russia,55.45,37.42,5,0
+11,Curling,Sweden,59.2,1.03,10,5
+11,Curling,Switzerland,46.57,7.26,10,5
+11,Curling,United Kingdom,51.3,-0.1,10,0
+11,Curling,United States,38.55,-77,10,0
+12,Freestyle Skiing,Australia,-35.18,149.08,11,2
+12,Freestyle Skiing,Austria,48.13,16.22,9,1
+12,Freestyle Skiing,Belarus,53.55,27.33,7,1
+12,Freestyle Skiing,Canada,45.25,-75.43,18,3
+12,Freestyle Skiing,China,39.55,116.26,8,3
+12,Freestyle Skiing,Czech Republic,50.06,14.26,7,0
+12,Freestyle Skiing,Denmark,55.43,12.34,1,0
+12,Freestyle Skiing,Finland,60.08,25,4,0
+12,Freestyle Skiing,France,48.5,2.2,11,1
+12,Freestyle Skiing,Germany,52.32,13.25,5,0
+12,Freestyle Skiing,Italy,41.48,12.36,1,0
+12,Freestyle Skiing,Jamaica,17.58,-76.48,1,0
+12,Freestyle Skiing,Japan,35.4,139.45,9,0
+12,Freestyle Skiing,Kazakhstan,43.19,76.55,6,0
+12,Freestyle Skiing,"Korea, South",37.3,127,1,0
+12,Freestyle Skiing,New Zealand,-41.17,174.47,1,0
+12,Freestyle Skiing,Norway,59.55,10.45,6,2
+12,Freestyle Skiing,Poland,52.15,21,1,0
+12,Freestyle Skiing,Romania,44.25,26.07,1,0
+12,Freestyle Skiing,Russia,55.45,37.42,12,0
+12,Freestyle Skiing,Slovenia,46.04,14.3,3,0
+12,Freestyle Skiing,Spain,40.25,-3.43,1,0
+12,Freestyle Skiing,Sweden,59.2,1.03,7,0
+12,Freestyle Skiing,Switzerland,46.57,7.26,14,1
+12,Freestyle Skiing,Ukraine,50.25,30.3,5,0
+12,Freestyle Skiing,United Kingdom,51.3,-0.1,3,0
+12,Freestyle Skiing,United States,38.55,-77,18,4
+13,Luge,Argentina,-34.4,-58.3,1,0
+13,Luge,Australia,-35.18,149.08,1,0
+13,Luge,Austria,48.13,16.22,9,3
+13,Luge,Bulgaria,42.4,23.18,2,0
+13,Luge,Canada,45.25,-75.43,10,0
+13,Luge,Czech Republic,50.06,14.26,4,0
+13,Luge,France,48.5,2.2,1,0
+13,Luge,Georgia,41.43,44.48,2,0
+13,Luge,Germany,52.32,13.25,10,6
+13,Luge,India,28.37,77.13,1,0
+13,Luge,Italy,41.48,12.36,8,1
+13,Luge,Japan,35.4,139.45,3,0
+13,Luge,"Korea, South",37.3,127,1,0
+13,Luge,Latvia,56.4,106.1,10,2
+13,Luge,Moldova,47,28.5,1,0
+13,Luge,Poland,52.15,21,2,0
+13,Luge,Romania,44.25,26.07,8,0
+13,Luge,Russia,55.45,37.42,10,0
+13,Luge,Slovakia,48.1,17.1,5,0
+13,Luge,Slovenia,46.04,14.3,1,0
+13,Luge,Switzerland,46.57,7.26,2,0
+13,Luge,Taiwan,25.5,121.32,1,0
+13,Luge,Ukraine,50.25,30.3,6,0
+13,Luge,United Kingdom,51.3,-0.1,1,0
+13,Luge,United States,38.55,-77,10,0
+14,Figure Skating,Australia,-35.18,149.08,1,0
+14,Figure Skating,Austria,48.13,16.22,2,0
+14,Figure Skating,Belgium,50.5,4.21,2,0
+14,Figure Skating,Canada,45.25,-75.43,12,3
+14,Figure Skating,China,39.55,116.26,9,4
+14,Figure Skating,Czech Republic,50.06,14.26,4,0
+14,Figure Skating,Estonia,59.22,24.48,5,0
+14,Figure Skating,Finland,60.08,25,3,0
+14,Figure Skating,France,48.5,2.2,8,0
+14,Figure Skating,Georgia,41.43,44.48,3,0
+14,Figure Skating,Germany,52.32,13.25,8,2
+14,Figure Skating,Hungary,47.3,19.03,3,0
+14,Figure Skating,Israel,31.47,35.13,2,0
+14,Figure Skating,Italy,41.48,12.36,9,0
+14,Figure Skating,Japan,35.4,139.45,8,2
+14,Figure Skating,Kazakhstan,43.19,76.55,2,0
+14,Figure Skating,"Korea, North",39,125.47,1,0
+14,Figure Skating,"Korea, South",37.3,127,2,1
+14,Figure Skating,Poland,52.15,21,4,0
+14,Figure Skating,Romania,44.25,26.07,1,0
+14,Figure Skating,Russia,55.45,37.42,16,3
+14,Figure Skating,Slovakia,48.1,17.1,1,0
+14,Figure Skating,Slovenia,46.04,14.3,2,0
+14,Figure Skating,Spain,40.25,-3.43,2,0
+14,Figure Skating,Sweden,59.2,1.03,1,0
+14,Figure Skating,Switzerland,46.57,7.26,4,0
+14,Figure Skating,Turkey,39.55,32.5,1,0
+14,Figure Skating,Ukraine,50.25,30.3,7,0
+14,Figure Skating,United Kingdom,51.3,-0.1,7,0
+14,Figure Skating,United States,38.55,-77,15,3
+14,Figure Skating,Uzbekistan,41.16,69.13,1,0
+15,Skeleton,Australia,-35.18,149.08,3,0
+15,Skeleton,Austria,48.13,16.22,1,0
+15,Skeleton,Canada,45.25,-75.43,6,1
+15,Skeleton,France,48.5,2.2,1,0
+15,Skeleton,Germany,52.32,13.25,6,2
+15,Skeleton,Ireland,53.2,-6.15,1,0
+15,Skeleton,Italy,41.48,12.36,2,0
+15,Skeleton,Japan,35.4,139.45,3,0
+15,Skeleton,"Korea, South",37.3,127,1,0
+15,Skeleton,Latvia,56.4,106.1,2,1
+15,Skeleton,New Zealand,-41.17,174.47,3,0
+15,Skeleton,Norway,59.55,10.45,1,0
+15,Skeleton,Romania,44.25,26.07,1,0
+15,Skeleton,Russia,55.45,37.42,4,1
+15,Skeleton,Slovenia,46.04,14.3,1,0
+15,Skeleton,Spain,40.25,-3.43,1,0
+15,Skeleton,Switzerland,46.57,7.26,2,0
+15,Skeleton,United Kingdom,51.3,-0.1,4,1
+15,Skeleton,United States,38.55,-77,5,0
