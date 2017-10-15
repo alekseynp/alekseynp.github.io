@@ -7,7 +7,7 @@ SITENAME = 'Aleksey Nozdryn-Plotnicki'
 SITESUBTITLE = ''
 SITEURL = ''
 
-THEME = '/home/aleksey/code/alekseynp.github.io/pelican/theme/freelancer-theme-pelican/'
+THEME = 'theme/freelancer-theme-pelican/'
 THEME_STATIC_DIR = 'static'
 PATH = 'content'
 STATIC_PATHS = ['images', 'js', 'css', 'fonts', 'viz']
