@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Aleksey Nozdrn-Plotnicki">
+
+    <title>	Aleksey Nozdryn-Plotnicki
+</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- RSS FEEDS -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Aleksey Nozdryn-Plotnicki</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            	<li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#portfolio">Projects</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#blog">Blog</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+	
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-text">
+                    <span class="name">Visualising Shot Location in Basketball</span>
+                    <hr class="star-light">
+                    2013-10-14
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <article>
+                <div class="content">
+                    <p>Sports is full of spacial data. Data visualizers love this. Take the points and plot them by x and y location. Instantly the data is in a format that we can relate to and gain insight from. Too many data points? Aggregate and count points by region to create a head map or something similar. Want to compare two sets of points? Put two charts side-by-side. All of this is done with NBA shot position, but it has its shortcomings.</p>
+<p>At stats.nba.com you can see shot charts like this:</p>
+<p><a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=true&amp;zoneDetails=false&amp;zoneOverlays=false"><img alt="short_chart_thumbnail" src="/images/short_chart_thumbnail.png"></a> <a href="http://stats.nba.com/playerShotchart.html?PlayerID=201142&amp;viewShots=false&amp;zoneDetails=true&amp;zoneOverlays=true&amp;zone-mode=zone"><img alt="shot_chart_thumbnail2" src="/images/shot_chart_thumbnail2.png"></a></p>
+<p>At hotshotcharts.com you can see shot charts heated by success rate:</p>
+<p><a href="http://hotshotcharts.com/"><img alt="shot_chart_thumbnail3" src="/images/shot_chart_thumbnail3.png"></a></p>
+<p>Even at the much (rightly) worshiped New York Times they're doing charts like this:</p>
+<p><a href="http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html?_r=0"><img alt="shot_chart_thumbnail4" src="/images/shot_chart_thumbnail4.png"></a></p>
+<p><strong>Shotcomings</strong></p>
+<p>I would say that the number one shortcoming of these charts is the difficultly in comparing two sets of points. Take the New York Times piece for example. Try to compare the Heat to the Thunder or the various pairs of players side-by-side. Your eyes will flick back and forth and maybe you'll find a difference, but it's hard and you can't help but feel that you are missing something.</p>
+<p>Why? Too much data. The points are not together for easy comparison.</p>
+<p><strong>Solution</strong></p>
+<p>What I am experimenting with is greater use of aggregation in these circumstances. What if we take average positions to aggregate thousands of data points and then plot those averages together to gain insights?</p>
+<p>Here is <a href="average-made-shot-location-nba-regular-season-2012-13.html">my first piece</a> on basketball:</p>
+<p><a href="/images/final.png"><img alt="final" src="/images/final-298x300.png"></a></p>
+<p>Unfortunately the concept of average location is a bit abstract, and thus that creates a greater overhead of effort for the viewer to overcome before they start getting value out of the graphic. However, after that we can start to compare players in a way that we never have before. See the first post <a href="http://alekseynp.com/2013/10/13/average-made-shot-location-nba-regular-season-2012-13/">here</a>.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+	
+
+<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Aleksey Nozdryn-Plotnicki <script>document.write(new Date().getFullYear())</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+	
+	
+
+
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jquery-1.11.0.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/bootstrap.min.js"></script>
+		
+	
+		<!-- script is a url -->
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/classie.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/cbpAnimatedHeader.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jqBootstrapValidation.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/contact_me.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/freelancer.js"></script>
+		
+	
+
+</body>
+
+</html>
