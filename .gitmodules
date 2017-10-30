@@ -3,4 +3,4 @@
 	url = git://github.com/lucaslew/whitespace
 [submodule "output"]
 	path = output
-	url = git@github.com:alekseynp/alekseynp.github.io.git
+	url = git@github.com:alekseynp/alekseynp.github.io

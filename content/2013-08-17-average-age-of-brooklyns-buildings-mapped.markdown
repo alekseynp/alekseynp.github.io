@@ -7,7 +7,7 @@ title: Average age of Brooklyn's buildings mapped
 
 I saw [this](http://bklynr.com/block-by-block-brooklyns-past-and-present/) recently [here](http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/). It's a map showing the age of Brooklyn's buildings.
 
-![bklynr]({filenae}/images/bklynr.png)
+![bklynr]({filename}/images/bklynr.png)
 
 **What do I get from the map?**
 

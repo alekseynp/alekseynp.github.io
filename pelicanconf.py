@@ -47,7 +47,7 @@ NAVLINKS = (
 # Portfolio Name
 PORTFOLIO = 'Selected Projects'
 
-
+GOOGLE_ANALYTICS = "UA-56820808-1"
 
 #Contact form fields sorted by: label, input_type, id, required_validation_,msg
 CONTACT_FIELDS = (
@@ -57,4 +57,5 @@ CONTACT_FIELDS = (
 	['Message', 'textarea', 'message', 'Please enter a message.']
 )
 
-
+PLUGIN_PATHS = ["../pelican-plugins/"]
+PLUGINS = ["render_math"]
