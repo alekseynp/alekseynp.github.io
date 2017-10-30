@@ -1,5 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Aleksey Nozdryn-Plotnicki - Aleksey Nozdryn-Plotnicki</title><link href="/" rel="alternate"></link><link href="/feeds/aleksey-nozdryn-plotnicki.atom.xml" rel="self"></link><id>/</id><updated>2015-03-24T20:00:00+00:00</updated><entry><title>Ontarion Sunshine List Pathologists Notebook</title><link href="/gist-pathologists.html" rel="alternate"></link><published>2015-03-24T20:00:00+00:00</published><updated>2015-03-24T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2015-03-24:/gist-pathologists.html</id><summary type="html">&lt;p&gt;Here is an &lt;a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc"&gt;nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Aleksey Nozdryn-Plotnicki - Aleksey Nozdryn-Plotnicki</title><link href="/" rel="alternate"></link><link href="/feeds/aleksey-nozdryn-plotnicki.atom.xml" rel="self"></link><id>/</id><updated>2017-10-29T20:00:00+00:00</updated><entry><title>Where do adversarial images come from?</title><link href="/where-do-adversarial-images-come-from.html" rel="alternate"></link><published>2017-10-29T20:00:00+00:00</published><updated>2017-10-29T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2017-10-29:/where-do-adversarial-images-come-from.html</id><summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;By reading this post, I hope that you will gain an intuitive understanding of adversarial examples. They are not as spooky and magical as they appear at first, and maybe it isn't even surprising that they exist. First, I will quickly cover what I mean by adversarial images. Second …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;By reading this post, I hope that you will gain an intuitive understanding of adversarial examples. They are not as spooky and magical as they appear at first, and maybe it isn't even surprising that they exist. First, I will quickly cover what I mean by adversarial images. Second, I will discuss ImageNet classifiers. Finally I will use a two-dimensional example build an intuitive understanding.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;What are adversarial images?&lt;/h1&gt;
+&lt;p&gt;An adversarial example is a data point that has been manipulated by an adversary with some goal in mind, probably a goal opposite to yours. In the case of an image classifier, it is a natural image, that has been modified by an adversary in order to fool the classifier. The goal is typically either to get the classifier to output a specific class rather than the correct class (a targeted attack) or simply to get the classifier to output the wrong class (a non-targeted attack).&lt;/p&gt;
+&lt;p&gt;Fairly recently, everyone was quite surprised to discover that you can easily fool Deep Neural Networks (DNNs) with a very small change to an image. These are changes that a human would not even perceive. We are faced with the possibility that deployed classifiers in the real world could be fooled by an adversary when a human supervisor would not even realize what is happening. For any application with a potential adversary this is a problem, and for any application where there are safety considerations this is a big problem. A surveillance system could be fooled into ignoring exactly the bad people it is looking for. A virus scanner could be similarly challenged. What if pranksters &lt;a href="https://arxiv.org/abs/1602.02697"&gt;fool our self-driving cars into identifying stop signs as yield signs&lt;/a&gt;? The consequences could be tragic.&lt;/p&gt;
+&lt;p&gt;Publications on the topic are littered with same-looking images with captions that claim they are classified differently by a classifier.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;center&gt;
+&lt;div class="container"&gt;
+&lt;img alt="OpenAI Example" src="/images/where_do_adversarial/adversarial_img_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Figure: An &lt;a href="https://blog.openai.com/adversarial-example-research/"&gt;example from the people at OpenAI&lt;/a&gt;
+&lt;/div&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;This is an academic field with real world importance, but I haven't yet seen any well articulated attack scenarios. This means that we tend to speak generally about an adversary changing the input to our classifier without specifying how they did it or what their limitations were. If an adversary can change every pixel of the image to whatever they want, it's little surprise that they can fool a classifier. They could simply substitute any image they like. Therefore it only makes sense to talk about adversarial examples in the context of small changes. Typically you either try to fool a classifier while minimizing the change, or alternatively you try to fool it as much as possible within some constraint as to how large the change is allowed to be.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;What are ImageNet classifiers doing?&lt;/h1&gt;
+&lt;p&gt;For simplicity, we will talk about the generation of models that take RGB images with width and height both 299 pixels as inputs.&lt;/p&gt;
+&lt;p&gt;Neural networks generally, and ImageNet classifiers in particular, are mapping vector spaces. An input image is just a collection of numbers, a red, green, and blue value for each pixel. An image can be thought of as &lt;span class="math"&gt;\( 299*299*3 = 268203\)&lt;/span&gt; different variables, each taking a value in &lt;span class="math"&gt;\([0,255]\)&lt;/span&gt;. A single image can be thought of as a point in a 268,203-dimensional vector space. An ImageNet classifier is mapping that input space to a space of 1000 probabilities, one for each class. We train the classifier with training data to be a function that takes in any point in the input space and outputs a point in the output space. Given an image, here are the class probabilities.&lt;/p&gt;
+&lt;p&gt;Our training data is comprised of 1,000,000 natural images from the 1,000 classes. That is a lot of data and that is what makes training these neural networks possible. However, we know that this is actually only a tiny subset of all possible data. Imagine all possible photos of all possible instances of all possible ImageNet classes taken from all possible angles under all possible lighting conditions, and so on and so on. The number of possible images is clearly much much greater than the one million images in our training data. It would be tempting to conclude that the number is infinite, but we know that is actually not the case. Consider drawing randomly from the space of all possible 299x299x3 images. Set every pixel value randomly and study the result. How long would you expect to draw random images until you got one that looks like a normal photograph? I think probably all of humanity could perform this task for the rest of time without being successful.&lt;/p&gt;
+&lt;div class="math"&gt;$$ N_{training} &amp;lt;&amp;lt; N_{natural} &amp;lt;&amp;lt; {256}^{260203} $$&lt;/div&gt;
+&lt;p&gt;So we are left with the conclusions that natural images make up a tiny proportion of our input vector space and that our training data makes up a tiny proportion of natural images. That means our classifier is learning to map a vector space that is mostly noisy garbage images, and it's learning to do that from actually very limited training data.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;Where do adversarial images come from?&lt;/h1&gt;
+&lt;p&gt;To build an intuition with visualization, we will consider an simplified two-dimensional example. No longer will we talk about 299 pixels by 299 pixels RGB images that define 260,203-dimensional vector spaces. Let's instead pretend that we have 2 pixels by 1 pixel gray scale images. They have only two pixels and only one value per pixel. Somehow imagine that it is possible to identify some of these tiny images as cats and some as dogs. We have six images in our training set (3 cats, 3 dogs), and since there are only two values, we can visualize them in a scatter plot. We will seek to train a classifier that can take in another of these strange images, and output a class of cat or dog.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+Our two pixel images in a scatter plot:
+&lt;center&gt;
+&lt;img alt="Two Dimensional Example" src="/images/where_do_adversarial/1-two-dims.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+Our training set is six images. Three cats and three dogs. Each image has a different value for pixel 1 and for pixel 2. We are therefore able to plot these images in our scatter plot.
+&lt;center&gt;
+&lt;img alt="Training Data" src="/images/where_do_adversarial/3-training-data.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+There is a true distribution of images that our training data comes from. It is impossible for us to ever know it, because we only have our training data points. Some regions are cats, some regions are dogs, and some regions are neither, perhaps just random meaningless images. &lt;strong&gt;I'll make up two hypothetical regions.&lt;/strong&gt;
+&lt;center&gt;
+&lt;img alt="Unknowable Truth" src="/images/where_do_adversarial/2-unknowable-truth.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+We use the training examples to train the classifier to draw a decision boundary between them. The boundary is a line where the probability of cat and dog are equal at 0.5, and on either side the decision is clear. We hope that when new test examples are drawn from somewhere in the red or blue areas, they will be classified correctly.&lt;/p&gt;
+&lt;p&gt;Unfortunately the training examples don't cover the space entirely, so there are a lot of different boundaries that could be drawn. This will always lead to errors at test time.
+&lt;center&gt;
+&lt;img alt="Decision Boundaries" src="/images/where_do_adversarial/4-decision-boundaries.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+There are large areas with no training data that we don't care about at all. The neural network can do whatever it wants with the decision boundaries in this space. It's chaos for all we know.
+&lt;center&gt;
+&lt;img alt="Chaos" src="/images/where_do_adversarial/5-chaos.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+Consider the following decision boundary. It looks a little strange, but it correctly classifies the training data, does a decent job of covering the true space, and behaves weirdly in the empty space. It seems strange in our two dimensional case, but for larger images this is very plausible.
+&lt;center&gt;
+&lt;img alt="Plausible" src="/images/where_do_adversarial/6-plausible.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+In the diagram below I use a black arrow to indicate an attack. We take a natural image from our training data, and then add or subtract a little from each of the two pixel values in order to move it into a different area of the scatter plot.&lt;/p&gt;
+&lt;p&gt;This gives us three ways of creating adversarial images by making small changes.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;We move a cat from the region of true cats that were correctly classified, into a region where they are not.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We move a dog out of the region of natural images, and into the area where the decision boundaries are chaotic. We choose a place that is classified as cat.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We move a cat from the region of true cats into the region of true dogs, causing it to be misclassified. In theory this attack would work on a human because we literally changed the meaning of the image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Attacks" src="/images/where_do_adversarial/7-attacks.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;If the change is small enough, a human won't notice the difference.&lt;/p&gt;
+&lt;p&gt;When attackers are creating these adversarial images, they don't really know which of the three scenarios are occurring. If the attackers could know that, then so could the defenders and adversarial images wouldn't be a problem.&lt;/p&gt;
+&lt;p&gt;At the top of the article we had a panda changed into a gibbon. I think that we can agree this is an example of #1 above. The image is still a normal looking image of a panda, but it is misclassified.&lt;/p&gt;
+&lt;p&gt;Here's an interesting example of a natural image and an attacked image from &lt;a href="https://www.kaggle.com/benhamner"&gt;Ben Hamner&lt;/a&gt;'s &lt;a href="https://www.kaggle.com/benhamner/adversarial-learning-challenges-getting-started"&gt;kernel&lt;/a&gt;:
+&lt;center&gt;
+&lt;img alt="FGSM" src="/images/where_do_adversarial/fgsm.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;The attacked image on the right is still obviously a butterfly, but there's something odd about it. There's a bizarre noise pattern that would not occur in a normal image. This is an example of #2.&lt;/p&gt;
+&lt;p&gt;Finally here's something I created recently as part of a project:
+&lt;center&gt;
+&lt;img alt="Natural" src="/images/where_do_adversarial/2ba52bcf59097dc8_natural.png"&gt; &lt;img alt="Attacked" src="/images/where_do_adversarial/2ba52bcf59097dc8.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;The goal was to get an ImageNet classifier to output something other than mountain, which it obviously is. The attacked mountain on the right has an unnatural quality to it, but to a human eye, it actually looks quite a lot like a jigsaw puzzle of a mountain, as was my intent. This is an example of #3. We have changed the true meaning of the image such that even a human might get it wrong.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;What can we do to defend?&lt;/h1&gt;
+&lt;p&gt;One of the most basic defenses is "adversarial training". Essentially we attack our own classifier and then add those examples as training data. Doing so allows us to pad the area around our training data so that decision boundaries are well behaved there, even though no "natural image" should ever appear there. This is effective to some extent, but with hundred of thousands of dimensions to cover, it seems hopeless that we'll ever be able to pad the entire space of natural images, let alone the space around our training data.&lt;/p&gt;
+&lt;p&gt;We add the examples from our three attacks above and re-train our classifier to get a new decision boundary.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Adversarial Training" src="/images/where_do_adversarial/8-adversarial-training.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+As an aside, this is very similar to what we are doing when we do data augmentation. Using our prior knowledge about what transforms do not change the meaning of an image, we create more training data in the region of each image to help the classifier map the space.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Data Augmentation" src="/images/where_do_adversarial/9-augmentation.png"&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;So there you go. I hope this gives you an intuition for adversarial images and makes them a little less magical.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Ontarion Sunshine List Pathologists Notebook</title><link href="/gist-pathologists.html" rel="alternate"></link><published>2015-03-24T20:00:00+00:00</published><updated>2015-03-24T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2015-03-24:/gist-pathologists.html</id><summary type="html">&lt;p&gt;Here is an &lt;a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc"&gt;nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It uses data from the &lt;a href="https://github.com/alekseynp/ontario_sunshine_list"&gt;Ontario Sunshine List Scraper&lt;/a&gt; that I made public on GitHub recently.&lt;/p&gt;
 &lt;p&gt;It recreates the analysis that went in to my previous article about pathologists on the list: &lt;a href="http://alekseynp.com/2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/"&gt;20-25% Raise …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is an &lt;a href="http://nbviewer.ipython.org/gist/alekseynp/81a249e5e971750039dc"&gt;nbviewer IPython notebook showing an analysis of pathologists in the Ontario Sunshine List&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It uses data from the &lt;a href="https://github.com/alekseynp/ontario_sunshine_list"&gt;Ontario Sunshine List Scraper&lt;/a&gt; that I made public on GitHub recently.&lt;/p&gt;
@@ -267,10 +423,10 @@ Data was collected for a one month period of auctions completed on eBay, a popul
 &lt;p&gt;More about this from a data visualization perspective in another post.&lt;/p&gt;
 &lt;p&gt;See also my work on the average passing direction in the English Premier League (Football (Soccer)):&lt;/p&gt;
 &lt;p&gt;&lt;a href="viz/mcfc-opta-passing-permier-league-2011-12.html"&gt;&lt;img alt="passingDirection" src="/images/passingDirection1.png"&gt;&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Average age of Brooklyn's buildings mapped</title><link href="/average-age-of-brooklyns-buildings-mapped.html" rel="alternate"></link><published>2013-08-17T04:12:25+00:00</published><updated>2013-08-17T04:12:25+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2013-08-17:/average-age-of-brooklyns-buildings-mapped.html</id><summary type="html">&lt;p&gt;I saw &lt;a href="http://bklynr.com/block-by-block-brooklyns-past-and-present/"&gt;this&lt;/a&gt; recently &lt;a href="http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/"&gt;here&lt;/a&gt;. It's a map showing the age of Brooklyn's buildings.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="bklynr" src="{filenae}/images/bklynr.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="bklynr" src="/images/bklynr.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;What do I get from the map?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Every data point is plotted, so if I were a Brooklyner, I would probably find my street or look up my favourite building. For some people this seems to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I saw &lt;a href="http://bklynr.com/block-by-block-brooklyns-past-and-present/"&gt;this&lt;/a&gt; recently &lt;a href="http://www.theatlanticcities.com/neighborhoods/2013/08/interactive-map-day-brooklyns-buildings-are-newer-you-think/6399/"&gt;here&lt;/a&gt;. It's a map showing the age of Brooklyn's buildings.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="bklynr" src="{filenae}/images/bklynr.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="bklynr" src="/images/bklynr.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;What do I get from the map?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Every data point is plotted, so if I were a Brooklyner, I would probably find my street or look up my favourite building. For some people this seems to have reduced confidence in the data quality. Having only ever been half-way across the Brooklyn Bridge, instead I looked at the map to try and find interesting trends. Some are certainly visible, but I found myself wanting a map with some aggregation.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;What I tried.&lt;/strong&gt;&lt;/p&gt;
@@ -370,7 +526,62 @@ Another graphic example from thinkdatavis.com: Ontario’s pathologist salaries 
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Other&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Inexplicably, a single record under schoolboards in 2007 has a taxable benefits of “101..92” rather than “$101.92” like the record immediately following it. Yes that's two decimals and no dollar sign. Inexplicably, a single record under other in 2007 has a salary paid of “$115, 448.78”. Yes, there's a space after the comma. Yes, these may seem like small things, but they betray a deeper malpractice. A properly validated and typed data structure would not allow this abnormalities.&lt;/p&gt;</content></entry><entry><title>Pathologists follow-up, data from 1996 to 2013 from Ontario "Sunshine List"</title><link href="/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list.html" rel="alternate"></link><published>2013-05-06T20:31:34+00:00</published><updated>2013-05-06T20:31:34+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2013-05-06:/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list.html</id><summary type="html">&lt;p&gt;This is a follow-up on my article, &lt;a href="../../../../2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/"&gt;20-25% raise for Ontario’s pathologists in 2012&lt;/a&gt;. Evolving from an explorative analysis of the 2013 Ontario Public Sector Salary Disclosure, the "Sunshine List", I identified a surprising change in the packages (salary + benefits) of pathologists on the list.&lt;/p&gt;
+&lt;p&gt;Inexplicably, a single record under schoolboards in 2007 has a taxable benefits of “101..92” rather than “&lt;span class="math"&gt;\(101.92” like the record immediately following it. Yes that's two decimals and no dollar sign. Inexplicably, a single record under other in 2007 has a salary paid of “\)&lt;/span&gt;115, 448.78”. Yes, there's a space after the comma. Yes, these may seem like small things, but they betray a deeper malpractice. A properly validated and typed data structure would not allow this abnormalities.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Pathologists follow-up, data from 1996 to 2013 from Ontario "Sunshine List"</title><link href="/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list.html" rel="alternate"></link><published>2013-05-06T20:31:34+00:00</published><updated>2013-05-06T20:31:34+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2013-05-06:/pathologists-follow-up-data-from-1996-to-2013-from-ontario-sunshine-list.html</id><summary type="html">&lt;p&gt;This is a follow-up on my article, &lt;a href="../../../../2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/"&gt;20-25% raise for Ontario’s pathologists in 2012&lt;/a&gt;. Evolving from an explorative analysis of the 2013 Ontario Public Sector Salary Disclosure, the "Sunshine List", I identified a surprising change in the packages (salary + benefits) of pathologists on the list.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Further Analysis&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Extending the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a follow-up on my article, &lt;a href="../../../../2013/04/19/20-25-raise-for-ontarios-pathologists-in-201-shows-sunshine-list/"&gt;20-25% raise for Ontario’s pathologists in 2012&lt;/a&gt;. Evolving from an explorative analysis of the 2013 Ontario Public Sector Salary Disclosure, the "Sunshine List", I identified a surprising change in the packages (salary + benefits) of pathologists on the list.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Further Analysis&lt;/strong&gt;&lt;/p&gt;
