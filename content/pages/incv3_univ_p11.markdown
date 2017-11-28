@@ -1,0 +1,190 @@
+---
+title: Inception v3 Targeted Universal Attacks - Page 12
+status: hidden
+---
+<center><a href="inception-v3-targeted-universal-attacks-page-11.html">Previous</a> - Page 12 of 20 - <a href="inception-v3-targeted-universal-attacks-page-13.html">Next</a></center>
+<br /><br /><div class="row">
+<div id=550 class="col-md-4"><center>
+<img src="/images/incv3_univ/550.png" alt=espresso maker /><br />
+<a href="#550">espresso maker</a></center></div>
+<div id=551 class="col-md-4"><center>
+<img src="/images/incv3_univ/551.png" alt=face powder /><br />
+<a href="#551">face powder</a></center></div>
+<div id=552 class="col-md-4"><center>
+<img src="/images/incv3_univ/552.png" alt=feather boa, boa /><br />
+<a href="#552">feather boa, boa</a></center></div>
+</div><br />
+<div class="row">
+<div id=553 class="col-md-4"><center>
+<img src="/images/incv3_univ/553.png" alt=file, file cabinet, filing cabinet /><br />
+<a href="#553">file, file cabinet, filing cabinet</a></center></div>
+<div id=554 class="col-md-4"><center>
+<img src="/images/incv3_univ/554.png" alt=fireboat /><br />
+<a href="#554">fireboat</a></center></div>
+<div id=555 class="col-md-4"><center>
+<img src="/images/incv3_univ/555.png" alt=fire engine, fire truck /><br />
+<a href="#555">fire engine, fire truck</a></center></div>
+</div><br />
+<div class="row">
+<div id=556 class="col-md-4"><center>
+<img src="/images/incv3_univ/556.png" alt=fire screen, fireguard /><br />
+<a href="#556">fire screen, fireguard</a></center></div>
+<div id=557 class="col-md-4"><center>
+<img src="/images/incv3_univ/557.png" alt=flagpole, flagstaff /><br />
+<a href="#557">flagpole, flagstaff</a></center></div>
+<div id=558 class="col-md-4"><center>
+<img src="/images/incv3_univ/558.png" alt=flute, transverse flute /><br />
+<a href="#558">flute, transverse flute</a></center></div>
+</div><br />
+<div class="row">
+<div id=559 class="col-md-4"><center>
+<img src="/images/incv3_univ/559.png" alt=folding chair /><br />
+<a href="#559">folding chair</a></center></div>
+<div id=560 class="col-md-4"><center>
+<img src="/images/incv3_univ/560.png" alt=football helmet /><br />
+<a href="#560">football helmet</a></center></div>
+<div id=561 class="col-md-4"><center>
+<img src="/images/incv3_univ/561.png" alt=forklift /><br />
+<a href="#561">forklift</a></center></div>
+</div><br />
+<div class="row">
+<div id=562 class="col-md-4"><center>
+<img src="/images/incv3_univ/562.png" alt=fountain /><br />
+<a href="#562">fountain</a></center></div>
+<div id=563 class="col-md-4"><center>
+<img src="/images/incv3_univ/563.png" alt=fountain pen /><br />
+<a href="#563">fountain pen</a></center></div>
+<div id=564 class="col-md-4"><center>
+<img src="/images/incv3_univ/564.png" alt=four-poster /><br />
+<a href="#564">four-poster</a></center></div>
+</div><br />
+<div class="row">
+<div id=565 class="col-md-4"><center>
+<img src="/images/incv3_univ/565.png" alt=freight car /><br />
+<a href="#565">freight car</a></center></div>
+<div id=566 class="col-md-4"><center>
+<img src="/images/incv3_univ/566.png" alt=French horn, horn /><br />
+<a href="#566">French horn, horn</a></center></div>
+<div id=567 class="col-md-4"><center>
+<img src="/images/incv3_univ/567.png" alt=frying pan, frypan, skillet /><br />
+<a href="#567">frying pan, frypan, skillet</a></center></div>
+</div><br />
+<div class="row">
+<div id=568 class="col-md-4"><center>
+<img src="/images/incv3_univ/568.png" alt=fur coat /><br />
+<a href="#568">fur coat</a></center></div>
+<div id=569 class="col-md-4"><center>
+<img src="/images/incv3_univ/569.png" alt=garbage truck, dustcart /><br />
+<a href="#569">garbage truck, dustcart</a></center></div>
+<div id=570 class="col-md-4"><center>
+<img src="/images/incv3_univ/570.png" alt=gasmask, respirator, gas helmet /><br />
+<a href="#570">gasmask, respirator, gas helmet</a></center></div>
+</div><br />
+<div class="row">
+<div id=571 class="col-md-4"><center>
+<img src="/images/incv3_univ/571.png" alt=gas pump, gasoline pump, petrol pump, island dispenser /><br />
+<a href="#571">gas pump, gasoline pump, petrol pump, island dispenser</a></center></div>
+<div id=572 class="col-md-4"><center>
+<img src="/images/incv3_univ/572.png" alt=goblet /><br />
+<a href="#572">goblet</a></center></div>
+<div id=573 class="col-md-4"><center>
+<img src="/images/incv3_univ/573.png" alt=go-kart /><br />
+<a href="#573">go-kart</a></center></div>
+</div><br />
+<div class="row">
+<div id=574 class="col-md-4"><center>
+<img src="/images/incv3_univ/574.png" alt=golf ball /><br />
+<a href="#574">golf ball</a></center></div>
+<div id=575 class="col-md-4"><center>
+<img src="/images/incv3_univ/575.png" alt=golfcart, golf cart /><br />
+<a href="#575">golfcart, golf cart</a></center></div>
+<div id=576 class="col-md-4"><center>
+<img src="/images/incv3_univ/576.png" alt=gondola /><br />
+<a href="#576">gondola</a></center></div>
+</div><br />
+<div class="row">
+<div id=577 class="col-md-4"><center>
+<img src="/images/incv3_univ/577.png" alt=gong, tam-tam /><br />
+<a href="#577">gong, tam-tam</a></center></div>
+<div id=578 class="col-md-4"><center>
+<img src="/images/incv3_univ/578.png" alt=gown /><br />
+<a href="#578">gown</a></center></div>
+<div id=579 class="col-md-4"><center>
+<img src="/images/incv3_univ/579.png" alt=grand piano, grand /><br />
+<a href="#579">grand piano, grand</a></center></div>
+</div><br />
+<div class="row">
+<div id=580 class="col-md-4"><center>
+<img src="/images/incv3_univ/580.png" alt=greenhouse, nursery, glasshouse /><br />
+<a href="#580">greenhouse, nursery, glasshouse</a></center></div>
+<div id=581 class="col-md-4"><center>
+<img src="/images/incv3_univ/581.png" alt=grille, radiator grille /><br />
+<a href="#581">grille, radiator grille</a></center></div>
+<div id=582 class="col-md-4"><center>
+<img src="/images/incv3_univ/582.png" alt=grocery store, grocery, food market, market /><br />
+<a href="#582">grocery store, grocery, food market, market</a></center></div>
+</div><br />
+<div class="row">
+<div id=583 class="col-md-4"><center>
+<img src="/images/incv3_univ/583.png" alt=guillotine /><br />
+<a href="#583">guillotine</a></center></div>
+<div id=584 class="col-md-4"><center>
+<img src="/images/incv3_univ/584.png" alt=hair slide /><br />
+<a href="#584">hair slide</a></center></div>
+<div id=585 class="col-md-4"><center>
+<img src="/images/incv3_univ/585.png" alt=hair spray /><br />
+<a href="#585">hair spray</a></center></div>
+</div><br />
+<div class="row">
+<div id=586 class="col-md-4"><center>
+<img src="/images/incv3_univ/586.png" alt=half track /><br />
+<a href="#586">half track</a></center></div>
+<div id=587 class="col-md-4"><center>
+<img src="/images/incv3_univ/587.png" alt=hammer /><br />
+<a href="#587">hammer</a></center></div>
+<div id=588 class="col-md-4"><center>
+<img src="/images/incv3_univ/588.png" alt=hamper /><br />
+<a href="#588">hamper</a></center></div>
+</div><br />
+<div class="row">
+<div id=589 class="col-md-4"><center>
+<img src="/images/incv3_univ/589.png" alt=hand blower, blow dryer, blow drier, hair dryer, hair drier /><br />
+<a href="#589">hand blower, blow dryer, blow drier, hair dryer, hair drier</a></center></div>
+<div id=590 class="col-md-4"><center>
+<img src="/images/incv3_univ/590.png" alt=hand-held computer, hand-held microcomputer /><br />
+<a href="#590">hand-held computer, hand-held microcomputer</a></center></div>
+<div id=591 class="col-md-4"><center>
+<img src="/images/incv3_univ/591.png" alt=handkerchief, hankie, hanky, hankey /><br />
+<a href="#591">handkerchief, hankie, hanky, hankey</a></center></div>
+</div><br />
+<div class="row">
+<div id=592 class="col-md-4"><center>
+<img src="/images/incv3_univ/592.png" alt=hard disc, hard disk, fixed disk /><br />
+<a href="#592">hard disc, hard disk, fixed disk</a></center></div>
+<div id=593 class="col-md-4"><center>
+<img src="/images/incv3_univ/593.png" alt=harmonica, mouth organ, harp, mouth harp /><br />
+<a href="#593">harmonica, mouth organ, harp, mouth harp</a></center></div>
+<div id=594 class="col-md-4"><center>
+<img src="/images/incv3_univ/594.png" alt=harp /><br />
+<a href="#594">harp</a></center></div>
+</div><br />
+<div class="row">
+<div id=595 class="col-md-4"><center>
+<img src="/images/incv3_univ/595.png" alt=harvester, reaper /><br />
+<a href="#595">harvester, reaper</a></center></div>
+<div id=596 class="col-md-4"><center>
+<img src="/images/incv3_univ/596.png" alt=hatchet /><br />
+<a href="#596">hatchet</a></center></div>
+<div id=597 class="col-md-4"><center>
+<img src="/images/incv3_univ/597.png" alt=holster /><br />
+<a href="#597">holster</a></center></div>
+</div><br />
+<div class="row">
+<div id=598 class="col-md-4"><center>
+<img src="/images/incv3_univ/598.png" alt=home theater, home theatre /><br />
+<a href="#598">home theater, home theatre</a></center></div>
+<div id=599 class="col-md-4"><center>
+<img src="/images/incv3_univ/599.png" alt=honeycomb /><br />
+<a href="#599">honeycomb</a></center></div>
+</div><br />
+<center><a href="inception-v3-targeted-universal-attacks-page-11.html">Previous</a> - Page 12 of 20 - <a href="inception-v3-targeted-universal-attacks-page-13.html">Next</a></center>

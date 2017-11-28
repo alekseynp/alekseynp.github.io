@@ -58,4 +58,4 @@ CONTACT_FIELDS = (
 )
 
 PLUGIN_PATHS = ["../pelican-plugins/"]
-PLUGINS = ["render_math"]
+PLUGINS = ["render_math", "liquid_tags.img"]
