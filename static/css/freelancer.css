@@ -147,6 +147,12 @@ header .intro-text .skills {
     }
 }
 
+@media(max-width:420px) {
+    a.navbar-brand {
+        font-size: 1em;
+    }
+}
+
 .navbar {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
