@@ -5,186 +5,186 @@ status: hidden
 <center><a href="inception-v3-targeted-universal-attacks-page-15.html">Previous</a> - Page 16 of 20 - <a href="inception-v3-targeted-universal-attacks-page-17.html">Next</a></center>
 <br /><br /><div class="row">
 <div id=750 class="col-md-4"><center>
-<img src="/images/incv3_univ/750.png" alt=quilt, comforter, comfort, puff /><br />
+<img src="/images/incv3_univ/750.png" alt="quilt, comforter, comfort, puff"" /><br />
 <a href="#750">quilt, comforter, comfort, puff</a></center></div>
 <div id=751 class="col-md-4"><center>
-<img src="/images/incv3_univ/751.png" alt=racer, race car, racing car /><br />
+<img src="/images/incv3_univ/751.png" alt="racer, race car, racing car"" /><br />
 <a href="#751">racer, race car, racing car</a></center></div>
 <div id=752 class="col-md-4"><center>
-<img src="/images/incv3_univ/752.png" alt=racket, racquet /><br />
+<img src="/images/incv3_univ/752.png" alt="racket, racquet"" /><br />
 <a href="#752">racket, racquet</a></center></div>
 </div><br />
 <div class="row">
 <div id=753 class="col-md-4"><center>
-<img src="/images/incv3_univ/753.png" alt=radiator /><br />
+<img src="/images/incv3_univ/753.png" alt="radiator"" /><br />
 <a href="#753">radiator</a></center></div>
 <div id=754 class="col-md-4"><center>
-<img src="/images/incv3_univ/754.png" alt=radio, wireless /><br />
+<img src="/images/incv3_univ/754.png" alt="radio, wireless"" /><br />
 <a href="#754">radio, wireless</a></center></div>
 <div id=755 class="col-md-4"><center>
-<img src="/images/incv3_univ/755.png" alt=radio telescope, radio reflector /><br />
+<img src="/images/incv3_univ/755.png" alt="radio telescope, radio reflector"" /><br />
 <a href="#755">radio telescope, radio reflector</a></center></div>
 </div><br />
 <div class="row">
 <div id=756 class="col-md-4"><center>
-<img src="/images/incv3_univ/756.png" alt=rain barrel /><br />
+<img src="/images/incv3_univ/756.png" alt="rain barrel"" /><br />
 <a href="#756">rain barrel</a></center></div>
 <div id=757 class="col-md-4"><center>
-<img src="/images/incv3_univ/757.png" alt=recreational vehicle, RV, R.V. /><br />
+<img src="/images/incv3_univ/757.png" alt="recreational vehicle, RV, R.V."" /><br />
 <a href="#757">recreational vehicle, RV, R.V.</a></center></div>
 <div id=758 class="col-md-4"><center>
-<img src="/images/incv3_univ/758.png" alt=reel /><br />
+<img src="/images/incv3_univ/758.png" alt="reel"" /><br />
 <a href="#758">reel</a></center></div>
 </div><br />
 <div class="row">
 <div id=759 class="col-md-4"><center>
-<img src="/images/incv3_univ/759.png" alt=reflex camera /><br />
+<img src="/images/incv3_univ/759.png" alt="reflex camera"" /><br />
 <a href="#759">reflex camera</a></center></div>
 <div id=760 class="col-md-4"><center>
-<img src="/images/incv3_univ/760.png" alt=refrigerator, icebox /><br />
+<img src="/images/incv3_univ/760.png" alt="refrigerator, icebox"" /><br />
 <a href="#760">refrigerator, icebox</a></center></div>
 <div id=761 class="col-md-4"><center>
-<img src="/images/incv3_univ/761.png" alt=remote control, remote /><br />
+<img src="/images/incv3_univ/761.png" alt="remote control, remote"" /><br />
 <a href="#761">remote control, remote</a></center></div>
 </div><br />
 <div class="row">
 <div id=762 class="col-md-4"><center>
-<img src="/images/incv3_univ/762.png" alt=restaurant, eating house, eating place, eatery /><br />
+<img src="/images/incv3_univ/762.png" alt="restaurant, eating house, eating place, eatery"" /><br />
 <a href="#762">restaurant, eating house, eating place, eatery</a></center></div>
 <div id=763 class="col-md-4"><center>
-<img src="/images/incv3_univ/763.png" alt=revolver, six-gun, six-shooter /><br />
+<img src="/images/incv3_univ/763.png" alt="revolver, six-gun, six-shooter"" /><br />
 <a href="#763">revolver, six-gun, six-shooter</a></center></div>
 <div id=764 class="col-md-4"><center>
-<img src="/images/incv3_univ/764.png" alt=rifle /><br />
+<img src="/images/incv3_univ/764.png" alt="rifle"" /><br />
 <a href="#764">rifle</a></center></div>
 </div><br />
 <div class="row">
 <div id=765 class="col-md-4"><center>
-<img src="/images/incv3_univ/765.png" alt=rocking chair, rocker /><br />
+<img src="/images/incv3_univ/765.png" alt="rocking chair, rocker"" /><br />
 <a href="#765">rocking chair, rocker</a></center></div>
 <div id=766 class="col-md-4"><center>
-<img src="/images/incv3_univ/766.png" alt=rotisserie /><br />
+<img src="/images/incv3_univ/766.png" alt="rotisserie"" /><br />
 <a href="#766">rotisserie</a></center></div>
 <div id=767 class="col-md-4"><center>
-<img src="/images/incv3_univ/767.png" alt=rubber eraser, rubber, pencil eraser /><br />
+<img src="/images/incv3_univ/767.png" alt="rubber eraser, rubber, pencil eraser"" /><br />
 <a href="#767">rubber eraser, rubber, pencil eraser</a></center></div>
 </div><br />
 <div class="row">
 <div id=768 class="col-md-4"><center>
-<img src="/images/incv3_univ/768.png" alt=rugby ball /><br />
+<img src="/images/incv3_univ/768.png" alt="rugby ball"" /><br />
 <a href="#768">rugby ball</a></center></div>
 <div id=769 class="col-md-4"><center>
-<img src="/images/incv3_univ/769.png" alt=rule, ruler /><br />
+<img src="/images/incv3_univ/769.png" alt="rule, ruler"" /><br />
 <a href="#769">rule, ruler</a></center></div>
 <div id=770 class="col-md-4"><center>
-<img src="/images/incv3_univ/770.png" alt=running shoe /><br />
+<img src="/images/incv3_univ/770.png" alt="running shoe"" /><br />
 <a href="#770">running shoe</a></center></div>
 </div><br />
 <div class="row">
 <div id=771 class="col-md-4"><center>
-<img src="/images/incv3_univ/771.png" alt=safe /><br />
+<img src="/images/incv3_univ/771.png" alt="safe"" /><br />
 <a href="#771">safe</a></center></div>
 <div id=772 class="col-md-4"><center>
-<img src="/images/incv3_univ/772.png" alt=safety pin /><br />
+<img src="/images/incv3_univ/772.png" alt="safety pin"" /><br />
 <a href="#772">safety pin</a></center></div>
 <div id=773 class="col-md-4"><center>
-<img src="/images/incv3_univ/773.png" alt=saltshaker, salt shaker /><br />
+<img src="/images/incv3_univ/773.png" alt="saltshaker, salt shaker"" /><br />
 <a href="#773">saltshaker, salt shaker</a></center></div>
 </div><br />
 <div class="row">
 <div id=774 class="col-md-4"><center>
-<img src="/images/incv3_univ/774.png" alt=sandal /><br />
+<img src="/images/incv3_univ/774.png" alt="sandal"" /><br />
 <a href="#774">sandal</a></center></div>
 <div id=775 class="col-md-4"><center>
-<img src="/images/incv3_univ/775.png" alt=sarong /><br />
+<img src="/images/incv3_univ/775.png" alt="sarong"" /><br />
 <a href="#775">sarong</a></center></div>
 <div id=776 class="col-md-4"><center>
-<img src="/images/incv3_univ/776.png" alt=sax, saxophone /><br />
+<img src="/images/incv3_univ/776.png" alt="sax, saxophone"" /><br />
 <a href="#776">sax, saxophone</a></center></div>
 </div><br />
 <div class="row">
 <div id=777 class="col-md-4"><center>
-<img src="/images/incv3_univ/777.png" alt=scabbard /><br />
+<img src="/images/incv3_univ/777.png" alt="scabbard"" /><br />
 <a href="#777">scabbard</a></center></div>
 <div id=778 class="col-md-4"><center>
-<img src="/images/incv3_univ/778.png" alt=scale, weighing machine /><br />
+<img src="/images/incv3_univ/778.png" alt="scale, weighing machine"" /><br />
 <a href="#778">scale, weighing machine</a></center></div>
 <div id=779 class="col-md-4"><center>
-<img src="/images/incv3_univ/779.png" alt=school bus /><br />
+<img src="/images/incv3_univ/779.png" alt="school bus"" /><br />
 <a href="#779">school bus</a></center></div>
 </div><br />
 <div class="row">
 <div id=780 class="col-md-4"><center>
-<img src="/images/incv3_univ/780.png" alt=schooner /><br />
+<img src="/images/incv3_univ/780.png" alt="schooner"" /><br />
 <a href="#780">schooner</a></center></div>
 <div id=781 class="col-md-4"><center>
-<img src="/images/incv3_univ/781.png" alt=scoreboard /><br />
+<img src="/images/incv3_univ/781.png" alt="scoreboard"" /><br />
 <a href="#781">scoreboard</a></center></div>
 <div id=782 class="col-md-4"><center>
-<img src="/images/incv3_univ/782.png" alt=screen, CRT screen /><br />
+<img src="/images/incv3_univ/782.png" alt="screen, CRT screen"" /><br />
 <a href="#782">screen, CRT screen</a></center></div>
 </div><br />
 <div class="row">
 <div id=783 class="col-md-4"><center>
-<img src="/images/incv3_univ/783.png" alt=screw /><br />
+<img src="/images/incv3_univ/783.png" alt="screw"" /><br />
 <a href="#783">screw</a></center></div>
 <div id=784 class="col-md-4"><center>
-<img src="/images/incv3_univ/784.png" alt=screwdriver /><br />
+<img src="/images/incv3_univ/784.png" alt="screwdriver"" /><br />
 <a href="#784">screwdriver</a></center></div>
 <div id=785 class="col-md-4"><center>
-<img src="/images/incv3_univ/785.png" alt=seat belt, seatbelt /><br />
+<img src="/images/incv3_univ/785.png" alt="seat belt, seatbelt"" /><br />
 <a href="#785">seat belt, seatbelt</a></center></div>
 </div><br />
 <div class="row">
 <div id=786 class="col-md-4"><center>
-<img src="/images/incv3_univ/786.png" alt=sewing machine /><br />
+<img src="/images/incv3_univ/786.png" alt="sewing machine"" /><br />
 <a href="#786">sewing machine</a></center></div>
 <div id=787 class="col-md-4"><center>
-<img src="/images/incv3_univ/787.png" alt=shield, buckler /><br />
+<img src="/images/incv3_univ/787.png" alt="shield, buckler"" /><br />
 <a href="#787">shield, buckler</a></center></div>
 <div id=788 class="col-md-4"><center>
-<img src="/images/incv3_univ/788.png" alt=shoe shop, shoe-shop, shoe store /><br />
+<img src="/images/incv3_univ/788.png" alt="shoe shop, shoe-shop, shoe store"" /><br />
 <a href="#788">shoe shop, shoe-shop, shoe store</a></center></div>
 </div><br />
 <div class="row">
 <div id=789 class="col-md-4"><center>
-<img src="/images/incv3_univ/789.png" alt=shoji /><br />
+<img src="/images/incv3_univ/789.png" alt="shoji"" /><br />
 <a href="#789">shoji</a></center></div>
 <div id=790 class="col-md-4"><center>
-<img src="/images/incv3_univ/790.png" alt=shopping basket /><br />
+<img src="/images/incv3_univ/790.png" alt="shopping basket"" /><br />
 <a href="#790">shopping basket</a></center></div>
 <div id=791 class="col-md-4"><center>
-<img src="/images/incv3_univ/791.png" alt=shopping cart /><br />
+<img src="/images/incv3_univ/791.png" alt="shopping cart"" /><br />
 <a href="#791">shopping cart</a></center></div>
 </div><br />
 <div class="row">
 <div id=792 class="col-md-4"><center>
-<img src="/images/incv3_univ/792.png" alt=shovel /><br />
+<img src="/images/incv3_univ/792.png" alt="shovel"" /><br />
 <a href="#792">shovel</a></center></div>
 <div id=793 class="col-md-4"><center>
-<img src="/images/incv3_univ/793.png" alt=shower cap /><br />
+<img src="/images/incv3_univ/793.png" alt="shower cap"" /><br />
 <a href="#793">shower cap</a></center></div>
 <div id=794 class="col-md-4"><center>
-<img src="/images/incv3_univ/794.png" alt=shower curtain /><br />
+<img src="/images/incv3_univ/794.png" alt="shower curtain"" /><br />
 <a href="#794">shower curtain</a></center></div>
 </div><br />
 <div class="row">
 <div id=795 class="col-md-4"><center>
-<img src="/images/incv3_univ/795.png" alt=ski /><br />
+<img src="/images/incv3_univ/795.png" alt="ski"" /><br />
 <a href="#795">ski</a></center></div>
 <div id=796 class="col-md-4"><center>
-<img src="/images/incv3_univ/796.png" alt=ski mask /><br />
+<img src="/images/incv3_univ/796.png" alt="ski mask"" /><br />
 <a href="#796">ski mask</a></center></div>
 <div id=797 class="col-md-4"><center>
-<img src="/images/incv3_univ/797.png" alt=sleeping bag /><br />
+<img src="/images/incv3_univ/797.png" alt="sleeping bag"" /><br />
 <a href="#797">sleeping bag</a></center></div>
 </div><br />
 <div class="row">
 <div id=798 class="col-md-4"><center>
-<img src="/images/incv3_univ/798.png" alt=slide rule, slipstick /><br />
+<img src="/images/incv3_univ/798.png" alt="slide rule, slipstick"" /><br />
 <a href="#798">slide rule, slipstick</a></center></div>
 <div id=799 class="col-md-4"><center>
-<img src="/images/incv3_univ/799.png" alt=sliding door /><br />
+<img src="/images/incv3_univ/799.png" alt="sliding door"" /><br />
 <a href="#799">sliding door</a></center></div>
 </div><br />
 <center><a href="inception-v3-targeted-universal-attacks-page-15.html">Previous</a> - Page 16 of 20 - <a href="inception-v3-targeted-universal-attacks-page-17.html">Next</a></center>

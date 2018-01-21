@@ -10,7 +10,7 @@ SITEURL = ''
 THEME = 'theme/freelancer-theme-pelican/'
 THEME_STATIC_DIR = 'static'
 PATH = 'content'
-STATIC_PATHS = ['images', 'js', 'css', 'fonts', 'viz']
+STATIC_PATHS = ['images', 'papers', 'js', 'css', 'fonts', 'viz']
 READERS = {'html': None}
 TIMEZONE = 'America/Lima'
 

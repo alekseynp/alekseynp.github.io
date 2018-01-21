@@ -5,186 +5,186 @@ status: hidden
 <center><a href="inception-v3-targeted-universal-attacks-page-4.html">Previous</a> - Page 5 of 20 - <a href="inception-v3-targeted-universal-attacks-page-6.html">Next</a></center>
 <br /><br /><div class="row">
 <div id=200 class="col-md-4"><center>
-<img src="/images/incv3_univ/200.png" alt=Tibetan terrier, chrysanthemum dog /><br />
+<img src="/images/incv3_univ/200.png" alt="Tibetan terrier, chrysanthemum dog"" /><br />
 <a href="#200">Tibetan terrier, chrysanthemum dog</a></center></div>
 <div id=201 class="col-md-4"><center>
-<img src="/images/incv3_univ/201.png" alt=silky terrier, Sydney silky /><br />
+<img src="/images/incv3_univ/201.png" alt="silky terrier, Sydney silky"" /><br />
 <a href="#201">silky terrier, Sydney silky</a></center></div>
 <div id=202 class="col-md-4"><center>
-<img src="/images/incv3_univ/202.png" alt=soft-coated wheaten terrier /><br />
+<img src="/images/incv3_univ/202.png" alt="soft-coated wheaten terrier"" /><br />
 <a href="#202">soft-coated wheaten terrier</a></center></div>
 </div><br />
 <div class="row">
 <div id=203 class="col-md-4"><center>
-<img src="/images/incv3_univ/203.png" alt=West Highland white terrier /><br />
+<img src="/images/incv3_univ/203.png" alt="West Highland white terrier"" /><br />
 <a href="#203">West Highland white terrier</a></center></div>
 <div id=204 class="col-md-4"><center>
-<img src="/images/incv3_univ/204.png" alt=Lhasa, Lhasa apso /><br />
+<img src="/images/incv3_univ/204.png" alt="Lhasa, Lhasa apso"" /><br />
 <a href="#204">Lhasa, Lhasa apso</a></center></div>
 <div id=205 class="col-md-4"><center>
-<img src="/images/incv3_univ/205.png" alt=flat-coated retriever /><br />
+<img src="/images/incv3_univ/205.png" alt="flat-coated retriever"" /><br />
 <a href="#205">flat-coated retriever</a></center></div>
 </div><br />
 <div class="row">
 <div id=206 class="col-md-4"><center>
-<img src="/images/incv3_univ/206.png" alt=curly-coated retriever /><br />
+<img src="/images/incv3_univ/206.png" alt="curly-coated retriever"" /><br />
 <a href="#206">curly-coated retriever</a></center></div>
 <div id=207 class="col-md-4"><center>
-<img src="/images/incv3_univ/207.png" alt=golden retriever /><br />
+<img src="/images/incv3_univ/207.png" alt="golden retriever"" /><br />
 <a href="#207">golden retriever</a></center></div>
 <div id=208 class="col-md-4"><center>
-<img src="/images/incv3_univ/208.png" alt=Labrador retriever /><br />
+<img src="/images/incv3_univ/208.png" alt="Labrador retriever"" /><br />
 <a href="#208">Labrador retriever</a></center></div>
 </div><br />
 <div class="row">
 <div id=209 class="col-md-4"><center>
-<img src="/images/incv3_univ/209.png" alt=Chesapeake Bay retriever /><br />
+<img src="/images/incv3_univ/209.png" alt="Chesapeake Bay retriever"" /><br />
 <a href="#209">Chesapeake Bay retriever</a></center></div>
 <div id=210 class="col-md-4"><center>
-<img src="/images/incv3_univ/210.png" alt=German short-haired pointer /><br />
+<img src="/images/incv3_univ/210.png" alt="German short-haired pointer"" /><br />
 <a href="#210">German short-haired pointer</a></center></div>
 <div id=211 class="col-md-4"><center>
-<img src="/images/incv3_univ/211.png" alt=vizsla, Hungarian pointer /><br />
+<img src="/images/incv3_univ/211.png" alt="vizsla, Hungarian pointer"" /><br />
 <a href="#211">vizsla, Hungarian pointer</a></center></div>
 </div><br />
 <div class="row">
 <div id=212 class="col-md-4"><center>
-<img src="/images/incv3_univ/212.png" alt=English setter /><br />
+<img src="/images/incv3_univ/212.png" alt="English setter"" /><br />
 <a href="#212">English setter</a></center></div>
 <div id=213 class="col-md-4"><center>
-<img src="/images/incv3_univ/213.png" alt=Irish setter, red setter /><br />
+<img src="/images/incv3_univ/213.png" alt="Irish setter, red setter"" /><br />
 <a href="#213">Irish setter, red setter</a></center></div>
 <div id=214 class="col-md-4"><center>
-<img src="/images/incv3_univ/214.png" alt=Gordon setter /><br />
+<img src="/images/incv3_univ/214.png" alt="Gordon setter"" /><br />
 <a href="#214">Gordon setter</a></center></div>
 </div><br />
 <div class="row">
 <div id=215 class="col-md-4"><center>
-<img src="/images/incv3_univ/215.png" alt=Brittany spaniel /><br />
+<img src="/images/incv3_univ/215.png" alt="Brittany spaniel"" /><br />
 <a href="#215">Brittany spaniel</a></center></div>
 <div id=216 class="col-md-4"><center>
-<img src="/images/incv3_univ/216.png" alt=clumber, clumber spaniel /><br />
+<img src="/images/incv3_univ/216.png" alt="clumber, clumber spaniel"" /><br />
 <a href="#216">clumber, clumber spaniel</a></center></div>
 <div id=217 class="col-md-4"><center>
-<img src="/images/incv3_univ/217.png" alt=English springer, English springer spaniel /><br />
+<img src="/images/incv3_univ/217.png" alt="English springer, English springer spaniel"" /><br />
 <a href="#217">English springer, English springer spaniel</a></center></div>
 </div><br />
 <div class="row">
 <div id=218 class="col-md-4"><center>
-<img src="/images/incv3_univ/218.png" alt=Welsh springer spaniel /><br />
+<img src="/images/incv3_univ/218.png" alt="Welsh springer spaniel"" /><br />
 <a href="#218">Welsh springer spaniel</a></center></div>
 <div id=219 class="col-md-4"><center>
-<img src="/images/incv3_univ/219.png" alt=cocker spaniel, English cocker spaniel, cocker /><br />
+<img src="/images/incv3_univ/219.png" alt="cocker spaniel, English cocker spaniel, cocker"" /><br />
 <a href="#219">cocker spaniel, English cocker spaniel, cocker</a></center></div>
 <div id=220 class="col-md-4"><center>
-<img src="/images/incv3_univ/220.png" alt=Sussex spaniel /><br />
+<img src="/images/incv3_univ/220.png" alt="Sussex spaniel"" /><br />
 <a href="#220">Sussex spaniel</a></center></div>
 </div><br />
 <div class="row">
 <div id=221 class="col-md-4"><center>
-<img src="/images/incv3_univ/221.png" alt=Irish water spaniel /><br />
+<img src="/images/incv3_univ/221.png" alt="Irish water spaniel"" /><br />
 <a href="#221">Irish water spaniel</a></center></div>
 <div id=222 class="col-md-4"><center>
-<img src="/images/incv3_univ/222.png" alt=kuvasz /><br />
+<img src="/images/incv3_univ/222.png" alt="kuvasz"" /><br />
 <a href="#222">kuvasz</a></center></div>
 <div id=223 class="col-md-4"><center>
-<img src="/images/incv3_univ/223.png" alt=schipperke /><br />
+<img src="/images/incv3_univ/223.png" alt="schipperke"" /><br />
 <a href="#223">schipperke</a></center></div>
 </div><br />
 <div class="row">
 <div id=224 class="col-md-4"><center>
-<img src="/images/incv3_univ/224.png" alt=groenendael /><br />
+<img src="/images/incv3_univ/224.png" alt="groenendael"" /><br />
 <a href="#224">groenendael</a></center></div>
 <div id=225 class="col-md-4"><center>
-<img src="/images/incv3_univ/225.png" alt=malinois /><br />
+<img src="/images/incv3_univ/225.png" alt="malinois"" /><br />
 <a href="#225">malinois</a></center></div>
 <div id=226 class="col-md-4"><center>
-<img src="/images/incv3_univ/226.png" alt=briard /><br />
+<img src="/images/incv3_univ/226.png" alt="briard"" /><br />
 <a href="#226">briard</a></center></div>
 </div><br />
 <div class="row">
 <div id=227 class="col-md-4"><center>
-<img src="/images/incv3_univ/227.png" alt=kelpie /><br />
+<img src="/images/incv3_univ/227.png" alt="kelpie"" /><br />
 <a href="#227">kelpie</a></center></div>
 <div id=228 class="col-md-4"><center>
-<img src="/images/incv3_univ/228.png" alt=komondor /><br />
+<img src="/images/incv3_univ/228.png" alt="komondor"" /><br />
 <a href="#228">komondor</a></center></div>
 <div id=229 class="col-md-4"><center>
-<img src="/images/incv3_univ/229.png" alt=Old English sheepdog, bobtail /><br />
+<img src="/images/incv3_univ/229.png" alt="Old English sheepdog, bobtail"" /><br />
 <a href="#229">Old English sheepdog, bobtail</a></center></div>
 </div><br />
 <div class="row">
 <div id=230 class="col-md-4"><center>
-<img src="/images/incv3_univ/230.png" alt=Shetland sheepdog, Shetland sheep dog, Shetland /><br />
+<img src="/images/incv3_univ/230.png" alt="Shetland sheepdog, Shetland sheep dog, Shetland"" /><br />
 <a href="#230">Shetland sheepdog, Shetland sheep dog, Shetland</a></center></div>
 <div id=231 class="col-md-4"><center>
-<img src="/images/incv3_univ/231.png" alt=collie /><br />
+<img src="/images/incv3_univ/231.png" alt="collie"" /><br />
 <a href="#231">collie</a></center></div>
 <div id=232 class="col-md-4"><center>
-<img src="/images/incv3_univ/232.png" alt=Border collie /><br />
+<img src="/images/incv3_univ/232.png" alt="Border collie"" /><br />
 <a href="#232">Border collie</a></center></div>
 </div><br />
 <div class="row">
 <div id=233 class="col-md-4"><center>
-<img src="/images/incv3_univ/233.png" alt=Bouvier des Flandres, Bouviers des Flandres /><br />
+<img src="/images/incv3_univ/233.png" alt="Bouvier des Flandres, Bouviers des Flandres"" /><br />
 <a href="#233">Bouvier des Flandres, Bouviers des Flandres</a></center></div>
 <div id=234 class="col-md-4"><center>
-<img src="/images/incv3_univ/234.png" alt=Rottweiler /><br />
+<img src="/images/incv3_univ/234.png" alt="Rottweiler"" /><br />
 <a href="#234">Rottweiler</a></center></div>
 <div id=235 class="col-md-4"><center>
-<img src="/images/incv3_univ/235.png" alt=German shepherd, German shepherd dog, German police dog, alsatian /><br />
+<img src="/images/incv3_univ/235.png" alt="German shepherd, German shepherd dog, German police dog, alsatian"" /><br />
 <a href="#235">German shepherd, German shepherd dog, German police dog, alsatian</a></center></div>
 </div><br />
 <div class="row">
 <div id=236 class="col-md-4"><center>
-<img src="/images/incv3_univ/236.png" alt=Doberman, Doberman pinscher /><br />
+<img src="/images/incv3_univ/236.png" alt="Doberman, Doberman pinscher"" /><br />
 <a href="#236">Doberman, Doberman pinscher</a></center></div>
 <div id=237 class="col-md-4"><center>
-<img src="/images/incv3_univ/237.png" alt=miniature pinscher /><br />
+<img src="/images/incv3_univ/237.png" alt="miniature pinscher"" /><br />
 <a href="#237">miniature pinscher</a></center></div>
 <div id=238 class="col-md-4"><center>
-<img src="/images/incv3_univ/238.png" alt=Greater Swiss Mountain dog /><br />
+<img src="/images/incv3_univ/238.png" alt="Greater Swiss Mountain dog"" /><br />
 <a href="#238">Greater Swiss Mountain dog</a></center></div>
 </div><br />
 <div class="row">
 <div id=239 class="col-md-4"><center>
-<img src="/images/incv3_univ/239.png" alt=Bernese mountain dog /><br />
+<img src="/images/incv3_univ/239.png" alt="Bernese mountain dog"" /><br />
 <a href="#239">Bernese mountain dog</a></center></div>
 <div id=240 class="col-md-4"><center>
-<img src="/images/incv3_univ/240.png" alt=Appenzeller /><br />
+<img src="/images/incv3_univ/240.png" alt="Appenzeller"" /><br />
 <a href="#240">Appenzeller</a></center></div>
 <div id=241 class="col-md-4"><center>
-<img src="/images/incv3_univ/241.png" alt=EntleBucher /><br />
+<img src="/images/incv3_univ/241.png" alt="EntleBucher"" /><br />
 <a href="#241">EntleBucher</a></center></div>
 </div><br />
 <div class="row">
 <div id=242 class="col-md-4"><center>
-<img src="/images/incv3_univ/242.png" alt=boxer /><br />
+<img src="/images/incv3_univ/242.png" alt="boxer"" /><br />
 <a href="#242">boxer</a></center></div>
 <div id=243 class="col-md-4"><center>
-<img src="/images/incv3_univ/243.png" alt=bull mastiff /><br />
+<img src="/images/incv3_univ/243.png" alt="bull mastiff"" /><br />
 <a href="#243">bull mastiff</a></center></div>
 <div id=244 class="col-md-4"><center>
-<img src="/images/incv3_univ/244.png" alt=Tibetan mastiff /><br />
+<img src="/images/incv3_univ/244.png" alt="Tibetan mastiff"" /><br />
 <a href="#244">Tibetan mastiff</a></center></div>
 </div><br />
 <div class="row">
 <div id=245 class="col-md-4"><center>
-<img src="/images/incv3_univ/245.png" alt=French bulldog /><br />
+<img src="/images/incv3_univ/245.png" alt="French bulldog"" /><br />
 <a href="#245">French bulldog</a></center></div>
 <div id=246 class="col-md-4"><center>
-<img src="/images/incv3_univ/246.png" alt=Great Dane /><br />
+<img src="/images/incv3_univ/246.png" alt="Great Dane"" /><br />
 <a href="#246">Great Dane</a></center></div>
 <div id=247 class="col-md-4"><center>
-<img src="/images/incv3_univ/247.png" alt=Saint Bernard, St Bernard /><br />
+<img src="/images/incv3_univ/247.png" alt="Saint Bernard, St Bernard"" /><br />
 <a href="#247">Saint Bernard, St Bernard</a></center></div>
 </div><br />
 <div class="row">
 <div id=248 class="col-md-4"><center>
-<img src="/images/incv3_univ/248.png" alt=Eskimo dog, husky /><br />
+<img src="/images/incv3_univ/248.png" alt="Eskimo dog, husky"" /><br />
 <a href="#248">Eskimo dog, husky</a></center></div>
 <div id=249 class="col-md-4"><center>
-<img src="/images/incv3_univ/249.png" alt=malamute, malemute, Alaskan malamute /><br />
+<img src="/images/incv3_univ/249.png" alt="malamute, malemute, Alaskan malamute"" /><br />
 <a href="#249">malamute, malemute, Alaskan malamute</a></center></div>
 </div><br />
 <center><a href="inception-v3-targeted-universal-attacks-page-4.html">Previous</a> - Page 5 of 20 - <a href="inception-v3-targeted-universal-attacks-page-6.html">Next</a></center>

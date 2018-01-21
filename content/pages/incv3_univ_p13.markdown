@@ -5,186 +5,186 @@ status: hidden
 <center><a href="inception-v3-targeted-universal-attacks-page-13.html">Previous</a> - Page 14 of 20 - <a href="inception-v3-targeted-universal-attacks-page-15.html">Next</a></center>
 <br /><br /><div class="row">
 <div id=650 class="col-md-4"><center>
-<img src="/images/incv3_univ/650.png" alt=microphone, mike /><br />
+<img src="/images/incv3_univ/650.png" alt="microphone, mike"" /><br />
 <a href="#650">microphone, mike</a></center></div>
 <div id=651 class="col-md-4"><center>
-<img src="/images/incv3_univ/651.png" alt=microwave, microwave oven /><br />
+<img src="/images/incv3_univ/651.png" alt="microwave, microwave oven"" /><br />
 <a href="#651">microwave, microwave oven</a></center></div>
 <div id=652 class="col-md-4"><center>
-<img src="/images/incv3_univ/652.png" alt=military uniform /><br />
+<img src="/images/incv3_univ/652.png" alt="military uniform"" /><br />
 <a href="#652">military uniform</a></center></div>
 </div><br />
 <div class="row">
 <div id=653 class="col-md-4"><center>
-<img src="/images/incv3_univ/653.png" alt=milk can /><br />
+<img src="/images/incv3_univ/653.png" alt="milk can"" /><br />
 <a href="#653">milk can</a></center></div>
 <div id=654 class="col-md-4"><center>
-<img src="/images/incv3_univ/654.png" alt=minibus /><br />
+<img src="/images/incv3_univ/654.png" alt="minibus"" /><br />
 <a href="#654">minibus</a></center></div>
 <div id=655 class="col-md-4"><center>
-<img src="/images/incv3_univ/655.png" alt=miniskirt, mini /><br />
+<img src="/images/incv3_univ/655.png" alt="miniskirt, mini"" /><br />
 <a href="#655">miniskirt, mini</a></center></div>
 </div><br />
 <div class="row">
 <div id=656 class="col-md-4"><center>
-<img src="/images/incv3_univ/656.png" alt=minivan /><br />
+<img src="/images/incv3_univ/656.png" alt="minivan"" /><br />
 <a href="#656">minivan</a></center></div>
 <div id=657 class="col-md-4"><center>
-<img src="/images/incv3_univ/657.png" alt=missile /><br />
+<img src="/images/incv3_univ/657.png" alt="missile"" /><br />
 <a href="#657">missile</a></center></div>
 <div id=658 class="col-md-4"><center>
-<img src="/images/incv3_univ/658.png" alt=mitten /><br />
+<img src="/images/incv3_univ/658.png" alt="mitten"" /><br />
 <a href="#658">mitten</a></center></div>
 </div><br />
 <div class="row">
 <div id=659 class="col-md-4"><center>
-<img src="/images/incv3_univ/659.png" alt=mixing bowl /><br />
+<img src="/images/incv3_univ/659.png" alt="mixing bowl"" /><br />
 <a href="#659">mixing bowl</a></center></div>
 <div id=660 class="col-md-4"><center>
-<img src="/images/incv3_univ/660.png" alt=mobile home, manufactured home /><br />
+<img src="/images/incv3_univ/660.png" alt="mobile home, manufactured home"" /><br />
 <a href="#660">mobile home, manufactured home</a></center></div>
 <div id=661 class="col-md-4"><center>
-<img src="/images/incv3_univ/661.png" alt=Model T /><br />
+<img src="/images/incv3_univ/661.png" alt="Model T"" /><br />
 <a href="#661">Model T</a></center></div>
 </div><br />
 <div class="row">
 <div id=662 class="col-md-4"><center>
-<img src="/images/incv3_univ/662.png" alt=modem /><br />
+<img src="/images/incv3_univ/662.png" alt="modem"" /><br />
 <a href="#662">modem</a></center></div>
 <div id=663 class="col-md-4"><center>
-<img src="/images/incv3_univ/663.png" alt=monastery /><br />
+<img src="/images/incv3_univ/663.png" alt="monastery"" /><br />
 <a href="#663">monastery</a></center></div>
 <div id=664 class="col-md-4"><center>
-<img src="/images/incv3_univ/664.png" alt=monitor /><br />
+<img src="/images/incv3_univ/664.png" alt="monitor"" /><br />
 <a href="#664">monitor</a></center></div>
 </div><br />
 <div class="row">
 <div id=665 class="col-md-4"><center>
-<img src="/images/incv3_univ/665.png" alt=moped /><br />
+<img src="/images/incv3_univ/665.png" alt="moped"" /><br />
 <a href="#665">moped</a></center></div>
 <div id=666 class="col-md-4"><center>
-<img src="/images/incv3_univ/666.png" alt=mortar /><br />
+<img src="/images/incv3_univ/666.png" alt="mortar"" /><br />
 <a href="#666">mortar</a></center></div>
 <div id=667 class="col-md-4"><center>
-<img src="/images/incv3_univ/667.png" alt=mortarboard /><br />
+<img src="/images/incv3_univ/667.png" alt="mortarboard"" /><br />
 <a href="#667">mortarboard</a></center></div>
 </div><br />
 <div class="row">
 <div id=668 class="col-md-4"><center>
-<img src="/images/incv3_univ/668.png" alt=mosque /><br />
+<img src="/images/incv3_univ/668.png" alt="mosque"" /><br />
 <a href="#668">mosque</a></center></div>
 <div id=669 class="col-md-4"><center>
-<img src="/images/incv3_univ/669.png" alt=mosquito net /><br />
+<img src="/images/incv3_univ/669.png" alt="mosquito net"" /><br />
 <a href="#669">mosquito net</a></center></div>
 <div id=670 class="col-md-4"><center>
-<img src="/images/incv3_univ/670.png" alt=motor scooter, scooter /><br />
+<img src="/images/incv3_univ/670.png" alt="motor scooter, scooter"" /><br />
 <a href="#670">motor scooter, scooter</a></center></div>
 </div><br />
 <div class="row">
 <div id=671 class="col-md-4"><center>
-<img src="/images/incv3_univ/671.png" alt=mountain bike, all-terrain bike, off-roader /><br />
+<img src="/images/incv3_univ/671.png" alt="mountain bike, all-terrain bike, off-roader"" /><br />
 <a href="#671">mountain bike, all-terrain bike, off-roader</a></center></div>
 <div id=672 class="col-md-4"><center>
-<img src="/images/incv3_univ/672.png" alt=mountain tent /><br />
+<img src="/images/incv3_univ/672.png" alt="mountain tent"" /><br />
 <a href="#672">mountain tent</a></center></div>
 <div id=673 class="col-md-4"><center>
-<img src="/images/incv3_univ/673.png" alt=mouse, computer mouse /><br />
+<img src="/images/incv3_univ/673.png" alt="mouse, computer mouse"" /><br />
 <a href="#673">mouse, computer mouse</a></center></div>
 </div><br />
 <div class="row">
 <div id=674 class="col-md-4"><center>
-<img src="/images/incv3_univ/674.png" alt=mousetrap /><br />
+<img src="/images/incv3_univ/674.png" alt="mousetrap"" /><br />
 <a href="#674">mousetrap</a></center></div>
 <div id=675 class="col-md-4"><center>
-<img src="/images/incv3_univ/675.png" alt=moving van /><br />
+<img src="/images/incv3_univ/675.png" alt="moving van"" /><br />
 <a href="#675">moving van</a></center></div>
 <div id=676 class="col-md-4"><center>
-<img src="/images/incv3_univ/676.png" alt=muzzle /><br />
+<img src="/images/incv3_univ/676.png" alt="muzzle"" /><br />
 <a href="#676">muzzle</a></center></div>
 </div><br />
 <div class="row">
 <div id=677 class="col-md-4"><center>
-<img src="/images/incv3_univ/677.png" alt=nail /><br />
+<img src="/images/incv3_univ/677.png" alt="nail"" /><br />
 <a href="#677">nail</a></center></div>
 <div id=678 class="col-md-4"><center>
-<img src="/images/incv3_univ/678.png" alt=neck brace /><br />
+<img src="/images/incv3_univ/678.png" alt="neck brace"" /><br />
 <a href="#678">neck brace</a></center></div>
 <div id=679 class="col-md-4"><center>
-<img src="/images/incv3_univ/679.png" alt=necklace /><br />
+<img src="/images/incv3_univ/679.png" alt="necklace"" /><br />
 <a href="#679">necklace</a></center></div>
 </div><br />
 <div class="row">
 <div id=680 class="col-md-4"><center>
-<img src="/images/incv3_univ/680.png" alt=nipple /><br />
+<img src="/images/incv3_univ/680.png" alt="nipple"" /><br />
 <a href="#680">nipple</a></center></div>
 <div id=681 class="col-md-4"><center>
-<img src="/images/incv3_univ/681.png" alt=notebook, notebook computer /><br />
+<img src="/images/incv3_univ/681.png" alt="notebook, notebook computer"" /><br />
 <a href="#681">notebook, notebook computer</a></center></div>
 <div id=682 class="col-md-4"><center>
-<img src="/images/incv3_univ/682.png" alt=obelisk /><br />
+<img src="/images/incv3_univ/682.png" alt="obelisk"" /><br />
 <a href="#682">obelisk</a></center></div>
 </div><br />
 <div class="row">
 <div id=683 class="col-md-4"><center>
-<img src="/images/incv3_univ/683.png" alt=oboe, hautboy, hautbois /><br />
+<img src="/images/incv3_univ/683.png" alt="oboe, hautboy, hautbois"" /><br />
 <a href="#683">oboe, hautboy, hautbois</a></center></div>
 <div id=684 class="col-md-4"><center>
-<img src="/images/incv3_univ/684.png" alt=ocarina, sweet potato /><br />
+<img src="/images/incv3_univ/684.png" alt="ocarina, sweet potato"" /><br />
 <a href="#684">ocarina, sweet potato</a></center></div>
 <div id=685 class="col-md-4"><center>
-<img src="/images/incv3_univ/685.png" alt=odometer, hodometer, mileometer, milometer /><br />
+<img src="/images/incv3_univ/685.png" alt="odometer, hodometer, mileometer, milometer"" /><br />
 <a href="#685">odometer, hodometer, mileometer, milometer</a></center></div>
 </div><br />
 <div class="row">
 <div id=686 class="col-md-4"><center>
-<img src="/images/incv3_univ/686.png" alt=oil filter /><br />
+<img src="/images/incv3_univ/686.png" alt="oil filter"" /><br />
 <a href="#686">oil filter</a></center></div>
 <div id=687 class="col-md-4"><center>
-<img src="/images/incv3_univ/687.png" alt=organ, pipe organ /><br />
+<img src="/images/incv3_univ/687.png" alt="organ, pipe organ"" /><br />
 <a href="#687">organ, pipe organ</a></center></div>
 <div id=688 class="col-md-4"><center>
-<img src="/images/incv3_univ/688.png" alt=oscilloscope, scope, cathode-ray oscilloscope, CRO /><br />
+<img src="/images/incv3_univ/688.png" alt="oscilloscope, scope, cathode-ray oscilloscope, CRO"" /><br />
 <a href="#688">oscilloscope, scope, cathode-ray oscilloscope, CRO</a></center></div>
 </div><br />
 <div class="row">
 <div id=689 class="col-md-4"><center>
-<img src="/images/incv3_univ/689.png" alt=overskirt /><br />
+<img src="/images/incv3_univ/689.png" alt="overskirt"" /><br />
 <a href="#689">overskirt</a></center></div>
 <div id=690 class="col-md-4"><center>
-<img src="/images/incv3_univ/690.png" alt=oxcart /><br />
+<img src="/images/incv3_univ/690.png" alt="oxcart"" /><br />
 <a href="#690">oxcart</a></center></div>
 <div id=691 class="col-md-4"><center>
-<img src="/images/incv3_univ/691.png" alt=oxygen mask /><br />
+<img src="/images/incv3_univ/691.png" alt="oxygen mask"" /><br />
 <a href="#691">oxygen mask</a></center></div>
 </div><br />
 <div class="row">
 <div id=692 class="col-md-4"><center>
-<img src="/images/incv3_univ/692.png" alt=packet /><br />
+<img src="/images/incv3_univ/692.png" alt="packet"" /><br />
 <a href="#692">packet</a></center></div>
 <div id=693 class="col-md-4"><center>
-<img src="/images/incv3_univ/693.png" alt=paddle, boat paddle /><br />
+<img src="/images/incv3_univ/693.png" alt="paddle, boat paddle"" /><br />
 <a href="#693">paddle, boat paddle</a></center></div>
 <div id=694 class="col-md-4"><center>
-<img src="/images/incv3_univ/694.png" alt=paddlewheel, paddle wheel /><br />
+<img src="/images/incv3_univ/694.png" alt="paddlewheel, paddle wheel"" /><br />
 <a href="#694">paddlewheel, paddle wheel</a></center></div>
 </div><br />
 <div class="row">
 <div id=695 class="col-md-4"><center>
-<img src="/images/incv3_univ/695.png" alt=padlock /><br />
+<img src="/images/incv3_univ/695.png" alt="padlock"" /><br />
 <a href="#695">padlock</a></center></div>
 <div id=696 class="col-md-4"><center>
-<img src="/images/incv3_univ/696.png" alt=paintbrush /><br />
+<img src="/images/incv3_univ/696.png" alt="paintbrush"" /><br />
 <a href="#696">paintbrush</a></center></div>
 <div id=697 class="col-md-4"><center>
-<img src="/images/incv3_univ/697.png" alt=pajama, pyjama, pj's, jammies /><br />
+<img src="/images/incv3_univ/697.png" alt="pajama, pyjama, pj's, jammies"" /><br />
 <a href="#697">pajama, pyjama, pj's, jammies</a></center></div>
 </div><br />
 <div class="row">
 <div id=698 class="col-md-4"><center>
-<img src="/images/incv3_univ/698.png" alt=palace /><br />
+<img src="/images/incv3_univ/698.png" alt="palace"" /><br />
 <a href="#698">palace</a></center></div>
 <div id=699 class="col-md-4"><center>
-<img src="/images/incv3_univ/699.png" alt=panpipe, pandean pipe, syrinx /><br />
+<img src="/images/incv3_univ/699.png" alt="panpipe, pandean pipe, syrinx"" /><br />
 <a href="#699">panpipe, pandean pipe, syrinx</a></center></div>
 </div><br />
 <center><a href="inception-v3-targeted-universal-attacks-page-13.html">Previous</a> - Page 14 of 20 - <a href="inception-v3-targeted-universal-attacks-page-15.html">Next</a></center>

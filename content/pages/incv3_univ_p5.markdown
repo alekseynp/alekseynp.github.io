@@ -5,186 +5,186 @@ status: hidden
 <center><a href="inception-v3-targeted-universal-attacks-page-5.html">Previous</a> - Page 6 of 20 - <a href="inception-v3-targeted-universal-attacks-page-7.html">Next</a></center>
 <br /><br /><div class="row">
 <div id=250 class="col-md-4"><center>
-<img src="/images/incv3_univ/250.png" alt=Siberian husky /><br />
+<img src="/images/incv3_univ/250.png" alt="Siberian husky"" /><br />
 <a href="#250">Siberian husky</a></center></div>
 <div id=251 class="col-md-4"><center>
-<img src="/images/incv3_univ/251.png" alt=dalmatian, coach dog, carriage dog /><br />
+<img src="/images/incv3_univ/251.png" alt="dalmatian, coach dog, carriage dog"" /><br />
 <a href="#251">dalmatian, coach dog, carriage dog</a></center></div>
 <div id=252 class="col-md-4"><center>
-<img src="/images/incv3_univ/252.png" alt=affenpinscher, monkey pinscher, monkey dog /><br />
+<img src="/images/incv3_univ/252.png" alt="affenpinscher, monkey pinscher, monkey dog"" /><br />
 <a href="#252">affenpinscher, monkey pinscher, monkey dog</a></center></div>
 </div><br />
 <div class="row">
 <div id=253 class="col-md-4"><center>
-<img src="/images/incv3_univ/253.png" alt=basenji /><br />
+<img src="/images/incv3_univ/253.png" alt="basenji"" /><br />
 <a href="#253">basenji</a></center></div>
 <div id=254 class="col-md-4"><center>
-<img src="/images/incv3_univ/254.png" alt=pug, pug-dog /><br />
+<img src="/images/incv3_univ/254.png" alt="pug, pug-dog"" /><br />
 <a href="#254">pug, pug-dog</a></center></div>
 <div id=255 class="col-md-4"><center>
-<img src="/images/incv3_univ/255.png" alt=Leonberg /><br />
+<img src="/images/incv3_univ/255.png" alt="Leonberg"" /><br />
 <a href="#255">Leonberg</a></center></div>
 </div><br />
 <div class="row">
 <div id=256 class="col-md-4"><center>
-<img src="/images/incv3_univ/256.png" alt=Newfoundland, Newfoundland dog /><br />
+<img src="/images/incv3_univ/256.png" alt="Newfoundland, Newfoundland dog"" /><br />
 <a href="#256">Newfoundland, Newfoundland dog</a></center></div>
 <div id=257 class="col-md-4"><center>
-<img src="/images/incv3_univ/257.png" alt=Great Pyrenees /><br />
+<img src="/images/incv3_univ/257.png" alt="Great Pyrenees"" /><br />
 <a href="#257">Great Pyrenees</a></center></div>
 <div id=258 class="col-md-4"><center>
-<img src="/images/incv3_univ/258.png" alt=Samoyed, Samoyede /><br />
+<img src="/images/incv3_univ/258.png" alt="Samoyed, Samoyede"" /><br />
 <a href="#258">Samoyed, Samoyede</a></center></div>
 </div><br />
 <div class="row">
 <div id=259 class="col-md-4"><center>
-<img src="/images/incv3_univ/259.png" alt=Pomeranian /><br />
+<img src="/images/incv3_univ/259.png" alt="Pomeranian"" /><br />
 <a href="#259">Pomeranian</a></center></div>
 <div id=260 class="col-md-4"><center>
-<img src="/images/incv3_univ/260.png" alt=chow, chow chow /><br />
+<img src="/images/incv3_univ/260.png" alt="chow, chow chow"" /><br />
 <a href="#260">chow, chow chow</a></center></div>
 <div id=261 class="col-md-4"><center>
-<img src="/images/incv3_univ/261.png" alt=keeshond /><br />
+<img src="/images/incv3_univ/261.png" alt="keeshond"" /><br />
 <a href="#261">keeshond</a></center></div>
 </div><br />
 <div class="row">
 <div id=262 class="col-md-4"><center>
-<img src="/images/incv3_univ/262.png" alt=Brabancon griffon /><br />
+<img src="/images/incv3_univ/262.png" alt="Brabancon griffon"" /><br />
 <a href="#262">Brabancon griffon</a></center></div>
 <div id=263 class="col-md-4"><center>
-<img src="/images/incv3_univ/263.png" alt=Pembroke, Pembroke Welsh corgi /><br />
+<img src="/images/incv3_univ/263.png" alt="Pembroke, Pembroke Welsh corgi"" /><br />
 <a href="#263">Pembroke, Pembroke Welsh corgi</a></center></div>
 <div id=264 class="col-md-4"><center>
-<img src="/images/incv3_univ/264.png" alt=Cardigan, Cardigan Welsh corgi /><br />
+<img src="/images/incv3_univ/264.png" alt="Cardigan, Cardigan Welsh corgi"" /><br />
 <a href="#264">Cardigan, Cardigan Welsh corgi</a></center></div>
 </div><br />
 <div class="row">
 <div id=265 class="col-md-4"><center>
-<img src="/images/incv3_univ/265.png" alt=toy poodle /><br />
+<img src="/images/incv3_univ/265.png" alt="toy poodle"" /><br />
 <a href="#265">toy poodle</a></center></div>
 <div id=266 class="col-md-4"><center>
-<img src="/images/incv3_univ/266.png" alt=miniature poodle /><br />
+<img src="/images/incv3_univ/266.png" alt="miniature poodle"" /><br />
 <a href="#266">miniature poodle</a></center></div>
 <div id=267 class="col-md-4"><center>
-<img src="/images/incv3_univ/267.png" alt=standard poodle /><br />
+<img src="/images/incv3_univ/267.png" alt="standard poodle"" /><br />
 <a href="#267">standard poodle</a></center></div>
 </div><br />
 <div class="row">
 <div id=268 class="col-md-4"><center>
-<img src="/images/incv3_univ/268.png" alt=Mexican hairless /><br />
+<img src="/images/incv3_univ/268.png" alt="Mexican hairless"" /><br />
 <a href="#268">Mexican hairless</a></center></div>
 <div id=269 class="col-md-4"><center>
-<img src="/images/incv3_univ/269.png" alt=timber wolf, grey wolf, gray wolf, Canis lupus /><br />
+<img src="/images/incv3_univ/269.png" alt="timber wolf, grey wolf, gray wolf, Canis lupus"" /><br />
 <a href="#269">timber wolf, grey wolf, gray wolf, Canis lupus</a></center></div>
 <div id=270 class="col-md-4"><center>
-<img src="/images/incv3_univ/270.png" alt=white wolf, Arctic wolf, Canis lupus tundrarum /><br />
+<img src="/images/incv3_univ/270.png" alt="white wolf, Arctic wolf, Canis lupus tundrarum"" /><br />
 <a href="#270">white wolf, Arctic wolf, Canis lupus tundrarum</a></center></div>
 </div><br />
 <div class="row">
 <div id=271 class="col-md-4"><center>
-<img src="/images/incv3_univ/271.png" alt=red wolf, maned wolf, Canis rufus, Canis niger /><br />
+<img src="/images/incv3_univ/271.png" alt="red wolf, maned wolf, Canis rufus, Canis niger"" /><br />
 <a href="#271">red wolf, maned wolf, Canis rufus, Canis niger</a></center></div>
 <div id=272 class="col-md-4"><center>
-<img src="/images/incv3_univ/272.png" alt=coyote, prairie wolf, brush wolf, Canis latrans /><br />
+<img src="/images/incv3_univ/272.png" alt="coyote, prairie wolf, brush wolf, Canis latrans"" /><br />
 <a href="#272">coyote, prairie wolf, brush wolf, Canis latrans</a></center></div>
 <div id=273 class="col-md-4"><center>
-<img src="/images/incv3_univ/273.png" alt=dingo, warrigal, warragal, Canis dingo /><br />
+<img src="/images/incv3_univ/273.png" alt="dingo, warrigal, warragal, Canis dingo"" /><br />
 <a href="#273">dingo, warrigal, warragal, Canis dingo</a></center></div>
 </div><br />
 <div class="row">
 <div id=274 class="col-md-4"><center>
-<img src="/images/incv3_univ/274.png" alt=dhole, Cuon alpinus /><br />
+<img src="/images/incv3_univ/274.png" alt="dhole, Cuon alpinus"" /><br />
 <a href="#274">dhole, Cuon alpinus</a></center></div>
 <div id=275 class="col-md-4"><center>
-<img src="/images/incv3_univ/275.png" alt=African hunting dog, hyena dog, Cape hunting dog, Lycaon pictus /><br />
+<img src="/images/incv3_univ/275.png" alt="African hunting dog, hyena dog, Cape hunting dog, Lycaon pictus"" /><br />
 <a href="#275">African hunting dog, hyena dog, Cape hunting dog, Lycaon pictus</a></center></div>
 <div id=276 class="col-md-4"><center>
-<img src="/images/incv3_univ/276.png" alt=hyena, hyaena /><br />
+<img src="/images/incv3_univ/276.png" alt="hyena, hyaena"" /><br />
 <a href="#276">hyena, hyaena</a></center></div>
 </div><br />
 <div class="row">
 <div id=277 class="col-md-4"><center>
-<img src="/images/incv3_univ/277.png" alt=red fox, Vulpes vulpes /><br />
+<img src="/images/incv3_univ/277.png" alt="red fox, Vulpes vulpes"" /><br />
 <a href="#277">red fox, Vulpes vulpes</a></center></div>
 <div id=278 class="col-md-4"><center>
-<img src="/images/incv3_univ/278.png" alt=kit fox, Vulpes macrotis /><br />
+<img src="/images/incv3_univ/278.png" alt="kit fox, Vulpes macrotis"" /><br />
 <a href="#278">kit fox, Vulpes macrotis</a></center></div>
 <div id=279 class="col-md-4"><center>
-<img src="/images/incv3_univ/279.png" alt=Arctic fox, white fox, Alopex lagopus /><br />
+<img src="/images/incv3_univ/279.png" alt="Arctic fox, white fox, Alopex lagopus"" /><br />
 <a href="#279">Arctic fox, white fox, Alopex lagopus</a></center></div>
 </div><br />
 <div class="row">
 <div id=280 class="col-md-4"><center>
-<img src="/images/incv3_univ/280.png" alt=grey fox, gray fox, Urocyon cinereoargenteus /><br />
+<img src="/images/incv3_univ/280.png" alt="grey fox, gray fox, Urocyon cinereoargenteus"" /><br />
 <a href="#280">grey fox, gray fox, Urocyon cinereoargenteus</a></center></div>
 <div id=281 class="col-md-4"><center>
-<img src="/images/incv3_univ/281.png" alt=tabby, tabby cat /><br />
+<img src="/images/incv3_univ/281.png" alt="tabby, tabby cat"" /><br />
 <a href="#281">tabby, tabby cat</a></center></div>
 <div id=282 class="col-md-4"><center>
-<img src="/images/incv3_univ/282.png" alt=tiger cat /><br />
+<img src="/images/incv3_univ/282.png" alt="tiger cat"" /><br />
 <a href="#282">tiger cat</a></center></div>
 </div><br />
 <div class="row">
 <div id=283 class="col-md-4"><center>
-<img src="/images/incv3_univ/283.png" alt=Persian cat /><br />
+<img src="/images/incv3_univ/283.png" alt="Persian cat"" /><br />
 <a href="#283">Persian cat</a></center></div>
 <div id=284 class="col-md-4"><center>
-<img src="/images/incv3_univ/284.png" alt=Siamese cat, Siamese /><br />
+<img src="/images/incv3_univ/284.png" alt="Siamese cat, Siamese"" /><br />
 <a href="#284">Siamese cat, Siamese</a></center></div>
 <div id=285 class="col-md-4"><center>
-<img src="/images/incv3_univ/285.png" alt=Egyptian cat /><br />
+<img src="/images/incv3_univ/285.png" alt="Egyptian cat"" /><br />
 <a href="#285">Egyptian cat</a></center></div>
 </div><br />
 <div class="row">
 <div id=286 class="col-md-4"><center>
-<img src="/images/incv3_univ/286.png" alt=cougar, puma, catamount, mountain lion, painter, panther, Felis concolor /><br />
+<img src="/images/incv3_univ/286.png" alt="cougar, puma, catamount, mountain lion, painter, panther, Felis concolor"" /><br />
 <a href="#286">cougar, puma, catamount, mountain lion, painter, panther, Felis concolor</a></center></div>
 <div id=287 class="col-md-4"><center>
-<img src="/images/incv3_univ/287.png" alt=lynx, catamount /><br />
+<img src="/images/incv3_univ/287.png" alt="lynx, catamount"" /><br />
 <a href="#287">lynx, catamount</a></center></div>
 <div id=288 class="col-md-4"><center>
-<img src="/images/incv3_univ/288.png" alt=leopard, Panthera pardus /><br />
+<img src="/images/incv3_univ/288.png" alt="leopard, Panthera pardus"" /><br />
 <a href="#288">leopard, Panthera pardus</a></center></div>
 </div><br />
 <div class="row">
 <div id=289 class="col-md-4"><center>
-<img src="/images/incv3_univ/289.png" alt=snow leopard, ounce, Panthera uncia /><br />
+<img src="/images/incv3_univ/289.png" alt="snow leopard, ounce, Panthera uncia"" /><br />
 <a href="#289">snow leopard, ounce, Panthera uncia</a></center></div>
 <div id=290 class="col-md-4"><center>
-<img src="/images/incv3_univ/290.png" alt=jaguar, panther, Panthera onca, Felis onca /><br />
+<img src="/images/incv3_univ/290.png" alt="jaguar, panther, Panthera onca, Felis onca"" /><br />
 <a href="#290">jaguar, panther, Panthera onca, Felis onca</a></center></div>
 <div id=291 class="col-md-4"><center>
-<img src="/images/incv3_univ/291.png" alt=lion, king of beasts, Panthera leo /><br />
+<img src="/images/incv3_univ/291.png" alt="lion, king of beasts, Panthera leo"" /><br />
 <a href="#291">lion, king of beasts, Panthera leo</a></center></div>
 </div><br />
 <div class="row">
 <div id=292 class="col-md-4"><center>
-<img src="/images/incv3_univ/292.png" alt=tiger, Panthera tigris /><br />
+<img src="/images/incv3_univ/292.png" alt="tiger, Panthera tigris"" /><br />
 <a href="#292">tiger, Panthera tigris</a></center></div>
 <div id=293 class="col-md-4"><center>
-<img src="/images/incv3_univ/293.png" alt=cheetah, chetah, Acinonyx jubatus /><br />
+<img src="/images/incv3_univ/293.png" alt="cheetah, chetah, Acinonyx jubatus"" /><br />
 <a href="#293">cheetah, chetah, Acinonyx jubatus</a></center></div>
 <div id=294 class="col-md-4"><center>
-<img src="/images/incv3_univ/294.png" alt=brown bear, bruin, Ursus arctos /><br />
+<img src="/images/incv3_univ/294.png" alt="brown bear, bruin, Ursus arctos"" /><br />
 <a href="#294">brown bear, bruin, Ursus arctos</a></center></div>
 </div><br />
 <div class="row">
 <div id=295 class="col-md-4"><center>
-<img src="/images/incv3_univ/295.png" alt=American black bear, black bear, Ursus americanus, Euarctos americanus /><br />
+<img src="/images/incv3_univ/295.png" alt="American black bear, black bear, Ursus americanus, Euarctos americanus"" /><br />
 <a href="#295">American black bear, black bear, Ursus americanus, Euarctos americanus</a></center></div>
 <div id=296 class="col-md-4"><center>
-<img src="/images/incv3_univ/296.png" alt=ice bear, polar bear, Ursus Maritimus, Thalarctos maritimus /><br />
+<img src="/images/incv3_univ/296.png" alt="ice bear, polar bear, Ursus Maritimus, Thalarctos maritimus"" /><br />
 <a href="#296">ice bear, polar bear, Ursus Maritimus, Thalarctos maritimus</a></center></div>
 <div id=297 class="col-md-4"><center>
-<img src="/images/incv3_univ/297.png" alt=sloth bear, Melursus ursinus, Ursus ursinus /><br />
+<img src="/images/incv3_univ/297.png" alt="sloth bear, Melursus ursinus, Ursus ursinus"" /><br />
 <a href="#297">sloth bear, Melursus ursinus, Ursus ursinus</a></center></div>
 </div><br />
 <div class="row">
 <div id=298 class="col-md-4"><center>
-<img src="/images/incv3_univ/298.png" alt=mongoose /><br />
+<img src="/images/incv3_univ/298.png" alt="mongoose"" /><br />
 <a href="#298">mongoose</a></center></div>
 <div id=299 class="col-md-4"><center>
-<img src="/images/incv3_univ/299.png" alt=meerkat, mierkat /><br />
+<img src="/images/incv3_univ/299.png" alt="meerkat, mierkat"" /><br />
 <a href="#299">meerkat, mierkat</a></center></div>
 </div><br />
 <center><a href="inception-v3-targeted-universal-attacks-page-5.html">Previous</a> - Page 6 of 20 - <a href="inception-v3-targeted-universal-attacks-page-7.html">Next</a></center>

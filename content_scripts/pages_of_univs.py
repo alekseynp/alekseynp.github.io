@@ -22,7 +22,7 @@ for p in range(20):
             if i % 3 == 0:
                 wf.write('<div class="row">\n')
             wf.write('<div id={} class="col-md-4"><center>\n'.format(imgidx))
-            wf.write('<img src="/images/incv3_univ/{}.png" alt={} /><br />\n'.format(imgidx, label_dict[imgidx]))
+            wf.write('<img src="/images/incv3_univ/{}.png" alt="{}"" /><br />\n'.format(imgidx, label_dict[imgidx]))
             wf.write('<a href="#{}">{}</a>'.format(imgidx, label_dict[imgidx]))
             wf.write('</center></div>\n')
             if i % 3 == 2 or i == 49:
