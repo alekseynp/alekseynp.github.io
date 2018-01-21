@@ -1,5 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Aleksey Nozdryn-Plotnicki - Aleksey Nozdryn-Plotnicki</title><link href="/" rel="alternate"></link><link href="/feeds/aleksey-nozdryn-plotnicki.atom.xml" rel="self"></link><id>/</id><updated>2017-12-07T20:00:00+00:00</updated><entry><title>Paper: An infinity norm constrained attack for the NIPS 2017 Competition Track</title><link href="/nips2017-adversarial.html" rel="alternate"></link><published>2017-12-07T20:00:00+00:00</published><updated>2017-12-07T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2017-12-07:/nips2017-adversarial.html</id><summary type="html">&lt;p&gt;My teammate, Ross Wightman, and I recently placed 5th in the &lt;a href="https://www.kaggle.com/c/nips-2017-targeted-adversarial-attack"&gt;Targeted Adversarial Attack&lt;/a&gt; and 9th in the &lt;a href="https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack"&gt;Non-targeted Adversarial Attack&lt;/a&gt; competitions hosted on Kaggle as part of the NIPS 2017 competition track.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Aleksey Nozdryn-Plotnicki - Aleksey Nozdryn-Plotnicki</title><link href="/" rel="alternate"></link><link href="/feeds/aleksey-nozdryn-plotnicki.atom.xml" rel="self"></link><id>/</id><updated>2018-01-20T20:00:00+00:00</updated><entry><title>Generating Targeted Universal Adversarial Images from Discriminative Networks: Diagnostic Potential</title><link href="/adversarial-images-diagnostics.html" rel="alternate"></link><published>2018-01-20T20:00:00+00:00</published><updated>2018-01-20T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2018-01-20:/adversarial-images-diagnostics.html</id><summary type="html">&lt;style&gt;
+    .MathJax {
+        font-size: 4em;
+    }
+&lt;/style&gt;
+
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Analysing, visualizing, diagnosing, and interpreting neural networks is famously difficult. In my recent work in adversarial images, images that have been modified by an adversary in order to fool an image classifier (discriminator), I have discovered a new tool for this task. Similar things have been …&lt;/p&gt;</summary><content type="html">&lt;style&gt;
+    .MathJax {
+        font-size: 4em;
+    }
+&lt;/style&gt;
+
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Analysing, visualizing, diagnosing, and interpreting neural networks is famously difficult. In my recent work in adversarial images, images that have been modified by an adversary in order to fool an image classifier (discriminator), I have discovered a new tool for this task. Similar things have been tried before, but I don't believe with this success.&lt;/p&gt;
+&lt;p&gt;For a given DNN (deep neural network) classifier and a target class, it is possible to create a single change that when added to any image, it fools that network with high probability. It is possible to create this &lt;strong&gt;only&lt;/strong&gt; with the trained neural network and the data upon which it was trained. In practice it is not necessary to have the training data. Any approximately similar data should do.&lt;/p&gt;
+&lt;p&gt;Here are a few such changes for Google's Inception v3 trained on imagenet:&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div id=33 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/33.png" alt="loggerhead, loggerhead turtle, Caretta caretta" /&gt;&lt;br /&gt;
+&lt;a href="#33"&gt;loggerhead, loggerhead turtle, Caretta caretta&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=34 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/34.png" alt="leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea" /&gt;&lt;br /&gt;
+&lt;a href="#34"&gt;leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=35 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/35.png" alt="mud turtle" /&gt;&lt;br /&gt;
+&lt;a href="#35"&gt;mud turtle&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;div id=36 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/36.png" alt="terrapin" /&gt;&lt;br /&gt;
+&lt;a href="#36"&gt;terrapin&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=37 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/37.png" alt="box turtle, box tortoise" /&gt;&lt;br /&gt;
+&lt;a href="#37"&gt;box turtle, box tortoise&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;These images are vibrant, clear, interpretable, and obviously highly related to the target class. We can study these and see what the neural network has learned about each turtle class.&lt;/p&gt;
+&lt;p&gt;This is not just constrained to turtles, of course, but can be done with any imagenet class. I have created &lt;a href="pages/inception-v3-targeted-universal-attacks-page-6.html"&gt;1,000 such images, one for every class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Large cats:
+&lt;div class="row"&gt;
+&lt;div id=288 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/288.png" alt=leopard, Panthera pardus /&gt;&lt;br /&gt;
+&lt;a href="#288"&gt;leopard, Panthera pardus&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=289 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/289.png" alt=snow leopard, ounce, Panthera uncia /&gt;&lt;br /&gt;
+&lt;a href="#289"&gt;snow leopard, ounce, Panthera uncia&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=290 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/290.png" alt=jaguar, panther, Panthera onca, Felis onca /&gt;&lt;br /&gt;
+&lt;/div&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;a href="#290"&gt;jaguar, panther, Panthera onca, Felis onca&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=291 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/291.png" alt=lion, king of beasts, Panthera leo /&gt;&lt;br /&gt;
+&lt;a href="#291"&gt;lion, king of beasts, Panthera leo&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=292 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/292.png" alt=tiger, Panthera tigris /&gt;&lt;br /&gt;
+&lt;a href="#292"&gt;tiger, Panthera tigris&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=293 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/293.png" alt=cheetah, chetah, Acinonyx jubatus /&gt;&lt;br /&gt;
+&lt;a href="#293"&gt;cheetah, chetah, Acinonyx jubatus&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;Diagnosis&lt;/h1&gt;
+&lt;p&gt;Studying the images, it is possible to identify problems with the network, or perhaps with the dataset that it was trained on.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;div id=664 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/664.png" alt="monitor" /&gt;&lt;br /&gt;
+&lt;a href="#664"&gt;monitor&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Is that Chinese on the monitor? No it's not actual Chinese, but it is strange proto-Chinese that has been generated by the process. The network has learned that Chinese written over the image is a very strong indicator that it is a monitor. If you look at the imagenet training data, you will see that a large portion of the monitor images have been sourced from Alibaba and they have Chinese overlayed on the image.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;div id=670 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/670.png" alt=motor scooter, scooter /&gt;&lt;br /&gt;
+&lt;a href="#670"&gt;motor scooter, scooter&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=774 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/774.png" alt=sandal /&gt;&lt;br /&gt;
+&lt;a href="#774"&gt;sandal&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;div id=793 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/793.png" alt=shower cap /&gt;&lt;br /&gt;
+&lt;a href="#793"&gt;shower cap&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Monitor is not the only object with this problem, though it is perhaps the most striking.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;div id=978 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/978.png" alt=seashore, coast, seacoast, sea-coast /&gt;&lt;br /&gt;
+&lt;a href="#978"&gt;seashore, coast, seacoast, sea-coast&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Tourism is big business, and so a lot of the seashore images have English written on them, hence the funny proto-English above.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;div id=96 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/96.png" alt="toucan" /&gt;&lt;br /&gt;
+&lt;a href="#96"&gt;toucan&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;There is a distinct cage or net visible for the toucan. From a quick glance at the training data, about half of toucan images include some cage or net. This is not something that we would want our network to learn if we were training it to identify toucans in the wild!&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;div class="row"&gt;
+&lt;div id=78 class="col-md-4"&gt;&lt;center&gt;
+&lt;img src="/images/incv3_univ/78.png" alt="tick" /&gt;&lt;br /&gt;
+&lt;a href="#78"&gt;tick&lt;/a&gt;&lt;/center&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Clearly the network has learned a lot about &lt;strong&gt;where&lt;/strong&gt; you find ticks, not just what they look like. Here is a tuck buried in some long hair.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt;Creating Targeted Universal Images: The Math&lt;/h1&gt;
+&lt;p&gt;Creating a targeted universal image looks a lot like the routine for training a neural network, but instead of training the network to make the correct output, we train an image to make the network output the target instead of what is correct.&lt;/p&gt;
+&lt;p&gt;We use the crossy entropy loss, as was used to train the network.&lt;/p&gt;
+&lt;p&gt;The goal is to maximize the expected output for the target, &lt;span class="math"&gt;\(p_{target}\)&lt;/span&gt;, when the change &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; is made to a randomly selected image &lt;span class="math"&gt;\(x\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\max_{\delta}E_x[p_{target}]
+$$&lt;/div&gt;
+&lt;p&gt;We constrain the &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; to be to be no more than some &lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt; for each pixel value. This is the infinity norm constraint.&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\lvert\lvert\delta\lvert\lvert_\infty \leq \epsilon
+$$&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Change of Variable&lt;/h3&gt;
+&lt;p&gt;We perform a change of variable in order to do unconstrained optimization. For each pixel value &lt;span class="math"&gt;\(i\)&lt;/span&gt; we define a &lt;span class="math"&gt;\(\delta_i\)&lt;/span&gt; function that maps a new variable &lt;span class="math"&gt;\(w_i \in [-\infty,\infty]\)&lt;/span&gt; to &lt;span class="math"&gt;\(\delta_i\)&lt;/span&gt; values that obey the constraint:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\delta_i(w_i) = \epsilon\cdot tanh(w_i)
+$$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(tanh(w) \in (-1,1)\)&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;then &lt;span class="math"&gt;\(\delta_i(w_i) \in (-\epsilon,\epsilon)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We can them perform unconstrained stochastic gradient descent with optimizers like Adam.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Optimization&lt;/h3&gt;
+&lt;p&gt;Given a random &lt;span class="math"&gt;\(x\)&lt;/span&gt; from the dataset, we compute &lt;span class="math"&gt;\(p_{target} = f_{target}(x + \delta(w))\)&lt;/span&gt; where &lt;span class="math"&gt;\(f\)&lt;/span&gt; is the target neural network (i.e. inception v3).&lt;/p&gt;
+&lt;p&gt;Then we compute the gradient &lt;span class="math"&gt;\(\frac{\partial p_{target}}{\partial w}\)&lt;/span&gt;, pass it to the Adam optimizer, and take a step to maximize &lt;span class="math"&gt;\(p_{target}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Improving Results with Augmentations&lt;/h3&gt;
+&lt;p&gt;Deep Neural Networks are very easily fooled. Unless we do something, our optimization routine is likely to converge on images that exploit this weakness, rather than utilize the true properties of the target class. You can see some of this in the images that I have created, though I have taken steps to mitigate it. For example, the center of the big cat images above are largely trained to exploit DNN weaknesses rather than look like big cats.&lt;/p&gt;
+&lt;p&gt;We insert differentiable image augmentations between the changed image and the target network. &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; is calculated and added to the image. The result is clipped to be a valid image &lt;span class="math"&gt;\(x + \delta \in [0,255]\)&lt;/span&gt;. The image is randomly flipped horizontally, blurred with a Gaussian kernel, and randomly cropped. Finally the image is bilinearly resized back up to &lt;code&gt;(299,299)&lt;/code&gt; as expected by inception v3.&lt;/p&gt;
+&lt;p&gt;The augmetations can be thought of as a function &lt;span class="math"&gt;\(A(X)\)&lt;/span&gt; and we can consider our optimization to be seeking to maximize:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\max_{w}E_x[f_{target}(A(x + \delta(w)))]
+$$&lt;/div&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;When I began working with adversarial images I felt that therin lay some essential truth behind the functioning of neural networks. What I demonstrate here is a technique that offers diagnostic power in assessing a DNN CNN image classifier.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Paper: An infinity norm constrained attack for the NIPS 2017 Competition Track</title><link href="/nips2017-adversarial.html" rel="alternate"></link><published>2017-12-07T20:00:00+00:00</published><updated>2017-12-07T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2017-12-07:/nips2017-adversarial.html</id><summary type="html">&lt;p&gt;My teammate, Ross Wightman, and I recently placed 5th in the &lt;a href="https://www.kaggle.com/c/nips-2017-targeted-adversarial-attack"&gt;Targeted Adversarial Attack&lt;/a&gt; and 9th in the &lt;a href="https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack"&gt;Non-targeted Adversarial Attack&lt;/a&gt; competitions hosted on Kaggle as part of the NIPS 2017 competition track.&lt;/p&gt;
 &lt;p&gt;We've written a paper and it is &lt;a href="/papers/nips2017-adversarial-paper.pdf"&gt;available here&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;My teammate, Ross Wightman, and I recently placed 5th in the &lt;a href="https://www.kaggle.com/c/nips-2017-targeted-adversarial-attack"&gt;Targeted Adversarial Attack&lt;/a&gt; and 9th in the &lt;a href="https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack"&gt;Non-targeted Adversarial Attack&lt;/a&gt; competitions hosted on Kaggle as part of the NIPS 2017 competition track.&lt;/p&gt;
 &lt;p&gt;We've written a paper and it is &lt;a href="/papers/nips2017-adversarial-paper.pdf"&gt;available here&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Where do adversarial images come from?</title><link href="/where-do-adversarial-images-come-from.html" rel="alternate"></link><published>2017-10-29T20:00:00+00:00</published><updated>2017-10-29T20:00:00+00:00</updated><author><name>Aleksey Nozdryn-Plotnicki</name></author><id>tag:None,2017-10-29:/where-do-adversarial-images-come-from.html</id><summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;By reading this post, I hope that you will gain an intuitive understanding of adversarial examples. They are not as spooky and magical as they appear at first, and maybe it isn't even surprising that they exist. First, I will quickly cover what I mean by adversarial images. Second …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction&lt;/h1&gt;

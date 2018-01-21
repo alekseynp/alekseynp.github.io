@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Aleksey Nozdrn-Plotnicki">
+
+    <title>	Aleksey Nozdryn-Plotnicki
+</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- RSS FEEDS -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56820808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-56820808-1');
+    </script>
+
+
+</head>
+
+<body id="page-top" class="index">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Aleksey Nozdryn-Plotnicki</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            	<li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#portfolio">Projects</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#blog">Blog</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+	
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-text">
+                    <span class="name">Generating Targeted Universal Adversarial Images from Discriminative Networks: Diagnostic Potential</span>
+                    <hr class="star-light">
+                    2018-01-20
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <article>
+                <div class="content">
+                    <style>
+    .MathJax {
+        font-size: 4em;
+    }
+</style>
+
+<h1>Introduction</h1>
+<p>Analysing, visualizing, diagnosing, and interpreting neural networks is famously difficult. In my recent work in adversarial images, images that have been modified by an adversary in order to fool an image classifier (discriminator), I have discovered a new tool for this task. Similar things have been tried before, but I don't believe with this success.</p>
+<p>For a given DNN (deep neural network) classifier and a target class, it is possible to create a single change that when added to any image, it fools that network with high probability. It is possible to create this <strong>only</strong> with the trained neural network and the data upon which it was trained. In practice it is not necessary to have the training data. Any approximately similar data should do.</p>
+<p>Here are a few such changes for Google's Inception v3 trained on imagenet:</p>
+<div class="row">
+<div id=33 class="col-md-4"><center>
+<img src="/images/incv3_univ/33.png" alt="loggerhead, loggerhead turtle, Caretta caretta" /><br />
+<a href="#33">loggerhead, loggerhead turtle, Caretta caretta</a></center></div>
+<div id=34 class="col-md-4"><center>
+<img src="/images/incv3_univ/34.png" alt="leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea" /><br />
+<a href="#34">leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea</a></center></div>
+<div id=35 class="col-md-4"><center>
+<img src="/images/incv3_univ/35.png" alt="mud turtle" /><br />
+<a href="#35">mud turtle</a></center></div>
+</div>
+
+<p><br />
+<div class="row">
+<div id=36 class="col-md-4"><center>
+<img src="/images/incv3_univ/36.png" alt="terrapin" /><br />
+<a href="#36">terrapin</a></center></div>
+<div id=37 class="col-md-4"><center>
+<img src="/images/incv3_univ/37.png" alt="box turtle, box tortoise" /><br />
+<a href="#37">box turtle, box tortoise</a></center></div>
+</div></p>
+<p>These images are vibrant, clear, interpretable, and obviously highly related to the target class. We can study these and see what the neural network has learned about each turtle class.</p>
+<p>This is not just constrained to turtles, of course, but can be done with any imagenet class. I have created <a href="pages/inception-v3-targeted-universal-attacks-page-6.html">1,000 such images, one for every class</a>.</p>
+<p>Large cats:
+<div class="row">
+<div id=288 class="col-md-4"><center>
+<img src="/images/incv3_univ/288.png" alt=leopard, Panthera pardus /><br />
+<a href="#288">leopard, Panthera pardus</a></center></div>
+<div id=289 class="col-md-4"><center>
+<img src="/images/incv3_univ/289.png" alt=snow leopard, ounce, Panthera uncia /><br />
+<a href="#289">snow leopard, ounce, Panthera uncia</a></center></div>
+<div id=290 class="col-md-4"><center>
+<img src="/images/incv3_univ/290.png" alt=jaguar, panther, Panthera onca, Felis onca /><br />
+</div><br />
+<div class="row">
+<a href="#290">jaguar, panther, Panthera onca, Felis onca</a></center></div>
+<div id=291 class="col-md-4"><center>
+<img src="/images/incv3_univ/291.png" alt=lion, king of beasts, Panthera leo /><br />
+<a href="#291">lion, king of beasts, Panthera leo</a></center></div>
+<div id=292 class="col-md-4"><center>
+<img src="/images/incv3_univ/292.png" alt=tiger, Panthera tigris /><br />
+<a href="#292">tiger, Panthera tigris</a></center></div>
+<div id=293 class="col-md-4"><center>
+<img src="/images/incv3_univ/293.png" alt=cheetah, chetah, Acinonyx jubatus /><br />
+<a href="#293">cheetah, chetah, Acinonyx jubatus</a></center></div>
+</div>
+<br /></p>
+<h1>Diagnosis</h1>
+<p>Studying the images, it is possible to identify problems with the network, or perhaps with the dataset that it was trained on.</p>
+<p><br />
+<div class="row">
+<div id=664 class="col-md-4"><center>
+<img src="/images/incv3_univ/664.png" alt="monitor" /><br />
+<a href="#664">monitor</a></center></div>
+</div>
+<br /></p>
+<p>Is that Chinese on the monitor? No it's not actual Chinese, but it is strange proto-Chinese that has been generated by the process. The network has learned that Chinese written over the image is a very strong indicator that it is a monitor. If you look at the imagenet training data, you will see that a large portion of the monitor images have been sourced from Alibaba and they have Chinese overlayed on the image.</p>
+<p><br />
+<div class="row">
+<div id=670 class="col-md-4"><center>
+<img src="/images/incv3_univ/670.png" alt=motor scooter, scooter /><br />
+<a href="#670">motor scooter, scooter</a></center></div>
+<div id=774 class="col-md-4"><center>
+<img src="/images/incv3_univ/774.png" alt=sandal /><br />
+<a href="#774">sandal</a></center></div>
+<div id=793 class="col-md-4"><center>
+<img src="/images/incv3_univ/793.png" alt=shower cap /><br />
+<a href="#793">shower cap</a></center></div>
+</div>
+<br /></p>
+<p>Monitor is not the only object with this problem, though it is perhaps the most striking.</p>
+<p><br />
+<div class="row">
+<div id=978 class="col-md-4"><center>
+<img src="/images/incv3_univ/978.png" alt=seashore, coast, seacoast, sea-coast /><br />
+<a href="#978">seashore, coast, seacoast, sea-coast</a></center></div>
+</div>
+<br /></p>
+<p>Tourism is big business, and so a lot of the seashore images have English written on them, hence the funny proto-English above.</p>
+<p><br />
+<div class="row">
+<div id=96 class="col-md-4"><center>
+<img src="/images/incv3_univ/96.png" alt="toucan" /><br />
+<a href="#96">toucan</a></center></div>
+</div>
+<br /></p>
+<p>There is a distinct cage or net visible for the toucan. From a quick glance at the training data, about half of toucan images include some cage or net. This is not something that we would want our network to learn if we were training it to identify toucans in the wild!</p>
+<p><br />
+<div class="row">
+<div id=78 class="col-md-4"><center>
+<img src="/images/incv3_univ/78.png" alt="tick" /><br />
+<a href="#78">tick</a></center></div>
+</div>
+<br /></p>
+<p>Clearly the network has learned a lot about <strong>where</strong> you find ticks, not just what they look like. Here is a tuck buried in some long hair.</p>
+<p><br /></p>
+<h1>Creating Targeted Universal Images: The Math</h1>
+<p>Creating a targeted universal image looks a lot like the routine for training a neural network, but instead of training the network to make the correct output, we train an image to make the network output the target instead of what is correct.</p>
+<p>We use the crossy entropy loss, as was used to train the network.</p>
+<p>The goal is to maximize the expected output for the target, <span class="math">\(p_{target}\)</span>, when the change <span class="math">\(\delta\)</span> is made to a randomly selected image <span class="math">\(x\)</span>.</p>
+<div class="math">$$
+\max_{\delta}E_x[p_{target}]
+$$</div>
+<p>We constrain the <span class="math">\(\delta\)</span> to be to be no more than some <span class="math">\(\epsilon\)</span> for each pixel value. This is the infinity norm constraint.</p>
+<div class="math">$$
+\lvert\lvert\delta\lvert\lvert_\infty \leq \epsilon
+$$</div>
+<p><br /></p>
+<h3>Change of Variable</h3>
+<p>We perform a change of variable in order to do unconstrained optimization. For each pixel value <span class="math">\(i\)</span> we define a <span class="math">\(\delta_i\)</span> function that maps a new variable <span class="math">\(w_i \in [-\infty,\infty]\)</span> to <span class="math">\(\delta_i\)</span> values that obey the constraint:</p>
+<div class="math">$$
+\delta_i(w_i) = \epsilon\cdot tanh(w_i)
+$$</div>
+<p>Since <span class="math">\(tanh(w) \in (-1,1)\)</span> </p>
+<p>then <span class="math">\(\delta_i(w_i) \in (-\epsilon,\epsilon)\)</span></p>
+<p>We can them perform unconstrained stochastic gradient descent with optimizers like Adam.</p>
+<p><br /></p>
+<h3>Optimization</h3>
+<p>Given a random <span class="math">\(x\)</span> from the dataset, we compute <span class="math">\(p_{target} = f_{target}(x + \delta(w))\)</span> where <span class="math">\(f\)</span> is the target neural network (i.e. inception v3).</p>
+<p>Then we compute the gradient <span class="math">\(\frac{\partial p_{target}}{\partial w}\)</span>, pass it to the Adam optimizer, and take a step to maximize <span class="math">\(p_{target}\)</span>.</p>
+<p><br /></p>
+<h3>Improving Results with Augmentations</h3>
+<p>Deep Neural Networks are very easily fooled. Unless we do something, our optimization routine is likely to converge on images that exploit this weakness, rather than utilize the true properties of the target class. You can see some of this in the images that I have created, though I have taken steps to mitigate it. For example, the center of the big cat images above are largely trained to exploit DNN weaknesses rather than look like big cats.</p>
+<p>We insert differentiable image augmentations between the changed image and the target network. <span class="math">\(\delta\)</span> is calculated and added to the image. The result is clipped to be a valid image <span class="math">\(x + \delta \in [0,255]\)</span>. The image is randomly flipped horizontally, blurred with a Gaussian kernel, and randomly cropped. Finally the image is bilinearly resized back up to <code>(299,299)</code> as expected by inception v3.</p>
+<p>The augmetations can be thought of as a function <span class="math">\(A(X)\)</span> and we can consider our optimization to be seeking to maximize:
+</p>
+<div class="math">$$
+\max_{w}E_x[f_{target}(A(x + \delta(w)))]
+$$</div>
+<h1>Conclusion</h1>
+<p>When I began working with adversarial images I felt that therin lay some essential truth behind the functioning of neural networks. What I demonstrate here is a technique that offers diagnostic power in assessing a DNN CNN image classifier.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+	
+
+<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Aleksey Nozdryn-Plotnicki <script>document.write(new Date().getFullYear())</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+	
+	
+
+
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jquery-1.11.0.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/bootstrap.min.js"></script>
+		
+	
+		<!-- script is a url -->
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/classie.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/cbpAnimatedHeader.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jqBootstrapValidation.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/contact_me.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/freelancer.js"></script>
+		
+	
+
+</body>
+
+</html>
