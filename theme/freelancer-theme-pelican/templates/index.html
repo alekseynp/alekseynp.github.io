@@ -1,0 +1,450 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{SITENAME}}
+{% endblock %}
+
+{% block nav %}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ SITEURL }}">{{SITENAME}}</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            {% for link, title  in NAVLINKS %}
+            	{%if title == '' %}
+            	<li class="hidden">
+                    <a href="{{link}}"></a>
+                </li>
+                {% else %}
+                <li class="page-scroll">
+                    <a href="{{link}}">{{title}}</a>
+                </li>
+                {% endif %}
+            {% endfor %}                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+	
+{% endblock %}
+
+{% block header %}
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" alt="">
+                <div class="intro-text">
+                    <span class="name">{{SITENAME}}</span>
+                    <hr class="star-light">
+                    <span class="skills">{{SITESUBTITLE}}</span>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://twitter.com/alekseynp">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://ca.linkedin.com/in/alekseynozdrynplotnicki">
+                                <i class="fa fa-fw fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://github.com/alekseynp">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="mailto:me@alekseynp.com">
+                                <i class="fa fa-fw fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://www.flickr.com/photos/alekseynp/">
+                                <i class="fa fa-fw fa-flickr"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+	
+{% endblock %}
+
+{% block content %}
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{{ PORTFOLIO }}</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/nips.png" class="img-responsive" alt="">
+            </a>
+        </div>
+
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/hailsense.png" class="img-responsive" alt="">
+            </a>
+        </div>
+
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal0" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/vcg.png" class="img-responsive" alt="">
+            </a>
+        </div>
+
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/landmarklens.png" class="img-responsive" alt="">
+            </a>
+        </div>
+
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/webviz.png" class="img-responsive" alt="">
+            </a>
+        </div>
+
+        <div class="col-sm-4 portfolio-item">
+            <a href="#pm-sunshine" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/sunshine_list.jpg" class="img-responsive" alt="">
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="speaking">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>SPEAKING</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <p>2018-02-25 - Machine Learning for Product Managers - An Intro - <a href="http://www.productcampvancouver.org">ProductCamp Vancouver</a></p>
+            <p>2018-02-25 - Machine Learning for Product Managers - Developing a Business Case - <a href="http://www.productcampvancouver.org">ProductCamp Vancouver</a></p>
+            <p>2018-02-19 - A Machine Learning 3D Computer Vision System Deployed to AWS - <a href="https://www.meetup.com/LearnDataScience/events/247568688/">AI in Production Meetup</a></p>
+            <p>2017-11-30 - NIPS 2017 Adversarial Attacks and Defenses <a href="https://www.youtube.com/watch?v=8e0kFtdDi6c">YouTube: <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span></a> - <a href="https://www.meetup.com/LearnDataScience/events/245170251/">Kaggle Competitions Meetup</a></p>
+            <p>2017-02-08 - Discuss Data Visualization Beyond the Screen! - <a href="https://www.meetup.com/Vancouver-Data-Visualization/events/236905093/">Vancouver Data Visualization Meetup</a></p>
+            <p>2014-08-12 - Augmented Reality Birds of a Feather - <a href="http://s2014.siggraph.org/attendees/birds-feather.html">SIGGRAPH 2014</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>BLOG</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+
+        <div class="row">
+        {% if articles %}
+			{% for article in articles_page.object_list %}
+            <div class="col-lg-12 text-left">
+		        <article>
+	                {{ article.date.strftime('%Y-%m-%d') }} <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                    <hr />
+		        </article>
+            </div>
+			{% endfor %}
+        {% endif %}
+            
+        </div>
+    </div>
+</section>
+
+	
+{% endblock %}
+
+{% block list %}
+
+<!-- Blog Section -->
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>BLOG</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+
+        <div class="row">
+        {% if articles %}
+{% for article in articles_page.object_list %}
+    <li>
+        <article>
+            <header>
+                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+            </header>
+            <footer>
+                {{ article.locale_date }}
+            </footer>
+            <div class="content">{{ article.summary }}</div>
+        </article>
+    </li>
+{% endfor %}
+        {% endif %}
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block modals %}
+<!-- Portfolio Modals -->
+
+<div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>VanCityGrowler</h2>
+                        <hr class="star-primary">
+                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/vcg.png" class="img-responsive img-centered" alt="">
+                        <p>VanCityGrowler is a website and twitter bot that helps you find the beer you're looking for at Vancouver's craft breweries.</p>
+                        <p>The project runs entirely serverless on AWS.</p>
+                        <p>Aleksey is the sole developer on the project and collabroates with another local craft beer enthusiast.</p>
+                        <ul class="list-inline item-details">
+                            <li>Date:<strong>2017</strong></li>
+                            <li>Link: <strong><a href="http://vancitygrowler.ca">VanCityGrowler.ca</a></strong></li>
+                            <li>Technologies: <strong>AWS (especially Lambda), Python</strong></li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Landmark Lens</h2>
+                        <hr class="star-primary">
+                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/landmarklens.png" class="img-responsive img-centered" alt="">
+                        <p>Landmark Lens is an iOS app. Take photos in crowded places. Landmark Lens removes people, cars, and moving objects. ​Use a tripod, make a stand, or lean your phone against something. Press start and the app does the rest. ​Get the perfect shot of a landmark without any pesky tourists in it. No getting up at sunrise or waiting forever for all of the people to leave.</p>
+                        <p>Aleksey worked with two other collaborators to bring the app to market. Aleksey contributed in image processing research, product management, and limited production code.</p>
+                        <ul class="list-inline item-details">
+                            <li>Date:<strong>2016</strong></li>
+                            <li>Link: <strong><a href="http://www.landmarklens.com">Landmark Lens</a></strong></li>
+                            <li>Technologies: <strong>Matlab, iOS, Swift</strong></li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Hailsense</h2>
+                        <hr class="star-primary">
+                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/hailsense.png" class="img-responsive img-centered" alt="">
+                        <p>Hailsense is NGRAIN's new AI-driven hail damage assessment product. We use machine learning to size and count hail dents in 3D scans of hail damaged vehicles in order to create accurate, objective, and consistent repair estimates.</p>
+                        <p>Hailsense is a web application with an AWS back-end for heavy lifting.</p>
+                        <p>Aleksey led the machine learning research effort, faces the customer and leads development as Product Manager, and writes production code when necessary.</p>
+                        <ul class="list-inline item-details">
+                            <li>Date: <strong>2016/17</strong></li>
+                            <li>Link: <strong><a href="http://hailsense.ngrain.com">Hailsense</a></strong></li>
+                            <li>Technologies: <strong>3D Triangular Meshes, Python, XGBoost, Theano/Lasagne, AWS, Django, 3D Scanners</strong></li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>NIPS 2017 Adversarial Images Challenge</h2>
+                        <hr class="star-primary">
+                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/nips.png" class="img-responsive img-centered" alt="">
+                        <p>Aleksey participated in the 2017 NIPS Competition Track Adversarial Images Challenge has hosted on Kaggle. After winning $1,000 Google Cloud Platform credits by finishing 1st in the first defense development round, he teamed up with Ross Wightman for additional submissoins. Together they placed gold in all three competitions, finishing 5th, 9th, and 9th.</p>
+                        <p>They published a paper on their attack <a href="papers/nips2017-adversarial-paper.pdf">here</a>.</p>
+                        <ul class="list-inline item-details">
+                            <li>Date: <strong>Summer 2017</strong></li>
+                            <li>Technologies: <strong>Convolutional Neural Networks (CNN), Adversarial Images, Python, Pytorch, Tensorflow</strong></li>
+                            <li>Sub-Competitions: <strong><a href="https://www.kaggle.com/c/nips-2017-targeted-adversarial-attack">Targeted Attack</a>, <a href="https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack">Non-Targeted Attack</a>, <a href="https://www.kaggle.com/c/nips-2017-defense-against-adversarial-attack">Defense</a></strong></li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Interactive Web Visualizations</h2>
+                        <hr class="star-primary">
+                        <p>In 2012-2014 Aleksey put out a flurry of interactive web visualizations built on D3.js<p>
+                        <p><a href="viz/global-games-regional-sports-london-2012-olympics.html"><img src="images/showcase_london2012_340.png" alt="showcase_london2012_340" /></a>
+                        <a href="viz/mcfc-opta-passing-permier-league-2011-12.html"><img src="images/showcase_passingdirection_340.png" alt="showcase_passingdirection_340" /></a></p>
+                        <p><a href="viz/english-football-tickets-value-for-money.html"><img src="images/showcase_footievalue_340.png" alt="showcase_footievalue_340" /></a> <a href="viz/who-won-the-olympics.html"><img src="images/showcase_whowontheolympics_340.png" alt="showcase_whowontheolympics_340" /></a></p>
+                        <p><a href="viz/k-means.html"><img src="images/showcase_kmeans_340.png" alt="showcase_kmeans_340" /></a></p>
+
+                        <p><a href="viz/k-means.html">K-means Clustering</a></p>
+                        <p><a href="viz/global-games-regional-sports-london-2012-olympics.html">Global Games, Regional Sports - London 2012</a></p>
+                        <p><a href="viz/global-games-regional-sports-vancouver-2010-olympics.html">Global Games, Regional Sports - Vancouver 2010</a></p>
+                        <p><a href="viz/mcfc-opta-passing-permier-league-2011-12.html">Passing Direction</a></p>
+                        <p><a href="viz/paid-to-win.html">Paid to Win</a></p>
+                        <p><a href="viz/english-football-tickets-value-for-money.html">English Football Value</a></p>
+                        <p><a href="viz/who-won-the-olympics.html">Who won the Olympics?</a></p>
+                        <p><a href="viz/create-visualisations/infowheel4/infoWheel.html">Create Info Wheel (4-level)</a></p>
+                        <p><a href="viz/create-visualisations/reingold-Tilford_Tree4/Reingold_Tilford_Tree.html">Create Info Tree (4-level)</a></p>
+                        <ul class="list-inline item-details">
+                            <li>Date: <strong>2012-2014</strong></li>
+                            <li>Technologies: <strong>D3.js, Javascript</strong></li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="pm-sunshine" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Ontario Sunshine List</h2>
+                        <hr class="star-primary">
+                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/portfolio/sunshine_list.jpg" class="img-responsive img-centered" alt="">
+                        <p>In 2012-2014 Aleksey did some extensive analysis of the publicly available Ontario "Sunshine List". A public disclosure of the salaries of the best paid public workers in Ontario. His work was referenced in both the National Post and in the CBC.<p>
+                        <p>For all of the blog articles written during that period, click <a href="category/ontario-sunshine-list.html">here</a>.</p>
+                        <ul class="list-inline item-details">
+                            <li>Date: <strong>2012-2014</strong></li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
