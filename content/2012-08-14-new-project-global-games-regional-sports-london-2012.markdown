@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2012-08-14 15:20:37+00:00
 slug: new-project-global-games-regional-sports-london-2012
-title: 'New Project: Global Games, Regional Sports - London 2012'
+title: New Project: Global Games, Regional Sports - London 2012
 ---
 
 Today I am publishing a project that I have been working on over the last couple of weeks during the 2012 Summer Olympics here in London. The essential question I asked was: If you calculate the weighted geographical midpoint of each sport at the Olympics, do you get an interesting result? I think the answer is yes, and I built a visualisation to support exploring it.

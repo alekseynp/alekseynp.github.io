@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2013-08-01 04:38:45+00:00
 slug: visualising-on-line-conversations-mooc-for-credit-discussion
-title: 'Visualising on-line conversations: MOOC for-credit "discussion"'
+title: Visualising on-line conversations: MOOC for-credit "discussion"
 ---
 
 Visualizing discussions is an interesting challenge. In this post I use a simple technique in the context of discussions in an on-line course.

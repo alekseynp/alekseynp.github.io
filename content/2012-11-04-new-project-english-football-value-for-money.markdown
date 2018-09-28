@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2012-11-04 22:34:06+00:00
 slug: new-project-english-football-value-for-money
-title: 'New Project: English Football Value for Money'
+title: New Project: English Football Value for Money
 ---
 
 The Guardian Data Blog has made available for download both the BBC Price of Football Survey data and the Premier League Accounts data, and I thought it would be interesting to mash them up and look for value for money on tickets. I did the analysis and produced the following:

@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2015-03-24 20:00:00+00:00
 slug: gist-pathologists
-title: Ontarion Sunshine List Pathologists Notebook
+title: Ontario Sunshine List Pathologists Notebook
 category: Ontario Sunshine list
 ---
 

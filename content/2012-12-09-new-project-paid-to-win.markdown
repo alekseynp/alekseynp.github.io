@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2012-12-09 16:51:41+00:00
 slug: new-project-paid-to-win
-title: 'New Project: Paid to Win'
+title: New Project: Paid to Win
 ---
 
 Here's one I had ready to go four weeks ago, but the unreliability of my current web provider got the better of me. This is another piece working from the BBC Price of Football Survey data, only this time mashing it up with league tables available from Wikipedia. I ask where you find the cheapest goals and cheapest wins throughout the English and Scottish Football leagues:  

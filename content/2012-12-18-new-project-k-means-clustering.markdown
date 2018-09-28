@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2012-12-18 17:00:35+00:00
 slug: new-project-k-means-clustering
-title: 'New Project: K-means Clustering'
+title: New Project: K-means Clustering
 ---
 
 When it comes to data visualisation design, it's always important to consider your purpose and your audience. Are you trying to convince your audience of a particular point of view? Are you giving your audience an platform from which to explore and find their own insights? In my latest piece I take a step down a less discussed path.

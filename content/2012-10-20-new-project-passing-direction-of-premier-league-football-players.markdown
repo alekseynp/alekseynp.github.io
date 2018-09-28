@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2012-10-20 12:33:36+00:00
 slug: new-project-passing-direction-of-premier-league-football-players
-title: 'New Project: Passing Direction of Premier League Football Players'
+title: New Project: Passing Direction of Premier League Football Players
 ---
 
 The guys over at [MCFC Analytics](http://www.mcfc.co.uk/the-club/mcfc-analytics) have released a dataset for the entire 2010-11 English Premier League Football season. This has generated a number of visuals on passing. For the time being, only aggregate by-game data is available for the entire season, but in-game event data for all games should follow. This is my first project, likely in a series on MCFC data.

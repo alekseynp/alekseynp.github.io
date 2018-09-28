@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2013-02-25 19:20:28+00:00
 slug: create-information-wheel
-title: 'Create: Information Wheel'
+title: Create: Information Wheel
 ---
 
 Today I am releasing a tool that allows users to create and export an Information Wheel.  

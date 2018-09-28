@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2013-10-24 21:45:40+00:00
 slug: update-average-shot-locations-nba-regular-season-2012-13
-title: 'Update: Average shot locations - NBA Regular Season 2012-13'
+title: Update: Average shot locations - NBA Regular Season 2012-13
 ---
 
 Here are two updated charts following up from my[ previous post](average-made-shot-location-nba-regular-season-2012-13.html).

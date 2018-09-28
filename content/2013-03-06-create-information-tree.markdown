@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2013-03-06 22:44:25+00:00
 slug: create-information-tree
-title: 'Create: Information Tree'
+title: Create: Information Tree
 ---
 
 Today I am releasing another tool that allows users to create and export a diagram/visualisation. Today it is an Information Tree.  

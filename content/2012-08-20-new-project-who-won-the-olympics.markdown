@@ -2,7 +2,7 @@
 author: Aleksey Nozdryn-Plotnicki
 date: 2012-08-20 17:35:36+00:00
 slug: new-project-who-won-the-olympics
-title: 'New Project: Who Won the Olympics?'
+title: New Project: Who Won the Olympics?
 ---
 
 The 2012 London Summer Olympics are over and the medals are tallied. As it is probably the most nationalistic event of the year, we all look to the medal tables to see how our nation did. So, "Who won the Olympics?". Like any good question, the answer is: It depends.
