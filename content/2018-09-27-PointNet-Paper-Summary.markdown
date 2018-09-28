@@ -33,7 +33,7 @@ There's a lot going on in this paper. I highlight the most important parts below
 
 6. Other Comments
 
-
+<br />
 ## Deep Learning on Unordered Sets
 
 **This is a powerful idea that is useful for anyone working in Machine Learning, not at all limited to point clouds or computer vision applications.**
@@ -61,13 +61,14 @@ Why this works on point clouds is hard to wrap your head around. Suppose instead
 
 In the Zillow Kaggle competition I experimented with PointNets. When predicting the value of a house, we could use statistical aggregate metrics about the neighbourhood it falls in, but we could also consider the k nearest houses as an unordered set that we could use to make predictions from. In a sense, the statistical measures like mean, median, standard deviation, etc. are engineered features and a DNN learning on the set has a chance of learning its own features. That may sound esoteric, but it is the classic story when using DNNs for computer vision applications vs. how those tasks were solved in the past.
 
-
+<br />
 ## Point Clouds
 
 Classifying 2D images has been done to death, but what about 3D data? Most of the 3D graphics we see in everyday life are triangular meshes. Millions of triangles rendered on a screen to make your video game or movie. However, the typical data format that comes from a 3D sensor is a point cloud. Some kind of sensor measures the 3D environment and generates an unordered list of $(x, y, z)$ coordinates. If you look at the raw data it doesn't look like much, but if you did a `plot3d` on it, you would be able to see it and guess what it is.
 
 In particular the authors run experiments on *ModelNet40* a benchmark dataset not unlike CIFAR-10 or CIFAR-100. The native data format for ModelNet40 is actually a triangular mesh, so converting it to point clouds is a little artificial, but it makes for a worthwhile benchmark to do research against. The authors achieve very good results on the benchmark with their approach.
 
+<br />
 ## Architecture
 
 Their architecture is at the top of page 3. For a first time reader of this paper, the "input transform" and "feature transform" from the "joint alignment networks" are best ignored and not important. They contribute very little to performance in the end. One should also understand the classification case before studying the segmentation.
@@ -82,6 +83,7 @@ The basic classification architecture is:
 
 4. MLP fully connected with size 512, 256, k where k is the number of classes mapping $R^{1024}\rightarrow R^k$
 
+<br />
 ## Implementation
 
 It's worth seeing their clever implementation [here](https://github.com/charlesq34/pointnet/blob/master/models/pointnet_cls.py)
@@ -96,12 +98,14 @@ It's worth seeing their clever implementation [here](https://github.com/charlesq
 
 You could also implement this as 1D convolutions starting with a input of shape `(batch_size, 3, n)` (channels first notation) and indeed I do in my own work.
 
+<br />
 ## Why does it work on point clouds?
 
 Each of the 1024 output features from the $h()$ can be thought of as point detectors. These numbers are derived only from 3 inputs! Some of these feature are excited by points that are very far from the origin. Some are excited by points below the origin. Some are excited by points in an arc in front of the origin. Before the max pool, each input point has excited some of the feature space elements, and after the max pool we have a summary of how the point cloud excited the features. A summary of where the points are.
 
 Maybe the visualizations in figure 19 on page 15 would help.
 
+<br />
 ## Other Comments
 
 ### Extensions
@@ -109,12 +113,14 @@ Maybe the visualizations in figure 19 on page 15 would help.
 The major limitation of their architecture is that it makes no use of local structure and cannot learn hierarchical features. There is a [
 PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/abs/1706.02413) that is worth looking up.
 
+<br />
 ### Comparison to VoxNet
 
 Why, in Supplementary B, do they make a point of demonstrating their superior robustness vs. VoxNet?
 
 Voxels are an alternative approach for classifying 3D objects. In the case of ModelNet40, the triangular meshes are converted to a 3D grid where each cell in the grid is occupied or not. Think about converting the 3D models to LEGO. After that, 3D CNNs can be applied in an analogous way to how 2D CNNs are applied for image classification. Converting the ModelNet40 triangular meshes to point clouds for this paper was an unfortunate necessity, but it's worth noting that voxel based approaches are also inelegant. Ultimately we should strive to process data in its native format. In the case of voxels, they are complete garbage if your input data is a sparse point cloud, or a point cloud that is in places sparse. This is because a sparse pount cloud converted to a voxel grid will provide only a few occupied cells. A 3DNN will then be mostly convolving across zeros and will struggle to learn anything. It's worth noting that this sparseness is actually a *very* common phenomenon in real world point clouds. They tend to be stupidly dense in some areas and frustratingly sparse in others as a consequence of the technology that gathers them.
 
+<br />
 ### Effect of Bottleneck Dimension and Number of Input Points
 
 The Supplementary F section is interesting to a practitioner and figure 15 in particular:
