@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Aleksey Nozdryn-Plotnicki - Aleksey Nozdryn-Plotnicki</title><link>/</link><description></description><lastBuildDate>Thu, 27 Sep 2018 12:00:00 +0000</lastBuildDate><item><title>Paper Summary: PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation</title><link>/pointnet-paper-summary.html</link><description>&lt;style&gt;
+<rss version="2.0"><channel><title>Aleksey Nozdryn-Plotnicki - Aleksey Nozdryn-Plotnicki</title><link>/</link><description></description><lastBuildDate>Mon, 11 Feb 2019 12:00:00 +0000</lastBuildDate><item><title>Paper Summary: mixup: Beyond Empirical Risk Minimization</title><link>/mixup-paper-summary.html</link><description>&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is summary of &lt;a href="https://arxiv.org/abs/1710.09412"&gt;mixup: Beyond Empirical Risk Minimization&lt;/a&gt; for the &lt;a href="https://www.meetup.com/LearnDataScience/"&gt;Vancouver Data Science Reading Group&lt;/a&gt;. It was a poster paper at ICLR 2018. &lt;/p&gt;
+&lt;p&gt;The paper authors are: Hongyi Zhang (MIT), Moustapha Cisse (FAIR), Yann N. Dauphin (FAIR), David Lopez-Paz (FAIR)&lt;/p&gt;
+&lt;p&gt;There's code!: &lt;a href="https://github.com/facebookresearch/mixup-cifar10"&gt;CIFAR10&lt;/a&gt; and &lt;a href="ttps://github.com/hongyi-zhang/mixup"&gt;more code from the …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aleksey Nozdryn-Plotnicki</dc:creator><pubDate>Mon, 11 Feb 2019 12:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-02-11:/mixup-paper-summary.html</guid></item><item><title>Paper Summary: PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation</title><link>/pointnet-paper-summary.html</link><description>&lt;style&gt;
     .MathJax {
         font-size: 1em;
     }

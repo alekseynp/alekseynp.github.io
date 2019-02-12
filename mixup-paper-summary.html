@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Aleksey Nozdrn-Plotnicki">
+
+    <title>	Aleksey Nozdryn-Plotnicki
+</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- RSS FEEDS -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56820808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-56820808-1');
+    </script>
+
+
+</head>
+
+<body id="page-top" class="index">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Aleksey Nozdryn-Plotnicki</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            	<li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#portfolio">Projects</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#blog">Blog</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+	
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-text">
+                    <span class="name">Paper Summary: mixup: Beyond Empirical Risk Minimization</span>
+                    <hr class="star-light">
+                    2019-02-11
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <article>
+                <div class="content">
+                    <h2>Introduction</h2>
+<p>This is summary of <a href="https://arxiv.org/abs/1710.09412">mixup: Beyond Empirical Risk Minimization</a> for the <a href="https://www.meetup.com/LearnDataScience/">Vancouver Data Science Reading Group</a>. It was a poster paper at ICLR 2018. </p>
+<p>The paper authors are: Hongyi Zhang (MIT), Moustapha Cisse (FAIR), Yann N. Dauphin (FAIR), David Lopez-Paz (FAIR)</p>
+<p>There's code!: <a href="https://github.com/facebookresearch/mixup-cifar10">CIFAR10</a> and <a href="ttps://github.com/hongyi-zhang/mixup">more code from the authors</a> and <a href="https://github.com/tensorpack/tensorpack/tree/master/examples/ResNet#cifar10-preact18-mixuppy">TF code linked by the authors</a>.</p>
+<p><br /></p>
+<h2>Why should you care?</h2>
+<blockquote>
+<p>mixup allows a new state-of-the-art performance in the CIFAR-10, CIFAR100, and ImageNet-2012 image classification datasets </p>
+</blockquote>
+<p>The only way practitioners think about doing classification in deep learning is by minimizing categorical cross entropy loss against one hot encoded vectors. This paper presents a viable alternative.</p>
+<p>What is Empirical Risk Minimization?
+The authors actually do a very good job of building up expected risk, empirical risk, and finally vicinal risk. They are actually quite generous to the reader and walk us through what is probably boring elementary theory for some research audiences.</p>
+<p>The key takeaway here is that data augmentation isn’t just something that engineers do in order to make their data set feel bigger or something that you bolt on to your training loop. Data augmentation is actually a fundamental component of how we formulate our problem. There are other ways of formulating the problem whose implementations might look like data augmentation, and mixup is one of them.</p>
+<p><br /></p>
+<h2>What is it?</h2>
+<h3>A Cheap Engineering Hack</h3>
+<p>Instead of training your model to output a class given a training example, randomly interpolate between two training examples and train your model to output the same interpolated class. In a CIFAR10 example, we might randomly draw a interpolation of 0.2. Take a photo of an airplane and a photo of an automobile and mix then 20%/80% pixel-wise on their RGB values. Compute your loss against a target out vector with a 20% probability for airplane and 80% for automobile. Done. Easy to do, if a bit bizarre to do with images.</p>
+<p>Mixup gets better results and it is a drop-in replacement in normal training routine with nearly zero cost or complexity.</p>
+<h3>A Wise Reformulation</h3>
+<p>In a classification problem we can think of our training data as being points in a high dimensional space. With mixup we re-formulate the problem so that our data is a fully connected graph where the vectors between training examples define the way in which our function outputs change.</p>
+<p><br /></p>
+<h2>What is the impact?</h2>
+<p>We end up with a lot of training examples that would never arise in the real world, but we also gain access to a rich vicinity. Most of images that are 20% of the way from an automobile to an airplane are bizarre unnatural images or images with a little structured noise. However, almost all of those images should be classified as automobile (argmax([0.8, 0.2]) and some of those images may actually start to look a little like an airplane (maybe even 20%).</p>
+<p>Interpolating spectrograms for audio classification like in their section 3.3 makes a whole lot more sense than images in sections 3.1 and 3.2.</p>
+<p>They:</p>
+<ul>
+<li>Eek out small improvements in classification error in the ImageNet 2012 benchmark</li>
+<li>Improved classification error on CIFAR-10 and CIFAR-100 image classification benchmarks</li>
+<li>Show other interesting results, though not as comprehensive or compelling<ul>
+<li>Demonstrate the potential to improve spectrogram classification</li>
+<li>Demonstrate frankly amazing resiliency to corrupted labels</li>
+<li>Demonstrate curious increased resiliency to adversarial attacks with one very interesting exception.</li>
+<li>Demonstrate improvements on tabular data</li>
+</ul>
+</li>
+<li>Their GAN idea is nice, but their results are really weak and I don’t think worth discussing</li>
+</ul>
+<h3>About Resiliency to Adversarial Attacks</h3>
+<p>I think the behaviour they demonstrate in Figure 2 makes their network <em>more</em> vulnerable to the white box iterative fast gradient sign method (I-FGSM) attack. This is not a criticism of their method, as white box attacks are not too concerning in practice. They do however mislead with their black box results, because they attack the ERM model and attempt to transfer to the mixup model. They should have also attacked a separately trained mixup model and attempted transfer to both.</p>
+<p><br /></p>
+<h2>Big Obvious Question</h2>
+<p>Why not interpolate in feature space rather than input space? Surely it makes more sense to mix features with some potential semantic meaning rather than the pixels of an image? They address this essentially by trying it out in their ablation studies and surprisingly their choice leads to the best result.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+	
+
+<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Aleksey Nozdryn-Plotnicki <script>document.write(new Date().getFullYear())</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+	
+	
+
+
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jquery-1.11.0.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/bootstrap.min.js"></script>
+		
+	
+		<!-- script is a url -->
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/classie.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/cbpAnimatedHeader.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jqBootstrapValidation.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/contact_me.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/freelancer.js"></script>
+		
+	
+
+</body>
+
+</html>
