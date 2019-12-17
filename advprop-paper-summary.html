@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Aleksey Nozdrn-Plotnicki">
+
+    <title>	Aleksey Nozdryn-Plotnicki
+</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- RSS FEEDS -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56820808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-56820808-1');
+    </script>
+
+
+</head>
+
+<body id="page-top" class="index">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Aleksey Nozdryn-Plotnicki</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            	<li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#portfolio">Projects</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#blog">Blog</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+	
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-text">
+                    <span class="name">Paper Summary: Adversarial Examples Improve Image Recognition</span>
+                    <hr class="star-light">
+                    2019-12-16
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <article>
+                <div class="content">
+                    <h2>Introduction</h2>
+<p><br /></p>
+<p>This is a summary of <a href="https://arxiv.org/abs/1911.09665">Adversarial Examples Improve Image Recognition</a> (ICML 2019) for the <a href="https://www.meetup.com/LearnDataScience/">Vancouver Data Science Reading Group</a></p>
+<p>The paper authors are: Cihang Xie (Google, Johns Hopkins University), Mingxing Tan (Google), Boqing Gong (Google), Jiang Wang (Google), Alan Yuille (Johns Hopkins University), Quoc V. Le (Google)</p>
+<p>There are pertrained models from the authors: <a href="https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet">TF</a>. Our own Ross Wigthman has pytorch pretrained models in <a href="https://github.com/rwightman/pytorch-image-models">timm</a>.</p>
+<p><br /></p>
+<h2>Main Takeaway</h2>
+<p><br /></p>
+<p>The authors set a new state of the art result on the ImageNet classification benchmark. They do so with a very large model, but they also make improvements across the EfficientNet family of models, across various sizes and speeds. They do so by performing adversarial training with separate batch norm layers for clean and attacked images.</p>
+<p><br /></p>
+<h2>Background</h2>
+<p><br /></p>
+<p><strong>Adversarial examples</strong> are otherwise normal images that have been manipulated by an adversary in order to fool a neural network. Typically structured noise is added to the image such that a human would report the image unchanged and therefore the correct label unchanged, but a neural network would be 100% wrong. </p>
+<p><strong>Adversarial training</strong> is a method where a nueral network is trained on adversarial examples rather than clean examples. This will train models that correctly classify adversarial examples much more often, but they typically have worse performance on clean images when compared to models trained in the normal way</p>
+<p><strong>Why should we expect worse results from adversarial training?</strong> An extremely hand-wavy argument goes that under adversarial training we are asking the network to do more with its finite capacity.</p>
+<p><strong>Why should we expect better results from adversarial training?</strong> When a model incorrectly classifies an adversarial image it is failing to generalize. A model that correctly classifies adversarial images agrees with humans more and is therefore a better model. Adversarial images are certainly exploiting overfit features in models, and training on them should be a valuable regularizer. Finally adversarial images can be thought of as a form of data augmentation. We use our prior knowledge of the image domain to state that a horizontal flip, a small change of brightness, or at touch of gaussian noise should not change the label of an ImageNet image. Therefore we perform these operations randomly in our data augmentation and our model learns those priors and is less prone to overfit. Similarly, robustness to structured adversarial noise is a prior that we can leverage in the same way.</p>
+<p><strong>Super relevant papers to this:</strong></p>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/1905.02175">Adversarial Examples Are Not Bugs, They Are Features</a> (NeruIPS 2019)</p>
+</li>
+<li>
+<p><a href="https://papers.nips.cc/paper/7515-how-does-batch-normalization-help-optimization.pdf">How Does Batch Normalization Help Optimization?</a> (NIPS 2018)</p>
+</li>
+</ul>
+<p><br /></p>
+<h2>Results</h2>
+<p><br /></p>
+<p>Across the board Top-1 accuracy improvements training EfficientNet models on the ImageNet benchmark.</p>
+<p>The paper is structured in such a way that you might get the impression that the authors are the first to show improvements on clean images with adversarial training for ImageNet, but this is not the case. The comparison adversarial training method shows improvements for all of B5, B6, and B7. I wonder if this was deliberate. Furthermore, the gains from the authors method decrease with model size, such that the benefit is only +0.1% for EfficientNet B7, which might not even be statistically significant. Finally they report their amazing SOTA score for EfficientNet B8, but never perform a comparison. Given the trends on display for smaller models, a reasonable extrapolation would be that they will be equal. Also, their method is a minute improvement over adversarial training plus clean image fine tuning, but that is hard to discover due to the incompleteness of the exploration and where in the paper the information is. I am tempted to conclude that the authors include at least one very canny editor.</p>
+<p>Following those harsh words, the impressive result should be repeated: <strong>Across the board Top-1 accuracy improvements training EfficientNet models on the ImageNet benchmark.</strong></p>
+<p><br /></p>
+<h2>Why does it work?</h2>
+<p><br /></p>
+<p>The authors have one key hypothesis: A network trained on both clean and adversarial images sees images from two different distributions that will have different batch-norm statistics. By providing two batch norm layers, the model is now capable of correctly computing the means and variances for the two distributions, rather than incorrectly computing a mean and variance for their union.</p>
+<p><br /></p>
+<h2>Big Questions</h2>
+<p><br /></p>
+<p>What about <a href="https://arxiv.org/abs/1905.02175">Adversarial Examples Are Not Bugs, They Are Features</a>? They convincingly demonstrate that the "structured noise" in adversarial examples that humans dismiss as meaningless are in fact valid, generalized features. This aligns with a line of thinking that CNNs <em>see</em> differently from humans, and tend to focus on textures more than shapes. After hearing that insight and thinking about the nature of convolutions, it seems obvious that they find textures easy to learn. Under this logic we might expect an adversarially trained model to perform poorly, because we have corrupted the texture information that it finds easy to learn, and is valid information for prediction. So why now are we seeing gains? </p>
+<p>How does this result inform the "How does Batch Norm help?" discussion? The best analysis I have seen suggests that BN smooths the loss landscape for optimization. Nowhere in that do I see that data from different distributions would be problematic.</p>
+<p>Why do three BNs for clean, AutoAugment, and adversarial images help EfficientNet B0, but no experiments are reported on the rest of the family?</p>
+<p><br /></p>
+<h2>Future work</h2>
+<p><br /></p>
+<p>If their disentanglement hypothesis is correct, then this multiple-BN approach should be useful generally when training on data from a mix of distributions. An example would be in medical imaging where one might have training images from a variety of devices and of course device is known at inference time.</p>
+<p>They find worse results on the ResNet family of models both for traditional adversarial training and their own method. What about the EfficientNet architecture changes things?</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+	
+
+<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Aleksey Nozdryn-Plotnicki <script>document.write(new Date().getFullYear())</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+	
+	
+
+
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jquery-1.11.0.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/bootstrap.min.js"></script>
+		
+	
+		<!-- script is a url -->
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/classie.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/cbpAnimatedHeader.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/jqBootstrapValidation.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/contact_me.js"></script>
+		
+	
+		<!-- script is a local library -->
+			<script src="/static/js/freelancer.js"></script>
+		
+	
+
+</body>
+
+</html>
